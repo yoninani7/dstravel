@@ -205,8 +205,11 @@ h6 {
 .navbar .active:focus,
 .navbar li:hover>a { 
   font-size: larger; 
-  font-weight: bold;
+  font-weight: bold; 
 
+}
+.navbar a:hover{
+  color: #ffc56e;
 }
 
 .navbar .dropdown ul {
@@ -988,12 +991,12 @@ section {
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
-.events {
-  background: url(../img/blurredlight.jpg) center center no-repeat;
+/* .events {
+  background: url(../img/blurredlight.jpg) center center no-repeat; 
   background-size: cover;
   position: relative;
-}
-
+} */
+ 
 .events::before {
   content: "";
   background-color: rgba(12, 11, 10, 0.8);
@@ -1002,7 +1005,7 @@ section {
   right: 0;
   left: 0;
   bottom: 0;
-}
+} 
 
 .events .section-title h2 {
   color: #fff;
