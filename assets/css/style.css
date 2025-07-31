@@ -128,7 +128,7 @@ h6 {
 } */
 
 #header .logo img {    
-  margin-top: 20px;
+  margin-top: 30px;
   max-height: 110px;
   margin-left: 50px;
 
@@ -593,12 +593,14 @@ section {
   padding: 20px 0;
   background-color: #f2f1ef;
   min-height: 40px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 @media (max-width: 992px) {
   .breadcrumbs {
-    margin-top: 70px;
+    margin-top: 40px;
+     
+  
   }
 }
 
