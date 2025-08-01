@@ -127,9 +127,9 @@ h6 {
   text-decoration: none;
 } */
 
-#header .logo img {    
-  margin-top: 30px;
-  max-height: 110px;
+#header .logo img {  
+  /* margin-top: 10px;    */
+  max-height: 60px;
   margin-left: 50px;
 
 }
@@ -998,11 +998,11 @@ section {
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
-/* .events {
-  background: url(../img/blurredlight.jpg) center center no-repeat; 
+.events {
+  background: url(../img/celebration.jpg) center center no-repeat; 
   background-size: cover;
   position: relative;
-} */
+}
  
 .events::before {
   content: "";
@@ -1029,7 +1029,7 @@ section {
 }
 
 .events .events-carousel {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgb(253, 8, 8);
   padding: 30px;
 }
 
