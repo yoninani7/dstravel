@@ -7,7 +7,7 @@
   <title>Image Gallery</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet"> 
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -158,28 +158,29 @@
     .modal-button:hover {
       background: rgba(255, 255, 255, 0.3);
     }
-    .exit-button {
+.exit-button {
   position: fixed;
-  top: 20px;
-  right: 25px;
-  font-size: 24px; /* Adjusted for better fit */
-  font-weight: bold;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6); 
+  top: 20px; /* Position from the top */
+  right: 25px; /* Position from the right */
+  font-size: 28px; /* Adjusted for better visibility */
+  font-weight: bold;   
   width: 50px; /* Size of the button */
   height: 50px; /* Size of the button */
   display: flex; /* Use flexbox to center the content */
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
-  cursor: pointer;
-  z-index: 1300;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-    .exit-button:hover {
-      background: rgba(0, 0, 0, 0.6);
-      transform: scale(1.1);
-    }
+  background: #3333339f; /* Dark background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 50%; /* Circular button */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  cursor: pointer; /* Pointer cursor */
+  transition: background 0.3s ease, transform 0.2s ease; /* Transition effects */
+} 
+.exit-button:hover {
+  background: rgba(134, 0, 0, 0.623); /* Red background on hover */
+  transform: scale(1.1); /* Slightly enlarges the button on hover */
+} 
 
     @media (max-width: 600px) {
       .swiper-slide {
@@ -200,9 +201,8 @@
 
 <body>
   <!-- Exit Button -->
- <button id="exitPageBtn" class="exit-button" style="border: none; background: rgba(0, 0, 0, 0.6); border-radius: 50%; color: white; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); ">
-    ×
-</button>
+  <button id="exitPageBtn" class="exit-button"> ×
+  </button>
 
   <header>
     <a href="index.html">
@@ -237,90 +237,90 @@
     <div class="swiper-pagination"></div>
   </div>
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container-fluid">
+  <!-- ======= Gallery Section ======= -->
+  <section id="gallery" class="gallery">
+    <div class="container-fluid">
 
-        <div class="section-title">
-          <h1 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; ">
-            Some photos from our last <span style="color:#ffcf88;">travels </span>
-            <br>
-          </h1>
-          <p style="font-size: 0.5 rem;">Browse highlights from our recent travels in our photo collection
-            for a glimpse into diverse and fascinating locations we've visited.</p>
+      <div class="section-title">
+        <h1 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; ">
+          Some photos from our last <span style="color:#ffcf88;">travels </span>
+          <br>
+        </h1>
+        <p style="font-size: 0.5 rem;">Browse highlights from our recent travels in our photo collection
+          for a glimpse into diverse and fascinating locations we've visited.</p>
+      </div>
+      <br>
+
+      <div class="row g-0">
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
         </div>
-        <br>
 
-        <div class="row g-0">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+            </a>
           </div>
+        </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+            </a>
           </div>
+        </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+            </a>
           </div>
+        </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+            </a>
           </div>
+        </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+            </a>
           </div>
+        </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+            </a>
           </div>
+        </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
         </div>
 
       </div>
-    </section><!-- End Gallery Section -->
+
+    </div>
+  </section><!-- End Gallery Section -->
 
 
   <div class="modal" id="imageModal">
@@ -334,92 +334,92 @@
         style="border: none; background-color: transparent; color: white;  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  border-radius:60%;   padding: 16px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;">
         &#10095;
       </button>
-  </div>
+    </div>
 
 
 
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      slidesPerView: "auto",
-      loop: true,
-      centeredSlides: true,
-      coverflowEffect: {
-        rotate: 15,
-        stretch: 20,
-        depth: 180,
-        modifier: 1.5,
-        slideShadows: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
 
-    const modal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
-    const slides = document.querySelectorAll('.swiper-slide');
-    let currentIndex = 0;
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        slidesPerView: "auto",
+        loop: true,
+        centeredSlides: true,
+        coverflowEffect: {
+          rotate: 15,
+          stretch: 20,
+          depth: 180,
+          modifier: 1.5,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
 
-    function openModal(index) {
-      currentIndex = index;
-      modalImage.src = slides[index].getAttribute('data-img');
-      modal.classList.add('active');
-      document.getElementById('exitPageBtn').style.display = 'none'; // Hide exit button
-    }
+      const modal = document.getElementById("imageModal");
+      const modalImage = document.getElementById("modalImage");
+      const slides = document.querySelectorAll('.swiper-slide');
+      let currentIndex = 0;
 
-    function closeModal() {
-      modal.classList.remove('active');
-      document.getElementById('exitPageBtn').style.display = ''; // Show exit button
-    }
-
-    function updateImage(index) {
-      if (index < 0) currentIndex = slides.length - 1;
-      else if (index >= slides.length) currentIndex = 0;
-      else currentIndex = index;
-
-      modalImage.src = slides[currentIndex].getAttribute('data-img');
-    }
-
-    slides.forEach((slide, index) => {
-      slide.addEventListener('click', () => openModal(index));
-    });
-
-    modal.addEventListener('click', closeModal);
-    document.getElementById('prevButton').addEventListener('click', (e) => {
-      e.stopPropagation();
-      updateImage(currentIndex - 1);
-    });
-    document.getElementById('nextButton').addEventListener('click', (e) => {
-      e.stopPropagation();
-      updateImage(currentIndex + 1);
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      if (modal.classList.contains('active')) {
-        if (e.key === 'ArrowLeft') {
-          updateImage(currentIndex - 1);
-        } else if (e.key === 'ArrowRight') {
-          updateImage(currentIndex + 1);
-        } else if (e.key === 'Escape') {
-          closeModal();
-        }
+      function openModal(index) {
+        currentIndex = index;
+        modalImage.src = slides[index].getAttribute('data-img');
+        modal.classList.add('active');
+        document.getElementById('exitPageBtn').style.display = 'none'; // Hide exit button
       }
-    });
 
-    // Exit button click handler
-    document.getElementById('exitPageBtn').addEventListener('click', () => {
-      window.location.href = 'index.html';
-    });
-  </script>
-  
- 
+      function closeModal() {
+        modal.classList.remove('active');
+        document.getElementById('exitPageBtn').style.display = ''; // Show exit button
+      }
+
+      function updateImage(index) {
+        if (index < 0) currentIndex = slides.length - 1;
+        else if (index >= slides.length) currentIndex = 0;
+        else currentIndex = index;
+
+        modalImage.src = slides[currentIndex].getAttribute('data-img');
+      }
+
+      slides.forEach((slide, index) => {
+        slide.addEventListener('click', () => openModal(index));
+      });
+
+      modal.addEventListener('click', closeModal);
+      document.getElementById('prevButton').addEventListener('click', (e) => {
+        e.stopPropagation();
+        updateImage(currentIndex - 1);
+      });
+      document.getElementById('nextButton').addEventListener('click', (e) => {
+        e.stopPropagation();
+        updateImage(currentIndex + 1);
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (modal.classList.contains('active')) {
+          if (e.key === 'ArrowLeft') {
+            updateImage(currentIndex - 1);
+          } else if (e.key === 'ArrowRight') {
+            updateImage(currentIndex + 1);
+          } else if (e.key === 'Escape') {
+            closeModal();
+          }
+        }
+      });
+
+      // Exit button click handler
+      document.getElementById('exitPageBtn').addEventListener('click', () => {
+        window.location.href = 'index.html';
+      });
+    </script>
+
+
 </body>
 
 </html>
