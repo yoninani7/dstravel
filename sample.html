@@ -1,425 +1,442 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Gallery</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #003973;
-      --accent: #e5e5be;
-      --text: #333;
-      --bg: #f9fafb;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-    }
-
-    header {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('assets/img/sam/ga.jpg') no-repeat center center / cover;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px 30px;
-    }
-
-    header img {
-      max-height: 55px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 10px 0 5px;
-    }
-
-    header p {
-      font-size: 1rem;
-      opacity: 0.85;
-    }
-
-    .swiper {
-      width: 100%;
-      max-width: 1000px;
-      padding: 50px 0;
-      margin: auto;
-    }
-
-    .swiper-slide {
-      width: 280px;
-      height: 280px;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-      cursor: pointer;
-    }
-
-    .swiper-slide:hover {
-      transform: scale(1.04);
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .swiper-pagination-bullet {
-      background: #bbb;
-      opacity: 1;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: var(--primary);
-    }
-
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal.active {
-      display: flex;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #003973;
+        --accent: #e5e5be;
+        --text: #333;
+        --bg: #f9fafb;
       }
 
-      to {
-        opacity: 1;
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
       }
-    }
 
-    .modal img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-    }
+      header {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('assets/img/sam/ga.jpg') no-repeat center center / cover;
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px 30px;
+      }
 
-    .modal-navigation {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
-
-    .modal-button {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(5px);
-      color: white;
-      font-size: 40px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      pointer-events: all;
-      padding: 0 20px;
-      transition: all 0.2s ease;
-    }
-
-    .modal-button:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-
-    .exit-button {
-      position: fixed;
-      top: 20px; 
-      right: 25px; 
-      font-size: 28px; 
-      font-weight: bold;
-      width: 50px; 
-      height: 50px; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      background: #3333339f; 
-      color: white; 
-      border: none; 
-      border-radius: 50%; 
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
-      cursor: pointer; 
-      transition: background 0.3s ease, transform 0.2s ease; 
-    }
-
-    .exit-button:hover {
-      background: rgba(134, 0, 0, 0.623);
-      /* Red background on hover */
-      transform: scale(1.1);
-      /* Slightly enlarges the button on hover */
-    }
-
-    @media (max-width: 600px) {
-      .swiper-slide {
-        width: 240px;
-        height: 240px;
+      header img {
+        max-height: 55px;
+        margin-bottom: 10px;
       }
 
       header h1 {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 10px 0 5px;
+      }
+
+      header p {
+        font-size: 1rem;
+        opacity: 0.85;
+      }
+
+      .swiper {
+        width: 100%;
+        max-width: 1000px;
+        padding: 50px 0;
+        margin: auto;
+      }
+
+      .swiper-slide {
+        width: 280px;
+        height: 280px;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        cursor: pointer;
+      }
+
+      .swiper-slide:hover {
+        transform: scale(1.04);
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-pagination-bullet {
+        background: #bbb;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--primary);
+      }
+
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal.active {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+      }
+
+      .modal-navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none;
       }
 
       .modal-button {
-        font-size: 30px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(5px);
+        color: white;
+        font-size: 40px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        pointer-events: all;
+        padding: 0 20px;
+        transition: all 0.2s ease;
+      }
+
+      .modal-button:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .exit-button {
+        position: fixed;
+        top: 20px; 
+        right: 25px; 
+        font-size: 28px; 
+        font-weight: bold;
+        width: 50px; 
+        height: 50px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        background: #3333339f; 
+        color: white; 
+        border: none; 
+        border-radius: 50%; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
+        cursor: pointer; 
+        transition: background 0.3s ease, transform 0.2s ease; 
+      }
+
+      .exit-button:hover {
+        background: rgba(134, 0, 0, 0.623);
+        /* Red background on hover */
+        transform: scale(1.1);
+        /* Slightly enlarges the button on hover */
+      }
+
+      @media (max-width: 600px) {
+        .swiper-slide {
+          width: 240px;
+          height: 240px;
+        }
+
+        header h1 {
+          font-size: 1.4rem;
+        }
+
+        .modal-button {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Exit Button -->
+    <button id="exitPageBtn" class="exit-button"> ×
+    </button>
+
+    <header>
+      <a href="index.html">
+        <img src="assets/img/transformedwhite.png" alt="Logo" />
+      </a>
+      <h1>Our Image Gallery</h1>
+      <p>Browse our collection of moments, events, and team celebrations.</p>
+    </header>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" data-img="assets/img/sam/EB7A3534.JPG">
+          <img src="assets/img/sam/EB7A3534.JPG" alt="Slide 1" />
+        </div>
+        <div class="swiper-slide" data-img="assets/img/sam/ga.jpg">
+          <img src="assets/img/sam/ga.jpg" alt="Slide 2" />
+        </div>
+        <div class="swiper-slide" data-img="assets/img/chefs/chefs-2.jpg">
+          <img src="assets/img/chefs/chefs-2.jpg" alt="Slide 3" />
+        </div>
+        <div class="swiper-slide" data-img="assets/img/chefs/chefs-3.jpg">
+          <img src="assets/img/chefs/chefs-3.jpg" alt="Slide 4" />
+        </div>
+        <div class="swiper-slide" data-img="assets/img/event-private.jpg">
+          <img src="assets/img/event-private.jpg" alt="Slide 5" />
+        </div>
+        <div class="swiper-slide" data-img="assets/img/event-custom.jpg">
+          <img src="assets/img/event-custom.jpg" alt="Slide 6" />
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container-fluid">
+
+        <div class="section-title">
+          <h1 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; ">
+            Some photos from our last <span style="color:#ffcf88;">travels </span>
+            <br>
+          </h1>
+          <p style="font-size: 0.5 rem;">Browse highlights from our recent travels in our photo collection
+            for a glimpse into diverse and fascinating locations we've visited.</p>
+        </div>
+        <br>
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/sam/EB7A3534.JPG" class="gallery-lightbox">
+                <img src="assets/img/sam/EB7A3534.JPG" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+
+    <div class="modal" id="imageModal">
+      <img id="modalImage" src="" alt="Preview Image" />
+      <div class="modal-navigation">
+        <button class="modal-button" id="prevButton"
+          style="border: none; background-color: transparent; color: white;  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  border-radius:60%;   padding: 16px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          &#10094;
+        </button>
+        <button class="modal-button" id="nextButton"
+          style="border: none; background-color: transparent; color: white;  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  border-radius:60%;   padding: 16px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          &#10095;
+        </button>
+      </div>
+  
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+  const swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    slidesPerView: "auto",
+    loop: true,
+    centeredSlides: true,
+    coverflowEffect: {
+      rotate: 15,
+      stretch: 20,
+      depth: 180,
+      modifier: 1.5,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const swiperSlides = document.querySelectorAll('.swiper-slide');
+  const galleryItems = document.querySelectorAll('.gallery-item a');
+  let currentIndex = 0;
+
+  function openModal(index) {
+    currentIndex = index;
+    modalImage.src = galleryItems[index].getAttribute('href'); // Use href from gallery items
+    modal.classList.add('active');
+    document.getElementById('exitPageBtn').style.display = 'none'; // Hide exit button
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.getElementById('exitPageBtn').style.display = ''; // Show exit button
+  }
+
+  function updateImage(index) {
+    if (index < 0) currentIndex = galleryItems.length - 1;
+    else if (index >= galleryItems.length) currentIndex = 0;
+    else currentIndex = index;
+
+    modalImage.src = galleryItems[currentIndex].getAttribute('href'); // Use href from gallery items
+  }
+
+  // Add event listeners to swiper slides
+  swiperSlides.forEach((slide, index) => {
+    slide.addEventListener('click', () => openModal(index));
+  });
+
+  // Add event listeners to gallery items
+  galleryItems.forEach((item, index) => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default anchor behavior
+      openModal(index); // Open modal with the clicked image
+    });
+  });
+
+  // Close modal when clicking outside of the image
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  
+  // Previous and next buttons
+  document.getElementById('prevButton').addEventListener('click', (e) => {
+    e.stopPropagation();
+    updateImage(currentIndex - 1);
+  });
+  document.getElementById('nextButton').addEventListener('click', (e) => {
+    e.stopPropagation();
+    updateImage(currentIndex + 1);
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('active')) {
+      if (e.key === 'ArrowLeft') {
+        updateImage(currentIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        updateImage(currentIndex + 1);
+      } else if (e.key === 'Escape') {
+        closeModal();
       }
     }
-  </style>
-</head>
+  });
 
-<body>
-  <!-- Exit Button -->
-  <button id="exitPageBtn" class="exit-button"> ×
-  </button>
-
-  <header>
-    <a href="index.html">
-      <img src="assets/img/transformedwhite.png" alt="Logo" />
-    </a>
-    <h1>Our Image Gallery</h1>
-    <p>Browse our collection of moments, events, and team celebrations.</p>
-  </header>
-
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" data-img="assets/img/sam/EB7A3534.JPG">
-        <img src="assets/img/sam/EB7A3534.JPG" alt="Slide 1" />
-      </div>
-      <div class="swiper-slide" data-img="assets/img/sam/ga.jpg">
-        <img src="assets/img/sam/ga.jpg" alt="Slide 2" />
-      </div>
-      <div class="swiper-slide" data-img="assets/img/chefs/chefs-2.jpg">
-        <img src="assets/img/chefs/chefs-2.jpg" alt="Slide 3" />
-      </div>
-      <div class="swiper-slide" data-img="assets/img/chefs/chefs-3.jpg">
-        <img src="assets/img/chefs/chefs-3.jpg" alt="Slide 4" />
-      </div>
-      <div class="swiper-slide" data-img="assets/img/event-private.jpg">
-        <img src="assets/img/event-private.jpg" alt="Slide 5" />
-      </div>
-      <div class="swiper-slide" data-img="assets/img/event-custom.jpg">
-        <img src="assets/img/event-custom.jpg" alt="Slide 6" />
-      </div>
-    </div>
-
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <!-- ======= Gallery Section ======= -->
-  <section id="gallery" class="gallery">
-    <div class="container-fluid">
-
-      <div class="section-title">
-        <h1 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; ">
-          Some photos from our last <span style="color:#ffcf88;">travels </span>
-          <br>
-        </h1>
-        <p style="font-size: 0.5 rem;">Browse highlights from our recent travels in our photo collection
-          for a glimpse into diverse and fascinating locations we've visited.</p>
-      </div>
-      <br>
-
-      <div class="row g-0">
-
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="assets/img/sam/EB7A3534.JPG" class="gallery-lightbox">
-              <img src="assets/img/sam/EB7A3534.JPG" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
-              <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
-              <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-              <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
-              <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
-              <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
-              <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
-              <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Gallery Section -->
+  // Exit button click handler
+  document.getElementById('exitPageBtn').addEventListener('click', () => {
+    window.location.href = 'index.html';
+  });
+</script>
 
 
-  <div class="modal" id="imageModal">
-    <img id="modalImage" src="" alt="Preview Image" />
-    <div class="modal-navigation">
-      <button class="modal-button" id="prevButton"
-        style="border: none; background-color: transparent; color: white;  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  border-radius:60%;   padding: 16px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        &#10094;
-      </button>
-      <button class="modal-button" id="nextButton"
-        style="border: none; background-color: transparent; color: white;  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  border-radius:60%;   padding: 16px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        &#10095;
-      </button>
-    </div>
- 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".mySwiper", {
-        effect: "coverflow",
-        grabCursor: true,
-        slidesPerView: "auto",
-        loop: true,
-        centeredSlides: true,
-        coverflowEffect: {
-          rotate: 15,
-          stretch: 20,
-          depth: 180,
-          modifier: 1.5,
-          slideShadows: true,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
+  </body>
 
-      const modal = document.getElementById("imageModal");
-      const modalImage = document.getElementById("modalImage");
-      const slides = document.querySelectorAll('.swiper-slide');
-      let currentIndex = 0;
-
-      function openModal(index) {
-        currentIndex = index;
-        modalImage.src = slides[index].getAttribute('data-img');
-        modal.classList.add('active');
-        document.getElementById('exitPageBtn').style.display = 'none'; // Hide exit button
-      }
-
-      function closeModal() {
-        modal.classList.remove('active');
-        document.getElementById('exitPageBtn').style.display = ''; // Show exit button
-      }
-
-      function updateImage(index) {
-        if (index < 0) currentIndex = slides.length - 1;
-        else if (index >= slides.length) currentIndex = 0;
-        else currentIndex = index;
-
-        modalImage.src = slides[currentIndex].getAttribute('data-img');
-      }
-
-      slides.forEach((slide, index) => {
-        slide.addEventListener('click', () => openModal(index));
-      });
-
-      modal.addEventListener('click', closeModal);
-      document.getElementById('prevButton').addEventListener('click', (e) => {
-        e.stopPropagation();
-        updateImage(currentIndex - 1);
-      });
-      document.getElementById('nextButton').addEventListener('click', (e) => {
-        e.stopPropagation();
-        updateImage(currentIndex + 1);
-      });
-
-      // Keyboard navigation
-      document.addEventListener('keydown', (e) => {
-        if (modal.classList.contains('active')) {
-          if (e.key === 'ArrowLeft') {
-            updateImage(currentIndex - 1);
-          } else if (e.key === 'ArrowRight') {
-            updateImage(currentIndex + 1);
-          } else if (e.key === 'Escape') {
-            closeModal();
-          }
-        }
-      });
-
-      // Exit button click handler
-      document.getElementById('exitPageBtn').addEventListener('click', () => {
-        window.location.href = 'index.html';
-      });
-    </script>
-
-
-</body>
-
-</html>
+  </html>
