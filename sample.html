@@ -158,29 +158,33 @@
     .modal-button:hover {
       background: rgba(255, 255, 255, 0.3);
     }
-.exit-button {
-  position: fixed;
-  top: 20px; /* Position from the top */
-  right: 25px; /* Position from the right */
-  font-size: 28px; /* Adjusted for better visibility */
-  font-weight: bold;   
-  width: 50px; /* Size of the button */
-  height: 50px; /* Size of the button */
-  display: flex; /* Use flexbox to center the content */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  background: #3333339f; /* Dark background */
-  color: white; /* Text color */
-  border: none; /* No border */
-  border-radius: 50%; /* Circular button */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
-  cursor: pointer; /* Pointer cursor */
-  transition: background 0.3s ease, transform 0.2s ease; /* Transition effects */
-} 
-.exit-button:hover {
-  background: rgba(134, 0, 0, 0.623); /* Red background on hover */
-  transform: scale(1.1); /* Slightly enlarges the button on hover */
-} 
+
+    .exit-button {
+      position: fixed;
+      top: 20px; 
+      right: 25px; 
+      font-size: 28px; 
+      font-weight: bold;
+      width: 50px; 
+      height: 50px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      background: #3333339f; 
+      color: white; 
+      border: none; 
+      border-radius: 50%; 
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
+      cursor: pointer; 
+      transition: background 0.3s ease, transform 0.2s ease; 
+    }
+
+    .exit-button:hover {
+      background: rgba(134, 0, 0, 0.623);
+      /* Red background on hover */
+      transform: scale(1.1);
+      /* Slightly enlarges the button on hover */
+    }
 
     @media (max-width: 600px) {
       .swiper-slide {
@@ -255,8 +259,8 @@
 
         <div class="col-lg-3 col-md-4">
           <div class="gallery-item">
-            <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-              <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+            <a href="assets/img/sam/EB7A3534.JPG" class="gallery-lightbox">
+              <img src="assets/img/sam/EB7A3534.JPG" alt="" class="img-fluid">
             </a>
           </div>
         </div>
@@ -335,11 +339,7 @@
         &#10095;
       </button>
     </div>
-
-
-
-
-
+ 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {
