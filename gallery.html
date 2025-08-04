@@ -59,7 +59,7 @@
     }
 
     .swiper-container-wrapper {
-      background: url('assets/img/sam/gal.jpg') center center / cover no-repeat;
+      background: url('assets/img/galback.jpg') center center / cover no-repeat  ;
       padding: 40px 0;
       margin: 20px auto;
       max-width: 1200px;
@@ -236,7 +236,7 @@
   </style>
 </head>
 
-<body>
+<body background="assets/img/photoback.jpg " style="background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;   ">
   <button id="exitPageBtn" class="exit-button">×</button>
 
   <header>
@@ -246,7 +246,9 @@
     <h1>Our Image Gallery</h1>
     <p>Browse our collection of moments, events, and team celebrations.</p>
   </header>
-
+  
+<div style="background-color: #0D0D0D; top: 0;">
+ 
   <div class="swiper-container-wrapper">  
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -267,19 +269,18 @@
     </div>
     <div class="swiper-pagination"></div>
   </div>
-  <!-- ======= Gallery Section ======= -->
-  <section id="gallery" class="gallery">
-    <div class="container-fluid">
-
-      <div class="section-title">
+</div>
+    <div class="section-title">
           <h1 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; ">
             Some photos from our last <span style="color:#ffcf88;">travels </span>
             <br>
           </h1>
           <p style="font-size: 0.5 rem;">Browse highlights from our recent travels in our photo collection
             for a glimpse into diverse and fascinating locations we've visited.</p>
-        </div>
-        <br>
+        </div> 
+  <!-- ======= Gallery Section ======= -->
+  <section id="gallery" class="gallery">
+    <div class="container-fluid"> 
 
       <div class="row g-0">
 

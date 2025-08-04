@@ -1185,7 +1185,7 @@ section {
 # Gallery
 --------------------------------------------------------------*/
 .gallery {
-  padding-bottom: 0;
+ top :0;
 }
 
 .gallery .gallery-item {
