@@ -1635,7 +1635,7 @@ section {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
-      border-top: 5px solid transparent;
+      border-top: 5px  solid  #05374bf6; 
       max-width: 100%; 
     }
 
