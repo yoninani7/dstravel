@@ -322,31 +322,45 @@
             animation: float 6s ease-in-out infinite;
         }
 
+          #header {
+        top: 30px;
+        height: 70px;
+        z-index: 997;
+        transition: all 0.5s;
+        padding: 10px 0;
+        background: rgba(5, 55, 75, 0.98);
+    }
+
+    #header.header-transparent {
+        background: transparent;
+    }
+
+    #header.header-scrolled {
+        top: 10px;
+        margin: 0 5%;
+        background: rgba(5, 55, 75, 0.98);
+        border-radius: 10px;
+        box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
         #header {
-            height: 70px;
-            z-index: 997;
-            transition: all 0.5s;
-            padding: 10px 0;
-            background: rgba(26, 24, 22, 0.85);
+            height: auto;
+            padding: 10px;
         }
-
-        #header.header-transparent {
-            background: transparent;
+        nav#navbar ul {
+            flex-direction: column;
         }
-
-        /* #000280;  */
-        #header.header-scrolled {
-            top: 10px;
-            margin-left: 5%;
-            margin-right: 5%;
-            background: #05374bf6;
-            border-radius: 10px;
-            box-shadow: 0px 2px 10px #ffc56e;
+        .book-a-table-btn {
+            margin-top: 10px;
         }
+    }
     </style>
 </head>
 
 <body> 
+<div id="header">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <div class="logo me-auto">
             <a href="index.html">
@@ -356,20 +370,17 @@
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
                 <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-                <li><a class="nav-link scrollto" href="index.html#about">About us</a></li>
+                <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
                 <li><a class="nav-link scrollto" href="index.html#why-us">Services</a></li>
-                <li><a class="nav-link scrollto" href="index.html#offers">Special offers</a></li>
+                <li><a class="nav-link scrollto" href="index.html#offers">Special Offers</a></li>
                 <li><a class="nav-link scrollto active" href="artgallery.html">Gallery</a></li>
                 <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
             </ul>
-
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
         <a href="book.html" class="book-a-table-btn scrollto">Book a Trip</a>
-
-    </div><!-- End Header -->
-
+    </div>
+</div><!-- End Header -->
 
 
     <center>
