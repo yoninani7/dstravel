@@ -23,11 +23,12 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
+
     <style>
         :root {
             --sunset-orange: #FF7E5F;
-            --deep-blue: #2A3F54;
-            --golden-yellow: #FFD166;
+            --deep-blue: #05374b;
+            --golden-yellow: #ffc56e;
             --soft-teal: #06D6A0;
             --warm-sand: #EFD9B4;
             --dark-charcoal: #2D2D2A;
@@ -38,6 +39,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -84,7 +89,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -196,9 +201,9 @@
 
         .modal-content {
             position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            text-align: center;
+            max-width: 50%;
+            max-height:75%;
+            text-align: center; 
         }
 
         .modal-img {
@@ -305,7 +310,7 @@
             }
         }
 
-        /* Floating Animation */
+        /*  
         @keyframes float {
 
             0%,
@@ -320,79 +325,95 @@
 
         .floating {
             animation: float 6s ease-in-out infinite;
+        } */
+
+        #header { 
+            position: relative;
+            top: 10px;
+            left: 0;
+            right: 0;
+            height: 70px;
+            z-index: 997;
+            transition: all 0.5s;
+            padding: 10px 0;
+            background: rgba(5, 55, 75, 0.98);
+            margin: 0 5%;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
         }
 
-          #header {
-        top: 30px;
-        height: 70px;
-        z-index: 997;
-        transition: all 0.5s;
-        padding: 10px 0;
-        background: rgba(5, 55, 75, 0.98);
-    }
-
-    #header.header-transparent {
-        background: transparent;
-    }
-
-    #header.header-scrolled {
-        top: 10px;
-        margin: 0 5%;
-        background: rgba(5, 55, 75, 0.98);
-        border-radius: 10px;
-        box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        #header {
-            height: auto;
-            padding: 10px;
+        #header.header-transparent {
+            background: transparent;
+            box-shadow: none;
         }
-        nav#navbar ul {
-            flex-direction: column;
+
+        #header.header-scrolled {
+            top: 10px;
+            /* Keep it at 10px even when scrolled */
+            background: rgba(5, 55, 75, 0.98);
+            box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
         }
-        .book-a-table-btn {
-            margin-top: 10px;
+
+        .header-center-text {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            pointer-events: none;
+            /* prevents text from being clickable */
         }
-    }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            #header {
+                height: auto;
+                padding: 10px;
+            }
+
+            nav#navbar ul {
+                flex-direction: column;
+            }
+
+            .book-a-table-btn {
+                margin-top: 10px;
+            }
+        }
     </style>
 </head>
 
-<body> 
-<div id="header">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-        <div class="logo me-auto">
-            <a href="index.html">
-                <img src="assets/img/transformedwhite.png" alt="Logo" style="width: auto; height: 50px;" />
-            </a>
+<body style="background-image:url('assets/img/b.jpg');">
+    <div id="header">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <div class="logo me-auto">
+                <a href="index.html">
+                    <img src="assets/img/transformedwhite.png" alt="Logo" style="width: auto; height: 50px;" />
+                </a>
+            </div>
+            <div class="header-center-text">Photo gallery</div>
+            <nav id="navbar" class="navbar order-last order-lg-0 center">
+
+                <ul>
+
+                    
+                    <li><a style="font-size: 16px;" class="nav-link scrollto " href="artgallery.html">Gallery</a></li>
+                    <li><a class="nav-link scrollto ">/</a></li>
+                    
+                    <li><a style="font-size: 16px;" class="nav-link scrollto active" href="index.html">Home</a></li>
+                </ul>
+            </nav><!-- .navbar -->
         </div>
-        <nav id="navbar" class="navbar order-last order-lg-0">
-            <ul>
-                <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-                <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
-                <li><a class="nav-link scrollto" href="index.html#why-us">Services</a></li>
-                <li><a class="nav-link scrollto" href="index.html#offers">Special Offers</a></li>
-                <li><a class="nav-link scrollto active" href="artgallery.html">Gallery</a></li>
-                <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-        <a href="book.html" class="book-a-table-btn scrollto">Book a Trip</a>
-    </div>
-</div><!-- End Header -->
+    </div><!-- End Header -->
 
 
-    <center>
-        <h1 class="floating">Art Gallery</h1>
-    </center>
     <div class="category-filter">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="landscape">Landscapes</button>
-        <button class="filter-btn" data-filter="city">Cities</button>
-        <button class="filter-btn" data-filter="beach">Beaches</button>
-        <button class="filter-btn" data-filter="mountain">Mountains</button>
-        <button class="filter-btn" data-filter="culture">Culture</button>
+        <!-- <button class="filter-btn" data-filter="landscape">Landscapes</button>
+        <button class="filter-btn" data-filter="city">Cities</button> -->
+        <button class="filter-btn" data-filter="beach">Scenery</button>
+        <button class="filter-btn" data-filter="mountain">Devours</button>
+        <button class="filter-btn" data-filter="culture">Explorers</button>
     </div>
 
     <div class="gallery-container" id="gallery">
@@ -456,7 +477,7 @@
                 title: "Santorini Sunset",
                 location: "Santorini, Greece",
                 filter: "beach",
-                url: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80"
+                url: "assets/img/sam/EB7A9890.jpg"
             },
             {
                 id: 2,
@@ -526,7 +547,7 @@
                 title: "Patagonia",
                 location: "Argentina",
                 filter: "mountain",
-                url: "https://images.unsplash.com/photo-1526397751294-331021109fbd?auto=format&fit=crop&w=1200&q=80"
+                url: "assets/img/sam/EB7A9890.jpg"
             },
             {
                 id: 12,
@@ -663,6 +684,7 @@
         // Initialize Gallery
         createGalleryItems(galleryData);
     </script>
+
 
 
 </body>

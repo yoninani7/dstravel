@@ -26,6 +26,57 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.9) !important;
+      border: none !important;
+      border-radius: 8px !important;
+      padding: 12px 15px !important;
+      height: auto !important;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.3) !important;
+      border: none !important;
+      background-color: white !important;
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+    }
+
+    .php-email-form button[type="submit"] {
+      background: #FFD166;
+      border: none;
+      padding: 12px 40px;
+      color: #2A3F54;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .php-email-form button[type="submit"]:hover {
+      background: #ffc72e;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    ::placeholder {
+      color: #6c757d !important;
+      opacity: 1 !important;
+    }
+  </style>
 </head>
 
 <body style=" background-size: cover;
@@ -36,31 +87,36 @@ background-position: center; background-image: url('assets/img/book.jpg');">
   <section class="breadcrumbs" style=" background-color: transparent;">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center">
-  <a href="index.html"> <img src="assets/img/transformedwhite.png" alt="Logo" width="auto" height="80px" style="margin-top: 10px; margin-left: 40px;"/></a>
+        <a href="index.html"> <img src="assets/img/transformedwhite.png" alt="Logo" width="auto" height="80px"
+            style="margin-top: 10px; margin-left: 40px;" /></a>
 
         <!-- <h2 style="font-family: sans-serif; font-size: 29px;"><a href="index.html" style="color: white;">DS TRAVEL</a></h2> -->
 
         <ol style="color: white;">
           <li>
-            <h7 style="color: white;font-family:sans-serif;font-weight: bold;">Bookings</h7> </a>
+            <h5 style="color: white;font-family:sans-serif;font-weight: bold;">Bookings</h5> </a>
           </li>
-          <li><a href="index.html" style="color: white;font-family:sans-serif;font-weight: bold; "> Home </a></li>
+          <li><a href="index.html" style="color: white;font-family:sans-serif;font-weight: bold; font-size: 17px; ">
+              Home </a></li>
         </ol>
       </div>
 
     </div>
   </section><!-- End Breadcrumbs Section -->
-  <center>
-    <h2 style="font-size: 39px; font-weight: 800; color: #2c3e50; text-shadow: 10px 10px 2px #bdc3c7; margin: 20px 0;">
-      Book Your Trip Now!
-    </h2>
 
-  </center>
   <main id="main">
     <!-- ======= Book A Table Section ======= -->
     <section id="book-a-table" class="book-a-table">
+      <center>
+        <h2
+          style="font-size: 39px; font-weight: 800; color: #2c3e50; text-shadow: 10px 10px 2px #81aecc; margin: 20px 0;">
+          Book Your Trip Now!
+        </h2>
+
+      </center>
       <div class="container">
-        <form action="https://formspree.io/f/xnqekzbb" method="POST" class="php-email-form">
+        <form action="https://formspree.io/f/xnqekzbb" method="POST" class="php-email-form"
+          style="background-color:#05374b3a; ">
           <div class="row">
             <div class="col-lg-4 col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -85,6 +141,7 @@ background-position: center; background-image: url('assets/img/book.jpg');">
             <textarea class="form-control" name="message" rows="5" placeholder="Message" required
               style="resize: none;"></textarea>
           </div>
+          <br>
           <div class="text-center">
             <button type="submit">Send Message</button>
           </div>
