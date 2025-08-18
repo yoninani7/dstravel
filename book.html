@@ -131,35 +131,22 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 0;
-    background: linear-gradient(135deg, #05374b, #05374b);
-    transition: height 1s ease;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #05374b, #0a122c);
+    transition: width 0.8s ease;
     z-index: -1;
 }
 
-.sendbtn:after {
-     content: ' \2708';
-    position: absolute;
-    right: 10px; /* Adjust positioning as needed */
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Transition for visibility */
-    font-size: 1.2rem; /* Adjust size as needed */
-}
-
+ 
 .sendbtn:hover {
     color: white;
 }
 
 .sendbtn:hover:before {
-    height: 100%; /* Expand height to full on hover */
+    width: 100%; 
 }
-
-.sendbtn:hover:after {
-    opacity: 12; /* Show arrow on hover */
-}
+ 
   </style>
 </head>
 
