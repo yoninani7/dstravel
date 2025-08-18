@@ -47,27 +47,7 @@
     textarea.form-control {
       min-height: 150px;
     }
-
-    .php-email-form button[type="submit"] {
-      background: #fcc84f;
-      border: none;
-      padding: 12px 40px;
-      color: #2A3F54;
-      font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .php-email-form button[type="submit"]:hover {
-      color: #2A3F54;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
+ 
     .form-group {
       margin-bottom: 20px;
     }
@@ -130,6 +110,56 @@
         margin-top: 10px;
       }
     }
+.sendbtn {
+    display: inline-block;
+    background: #05374bad;
+    color: white;
+    padding: 14px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.sendbtn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(135deg, #05374b, #05374b);
+    transition: height 1s ease;
+    z-index: -1;
+}
+
+.sendbtn:after {
+     content: ' \2708';
+    position: absolute;
+    right: 10px; /* Adjust positioning as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Transition for visibility */
+    font-size: 1.2rem; /* Adjust size as needed */
+}
+
+.sendbtn:hover {
+    color: white;
+}
+
+.sendbtn:hover:before {
+    height: 100%; /* Expand height to full on hover */
+}
+
+.sendbtn:hover:after {
+    opacity: 12; /* Show arrow on hover */
+}
   </style>
 </head>
 
@@ -216,8 +246,10 @@ background-position: center; background-image: url('assets/img/book.jpg');">
   </div>
   <br>
   <div class="text-center">
-    <button type="submit" class="btn btn-primary">Send Message</button>
+    <button type="submit" class="sendbtn">&#9993;&nbsp;&nbsp;&nbsp;  Send Message </button>
   </div>
+  
+      
 </form>
 
       </div>
