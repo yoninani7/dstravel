@@ -31,8 +31,9 @@
 
   <style>
     html {
-    scroll-behavior: smooth;
-  }
+      scroll-behavior: smooth;
+    }
+
     .marquee-container {
       max-width: 100%;
       overflow-x: hidden;
@@ -321,14 +322,16 @@
 
     <section id="offers" style="text-align: center; padding: 20px;">
       <br>
-      <h1 style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 600;">Special tour offerings !</h1>
+      <h1 style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 600;">Special tour offerings!</h1>
       <br>
-      <p style="color: #666;">Explore our exclusive tour packages designed just for you. </p>
+      <p style="color: #666;">Explore our exclusive tour packages designed just for you.</p>
 
       <center>
-        <div style="width: 15%;height: 7px;border-radius: 10px; background-color:#05374be3"> </div>
+        <div style="width: 15%; height: 7px; border-radius: 10px; background-color: #05374be3;"></div>
       </center>
-      <div class="containered">
+
+      <div class="containered" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
         <!-- Package 1 -->
         <div class="package">
           <div class="preview">
@@ -342,38 +345,63 @@
               Package</a>
           </div>
         </div>
-
         <!-- Package 2 -->
         <div class="package">
           <div class="preview">
-            <iframe src="assets/packages/Zanzibar Honeymoon Package-2025.pdf#toolbar=0&navpanes=0&scrollbar=0"
-              scrolling="no"></iframe>
-          </div>
-          <div class="package-content">
-            <a class="btnpdf" onclick="viewPackage('assets/packages/Zanzibar Honeymoon Package-2025.pdf')">View
-              Package</a>
-          </div>
-        </div>
-
-        <!-- Package 3 -->
-        <div class="package">
-          <div class="preview">
             <iframe
-              src="assets/packages/3Nights and 4Days Weekend Getaway Package to SEZ-with flight ticket.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              src="assets/packages/Zanzibar Valentine-2025.pdf"
               scrolling="no"></iframe>
           </div>
           <div class="package-content">
             <a class="btnpdf"
-              onclick="viewPackage('assets/packages/3Nights and 4Days Weekend Getaway Package to SEZ-with flight ticket.pdf')">View
+              onclick="viewPackage('assets/packages/Zanzibar Valentine-2025.pdf')">View
               Package</a>
           </div>
         </div>
-
+        <!-- Package 3 -->
+        <div class="package">
+          <div class="preview">
+            <iframe
+              src="assets/packages/Weekend Gateway Cape Town Package-2025.pdf"
+              scrolling="no"></iframe>
+          </div>
+          <div class="package-content">
+            <a class="btnpdf"
+              onclick="viewPackage('assets/packages/Weekend Gateway Cape Town Package-2025.pdf')">View
+              Package</a>
+          </div>
+        </div>
         <!-- Package 4 -->
         <div class="package">
           <div class="preview">
             <iframe
-              src="assets/packages/3Nights and 4Days Weekend Getaway Package to ZNZ-with flight ticket.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              src="assets/packages/Mombasa valentine day Package-2025.pdf"
+              scrolling="no"></iframe>
+          </div>
+          <div class="package-content">
+            <a class="btnpdf"
+              onclick="viewPackage('assets/packages/Mombasa valentine day Package-2025.pdf')">View
+              Package</a>
+          </div>
+        </div>
+        <!-- Package 5 -->
+        <div class="package">
+          <div class="preview">
+            <iframe
+              src="assets/packages/Cape Town Valentine-2025.pdf"
+              scrolling="no"></iframe>
+          </div>
+          <div class="package-content">
+            <a class="btnpdf"
+              onclick="viewPackage('assets/packages/Cape Town Valentine-2025.pdf')">View
+              Package</a>
+          </div>
+        </div> 
+<!-- Package 6 -->
+        <div class="package">
+          <div class="preview">
+            <iframe
+              src="assets/packages/3Nights and 4Days Weekend Getaway Package to ZNZ-with flight ticket.pdf"
               scrolling="no"></iframe>
           </div>
           <div class="package-content">
@@ -381,40 +409,14 @@
               onclick="viewPackage('assets/packages/3Nights and 4Days Weekend Getaway Package to ZNZ-with flight ticket.pdf')">View
               Package</a>
           </div>
-        </div>
+        </div> 
 
-        <!-- Package 5 -->
-        <div class="package">
-          <div class="preview">
-            <iframe src="assets/packages/Cape Town Honeymoon Package-2025.pdf#toolbar=0&navpanes=0&scrollbar=0"
-              scrolling="no"></iframe>
-          </div>
-          <div class="package-content">
-            <a class="btnpdf" onclick="viewPackage('assets/packages/Cape Town Honeymoon Package-2025.pdf')">View
-              Package</a>
-          </div>
+        <div style="display: flex; justify-content: center;">
+          <a class="btnpdf"
+            onclick="viewPackage('assets/packages/4Nights and 5Days Honeymoon Package to SEZ-with flight ticket.pdf')">View
+            all
+            Packages</a>
         </div>
-
-        <!-- Package 6 -->
-        <div class="package">
-          <div class="preview">
-            <iframe
-              src="assets/packages/4Nights and 5Days Honeymoon Package to SEZ-with flight ticket.pdf#toolbar=0&navpanes=0&scrollbar=0"
-              scrolling="no"></iframe>
-          </div>
-          <div class="package-content">
-            <a class="btnpdf"
-              onclick="viewPackage('assets/packages/4Nights and 5Days Honeymoon Package to SEZ-with flight ticket.pdf')">View
-              Package</a>
-          </div>
-        </div>
-        <div style="margin-top: 30px; display: flex; justify-content: center;">
-          <a href="/all-packages.html" class="btnpdf"
-            style="padding: 12px 24px; font-size: 16px; border-radius: 8px; text-decoration: none;">
-            View all packages
-          </a>
-        </div>
-
       </div>
 
       <script>
@@ -1093,7 +1095,7 @@
       });
     });
 
-    
+
   </script>
 
 
