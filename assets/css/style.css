@@ -5,7 +5,7 @@
 
  a {
    text-decoration: none;
-   color: #05374bd0;
+   color: #05374bd0;  
  }
 
  a:hover {
@@ -140,7 +140,7 @@
 --------------------------------------------------------------*/
  .book-a-table-btn {
    display: inline-block;
-   background: #0e4155;
+   background: #05374be0;
    color: white;
    padding: 5px 40px;
    border-radius: 30px;
@@ -547,10 +547,10 @@
  }
 
  #hero .btn-menu:hover,
- #hero .btn-book:hover {
-   border: 2px solid white;
+ #hero .btn-book:hover { 
    color: #fff;
- }
+     background: linear-gradient(135deg, #05374b, #031c25);
+ } 
 
  @media (max-width: 768px) {
    #hero h2 {
@@ -1565,6 +1565,7 @@
      grid-template-columns: 1fr;
    }
  }
+/* Start offers section */
 .package {
   background-color: transparent;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -1585,17 +1586,17 @@
 
 .preview {
   width: 100%;
-  height: auto; /* Allow height to adjust */
+  height: 220px; /* Fixed height for the preview area */
   overflow: hidden;
   position: relative;
 }
 
 .preview iframe {
   width: 100%;
-  height: 220px; /* Set a fixed height for the iframe */
+  height: 100%; /* Fill the preview area */
   border: none;
-  pointer-events: none;
-  transform: translateY(0); /* Adjust position if necessary */
+  pointer-events: auto; /* Allow interaction */
+  
 }
 
 .package-content {
@@ -1607,26 +1608,47 @@
   justify-content: space-between;
 }
  
- .btnpdf {
-   font-weight: 600;
-   font-size: 13px;
-   letter-spacing: 1px;
-   text-transform: uppercase;
-   display: inline-block;
-   padding: 12px 30px;
-   border-radius: 50px;
-   transition: 0.5s;
-   line-height: 1; 
-   animation-delay: 0.5s;
-   color: #fff;
-   background-color: #05374be0;
-   cursor: pointer;
- }
+.btnpdf {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1; 
+  animation-delay: 0.5s;
+  color: #fff;
+  background-color: #05374be0;
+  cursor: pointer;
+}
 
 .btnpdf:hover {
-   border: 2px solid white;
-   color: #fff;
- }
+  background: linear-gradient(135deg, #05374b, #042633);
+  color: white; 
+}
+
+.btnpdfall {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1; 
+  animation-delay: 0.5s;
+  color: #fff;
+  background-color: #05374be0;
+  cursor: pointer; 
+}
+
+.btnpdfall:hover {
+  background: linear-gradient(135deg, #05374b, #042633);
+  color: white; 
+}
 
 /* Additional media queries for responsiveness */
 @media (max-width: 768px) {
@@ -1639,4 +1661,5 @@
     height: 180px; /* Adjust height for smaller screens */
   }
 }
- /* end offers section */
+
+/* end offers section */
