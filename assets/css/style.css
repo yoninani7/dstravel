@@ -111,22 +111,7 @@
    background: #05374bf6;
    border-radius: 10px;
    box-shadow: 0px 2px 10px #ffc56e;
- }
-
- /* 
-#header .logo h1 {
-  font-size: 28px;
-  margin: 0;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: 3px;
-}
-
-#header .logo h1 a,
-#header .logo h1 a:hover {
-  color: #fff;
-  text-decoration: none;
-} */
+ } 
 
  #header .logo img {
    /* margin-top: 10px;    */
