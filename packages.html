@@ -237,22 +237,22 @@
         .accordion {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 20px;   
             margin: 2rem 0;
         }
 
         .accordion-item {
-            background: white;
-            border-radius: 12px;
+            background: white; 
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px  rgba(255, 255, 255, 0.2);  
+          
         }
 
         .accordion-item.expanded {
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.15);
-            transform: translateY(-5px);
+            transform: translateY(-5px); 
         }
 
         .accordion-header {
@@ -266,9 +266,9 @@
             border-bottom: 1px solid #e9ecef;
         }
 
-        .accordion-item.expanded .accordion-header {
-            background: linear-gradient(135deg, #4b6cb7 0%, #182848 20%);
-            color: white;
+        .accordion-item.expanded .accordion-header { 
+            color: #05374b;
+           border: 2px solid #05374b;
         }
 
         .header-left {
@@ -281,7 +281,7 @@
 
        
         .accordion-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
         }
 
