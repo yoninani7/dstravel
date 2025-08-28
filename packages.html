@@ -23,7 +23,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
- <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -42,7 +42,7 @@
             scroll-behavior: smooth;
         }
 
-        h1 { 
+        h1 {
             font-size: 3.5rem;
             margin-bottom: 0.5rem;
             position: relative;
@@ -91,7 +91,7 @@
             pointer-events: none;
             white-space: nowrap;
         }
-        
+
         /* Container */
         .container {
             max-width: 1100px;
@@ -207,52 +207,35 @@
         .pdf-item.expanded .pdf-actions {
             opacity: 1;
         }
+ 
 
-        .action-btn {
-            flex: 1;
-            text-align: center;
-            padding: 12px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            font-size: 1rem;
-        }
-
-        .preview-btn {
-            background: #05374b;
-            color: white;   
-        }
-
-        .preview-btn:hover {
-            background: #05374b;
-            transform: translateY(-2px);
-        }
+       
 
         /* Accordion */
         .accordion {
             display: flex;
             flex-direction: column;
-            gap: 20px;   
+            gap: 20px;
             margin: 2rem 0;
         }
 
         .accordion-item {
-            background: white; 
+            background: white;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            border-top: 1px  rgba(255, 255, 255, 0.2);  
-          
+            border-top: 1px rgba(255, 255, 255, 0.2);
+
         }
 
         .accordion-item.expanded {
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.15);
-            transform: translateY(-5px); 
+            transform: translateY(-5px);
+            height: 460px;
+        }
+
+        .accordion-item.expanded .accordion-content {
+            max-height: 900px;
         }
 
         .accordion-header {
@@ -266,9 +249,9 @@
             border-bottom: 1px solid #e9ecef;
         }
 
-        .accordion-item.expanded .accordion-header { 
+        .accordion-item.expanded .accordion-header {
             color: #05374b;
-           border: 2px solid #05374b;
+            border: 2px solid #05374b;
         }
 
         .header-left {
@@ -277,9 +260,9 @@
             gap: 20px;
         }
 
-  
 
-       
+
+
         .accordion-title {
             font-size: 1.3rem;
             font-weight: 600;
@@ -312,9 +295,7 @@
             transition: max-height 0.5s ease;
         }
 
-        .accordion-item.expanded .accordion-content {
-            max-height: 600px;
-        }
+
 
         /* Footer */
         #footer {
@@ -350,12 +331,12 @@
             .container {
                 padding: 0 1.5rem;
             }
-            
+
             h1 {
                 font-size: 3rem;
                 margin-top: 80px;
             }
-            
+
             .pdf-item.expanded .pdf-preview-container {
                 height: 450px;
             }
@@ -366,11 +347,11 @@
             .pdf-title {
                 font-size: 1.3rem;
             }
-            
+
             .accordion-title {
                 font-size: 1.3rem;
             }
-            
+
             .header-center-text {
                 font-size: 1.3rem;
             }
@@ -381,31 +362,31 @@
             body {
                 padding-top: 80px;
             }
-            
+
             #header {
                 height: 60px;
                 margin: 0 3%;
             }
-            
+
             h1 {
                 font-size: 2.5rem;
                 margin-top: 60px;
             }
-            
+
             .pdf-header {
                 padding: 1rem;
             }
-            
+
             .pdf-item.expanded .pdf-preview-container {
                 height: 400px;
             }
-            
+
             .accordion-header {
                 padding: 15px 20px;
             }
-            
-            
-            
+
+
+
             .footer-content {
                 flex-direction: column;
                 gap: 20px;
@@ -414,47 +395,50 @@
 
         /* Phones */
         @media (max-width: 600px) {
+            .btnpdf{
+                 margin-top: -1000px;
+            }
             #header {
                 margin: 0 2%;
             }
-            
+
             .header-center-text {
                 font-size: 1.1rem;
             }
-            
+
             h1 {
                 font-size: 2rem;
                 margin-top: 40px;
             }
-            
+
             .pdf-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1rem;
             }
-            
+
             .toggle-btn {
                 align-self: flex-end;
             }
-            
+
             .pdf-item.expanded .pdf-preview-container {
                 height: 350px;
             }
-            
+
             .pdf-actions {
                 flex-direction: column;
             }
-            
+
             .accordion-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 15px;
             }
-            
+
             .header-left {
                 width: 100%;
             }
-            
+
             .accordion-toggle-btn {
                 align-self: flex-end;
             }
@@ -465,47 +449,43 @@
             body {
                 padding-top: 70px;
             }
-            
+
             #header {
                 height: 50px;
                 margin: 0 1%;
             }
-            
+
             .header-center-text {
                 font-size: 1rem;
             }
-            
+
             h1 {
                 font-size: 1.8rem;
             }
-            
+
             .container {
                 padding: 0 1rem;
             }
-            
+
             .pdf-preview-container {
                 height: 300px;
             }
-            
+
             .pdf-item.expanded .pdf-preview-container {
                 height: 300px;
             }
-            
+
             .pdf-title {
                 font-size: 1.2rem;
             }
-            
-            .action-btn {
-                padding: 10px 15px;
-                font-size: 0.9rem;
-            }
-            
+ 
+
             .accordion-header {
                 padding: 12px 15px;
             }
-            
-            
-            
+
+
+
             .accordion-title {
                 font-size: 1.2rem;
             }
@@ -516,20 +496,20 @@
             .header-center-text {
                 font-size: 0.9rem;
             }
-            
+
             h1 {
                 font-size: 1.6rem;
             }
-            
+
             .pdf-item.expanded .pdf-preview-container {
                 height: 250px;
             }
-            
+
             .pdf-icon {
                 font-size: 1.5rem;
             }
         }
-    </style> 
+    </style>
 </head>
 
 <body style="background-image:url('assets/img/b.jpg'); background-size: cover; background-attachment: fixed;">
@@ -540,7 +520,7 @@
                     <img src="assets/img/transformedwhite.png" alt="Logo" style="width: auto; height: 50px;" />
                 </a>
             </div>
-            <div class="header-center-text">Our special offer packages</div>
+            <div class="header-center-text">OUR SPECIAL PACKAGES</div>
             <nav id="navbar" class="navbar order-last order-lg-0 center">
                 <ul>
                     <li><a style="font-size: 16px;" class="nav-link scrollto " href="packages.html">Packages</a></li>
@@ -551,75 +531,75 @@
         </div>
     </div><!-- End Header -->
 
- 
- <div class="container">
-        
-        
-        <div class="accordion" id="accordion"> 
+
+    <div class="container">
+
+
+        <div class="accordion" id="accordion">
         </div>
     </div>
-    
 
 
-  <!-- ======= Footer ======= -->
-  <div id="footer">
-    <div class="container">
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-whatsapp"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-telegram"></i></a>
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>DS International Trading PLC</span></strong>. All Rights Reserved
-      </div>
-      <br>
-      <div class="credits">
-        Designed by <a style="color: white; font-weight: bold;" href="https://yonikass.netlify.app/">Yonatan
-          Kassahun</a>
-      </div>
-    </div>
-  </div><!-- End Footer -->
+
+    <!-- ======= Footer ======= -->
+    <div id="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-whatsapp"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-telegram"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>DS International Trading PLC</span></strong>. All Rights Reserved
+            </div>
+            <br>
+            <div class="credits">
+                Designed by <a style="color: white; font-weight: bold;" href="https://yonikass.netlify.app/">Yonatan
+                    Kassahun</a>
+            </div>
+        </div>
+    </div><!-- End Footer -->
 
 
     <script>
         // PDF data
         const pdfFiles = [
-            { 
-                filePath: "assets/packages/3Nights and 4Days Honeymoon package to MBA-with flight ticket .pdf", 
+            {
+                filePath: "assets/packages/3Nights and 4Days Honeymoon package to MBA-with flight ticket .pdf",
             },
-            { 
+            {
                 filePath: "assets/packages/3Nights and 4Days Valentine's Day Package to SEZ-with flight ticket.pdf",
             },
-            { 
-                filePath: "assets/packages/3Nights and 4Days Weekend Gateway package to MBA-with flight ticket.pdf", 
+            {
+                filePath: "assets/packages/3Nights and 4Days Weekend Gateway package to MBA-with flight ticket.pdf",
             },
-            { 
-                filePath: "assets/packages/3Nights and 4Days Weekend Getaway Package to SEZ-with flight ticket.pdf", 
+            {
+                filePath: "assets/packages/3Nights and 4Days Weekend Getaway Package to SEZ-with flight ticket.pdf",
             },
-            { 
-                filePath: "assets/packages/3Nights and 4Days Weekend Getaway Package to ZNZ-with flight ticket.pdf", 
+            {
+                filePath: "assets/packages/3Nights and 4Days Weekend Getaway Package to ZNZ-with flight ticket.pdf",
             },
-            { 
-                filePath: "assets/packages/4Nights and 5Days Honeymoon Package to SEZ-with flight ticket.pdf", 
+            {
+                filePath: "assets/packages/4Nights and 5Days Honeymoon Package to SEZ-with flight ticket.pdf",
             },
-            { 
-                filePath: "assets/packages/Cape Town Honeymoon Package-2025.pdf", 
+            {
+                filePath: "assets/packages/Cape Town Honeymoon Package-2025.pdf",
             },
-            { 
-                filePath: "assets/packages/Cape Town Valentine-2025.pdf", 
+            {
+                filePath: "assets/packages/Cape Town Valentine-2025.pdf",
             },
-            { 
-                filePath: "assets/packages/Mombasa valentine day Package-2025.pdf", 
+            {
+                filePath: "assets/packages/Mombasa valentine day Package-2025.pdf",
             },
-            { 
-                filePath: "assets/packages/Weekend Gateway Cape Town Package-2025.pdf", 
+            {
+                filePath: "assets/packages/Weekend Gateway Cape Town Package-2025.pdf",
             },
-            { 
-                filePath: "assets/packages/Zanzibar Honeymoon Package-2025.pdf", 
+            {
+                filePath: "assets/packages/Zanzibar Honeymoon Package-2025.pdf",
             },
-            { 
-                filePath: "assets/packages/Zanzibar Valentine-2025.pdf", 
+            {
+                filePath: "assets/packages/Zanzibar Valentine-2025.pdf",
             }
         ];
 
@@ -648,11 +628,11 @@
         // Generate accordion items
         function renderAccordion() {
             accordion.innerHTML = '';
-            
+
             pdfFiles.forEach((pdf, index) => {
                 const title = extractTitleFromPath(pdf.filePath);
                 const pdfUrl = preparePdfUrl(pdf.filePath);
-                
+
                 const item = document.createElement('div');
                 item.className = 'accordion-item';
                 item.innerHTML = `
@@ -669,36 +649,38 @@
                         </button>
                     </div>
                     <div class="accordion-content">
-                        <div class="pdf-preview">
+                        <div class="pdf-preview" style="height: 300px;">
                             <iframe class="pdf-iframe" src="${pdfUrl}" frameborder="0"></iframe>
                         </div>
-                        <div class="accordion-actions">
-                            <button class="action-btn preview-btn">
-                                <i class="fas fa-eye"></i> Open in New Tab
-                            </button>
+                        <div class="accordion-actions"> 
+                            <center>
+                            <button class="btnpdf" style="border:none; margin-top: 15px;margin-bottom: 15px; width:50%; ">
+                                <i class="fas fa-eye"></i> preview PDF
+                            </button> 
+                            </center>
                         </div>
                     </div>
                 `;
-                
+
                 // Add event listeners
                 const header = item.querySelector('.accordion-header');
                 const toggleBtn = item.querySelector('.toggle-btn');
-                const previewBtn = item.querySelector('.preview-btn');
-                
+                const previewBtn = item.querySelector('.btnpdf');
+
                 header.addEventListener('click', () => {
                     toggleItem(item);
                 });
-                
+
                 toggleBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     toggleItem(item);
                 });
-                
+
                 previewBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     window.open(pdf.filePath, '_blank');
                 });
-                
+
                 accordion.appendChild(item);
             });
         }
@@ -706,12 +688,12 @@
         // Toggle accordion item
         function toggleItem(item) {
             const wasExpanded = item.classList.contains('expanded');
-            
+
             // Collapse all items
             document.querySelectorAll('.accordion-item').forEach(accordionItem => {
                 accordionItem.classList.remove('expanded');
             });
-            
+
             // If it wasn't already expanded, expand it
             if (!wasExpanded) {
                 item.classList.add('expanded');
@@ -725,4 +707,5 @@
         renderAccordion();
     </script>
 </body>
+
 </html>
