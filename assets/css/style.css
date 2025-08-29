@@ -1537,8 +1537,7 @@
    padding: 60px 20px;
    max-width: 1200px;
    margin: auto;
- }
-
+ } 
  @media (max-width: 992px) {
    .containered {
      grid-template-columns: repeat(2, 1fr);
@@ -1562,9 +1561,8 @@
   flex: 1 1 300px; /* Allow packages to grow */ 
 }
 
-.package:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+.package:hover{  
+  border-top: #05374b solid thin;
 }
 
 .preview {
