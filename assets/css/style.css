@@ -108,7 +108,7 @@
    top: 10px;
    margin-left: 5%;
    margin-right: 5%;
-   background: #05374bf6;
+   background: linear-gradient(135deg, #05374b , #031c25);
    border-radius: 10px;
    box-shadow: 0px 2px 10px #ffc56e;
  } 
@@ -1467,63 +1467,133 @@
  /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
- #footer {
-   /* background-image: linear-gradient(to bottom, #d1d1d1 0%, #05374b 40%, #05374b 80%, #05374b 100%); */
-   background-color: #05374b;
-   color: white;
-   padding: 40px 0;
- }
 
- .container {
-   max-width: 1140px;
-   max-height: 10%;
+        
+        /* Footer Styles */
+        #footer {
+            background: #0a1929;
+            background: linear-gradient(0deg, #0a1929 0%, #05374b 100%);
+            color: white;
+            padding: 60px 0 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stars-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite ease-in-out;
+        }
+        
+        /* Generate 100 stars with random positions and sizes */
+        .star:nth-child(1) { top: 15%; left: 5%; width: 2px; height: 2px; animation-delay: 0.5s; }
+        .star:nth-child(2) { top: 25%; left: 15%; width: 1px; height: 1px; animation-delay: 1.2s; }
+        .star:nth-child(3) { top: 35%; left: 25%; width: 2px; height: 2px; animation-delay: 0.8s; }
+        .star:nth-child(4) { top: 45%; left: 35%; width: 1px; height: 1px; animation-delay: 2.1s; }
+        .star:nth-child(5) { top: 55%; left: 45%; width: 3px; height: 3px; animation-delay: 1.5s; }
+        .star:nth-child(6) { top: 65%; left: 55%; width: 1px; height: 1px; animation-delay: 0.3s; }
+        .star:nth-child(7) { top: 75%; left: 65%; width: 2px; height: 2px; animation-delay: 2.4s; }
+        .star:nth-child(8) { top: 85%; left: 75%; width: 1px; height: 1px; animation-delay: 1.8s; }
+        .star:nth-child(9) { top: 20%; left: 85%; width: 2px; height: 2px; animation-delay: 0.7s; }
+        .star:nth-child(10) { top: 30%; left: 95%; width: 1px; height: 1px; animation-delay: 2.7s; }
+        .star:nth-child(11) { top: 10%; left: 30%; width: 2px; height: 2px; animation-delay: 1.1s; }
+        .star:nth-child(12) { top: 40%; left: 10%; width: 1px; height: 1px; animation-delay: 0.4s; }
+        .star:nth-child(13) { top: 60%; left: 20%; width: 3px; height: 3px; animation-delay: 2.2s; }
+        .star:nth-child(14) { top: 80%; left: 30%; width: 1px; height: 1px; animation-delay: 1.3s; }
+        .star:nth-child(15) { top: 50%; left: 80%; width: 2px; height: 2px; animation-delay: 0.9s; }
+        .star:nth-child(16) { top: 70%; left: 90%; width: 1px; height: 1px; animation-delay: 2.5s; }
+        .star:nth-child(17) { top: 25%; left: 50%; width: 2px; height: 2px; animation-delay: 1.6s; }
+        .star:nth-child(18) { top: 45%; left: 60%; width: 1px; height: 1px; animation-delay: 0.6s; }
+        .star:nth-child(19) { top: 65%; left: 70%; width: 2px; height: 2px; animation-delay: 2.3s; }
+        .star:nth-child(20) { top: 85%; left: 80%; width: 1px; height: 1px; animation-delay: 1.4s; }
+        .star:nth-child(21) { top: 5%; left: 20%; width: 2px; height: 2px; animation-delay: 0.5s; }
+        .star:nth-child(22) { top: 15%; left: 40%; width: 1px; height: 1px; animation-delay: 1.7s; }
+        .star:nth-child(23) { top: 35%; left: 70%; width: 2px; height: 2px; animation-delay: 0.9s; }
+        .star:nth-child(24) { top: 55%; left: 90%; width: 1px; height: 1px; animation-delay: 2.6s; }
+        .star:nth-child(25) { top: 75%; left: 10%; width: 3px; height: 3px; animation-delay: 1.2s; }
+        .star:nth-child(26) { top: 95%; left: 30%; width: 1px; height: 1px; animation-delay: 0.8s; }
+        .star:nth-child(27) { top: 10%; left: 60%; width: 2px; height: 2px; animation-delay: 2.4s; }
+        .star:nth-child(28) { top: 30%; left: 80%; width: 1px; height: 1px; animation-delay: 1.5s; }
+        .star:nth-child(29) { top: 50%; left: 5%; width: 2px; height: 2px; animation-delay: 0.7s; } 
+ 
+ 
+   
+  
 
- }
+        @keyframes twinkle {
+            0%, 100% { 
+                opacity: 0.3; 
+                transform: scale(0.8);
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.2);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            }
+        }
 
- .social-links {
-   display: flex;
-   justify-content: center;
-   margin-bottom: 30px;
- }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
 
- .social-links a {
-   display: inline-block;
-   width: 40px;
-   height: 40px;
-   background-color: rgba(255, 255, 255, 0.1);
-   color: white;
-   text-align: center;
-   line-height: 40px;
-   border-radius: 50%;
-   margin: 0 10px;
-   transition: all 0.3s ease-in-out;
- }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
 
- .social-links a i {
-   font-size: 18px;
-   vertical-align: middle;
- }
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: all 0.3s ease-in-out;
+        }
 
- .social-links a:hover {
-   background-color: white;
-   color: #05374b;
- }
+        .social-links a i {
+            font-size: 18px;
+            vertical-align: middle;
+        }
 
- .copyright,
- .credits {
-   text-align: center;
-   font-size: 14px;
- }
+        .social-links a:hover {
+            background-color: white;
+            color: #05374b;
+            transform: translateY(-5px);
+        }
 
- .credits a {
-   color: white;
-   font-weight: bold;
-   text-decoration: none;
- }
+        .copyright,
+        .credits {
+            text-align: center;
+            font-size: 14px;
+        }
 
- .credits a:hover {
-   color: #b2b2b2;
- }
+        .credits a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .credits a:hover {
+            color: #b2b2b2;
+        }
 
  /* start offers section */
  .offers {
