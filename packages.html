@@ -63,11 +63,11 @@
             z-index: 997;
             transition: all 0.5s;
             padding: 10px 0;
-            background: rgba(5, 55, 75, 0.98);
+             background: linear-gradient(100deg, rgba(5, 55, 75, 0.98), #094e68);
             margin: 0 5%;
-            border-radius: 10px;
-            box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
-        }
+            border-radius: 10px; 
+            box-shadow: 0px 1px 4px #ffffff;
+               }
 
         #header.header-transparent {
             background: transparent;
@@ -207,9 +207,27 @@
         .pdf-item.expanded .pdf-actions {
             opacity: 1;
         }
- 
 
-       
+        .btnpdf {
+            background: linear-gradient(135deg, #05374b 0%, #084f6b 100%);
+            width: 300px;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            margin: 10px 5px; 
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btnpdf:hover {
+            background: linear-gradient(135deg,  #05374b 0%, #05374b 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
         /* Accordion */
         .accordion {
@@ -225,17 +243,11 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             border-top: 1px rgba(255, 255, 255, 0.2);
-
         }
 
         .accordion-item.expanded {
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.15);
             transform: translateY(-5px);
-            height: 460px;
-        }
-
-        .accordion-item.expanded .accordion-content {
-            max-height: 900px;
         }
 
         .accordion-header {
@@ -251,14 +263,15 @@
 
         .accordion-item.expanded .accordion-header {
             color: #05374b;
-            border-top: 3px solid #05374b ;  
+            border-top: 3px solid #05374b;
         }
 
         .header-left {
             display: flex;
             align-items: center;
             gap: 20px;
-        } 
+        }
+
         .accordion-title {
             font-size: 1.3rem;
             font-weight: 600;
@@ -268,7 +281,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #b7584b 0%, #182848 100%);
+            background: linear-gradient(135deg,  #182848 0%, #253d6e 100%);
             color: white;
             border: none;
             display: flex;
@@ -280,7 +293,7 @@
         }
 
         .accordion-item.expanded .accordion-toggle-btn {
-            background: white;
+            background: wheat;
             color: #051f5c;
             transform: rotate(180deg);
         }
@@ -291,7 +304,27 @@
             transition: max-height 0.5s ease;
         }
 
+        .accordion-item.expanded .accordion-content {
+            max-height: 900px;
+        }
 
+        .pdf-preview {
+            height: 0;
+            transition: height 0.4s ease;
+            overflow: hidden;
+        }
+
+        .accordion-item.expanded .pdf-preview {
+            height: 400px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
         /* Footer */
         #footer {
@@ -299,6 +332,29 @@
             color: white;
             padding: 40px 0;
             margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stars-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
         }
 
         .footer-content {
@@ -321,6 +377,43 @@
             display: inline-block;
         }
 
+        .social-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            font-size: 18px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            line-height: 1;
+            padding: 8px 0;
+            margin-right: 4px;
+            border-radius: 50%;
+            text-align: center;
+            width: 36px;
+            height: 36px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #ffc56e;
+            color: #05374b;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        .credits {
+            text-align: center;
+            font-size: 13px;
+            padding-top: 5px;
+        }
+
         /* Responsive Design */
         /* Tablets and smaller desktops */
         @media (max-width: 1024px) {
@@ -335,6 +428,10 @@
 
             .pdf-item.expanded .pdf-preview-container {
                 height: 450px;
+            }
+
+            .accordion-item.expanded .pdf-preview {
+                height: 350px;
             }
         }
 
@@ -381,19 +478,29 @@
                 padding: 15px 20px;
             }
 
-
+            .accordion-item.expanded .pdf-preview {
+                height: 300px;
+            }
 
             .footer-content {
                 flex-direction: column;
                 gap: 20px;
             }
+
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btnpdf {
+                width: 80%;
+                text-align: center;
+                justify-content: center;
+            }
         }
 
         /* Phones */
         @media (max-width: 600px) {
-            .btnpdf{
-                 margin-top: -1000px;
-            }
             #header {
                 margin: 0 2%;
             }
@@ -438,6 +545,14 @@
             .accordion-toggle-btn {
                 align-self: flex-end;
             }
+
+            .accordion-item.expanded .pdf-preview {
+                height: 250px;
+            }
+
+            .logo-container img {
+                width: 70px !important;
+            }
         }
 
         /* Small phones */
@@ -474,16 +589,23 @@
             .pdf-title {
                 font-size: 1.2rem;
             }
- 
 
             .accordion-header {
                 padding: 12px 15px;
             }
 
-
-
             .accordion-title {
                 font-size: 1.2rem;
+            }
+
+            .accordion-item.expanded .pdf-preview {
+                height: 200px;
+            }
+
+            .btnpdf {
+                width: 90%;
+                padding: 8px 15px;
+                font-size: 14px;
             }
         }
 
@@ -503,6 +625,14 @@
 
             .pdf-icon {
                 font-size: 1.5rem;
+            }
+
+            .accordion-item.expanded .pdf-preview {
+                height: 180px;
+            }
+
+            .logo-container img {
+                width: 60px !important;
             }
         }
     </style>
@@ -527,140 +657,128 @@
         </div>
     </div><!-- End Header -->
 
-
     <div class="container">
-
-
         <div class="accordion" id="accordion">
         </div>
     </div>
 
-  <!-- ======= Footer ======= -->
-  <div id="footer">
-    <div class="stars-container">
-      <!-- Generate 100 star divs -->
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-    </div>
-    <div class="container">
-      <div class="social-links">
-        <a href="#" class="twitter"><i class='bx bxl-whatsapp'></i></a>
-        <a href="#" class="facebook"><i class='bx bxl-facebook'></i></a>
-        <a href="#" class="instagram"><i class='bx bxl-instagram'></i></a>
-        <a href="#" class="linkedin"><i class='bx bxl-telegram'></i></a>
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>DS International Trading PLC</span></strong>. All Rights Reserved
-      </div>
-      <br>
-      <div class="credits">
-        Designed by <a style="color: white; font-weight: bold;" href="https://yonikass.netlify.app/">Yonatan
-          Kassahun</a>
-      </div>
-    </div>
-  </div><!-- End Footer -->
+    <!-- ======= Footer ======= -->
+    <div id="footer">
+        <div class="stars-container">
+            <!-- Generate 100 star divs -->
+          
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="twitter"><i class='bx bxl-whatsapp'></i></a>
+                <a href="#" class="facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="linkedin"><i class='bx bxl-telegram'></i></a>
+            </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>DS International Trading PLC</span></strong>. All Rights Reserved
+            </div>
+            <br>
+            <div class="credits">
+                Designed by <a style="color: white; font-weight: bold;" href="https://yonikass.netlify.app/">Yonatan
+                    Kassahun</a>
+            </div>
+        </div>
+    </div><!-- End Footer -->
 
-  
     <script>
         // PDF data
         const pdfFiles = [
@@ -741,33 +859,31 @@
                                 <img src="assets/img/footerlogoenhanced.png" alt="Logo" style="width:90px">
                             </div>
                             <h2 class="accordion-title">${title}</h2>
-                            
                         </div>
- &nbsp;&nbsp;
-                        <button class="toggle-btn">
+                        <button class="accordion-toggle-btn">
                             <i class="fas fa-chevron-down"></i>
                         </button>
-                        
                     </div>
                     <div class="accordion-content">
-                        <div class="pdf-preview" style="height: 300px;">
+                        <div class="pdf-preview">
                             <iframe class="pdf-iframe" src="${pdfUrl}" frameborder="0"></iframe>
-                        </div> 
-                            <center>
-                                
-                            <button class="btnpdf" style="border:none; margin-top: 15px;margin-bottom: 15px; width:50%;">
-                                <i class="fas fa-eye"></i> preview PDF
-                            </button> 
-                            <button onclick="book.html" class="btnpdf" style="border:none; ">Book Now</button>
-
-                            </center> 
+                        </div>
+                        <div class="button-container">
+                            <button class="btnpdf preview-btn">
+                                <i class="fas fa-eye"></i>&nbsp;&nbsp; Preview PDF
+                            </button>
+                            <button class="btnpdf book-btn">
+                                <i class="fas fa-calendar-check"></i>&nbsp;&nbsp; Book Now
+                            </button>
+                        </div>
                     </div>
                 `;
 
                 // Add event listeners
                 const header = item.querySelector('.accordion-header');
-                const toggleBtn = item.querySelector('.toggle-btn');
-                const previewBtn = item.querySelector('.btnpdf');
+                const toggleBtn = item.querySelector('.accordion-toggle-btn');
+                const previewBtn = item.querySelector('.preview-btn');
+                const bookBtn = item.querySelector('.book-btn');
 
                 header.addEventListener('click', () => {
                     toggleItem(item);
@@ -783,8 +899,16 @@
                     window.open(pdf.filePath, '_blank');
                 });
 
+                bookBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    window.location.href = 'book.html';
+                });
+
                 accordion.appendChild(item);
             });
+
+            // Generate stars for footer
+            generateStars();
         }
 
         // Toggle accordion item
@@ -803,6 +927,30 @@
             } else {
                 currentlyExpanded = null;
             }
+        }
+
+        // Generate stars for footer
+        function generateStars() {
+            const starsContainer = document.querySelector('.stars-container');
+            const stars = starsContainer.querySelectorAll('.star');
+            
+            stars.forEach(star => {
+                // Random position
+                const top = Math.random() * 100;
+                const left = Math.random() * 100;
+                
+                // Random size between 1-3px
+                const size = Math.random() * 2 + 1;
+                
+                // Random animation delay
+                const delay = Math.random() * 5;
+                
+                star.style.top = `${top}%`;
+                star.style.left = `${left}%`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.animationDelay = `${delay}s`;
+            });
         }
 
         // Initial render
