@@ -2,375 +2,709 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DS International Trading PLC</title>
-<link rel="icon" type="image/png" href="assets/img/transformed.png" sizes="164x164">
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DS International Trading PLC - Art Gallery</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="icon" type="image/png" href="assets/img/transformed.png" sizes="164x164">
+  <!-- Add this line within the <head> section -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
   <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Custom Styles -->
-  <link href="assets/css/style.css" rel="stylesheet" />
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
 
-  <style>
-    :root {
-      --primary: #003973;
-      --accent: #ffcf88;
-      --text: #333;
-      --bg: #f9fafb;
-    }
+  <style> 
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      height: 100%;
+      margin: 0;  
     }
 
-    header {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('assets/img/sam/gallery.jpg') center center / cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
+    .contained {
+      max-width: 1200px;  
+      margin: 0 auto;
+      margin-top: 30px; 
     }
 
-    header img {
-      max-height: 55px;
-      margin-bottom: 10px;
+    #header {
+      position: relative;
+      top: 10px;
+      left: 0;
+      right: 0;
+      height: 70px;
+      z-index: 997;
+      transition: all 0.5s;
+      padding: 10px 0;
+      background: rgba(5, 55, 75, 0.98);
+      margin: 0 5%;
+      border-radius: 10px;
+      box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
     }
 
-    header h1 {
-      font-size: 2rem;
+    #header.header-transparent {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    #header.header-scrolled {
+      top: 10px;
+      background: rgba(5, 55, 75, 0.98);
+      box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
+    }
+
+    .header-center-text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+      pointer-events: none;
+      text-transform: uppercase;
+    } 
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 0.7rem 1.8rem;
+      background: #05374b;
+      border: none;
+      border-radius: 30px;
+      color: #ffffff;
       letter-spacing: 1px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-transform: uppercase;
     }
 
-    header p {
-      font-size: 1rem;
-      opacity: 0.85;
+    .filter-btn:hover {
+      background: #ffc56e;
+      color: #05374b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
     }
 
-    .swiper-container-wrapper {
-      background: url('assets/img/galback.jpg') center center / cover no-repeat  ;
-      padding: 40px 0;
-      margin: 20px auto;
-      max-width: 1200px;
+    .filter-btn.active {
+      background: #ffc56e;
+      color: #05374b;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery-item {
       border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .swiper {
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .swiper-slide {
-      width: 280px;
-      height: 280px;
-      border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s ease;
       cursor: pointer;
-      will-change: transform;
+      position: relative;
+      aspect-ratio: 4/3;
     }
 
-    .swiper-slide:hover {
-      transform: scale(1.04);
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .swiper-pagination-bullet {
-      background: #bbb;
-      opacity: 1;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: var(--primary);
-    }
-
-    .section-title h1 {
-      font-size: 2.5rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    .section-title span {
-      color: var(--accent);
-    }
-
-    .section-title p {
-      font-size: 1rem;
-      text-align: center;
-      color: #666;
+    .gallery-item:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     }
 
     .gallery-item img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
+      transition: transform 0.5s ease;
     }
 
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal.active {
-      display: flex;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .modal img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-    }
-
-    .modal-navigation {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
-
-    .modal-button {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(5px);
-      color: white;
-      font-size: 40px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      pointer-events: all;
-      padding: 0 20px;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    .modal-button:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-
-    .exit-button {
-      position: fixed;
-      top: 20px;
-      right: 25px;
-      font-size: 28px;
-      font-weight: bold;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(51, 51, 51, 0.6);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .exit-button:hover {
-      background: rgba(134, 0, 0, 0.7);
+    .gallery-item:hover img {
       transform: scale(1.1);
     }
 
-    @media (max-width: 600px) {
-      .swiper-slide {
-        width: 240px;
-        height: 240px;
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.92);
+      z-index: 1000;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+    }
+
+    .modal.show {
+      opacity: 1;
+    }
+
+    .modal-content {
+      position: absolute;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.116);
+    }
+
+    .modal-image {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      color: black;
+      font-size: 32px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      content: center;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.6s ease;
+    }
+
+    .close:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(90deg);
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+
+      font-size: 32px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .prev {
+      left: 25px;
+    }
+
+    .next {
+      right: 25px;
+    }
+
+    /* Image counter */
+    .image-counter {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 1.2rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
       }
 
-      header h1 {
-        font-size: 1.4rem;
+      .nav-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+
       }
 
-      .modal-button {
-        font-size: 30px;
+      .close {
+        width: 45px;
+        height: 45px;
+        font-size: 28px;
       }
     }
+
+    @media (max-width: 576px) {
+      .filter-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      .close {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+      }
+
+      .image-counter {
+        font-size: 1rem;
+        bottom: 15px;
+      }
+    }
+
+    /* Footer */
+  #footer {
+margin-top: 40px; 
+}
+
+    
   </style>
 </head>
 
-<body background="assets/img/photoback.jpg " style="background-color: #DBD6D4; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;   ">
-  <button id="exitPageBtn" class="exit-button">×</button>
+<body>
+  <div id="header">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <div class="logo me-auto">
+        <a href="index.html">
+          <img src="assets/img/transformedwhite.png" alt="Logo" style="width: auto; height: 50px;" />
+        </a>
+      </div>
+      <div class="header-center-text">Photo gallery</div>
+      <nav id="navbar" class="navbar order-last order-lg-0 center">
 
-  <header>
-    <a href="index.html">
-      <img src="assets/img/transformedwhite.png" alt="Logo" />
-    </a>
-    <h1>Our Image Gallery</h1>
-    <p>Browse our collection of moments, events, and team celebrations.</p>
-  </header> 
-<div style="background-color: #0D0D0D; top: 0;">
- 
-  <div class="swiper-container-wrapper">  
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" data-img="assets/img/sam/EB7A3534.JPG"><img src="assets/img/sam/EB7A3534.JPG"
-            alt="Slide 1" /></div>
-        <div class="swiper-slide" data-img="assets/img/sam/EB7A1497.jpg"><img src="assets/img/sam/EB7A1497.jpg"
-            alt="Slide 2" /></div>
-        <div class="swiper-slide" data-img="assets/img/sam/EB7A4854.jpg"><img src="assets/img/sam/EB7A4854.jpg"
-            alt="Slide 3" /></div>
-        <div class="swiper-slide" data-img="assets/img/sam/EB7A9890.jpg"><img src="assets/img/sam/EB7A9890.JPG"
-            alt="Slide 4" /></div>
-        <div class="swiper-slide" data-img="assets/img/event-private.jpg"><img src="assets/img/sam/EB7A4854.jpg"
-            alt="Slide 5" /></div>
-        <div class="swiper-slide" data-img="assets/img/event-custom.jpg"><img src="assets/img/sam/EB7A9890.JPG"
-            alt="Slide 6" /></div>
+        <ul>
+
+
+          <li><a style="font-size: 16px;" class="nav-link scrollto " href="artgallery.html">Gallery</a></li>
+          <li><a class="nav-link scrollto ">/</a></li>
+
+          <li><a style="font-size: 16px;" class="nav-link scrollto active" href="index.html">Home</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+    </div>
+  </div><!-- End Header -->
+  <div class="contained">
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="beach">Scenery</button>
+      <button class="filter-btn" data-filter="mountain">Devours</button>
+      <button class="filter-btn" data-filter="city">Explorers</button>
+    </div>
+
+    <div class="gallery">
+      <!-- Beach destinations -->
+      <div class="gallery-item" data-category="beach">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="Tropical Beach">
       </div>
 
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-</div>
- 
+      <div class="gallery-item" data-category="beach">
+        <img
+          src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="Sandy Beach">
+      </div>
 
-  <!-- Modal -->
-  <div class="modal" id="imageModal">
-    <img id="modalImage" src="" alt="Preview Image" />
-    <div class="modal-navigation">
-      <button class="modal-button" id="prevButton">&#10094;</button>
-      <button class="modal-button" id="nextButton">&#10095;</button>
+      <!-- Mountain destinations -->
+      <div class="gallery-item" data-category="mountain">
+        <img
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="Mountain Range">
+      </div>
+
+      <div class="gallery-item" data-category="mountain">
+        <img
+          src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="Mountain Lake">
+      </div>
+
+      <!-- City destinations -->
+      <div class="gallery-item" data-category="city">
+        <img
+          src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="New York City">
+      </div>
+
+      <div class="gallery-item" data-category="city">
+        <img
+          src="https://images.unsplash.com/photo-1549144511-736d184193d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="Paris">
+      </div>
+
+      <div class="gallery-item" data-category="beach">
+        <img
+          src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="Coastal Town">
+      </div>
+
+      <div class="gallery-item" data-category="city">
+        <img
+          src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="Tokyo">
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close"><i class="fas fa-times"
+            style="display: flex; justify-content: center; align-items: center;font-size: 19px;color: white;"></i></span>
+        <button class="nav-btn prev">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="nav-btn next">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <img class="modal-image" src="" alt="">
+        <div class="image-counter"></div>
+      </div>
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" >
+    <div class="stars-container">
+      <!-- Generate 100 star divs -->
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </div>
+    <div class="container">
+      <div class="social-links">
+        <a href="#" class="twitter"><i class='bx bxl-whatsapp'></i></a>
+        <a href="#" class="facebook"><i class='bx bxl-facebook'></i></a>
+        <a href="#" class="instagram"><i class='bx bxl-instagram'></i></a>
+        <a href="#" class="linkedin"><i class='bx bxl-telegram'></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>DS International Trading PLC</span></strong>. All Rights Reserved
+      </div>
+      <br>
+      <div class="credits">
+        Designed by <a style="color: white; font-weight: bold;" href="https://yonikass.netlify.app/">Yonatan
+          Kassahun</a>
+      </div>
+    </div>
+  </div><!-- End Footer -->
+
+  </div>
+
   <script>
-    const swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      slidesPerView: "auto",
-      loop: true,
-      coverflowEffect: {
-        rotate: 10,
-        stretch: 20,
-        depth: 150,
-        modifier: 2,
-        slideShadows: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+    document.addEventListener('DOMContentLoaded', function () {
+      // Image array for navigation
+      const images = [
+        {
+          src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          category: "beach"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          category: "beach"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          category: "mountain"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          category: "mountain"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          category: "city"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1549144511-736d184193d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          category: "city"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          category: "beach"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          category: "city"
+        }
+      ];
 
-      },
-    });
+      // Filter functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
 
-    const modal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
-    const swiperSlides = document.querySelectorAll(".swiper-slide");
-    const galleryItems = document.querySelectorAll(".gallery-item a");
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
 
-    let currentIndex = 0;
-    let currentSource = "";
+          // Add active class to clicked button
+          button.classList.add('active');
 
-    const swiperImages = Array.from(swiperSlides).map(slide => slide.dataset.img);
-    const galleryImages = Array.from(galleryItems).map(item => item.getAttribute("href"));
+          const filter = button.getAttribute('data-filter');
 
-    function openModal(index, source) {
-      currentSource = source;
-      currentIndex = index;
-      modalImage.src = (source === "swiper" ? swiperImages : galleryImages)[index];
-      modal.classList.add("active");
-      document.getElementById("exitPageBtn").style.display = "none";
-    }
-
-    function closeModal() {
-      modal.classList.remove("active");
-      document.getElementById("exitPageBtn").style.display = "";
-    }
-
-    function updateImage(index) {
-      const sourceArray = currentSource === "swiper" ? swiperImages : galleryImages;
-      currentIndex = (index + sourceArray.length) % sourceArray.length;
-      modalImage.src = sourceArray[currentIndex];
-    }
-
-    swiperSlides.forEach((slide, i) => {
-      slide.addEventListener("click", () => openModal(i, "swiper"));
-    });
-
-    galleryItems.forEach((item, i) => {
-      item.addEventListener("click", (e) => {
-        e.preventDefault();
-        openModal(i, "gallery");
+          galleryItems.forEach((item, index) => {
+            if (filter === 'all' || images[index].category === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
       });
-    });
 
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) closeModal();
-    });
+      // Modal functionality
+      const modal = document.querySelector('.modal');
+      const modalImage = document.querySelector('.modal-image');
+      const closeButton = document.querySelector('.close');
+      const prevButton = document.querySelector('.prev');
+      const nextButton = document.querySelector('.next');
+      const imageCounter = document.querySelector('.image-counter');
 
-    document.getElementById("prevButton").addEventListener("click", (e) => {
-      e.stopPropagation();
-      updateImage(currentIndex - 1);
-    });
+      let currentImageIndex = 0;
+      let filteredImages = [];
 
-    document.getElementById("nextButton").addEventListener("click", (e) => {
-      e.stopPropagation();
-      updateImage(currentIndex + 1);
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (modal.classList.contains("active")) {
-        if (e.key === "ArrowLeft") updateImage(currentIndex - 1);
-        if (e.key === "ArrowRight") updateImage(currentIndex + 1);
-        if (e.key === "Escape") closeModal();
+      // Function to open modal with specific image
+      function openModal(index) {
+        currentImageIndex = index;
+        modalImage.src = filteredImages[currentImageIndex].src;
+        updateImageCounter();
+        modal.style.display = 'block';
+        setTimeout(() => {
+          modal.classList.add('show');
+        }, 10);
       }
-    });
 
-    document.getElementById("exitPageBtn").addEventListener("click", () => {
-      window.location.href = "index.html";
+      // Function to update image counter
+      function updateImageCounter() {
+        imageCounter.textContent = `${currentImageIndex + 1} / ${filteredImages.length}`;
+      }
+
+      // Function to navigate to next image
+      function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % filteredImages.length;
+        modalImage.src = filteredImages[currentImageIndex].src;
+        updateImageCounter();
+      }
+
+      // Function to navigate to previous image
+      function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + filteredImages.length) % filteredImages.length;
+        modalImage.src = filteredImages[currentImageIndex].src;
+        updateImageCounter();
+      }
+
+      // Add click event to gallery items
+      galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          // Get current filter
+          const currentFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+
+          // Create filtered images array based on current filter
+          filteredImages = [];
+          images.forEach((img, i) => {
+            if (currentFilter === 'all' || img.category === currentFilter) {
+              filteredImages.push({
+                src: img.src,
+                index: i
+              });
+            }
+          });
+
+          // Find the clicked image index in the filtered array
+          const clickedImageIndex = filteredImages.findIndex(img => img.index === index);
+
+          // Open modal with the clicked image
+          openModal(clickedImageIndex);
+        });
+      });
+
+      // Close modal
+      closeButton.addEventListener('click', () => {
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 300);
+      });
+
+      // Navigate with buttons
+      nextButton.addEventListener('click', nextImage);
+      prevButton.addEventListener('click', prevImage);
+
+      // Navigate with keyboard arrows
+      document.addEventListener('keydown', (e) => {
+        if (modal.style.display === 'block') {
+          if (e.key === 'ArrowRight') {
+            nextImage();
+          } else if (e.key === 'ArrowLeft') {
+            prevImage();
+          } else if (e.key === 'Escape') {
+            modal.classList.remove('show');
+            setTimeout(() => {
+              modal.style.display = 'none';
+            }, 300);
+          }
+        }
+      });
+
+      // Close modal when clicking outside
+      window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.classList.remove('show');
+          setTimeout(() => {
+            modal.style.display = 'none';
+          }, 300);
+        }
+      });
     });
   </script>
 </body>

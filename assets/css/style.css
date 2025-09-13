@@ -135,8 +135,9 @@
    box-shadow: 0px 3px 4px #ffffff;
  }
 
- .book-a-table-btn:hover {
-   color: white;
+ #book-a-table-btn:hover { 
+  
+   box-shadow: 0px 0px 4px #ffffff;
  }
 
 
