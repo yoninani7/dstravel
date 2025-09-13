@@ -12,7 +12,6 @@
   <!-- Add this line within the <head> section -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,18 +25,17 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
 
-  <style> 
-
+  <style>
     body {
       font-family: 'Poppins', sans-serif;
       height: 100%;
-      margin: 0;  
+      margin: 0;
     }
 
     .contained {
-      max-width: 1200px;  
+      max-width: 1200px;
       margin: 0 auto;
-      margin-top: 30px; 
+      margin-top: 30px;
     }
 
     #header {
@@ -49,10 +47,10 @@
       z-index: 997;
       transition: all 0.5s;
       padding: 10px 0;
-      background: rgba(5, 55, 75, 0.98);
+      box-shadow: 0px 1px 4px #ffffff;
       margin: 0 5%;
       border-radius: 10px;
-      box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
+      background: linear-gradient(100deg, rgba(5, 55, 75, 0.98), #094e68);
     }
 
     #header.header-transparent {
@@ -75,7 +73,7 @@
       color: white;
       pointer-events: none;
       text-transform: uppercase;
-    } 
+    }
 
     .filters {
       display: flex;
@@ -303,11 +301,23 @@
     }
 
     /* Footer */
-  #footer {
-margin-top: 40px; 
-}
-
+    #footer {
+      margin-top: 40px;
+    }
     
+    /* Lazy loading styles */
+    .gallery-item img {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .gallery-item img.lazy-loaded {
+      opacity: 1;
+    }
+    
+    .gallery-item img.lazy-loading {
+      filter: blur(8px);
+    }
   </style>
 </head>
 
@@ -319,7 +329,7 @@ margin-top: 40px;
           <img src="assets/img/transformedwhite.png" alt="Logo" style="width: auto; height: 50px;" />
         </a>
       </div>
-      <div class="header-center-text">Photo gallery</div>
+      <div class="header-center-text">Photo album</div>
       <nav id="navbar" class="navbar order-last order-lg-0 center">
 
         <ul>
@@ -336,62 +346,35 @@ margin-top: 40px;
   <div class="contained">
     <div class="filters">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="beach">Scenery</button>
-      <button class="filter-btn" data-filter="mountain">Devours</button>
-      <button class="filter-btn" data-filter="city">Explorers</button>
+      <button class="filter-btn" data-filter="explorers">Explorers</button>
+      <button class="filter-btn" data-filter="scenery">Scenery</button>
+      <button class="filter-btn" data-filter="devours">Devours</button>
     </div>
 
     <div class="gallery">
-      <!-- Beach destinations -->
-      <div class="gallery-item" data-category="beach">
-        <img
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="Tropical Beach">
+      <!-- Explorers -->
+      <div class="gallery-item" data-category="explorers">
+        <img class="lazy-loading" data-src="assets/img/selectedimg/explorers/e.JPG" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Tropical explorers">
       </div>
 
-      <div class="gallery-item" data-category="beach">
-        <img
-          src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="Sandy Beach">
+      <div class="gallery-item" data-category="explorers">
+        <img class="lazy-loading" data-src="assets/img/selectedimg/explorers/e1.JPG" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Tropical explorers">
+      </div>
+      
+      <!-- Scenery -->
+      <div class="gallery-item" data-category="scenery">
+        <img class="lazy-loading" data-src="assets/img/selectedimg/scenery/s.JPG" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Tropical explorers">
       </div>
 
-      <!-- Mountain destinations -->
-      <div class="gallery-item" data-category="mountain">
-        <img
-          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="Mountain Range">
+      <!-- Devours -->
+      <div class="gallery-item" data-category="devours">
+        <img class="lazy-loading" data-src="assets/img/selectedimg/devours/d.JPG" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Devours">
+      </div>
+      
+      <div class="gallery-item" data-category="devours">
+        <img class="lazy-loading" data-src="assets/img/selectedimg/explorers/e1.JPG" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Tropical explorers">
       </div>
 
-      <div class="gallery-item" data-category="mountain">
-        <img
-          src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="Mountain Lake">
-      </div>
-
-      <!-- City destinations -->
-      <div class="gallery-item" data-category="city">
-        <img
-          src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="New York City">
-      </div>
-
-      <div class="gallery-item" data-category="city">
-        <img
-          src="https://images.unsplash.com/photo-1549144511-736d184193d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="Paris">
-      </div>
-
-      <div class="gallery-item" data-category="beach">
-        <img
-          src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="Coastal Town">
-      </div>
-
-      <div class="gallery-item" data-category="city">
-        <img
-          src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="Tokyo">
-      </div>
     </div>
 
     <!-- Modal -->
@@ -414,9 +397,11 @@ margin-top: 40px;
 
 
   <!-- ======= Footer ======= -->
-  <div id="footer" >
+  <div id="footer">
     <div class="stars-container">
       <!-- Generate 100 star divs -->
+      <div class="star"></div>
+      <div class="star"></div>
       <div class="star"></div>
       <div class="star"></div>
       <div class="star"></div>
@@ -542,45 +527,19 @@ margin-top: 40px;
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Image array for navigation
-      const images = [
-        {
-          src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          category: "beach"
-        },
-        {
-          src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          category: "beach"
-        },
-        {
-          src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          category: "mountain"
-        },
-        {
-          src: "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          category: "mountain"
-        },
-        {
-          src: "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          category: "city"
-        },
-        {
-          src: "https://images.unsplash.com/photo-1549144511-736d184193d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          category: "city"
-        },
-        {
-          src: "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          category: "beach"
-        },
-        {
-          src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          category: "city"
-        }
-      ];
+      // Get all gallery items and their data
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      const imageElements = document.querySelectorAll('.gallery-item img');
+      
+      // Create an array of image data from the actual DOM elements
+      const images = Array.from(imageElements).map((img, index) => ({
+        src: img.getAttribute('data-src') || img.src,
+        category: galleryItems[index].getAttribute('data-category'),
+        element: img
+      }));
 
       // Filter functionality
       const filterButtons = document.querySelectorAll('.filter-btn');
-      const galleryItems = document.querySelectorAll('.gallery-item');
 
       filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -592,8 +551,9 @@ margin-top: 40px;
 
           const filter = button.getAttribute('data-filter');
 
-          galleryItems.forEach((item, index) => {
-            if (filter === 'all' || images[index].category === filter) {
+          galleryItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
               item.style.display = 'block';
             } else {
               item.style.display = 'none';
@@ -652,7 +612,10 @@ margin-top: 40px;
           // Create filtered images array based on current filter
           filteredImages = [];
           images.forEach((img, i) => {
-            if (currentFilter === 'all' || img.category === currentFilter) {
+            const itemCategory = galleryItems[i].getAttribute('data-category');
+            const isVisible = galleryItems[i].style.display !== 'none';
+            
+            if ((currentFilter === 'all' || itemCategory === currentFilter) && isVisible) {
               filteredImages.push({
                 src: img.src,
                 index: i
@@ -705,6 +668,48 @@ margin-top: 40px;
           }, 300);
         }
       });
+
+      // Lazy loading implementation
+      function lazyLoadImages() {
+        const lazyImages = document.querySelectorAll('img.lazy-loading');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              const src = img.getAttribute('data-src');
+              
+              if (src) {
+                img.src = src;
+                img.classList.remove('lazy-loading');
+                img.classList.add('lazy-loaded');
+              }
+              
+              observer.unobserve(img);
+            }
+          });
+        }, {
+          rootMargin: '0px 0px 100px 0px' // Load images slightly before they enter viewport
+        });
+
+        lazyImages.forEach(img => {
+          imageObserver.observe(img);
+        });
+      }
+
+      // Initialize lazy loading
+      lazyLoadImages();
+      
+      // Preload images for better user experience
+      function preloadImages() {
+        images.forEach(img => {
+          const image = new Image();
+          image.src = img.src;
+        });
+      }
+      
+      // Start preloading after a short delay to prioritize visible content
+      setTimeout(preloadImages, 1000);
     });
   </script>
 </body>
