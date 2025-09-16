@@ -940,7 +940,7 @@
    transition: 0.3s;
    color: #433f39;
    border-radius: 0;
-   border-right: 2px solid #e8e7e4;
+   border-right: 2px solid #e7e4db;
    font-weight: 600;
    font-size: 15px;
  }
@@ -952,6 +952,7 @@
  .specials .nav-link.active {
    color: #05374b;
    border-color: #05374b;
+   background-color: rgba(105, 105, 105, 0.233);
  }
 
  .specials .tab-pane.active {
@@ -985,101 +986,170 @@
    }
  }
 
- /*--------------------------------------------------------------
-# Events
---------------------------------------------------------------*/
+ 
+    /* Events Section */
+    .events {
+      background: url(../img/celebration.jpg) center center no-repeat;
+      background-size: cover;
+      position: relative;
+      padding: 50px 0;
+    }
 
- .events {
-   background: url(../img/celebration.jpg) center center no-repeat;
-   background-size: cover;
-   position: relative;
- }
+    .events::before {
+      content: "";
+      background-color: rgba(12, 11, 10, 0.8);
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
 
- .events::before {
-   content: "";
-   background-color: rgba(12, 11, 10, 0.8);
-   position: absolute;
-   top: 0;
-   right: 0;
-   left: 0;
-   bottom: 0;
- }
+    .events .section-title h2 {
+      color: #fff;
+    }
 
- .events .section-title h2 {
-   color: #fff;
- }
+    .events .container {
+      position: relative;
+    }
 
- .events .container {
-   position: relative;
- }
+    @media (min-width: 1024px) {
+      .events {
+        background-attachment: fixed;
+      }
+    }
 
- @media (min-width: 1024px) {
-   .events {
-     background-attachment: fixed;
-   }
- }
+    .events .events-carousel {
+      padding: 30px;
+    }
 
- .events .events-carousel {
-   background: rgb(253, 8, 8);
-   padding: 30px;
- }
+    .events .event-item {
+      color: #fff;
+    }
 
- .events .event-item {
-   color: #fff;
- }
+    .events .event-item h3 {
+      font-weight: 600;
+      font-size: 26px;
+      color: #ffcf88;
+    }
 
- .events .event-item h3 {
-   font-weight: 600;
-   font-size: 26px;
-   color: #05374b;
- }
+    .events .event-item .price {
+      font-size: 26px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
 
- .events .event-item .price {
-   font-size: 26px;
-   font-family: "Poppins", sans-serif;
-   font-weight: 700;
-   margin-bottom: 15px;
- }
+    .events .event-item .price span {
+      border-bottom: 2px solid #05374b;
+    }
 
- .events .event-item .price span {
-   border-bottom: 2px solid #05374b;
- }
+    .events .event-item ul {
+      list-style: none;
+      padding: 0;
+    }
 
- .events .event-item ul {
-   list-style: none;
-   padding: 0;
- }
+    .events .event-item ul li {
+      padding-bottom: 10px;
+    }
 
- .events .event-item ul li {
-   padding-bottom: 10px;
- }
+    .events .event-item ul i {
+      font-size: 20px;
+      padding-right: 4px;
+      color: #05374b;
+    }
 
- .events .event-item ul i {
-   font-size: 20px;
-   padding-right: 4px;
-   color: #05374b;
- }
+    .events .event-item p:last-child {
+      margin-bottom: 0;
+    }
 
- .events .event-item p:last-child {
-   margin-bottom: 0;
- }
+    .events .swiper-pagination {
+      margin-top: 20px;
+      position: relative;
+    }
 
- .events .swiper-pagination {
-   margin-top: 20px;
-   position: relative;
- }
+    .events .swiper-pagination .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: rgba(255, 255, 255, 0.5);
+      opacity: 1;
+    }
 
- .events .swiper-pagination .swiper-pagination-bullet {
-   width: 12px;
-   height: 12px;
-   background-color: rgba(255, 255, 255, 0.5);
-   opacity: 1;
- }
-
- .events .swiper-pagination .swiper-pagination-bullet-active {
-   background-color: #ffcf88;
- }
-
+    .events .swiper-pagination .swiper-pagination-bullet-active {
+      background-color: #ffcf88;
+    }
+    
+    /* Custom Navigation Arrows */
+    .events-navigation {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      z-index: 10;
+      pointer-events: none;
+    }
+    
+    .events-button-prev, 
+    .events-button-next {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 207, 136, 0.8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      pointer-events: auto;
+    }
+    
+    .events-button-prev:hover, 
+    .events-button-next:hover {
+      background: #ffcf88;
+      transform: scale(1.1);
+    }
+    
+    .events-button-prev {
+      left: -25px;
+    }
+    
+    .events-button-next {
+      right: -25px;
+    }
+    
+    .events-button-prev::after, 
+    .events-button-next::after {
+      font-family: swiper-icons;
+      font-size: 24px;
+      color: #05374b;
+      font-weight: bold;
+    }
+    
+    .events-button-prev::after {
+      content: 'prev';
+    }
+    
+    .events-button-next::after {
+      content: 'next';
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .events-button-prev, 
+      .events-button-next {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .events-button-prev {
+        left: -15px;
+      }
+      
+      .events-button-next {
+        right: -15px;
+      }
+    }
 
 
  /*--------------------------------------------------------------
@@ -1824,7 +1894,8 @@
  }
 
  .package:hover {
-   border-top: #05374b solid thin;
+  transform: scale(1.001);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
  }
 
  .preview {
@@ -1872,7 +1943,7 @@
 
  .btnpdf:hover {
    background: linear-gradient(135deg, #05374b, #042633);
-   color: white;
+   color: white; 
  }
 
  .btnpdfall {
