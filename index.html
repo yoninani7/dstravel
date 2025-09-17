@@ -34,9 +34,24 @@
       scroll-behavior: smooth;
     }
 
+    .divider {
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, #095775 50%, transparent 100%);
+      width: 80%;
+      max-width: 800px;
+      border: none;
+      border-radius: 3px;
+    }
+
     .marquee-container {
       max-width: 100%;
       overflow-x: hidden;
+      background-color: #f9f9f9;
+      /* Light background */
+      padding: 20px 0;
+      /* Padding for breathing space */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow */
     }
 
     .airlinecontained {
@@ -44,13 +59,19 @@
       align-items: center;
       animation: marquee 30s linear infinite;
       width: max-content;
-      padding: 20px 0;
     }
 
     .airlinecontained img {
       width: 150px;
       height: 100px;
       margin: 0 15px;
+      transition: transform 0.9s;
+      /* Smooth transition for hover effect */
+    }
+
+    .airlinecontained img:hover {
+      transform: scale(1.1);
+      /* Scale up on hover */
     }
 
     @keyframes marquee {
@@ -927,8 +948,8 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
+                <img src="assets/img/samp.jpg" class="testimonial-img" alt="">
+                <h3>Samson Zewge</h3>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   This agency planned every detail of my trip perfectly. I didn't have to worry about anything, from the
@@ -941,8 +962,8 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
+                <img src="assets/img/samp.jpg" class="testimonial-img" alt="">
+                <h3>Samson Zewge</h3>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   I’ve never felt so well taken care of. The attention to detail and dedication from the team made this
@@ -955,8 +976,8 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
+                <img src="assets/img/samp.jpg" class="testimonial-img" alt="">
+                <h3>Samson Zewge</h3>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   The service provided was outstanding. From start to finish, every aspect of our journey was
@@ -984,7 +1005,7 @@
       <h2 style="color: #0a6c93;"> Discover the airlines  <span>  leading the way in modern air travel</span></h2>
       </center> -->
 
-    <hr style="color: #05374be3;">
+    <div class="divider"></div>
     <div class="marquee-container">
       <div class="airlinecontained">
         <img src="assets/img/airlines/ethiopianairlines.png" alt="Airline 1 Logo" class="airline-logo">
@@ -1007,42 +1028,33 @@
 
       </div>
     </div>
-    <hr>
+   <center> <div class="divider"></div></center>
+
+ 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;">
-            Contact<span style="color:#ffcf88;"> Us !</span>
+  <div class="section-title fade-in">
+          <h2 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; color: #333;">
+            Contact <span style="color:#ffcf88;">Us </span>
           </h2>
-          <p> Our travel experts are standing by to assist you.
-            We invite you to get in touch - contact us now..</p>
+          <p>Our travel experts are standing by to assist you. We invite you to get in touch - contact us now.</p>
         </div>
-      </div>
-      <center>
-        <div
-          style="padding: 30px; background-color: #f9f9f9; border-radius: 20px; box-shadow: 0 10px 20px #05374b4d; margin: 50px auto; max-width: 90%; display: flex; justify-content: center; align-items: center;">
+      
+ 
+        <div class="map-container fade-in">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.7411467598777!2d38.78555587367276!3d8.995949789508172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85d1ac548603%3A0x4df5a08a139c3118!2zQmVyaGFuZSBBZGVyZSBNYWxsIHwgQm9sZSBNZWRoYW5pYWxlbSB8IOGJpeGIreGIg-GKlCDhiqDhi7DhiKwg4Yie4YiNIHwg4Ymm4YiMIOGImOGLteGIg-GKkuGKoOGIiOGInQ!5e0!3m2!1sen!2set!4v1725608995109!5m2!1sen!2set"
-            width="100%" height="400" style="border: 0; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> 
 
-
-
-
-
-      </center>
-      <div class="container mt-5">
-
-        <div class="info-wrap">
+      <div class="container">
+        <div class="info-wrap fade-in">
           <div class="row">
             <div class="col-lg-3 col-md-6 info">
               <i class="bi bi-geo-alt"></i>
-              <h4>Location:</h4>
-              <p>Bole Medhaniyalem,Berhane Adere Mall<br>6th Flr.Off.No.610</p>
+              <h4  >Location</h4> 
+              <p>Bole Medhaniyalem, Berhane Adere Mall<br>6th Flr.Off.No.610</p>
             </div>
 
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
@@ -1060,12 +1072,12 @@
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="bi bi-phone"></i>
               <h4>Call:</h4>
-              <p>+251 116 57 67 77<br> +251 911 23 66 79 <br> +251 984 94 92 33 <br> +251 912 12 26 36 <br> </p>
+              <p>+251 116 57 67 77<br> +251 911 23 66 79 <br> +251 984 94 92 33 <br> +251 912 12 26 36</p>
             </div>
           </div>
         </div>
 
-        <form action="https://formspree.io/f/xvoejqbk" method="POST" role="form" class="php-email-form">
+        <form action="https://formspree.io/f/xvoejqbk" method="POST" role="form" class="php-email-form fade-in">
           <div class="row">
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -1088,10 +1100,10 @@
           </div>
           <div class="text-center"><button type="submit">Send Message</button></div>
         </form>
-        <br>
-        <center>
-          <img src="assets/img/footerlogoenhanced.png" alt="Footer Logo" style="max-width: 30%; height: auto;">
-        </center>
+
+        <div class="footer-logo fade-in">
+          <img src="assets/img/footerlogoenhanced.png" alt="Footer Logo">
+        </div>
       </div>
     </section><!-- End Contact Section -->
 
@@ -1260,6 +1272,34 @@
           prevEl: '.events-button-prev',
         },
       });
+    });
+  </script>
+
+  <script>
+    // Simple fade-in animation for elements
+    document.addEventListener('DOMContentLoaded', function () {
+      const fadeElements = document.querySelectorAll('.fade-in');
+
+      fadeElements.forEach(element => {
+        element.style.opacity = 0;
+      });
+
+      function checkFade() {
+        fadeElements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementBottom = element.getBoundingClientRect().bottom;
+
+          if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+            element.style.animation = 'fadeIn 1s ease forwards';
+          }
+        });
+      }
+
+      // Initial check
+      checkFade();
+
+      // Check on scroll
+      window.addEventListener('scroll', checkFade);
     });
   </script>
 
