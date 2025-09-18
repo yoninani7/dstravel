@@ -1358,46 +1358,8 @@
       });
     });
 
-
-    
-document.addEventListener('DOMContentLoaded', function() {
-  // Mobile nav toggle
-  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-  const navbar = document.querySelector('#navbar');
+  </script>
   
-  if (mobileNavToggle && navbar) {
-    mobileNavToggle.addEventListener('click', function(e) {
-      navbar.classList.toggle('navbar-mobile');
-      this.classList.toggle('bi-list');
-      this.classList.toggle('bi-x');
-    });
-
-    // Close mobile menu when a scrollto link is clicked
-    document.querySelectorAll('#navbar a').forEach(navLink => {
-      navLink.addEventListener('click', () => {
-        if (navbar.classList.contains('navbar-mobile')) {
-          navbar.classList.remove('navbar-mobile');
-          mobileNavToggle.classList.toggle('bi-list');
-          mobileNavToggle.classList.toggle('bi-x');
-        }
-      });
-    });
-  }
-
-  // Navbar background on scroll
-  const header = document.getElementById('header');
-  if (header) {
-    const headerOffset = 100;
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > headerOffset) {
-        header.classList.add('header-scrolled');
-      } else {
-        header.classList.remove('header-scrolled');
-      }
-    });
-  }
-});
-  </script> 
 </body>
 
 </html>
