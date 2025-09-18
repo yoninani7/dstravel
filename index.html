@@ -111,6 +111,9 @@
     }
 
     @media (max-width: 999px) {
+.chck{
+ margin-top: 40px;
+}
 
       .events-button-prev,
       .events-button-next {
@@ -298,19 +301,19 @@
       </div>
     </section>
     <!-- End About Section -->
-
-
-
-
+  
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us"
       style="background-image: url('assets/img/back.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; margin: 0;">
       <div class="container">
 
         <div class="section-title">
-          <h2 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;color:#ffcf886c; ">
-            Checkout our <span style="color:#ffcf88;">Services</span>
-          </h2>
+          <h3 class="chck" style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;color:#ffcf886c; ">
+            <span style="background: linear-gradient(90deg, #ffcf88,#ffcf886c); -webkit-background-clip: text; color: transparent; background-clip: text;">
+              Checkout</span>    our <span style="background: linear-gradient(90deg, #ffcf886c,#ffcf88); -webkit-background-clip: text; color: transparent; background-clip: text;">Services</span>
+          </h3>
+        <center>  <div class="divider" style="background: linear-gradient(90deg, #ffcf88,transparent 50%, #ffcf88 );width: 40%;"></div> </center> 
+        <div style="height: 10px;"> </div>
           <p style=" font-family: 'Poppins', sans-serif; font-weight: 600; ">Discover the full range of solutions we
             offer to meet <br> your business needs.</p>
         </div>
@@ -1355,7 +1358,46 @@
       });
     });
 
-  </script>
+
+    
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile nav toggle
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const navbar = document.querySelector('#navbar');
+  
+  if (mobileNavToggle && navbar) {
+    mobileNavToggle.addEventListener('click', function(e) {
+      navbar.classList.toggle('navbar-mobile');
+      this.classList.toggle('bi-list');
+      this.classList.toggle('bi-x');
+    });
+
+    // Close mobile menu when a scrollto link is clicked
+    document.querySelectorAll('#navbar a').forEach(navLink => {
+      navLink.addEventListener('click', () => {
+        if (navbar.classList.contains('navbar-mobile')) {
+          navbar.classList.remove('navbar-mobile');
+          mobileNavToggle.classList.toggle('bi-list');
+          mobileNavToggle.classList.toggle('bi-x');
+        }
+      });
+    });
+  }
+
+  // Navbar background on scroll
+  const header = document.getElementById('header');
+  if (header) {
+    const headerOffset = 100;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > headerOffset) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    });
+  }
+});
+  </script> 
 </body>
 
 </html>
