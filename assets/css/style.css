@@ -1677,7 +1677,7 @@
  }
 
  .footer-logo img {
-   max-width: 250px;
+   max-width: 390px;
    height: auto;
    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
  }
@@ -1740,7 +1740,7 @@
    background: #0a1929;
    background: linear-gradient(0deg, #0a1929 0%, #05374b 100%);
    color: white;
-   padding: 60px 0 25px;
+   padding: 40px 0 25px;
    position: relative;
    overflow: hidden;
  }
