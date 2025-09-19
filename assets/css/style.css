@@ -1122,7 +1122,7 @@
  .events-button-next::after {
    font-family: swiper-icons;
    font-size: 24px;
-   color: #05374b;
+   color: #333;
    font-weight: bold;
  }
 
