@@ -9,6 +9,13 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   <link rel="icon" type="image/png" href="assets/img/transformed.png" sizes="164x164">
+  
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preload" as="style" href="assets/css/style.css">
+  
   <!-- Add this line within the <head> section -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -34,9 +41,6 @@
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;   
-
-      
-      
     }
 
     .contained {
@@ -163,7 +167,6 @@
       overflow: hidden;
       opacity: 0;
       transition: opacity 0.3s ease;
-
     }
 
     .modal.show {
@@ -215,7 +218,6 @@
       top: 50%;
       transform: translateY(-50%);
       color: white;
-
       font-size: 32px;
       cursor: pointer;
       background: rgba(255, 255, 255, 0.1);
@@ -256,7 +258,6 @@
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-
       .gallery {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 20px;
@@ -266,7 +267,6 @@
         width: 50px;
         height: 50px;
         font-size: 28px;
-
       }
 
       .close {
@@ -325,10 +325,32 @@
     .gallery-item img.lazy-loading {
       filter: blur(8px);
     }
+    
+    /* Loading animation */
+    .loading-spinner {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #ffc56e;
+      animation: spin 1s ease-in-out infinite;
+      z-index: 9999;
+    }
+    
+    @keyframes spin {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
   </style>
 </head>
 
 <body>
+  <div class="loading-spinner"></div>
+  
   <div id="header">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <div class="logo me-auto">
@@ -338,18 +360,15 @@
       </div>
       <div class="header-center-text">Photo album</div>
       <nav id="navbar" class="navbar order-last order-lg-0 center">
-
         <ul>
-
-
           <li><a style="font-size: 16px;" class="nav-link scrollto " href="artgallery.html">Gallery</a></li>
           <li><a class="nav-link scrollto ">/</a></li>
-
           <li><a style="font-size: 16px;" class="nav-link scrollto active" href="index.html">Home</a></li>
         </ul>
       </nav><!-- .navbar -->
     </div>
   </div><!-- End Header -->
+  
   <div class="contained">
     <div class="filters">
       <button class="filter-btn active" data-filter="all">All</button>
@@ -480,10 +499,6 @@
         <img class="lazy-loading" data-src="assets/img/selectedimg/scenery/sss3.JPG" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Tropical explorers">
       </div>
        
-
-
-
-
       <!-- Devours -->
       <div class="gallery-item" data-category="devours">
         <img class="lazy-loading" data-src="assets/img/selectedimg/devours/d.JPG" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Devours">
@@ -509,7 +524,6 @@
       <div class="gallery-item" data-category="devours">
         <img class="lazy-loading" data-src="assets/img/selectedimg/devours/dd1v.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Devours">
       </div> 
-
     </div>
 
     <!-- Modal -->
@@ -529,12 +543,12 @@
     </div>
   </div>
 
-
-
   <!-- ======= Footer ======= -->
   <div id="footer">
     <div class="stars-container">
       <!-- Generate 100 star divs -->
+      <div class="star"></div>
+      <div class="star"></div>
       <div class="star"></div>
       <div class="star"></div>
       <div class="star"></div>
@@ -658,10 +672,12 @@
     </div>
   </div><!-- End Footer -->
 
-  </div>
-
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      // Show loading spinner
+      const spinner = document.querySelector('.loading-spinner');
+      spinner.style.display = 'block';
+      
       // Get all gallery items and their data
       const galleryItems = document.querySelectorAll('.gallery-item');
       const imageElements = document.querySelectorAll('.gallery-item img');
@@ -841,52 +857,101 @@
         }
       });
 
-      // Lazy loading implementation
+      // Image loading optimization
+      function preconnectToOrigins() {
+        const preconnectLinks = [
+          { rel: 'preconnect', href: window.location.origin }
+        ];
+        
+        preconnectLinks.forEach(link => {
+          const el = document.createElement('link');
+          el.rel = link.rel;
+          el.href = link.href;
+          el.crossOrigin = '';
+          document.head.appendChild(el);
+        });
+      }
+      
+      // Preload the first few images for better perceived performance
+      function preloadCriticalImages() {
+        const criticalImages = document.querySelectorAll('.gallery-item:nth-child(-n+6) img');
+        criticalImages.forEach(img => {
+          const src = img.getAttribute('data-src');
+          if (src) {
+            // Load these images immediately
+            img.src = src;
+            img.classList.remove('lazy-loading');
+            img.classList.add('lazy-loaded');
+          }
+        });
+      }
+      
+      // Enhanced lazy loading with requestIdleCallback
       function lazyLoadImages() {
         const lazyImages = document.querySelectorAll('img.lazy-loading');
         
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target;
-              const src = img.getAttribute('data-src');
-              
-              if (src) {
-                img.src = src;
-                img.classList.remove('lazy-loading');
-                img.classList.add('lazy-loaded');
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(() => {
+            lazyLoadImagesNow();
+          }, { timeout: 1000 });
+        } else {
+          // Fallback for browsers that don't support requestIdleCallback
+          setTimeout(lazyLoadImagesNow, 500);
+        }
+        
+        function lazyLoadImagesNow() {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                const src = img.getAttribute('data-src');
+                
+                if (src) {
+                  // Use a small timeout to avoid blocking the main thread
+                  setTimeout(() => {
+                    img.src = src;
+                    img.classList.remove('lazy-loading');
+                    img.classList.add('lazy-loaded');
+                  }, 50);
+                }
+                
+                observer.unobserve(img);
               }
-              
-              observer.unobserve(img);
+            });
+          }, {
+            rootMargin: '200px 0px' // Load images when they're 200px from viewport
+          });
+
+          lazyImages.forEach(img => {
+            // Skip already loaded critical images
+            if (img.classList.contains('lazy-loading')) {
+              imageObserver.observe(img);
             }
           });
-        }, {
-          rootMargin: '0px 0px 100px 0px' // Load images slightly before they enter viewport
-        });
-
-        lazyImages.forEach(img => {
-          imageObserver.observe(img);
-        });
+        }
       }
-
-      // Initialize lazy loading
+      
+      // Initialize all optimization techniques
+      preconnectToOrigins();
+      preloadCriticalImages();
       lazyLoadImages();
-      
-      // Preload images for better user experience
-      function preloadImages() {
-        images.forEach(img => {
-          const image = new Image();
-          image.src = img.src;
-        });
-      }
-      
-      // Start preloading after a short delay to prioritize visible content
-      setTimeout(preloadImages, 1000);
       
       // Apply random order on initial load if "All" filter is active
       if (document.querySelector('.filter-btn.active').getAttribute('data-filter') === 'all') {
         applyRandomOrder();
       }
+      
+      // Hide loading spinner when images are loaded
+      Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { 
+        img.onload = img.onerror = resolve; 
+      }))).then(() => {
+        spinner.style.display = 'none';
+      }).catch(() => {
+        // Even if some images fail to load, hide the spinner after a timeout
+        setTimeout(() => {
+          spinner.style.display = 'none';
+        }, 2000);
+      });
     });
   </script>
 </body>
