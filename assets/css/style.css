@@ -118,8 +118,7 @@
    max-height: 60px;
    margin-left: 50px;
 
- }
-
+ } 
  /*--------------------------------------------------------------
 # Book a table button Menu
 --------------------------------------------------------------*/
@@ -2192,7 +2191,7 @@
      height: 180px;
      /* Adjust height for smaller screens */
    } 
-
+ 
   }
 
  /* end offers section */
