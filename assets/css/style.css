@@ -1423,7 +1423,7 @@
    transform: translateX(-50%);
    width: 190px;
    height: 4px;
-   background: linear-gradient(90deg,   #095775 50%, transparent 100%);
+   background: linear-gradient(90deg,  #333,#05374bd3 50%, transparent 100%);
    border-radius: 2px;
  }
 
