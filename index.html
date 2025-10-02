@@ -9,6 +9,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   <link rel="icon" type="image/png" href="assets/img/transformed.png" sizes="164x164">
+  
   <!-- Favicons 
       //top icon7
     <link href="assets/img/favicon.png" rel="icon">-->
@@ -120,6 +121,298 @@
         visibility: hidden;
       }
     }
+     /* --- Global & Typography Styles --- */
+        .p_section-packages {
+            padding: 4rem 1rem;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .p_section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: var(--primary-color);
+        }
+
+        /* Responsive padding for section (px-4 sm:px-6 lg:px-8) */
+        @media (min-width: 640px) {
+            .p_section-packages {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .p_section-packages {
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
+
+
+        /* --- Card Grid Styles --- */
+        .p_packages-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .p_packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .p_packages-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* --- Card Styles --- */
+        .p_package-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            /* shadow-2xl */
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .p_card-hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            will-change: transform, box-shadow;
+        }
+
+        .p_card-hover-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px var(--shadow-color);
+        }
+
+        .p_card-image {
+            height: 14rem;
+            /* h-56 */
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .p_card-content {
+            padding: 1.5rem;
+        }
+
+        .p_card-title {
+            font-size: 1.5rem;
+            /* text-2xl */
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            /* mb-2 */
+            color: var(--accent-color);
+        }
+
+        .p_card-tagline {
+            color: rgb(107 114 128);
+            /* text-gray-500 */
+            margin-bottom: 1rem;
+            /* mb-4 */
+            font-size: 0.875rem;
+            /* text-sm */
+        }
+
+        .p_card-description {
+            color: rgb(55 65 81);
+            /* text-gray-700 */
+            margin-bottom: 1.5rem;
+            /* mb-6 */
+        }
+
+        /* --- Modal Styles (Image Modal Overlay) --- */
+        .p_modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* bg-black bg-opacity-80 */
+            padding: 1rem;
+            overflow-y: auto;
+            display: none;
+            /* hidden by default */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .p_modal-overlay.p_open {
+            display: flex;
+        }
+
+        .p_modal-content {
+            background-color: white;
+            border-radius: 0.75rem;
+            /* rounded-xl */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            /* shadow-2xl */
+            max-width: 64rem;
+            /* max-w-5xl */
+            width: 100%;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .p_modal-relative-container {
+            position: relative;
+        }
+
+        /* Close Button */
+        .p_modal-close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: white;
+            font-size: 1.875rem;
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            /* rounded-full */
+            transition: background-color 150ms ease-in-out;
+            z-index: 20;
+            border: none;
+            cursor: pointer;
+        }
+
+        .p_modal-close-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Carousel Container */
+        .p_carousel-container {
+            position: relative;
+            overflow: hidden;
+            height: 40vh;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+
+        @media (min-width: 640px) {
+            .p_carousel-container {
+                height: 50vh;
+            }
+        }
+
+        /* Carousel Track */
+        #p_carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Carousel Slide */
+        .p_carousel-slide {
+            flex-shrink: 0;
+            height: 100%;
+            position: relative;
+        }
+
+        .p_carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Navigation Buttons */
+        .p_nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0.75rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 9999px;
+            /* rounded-full */
+            transition: background-color 150ms ease-in-out;
+            z-index: 10;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .p_nav-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .p_nav-button-prev {
+            left: 1rem;
+        }
+
+        .p_nav-button-next {
+            right: 1rem;
+        }
+
+        /* Modal Body Content */
+        .p_modal-body-content {
+            padding: 1.5rem;
+        }
+
+        .p_modal-title {
+            font-size: 1.875rem;
+            /* text-3xl */
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            /* mb-2 */
+            color: var(--primary-color);
+        }
+
+        .p_modal-description-wrapper {
+            color: rgb(55 65 81);
+            /* text-gray-700 */
+            margin-bottom: 1.5rem;
+            /* mb-6 */
+        }
+
+        .p_modal-tagline {
+            font-weight: 600;
+            font-size: 1.25rem;
+            /* text-xl */
+            margin-bottom: 0.75rem;
+            /* mb-3 */
+            color: var(--accent-color);
+        }
+
+        .p_modal-cta-container {
+            margin-top: 1rem;
+        }
+
+        .p_modal-cta {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            /* rounded-full */
+            color: white;
+            transition: background-color 300ms ease-in-out;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            background-color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .p_modal-cta:hover {
+            background-color: #3b9f98;
+            /* A darker shade of the accent color */
+        }
   </style>
 </head>
 
@@ -399,6 +692,298 @@
       <hr style="color: #05374b;"> -->
 
     <section id="offers" style="text-align: center;  ">
+      <h1 style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 600;">Our 
+        <span
+          style="background: linear-gradient(90deg,  #333,#05374bd3); -webkit-background-clip: text; color: transparent; background-clip: text;">
+          tour </span>
+        <span style="color: #05374bd3;">offerings!</span>
+      </h1>
+<p style="color: #666;">Explore our exclusive tour packages designed just for you.</p>
+
+      <center>
+        <div
+          style="width: 13%; height: 5px; border-radius: 10px; background: linear-gradient(90deg,  #333,#05374bd3,transparent);">
+        </div>
+      </center>
+
+
+ <section id="packages" class="p_section-packages"> 
+        <div class="p_packages-grid">
+
+            <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="Tour & Leisure"
+                data-tagline="Escapism Redefined"
+                data-description="Curated itineraries, private guides, and exclusive access to cultural landmarks. Focus on relaxation and personalized discovery in the world's most beautiful locations."
+                data-image="https://images.unsplash.com/photo-1542037109511-ac69f987f694?q=80&w=2940&auto=format&fit=crop"
+                data-images="https://images.unsplash.com/photo-1542037109511-ac69f987f694?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1522850689914-7494ec05b95a?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1508782353381-80718507d721?q=80&w=2940&auto=format&fit=crop">
+                <img class="p_card-image"
+                    src="https://images.unsplash.com/photo-1542037109511-ac69f987f694?q=80&w=2940&auto=format&fit=crop"
+                    alt="Group of people on a scenic tour overlooking a city"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Tour+Package+Preview'">
+                <div class="p_card-content">
+                    <h3 class="p_card-title">Tour & Leisure</h3>
+                    <p class="p_card-tagline">Escapism Redefined</p>
+                    <p class="p_card-description">Curated itineraries, private guides, and exclusive access to cultural
+                        landmarks.</p>
+                </div>
+            </div>
+
+            <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
+                data-title="Social & Corporate Events" data-tagline="Spectacular Occasions"
+                data-description="Full-service planning for galas, launches, staff parties, and celebrations. We manage venues, catering, entertainment, and guest logistics seamlessly."
+                data-image="https://images.unsplash.com/photo-1533038590840-1cde6e63ce9a?q=80&w=2940&auto=format&fit=crop"
+                data-images="https://images.unsplash.com/photo-1533038590840-1cde6e63ce9a?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1540134005892-9a3b8396ce17?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1518015331613-2d25087d1ef4?q=80&w=2940&auto=format&fit=crop">
+                <img class="p_card-image"
+                    src="https://images.unsplash.com/photo-1533038590840-1cde6e63ce9a?q=80&w=2940&auto=format&fit=crop"
+                    alt="Large crowd celebrating at a music festival or corporate gala"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Event+Planning+Preview'">
+                <div class="p_card-content">
+                    <h3 class="p_card-title">Social & Corporate Events
+                    </h3>
+                    <p class="p_card-tagline">Spectacular Occasions</p>
+                    <p class="p_card-description">Full-service planning for galas, launches, staff parties, and
+                        celebrations.</p>
+                </div>
+            </div>
+
+            <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
+                data-title="Conference Management" data-tagline="High-Impact Gatherings"
+                data-description="Comprehensive services for large academic and industry conferences, including venue sourcing, speaker coordination, registration, and technical setup."
+                data-image="https://images.unsplash.com/photo-1521737711886-c567a5411988?q=80&w=2940&auto=format&fit=crop"
+                data-images="https://images.unsplash.com/photo-1521737711886-c567a5411988?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1520607162513-772a1c53dd70?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1587825590918-ee518e95079a?q=80&w=2940&auto=format&fit=crop">
+                <img class="p_card-image"
+                    src="https://images.unsplash.com/photo-1521737711886-c567a5411988?q=80&w=2940&auto=format&fit=crop"
+                    alt="Professionals attending a large, well-lit conference with screens"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Conference+Planning+Preview'">
+                <div class="p_card-content">
+                    <h3 class="p_card-title">Conference Management
+                    </h3>
+                    <p class="p_card-tagline">High-Impact Gatherings</p>
+                    <p class="p_card-description">Comprehensive services for large academic and industry conferences.
+                    </p>
+                </div>
+            </div>
+
+            <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
+                data-title="Exposition & Tradeshows" data-tagline="Connecting Industry Leaders"
+                data-description="Expert logistics for exhibitors and organizers. Booth design, build-out, transport management, and on-site support for successful trade expos worldwide."
+                data-image="https://images.unsplash.com/photo-1505373877841-8e2b291e7080?q=80&w=2942&auto=format&fit=crop"
+                data-images="https://images.unsplash.com/photo-1505373877841-8e2b291e7080?q=80&w=2942&auto=format&fit=crop, https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1517486411545-a9f333333b26?q=80&w=2940&auto=format&fit=crop">
+                <img class="p_card-image"
+                    src="https://images.unsplash.com/photo-1505373877841-8e2b291e7080?q=80&w=2942&auto=format&fit=crop"
+                    alt="Modern exhibition hall with booths and large display banners"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Expo+Logistics+Preview'">
+                <div class="p_card-content">
+                    <h3 class="p_card-title">Exposition & Tradeshows
+                    </h3>
+                    <p class="p_card-tagline">Connecting Industry Leaders</p>
+                    <p class="p_card-description">Expert logistics for exhibitors and organizers including design,
+                        build-out, and on-site support.</p>
+                </div>
+            </div>
+
+            <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
+                data-title="B2B Meeting & Delegation" data-tagline="Executive Facilitation"
+                data-description="Private meeting coordination, executive travel, secure transportation, and translation services for high-stakes business discussions and trade delegations."
+                data-image="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2940&auto=format&fit=crop"
+                data-images="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1587560566861-f09c1389e023?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1579389083072-bae92da90924?q=80&w=2940&auto=format&fit=crop">
+                <img class="p_card-image"
+                    src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2940&auto=format&fit=crop"
+                    alt="Two business people shaking hands across a boardroom table"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=B2B+Meetings+Preview'">
+                <div class="p_card-content">
+                    <h3 class="p_card-title">B2B Meeting & Delegation
+                    </h3>
+                    <p class="p_card-tagline">Executive Facilitation</p>
+                    <p class="p_card-description">Private meeting coordination, executive travel, secure transportation,
+                        and translation services.</p>
+                </div>
+            </div>
+
+            <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
+                data-title="Medical Tourism & Assistance" data-tagline="Care & Comfort Travel"
+                data-description="Specialized travel planning for medical procedures, recovery stays, and family support, ensuring privacy, comfort, and seamless health facility logistics."
+                data-image="https://images.unsplash.com/photo-1584462102148-e87754f762f2?q=80&w=2940&auto=format&fit=crop"
+                data-images="https://images.unsplash.com/photo-1584462102148-e87754f762f2?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1519491702952-662584d43679?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1576091160550-2173dba99932?q=80&w=2940&auto=format&fit=crop">
+                <img class="p_card-image"
+                    src="https://images.unsplash.com/photo-1584462102148-e87754f762f2?q=80&w=2940&auto=format&fit=crop"
+                    alt="Modern, clean medical environment or hospital room"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Medical+Travel+Preview'">
+                <div class="p_card-content">
+                    <h3 class="p_card-title">Medical Tourism & Assistance
+                    </h3>
+                    <p class="p_card-tagline">Care & Comfort Travel</p>
+                    <p class="p_card-description">Specialized travel planning for medical procedures, recovery stays,
+                        and family support.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <div id="image-modal" class="p_modal-overlay" onclick="p_closeModal()">
+        <div class="p_modal-content" onclick="event.stopPropagation()">
+            <div class="p_modal-relative-container">
+                <button onclick="p_closeModal()" class="p_modal-close-button">&times;</button>
+
+                <div class="p_carousel-container">
+                    <div id="p_carousel-track" class="p_flex p_h-full">
+                        </div>
+
+                    <button onclick="p_changeSlide(-1)" class="p_nav-button p_nav-button-prev">
+                        &lsaquo;
+                    </button>
+                    <button onclick="p_changeSlide(1)" class="p_nav-button p_nav-button-next">
+                        &rsaquo;
+                    </button>
+                </div>
+
+                <div class="p_modal-body-content">
+                    <h3 id="p_modal-title" class="p_modal-title">
+                    </h3>
+                    <div id="p_modal-description" class="p_modal-description-wrapper"></div>
+                    <div class="p_modal-cta-container">
+                        <a href="#" id="p_modal-cta" class="p_modal-cta">Request Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Global Carousel State ---
+        let p_currentSlideIndex = 0;
+        let p_totalSlides = 0;
+
+        /**
+         * Updates the carousel position based on the p_currentSlideIndex.
+         */
+        function p_updateCarousel() {
+            const track = document.getElementById('p_carousel-track');
+            if (p_totalSlides === 0) return;
+
+            // Calculate the shift unit: 100% divided by the total number of slides 
+            const slideWidthUnit = 100 / p_totalSlides;
+            const offset = -p_currentSlideIndex * slideWidthUnit;
+
+            // Use the calculated percentage for accurate translation.
+            track.style.transform = `translateX(${offset}%)`;
+        }
+
+        /**
+         * Changes the visible slide in the carousel.
+         * @param {number} direction - 1 for next slide, -1 for previous slide.
+         */
+        function p_changeSlide(direction) {
+            p_currentSlideIndex += direction;
+
+            // Boundary check for infinite loop effect
+            if (p_currentSlideIndex >= p_totalSlides) {
+                p_currentSlideIndex = 0; // Loop back to the first slide
+            } else if (p_currentSlideIndex < 0) {
+                p_currentSlideIndex = p_totalSlides - 1; // Loop back to the last slide
+            }
+
+            p_updateCarousel();
+        }
+
+
+        function p_openModal(cardElement) {
+            const modal = document.getElementById('image-modal');
+            const galleryContainer = document.getElementById('p_carousel-track');
+            const title = document.getElementById('p_modal-title');
+            const descriptionContainer = document.getElementById('p_modal-description');
+            const cta = document.getElementById('p_modal-cta');
+
+            // Extract data from the clicked card
+            const data = cardElement.dataset;
+            const fullTitle = data.title;
+            const fullDescription = data.description;
+            const allImagesStr = data.images;
+            const images = allImagesStr.split(',').map(url => url.trim()); // Array of 3 URLs
+
+            // --- Reset and Initialize Carousel State ---
+            p_totalSlides = images.length;
+            p_currentSlideIndex = 0;
+
+            // --- Set Track Width (e.g., 300% for 3 slides) ---
+            galleryContainer.style.width = `${p_totalSlides * 100}%`;
+            galleryContainer.innerHTML = ''; // Clear previous slides
+
+            // --- Populate Carousel Track with Slides ---
+            const slideWidth = 100 / p_totalSlides; // Width of each slide relative to the track
+
+            images.forEach((url, index) => {
+                const slide = document.createElement('div');
+
+                // Apply p_carousel-slide class which has flex-shrink-0 and h-full properties
+                slide.classList.add('p_carousel-slide');
+                slide.style.width = `${slideWidth}%`;
+
+                const imgElement = document.createElement('img');
+                imgElement.src = url;
+                imgElement.alt = `${fullTitle} visual ${index + 1}`;
+
+                // Image styling is handled by CSS rule for .p_carousel-slide img
+                imgElement.onerror = function () {
+                    this.src = `https://placehold.co/800x500/173e6a/ffffff?text=${encodeURIComponent('Image ' + (index + 1))}`;
+                    this.style.backgroundColor = 'var(--primary-color)';
+                };
+
+                slide.appendChild(imgElement);
+                galleryContainer.appendChild(slide);
+            });
+
+
+            // --- Populate Text Content ---
+            title.textContent = fullTitle;
+            // Combine tagline and description for richer text in the modal
+            descriptionContainer.innerHTML = `<p class="p_modal-tagline">${data.tagline}</p><p class="text-base">${fullDescription}</p>`;
+
+            // Link the CTA button to a dedicated contact form or page
+            cta.href = '#';
+
+            // Initialize the carousel to the correct slide (index 0)
+            p_updateCarousel();
+
+            // Show the modal
+            modal.classList.add('p_open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling on the body
+        }
+
+        /**
+         * Closes the modal.
+         */
+        function p_closeModal() {
+            const modal = document.getElementById('image-modal');
+            modal.classList.remove('p_open');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Bind ESC key to close modal
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                p_closeModal();
+            }
+        });
+
+    </script>
+
+
+
+
+
+
+
+
+<div style="height: 50px;"> </div>
+
+
+
+
+
       <h1 style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 600;">Special
         <span
           style="background: linear-gradient(90deg,  #333,#05374bd3); -webkit-background-clip: text; color: transparent; background-clip: text;">
