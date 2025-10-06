@@ -1735,9 +1735,8 @@
 
 
  /* Footer Styles */
- #footer {
-   background: #0a1929;
-   background: linear-gradient(0deg, #0a1929 0%, #05374b 100%);
+ #footer { 
+   background: linear-gradient(180deg, #0a1929 4%, #05374b 90%);
    color: white;
    padding: 40px 0 25px;
    position: relative;
