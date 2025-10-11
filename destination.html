@@ -694,116 +694,125 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-       // Initialize AOS (Animate On Scroll)
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-});
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
 
-// All functionality is inside DOMContentLoaded to ensure proper scoping
-document.addEventListener('DOMContentLoaded', function() {
-    // Define variables first
-    const filterTabs = document.querySelectorAll('.filter-tab');
-    const cards = document.querySelectorAll('.card');
-    
-    // Function to set active filter and show appropriate cards
-    function setActiveFilter(category) {
-        // Remove active class from all tabs
-        filterTabs.forEach(btn => btn.classList.remove('active'));
-        
-        // Add active class to clicked tab
-        const activeTab = document.querySelector(`.filter-tab[data-category="${category}"]`);
-        if (activeTab) {
-            activeTab.classList.add('active');
-        }
-        
-        // Show/hide cards based on category
-        cards.forEach(card => {
-            if (category === 'all' || card.getAttribute('data-category') === category) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const cards = document.querySelectorAll('.card');
+            
+            // Function to filter cards based on category
+            function filterCards(category) {
+                cards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        // Re-trigger AOS animation for visible cards
+                        card.setAttribute('data-aos', 'fade-up');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Refresh AOS to handle newly visible elements
+                AOS.refresh();
             }
-        });
-        
-        // Update page titles based on category
-        updatePageTitles(category);
-    }
-    
-    // Function to update page titles based on category
-    function updatePageTitles(category) {
-        const sectionTitle = document.getElementById('section-title');
-        const sectionSubtitle = document.getElementById('section-subtitle');
-        
-        if (category === 'all') {
-            document.title = "Ethiopia Travel Guide | All Destinations";
-            if (sectionTitle) sectionTitle.textContent = "Ethiopia's Destinations";
-            if (sectionSubtitle) sectionSubtitle.textContent = "Discover the rich diversity of Ethiopia's historical, cultural, and religious sites";
-        } else if (category === 'historical') {
-            document.title = "Ethiopia Travel Guide | Historical Destinations";
-            if (sectionTitle) sectionTitle.textContent = "Historical Destinations";
-            if (sectionSubtitle) sectionSubtitle.textContent = "Discover Ethiopia's ancient historical sites and archaeological wonders";
-        } else if (category === 'cultural') {
-            document.title = "Ethiopia Travel Guide | Cultural Destinations";
-            if (sectionTitle) sectionTitle.textContent = "Cultural Destinations";
-            if (sectionSubtitle) sectionSubtitle.textContent = "Experience the rich cultural heritage and traditions of Ethiopia's diverse communities";
-        } else if (category === 'religious') {
-            document.title = "Ethiopia Travel Guide | Religious Destinations";
-            if (sectionTitle) sectionTitle.textContent = "Religious Destinations";
-            if (sectionSubtitle) sectionSubtitle.textContent = "Explore Ethiopia's sacred religious sites, ancient churches, and spiritual landmarks";
-        }
-    }
+            
+            // Function to update active filter tab
+            function setActiveFilter(category) {
+                filterTabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.getAttribute('data-category') === category) {
+                        tab.classList.add('active');
+                    }
+                });
+                
+                // Update page titles based on category
+                updatePageTitles(category);
+            }
+            
+            // Function to update page titles based on category
+            function updatePageTitles(category) {
+                const sectionTitle = document.getElementById('section-title');
+                const sectionSubtitle = document.getElementById('section-subtitle');
+                
+                if (category === 'all') {
+                    document.title = "Ethiopia Travel Guide | All Destinations";
+                    if (sectionTitle) sectionTitle.textContent = "Ethiopia's Destinations";
+                    if (sectionSubtitle) sectionSubtitle.textContent = "Discover the rich diversity of Ethiopia's historical, cultural, and religious sites";
+                } else if (category === 'historical') {
+                    document.title = "Ethiopia Travel Guide | Historical Destinations";
+                    if (sectionTitle) sectionTitle.textContent = "Historical Destinations";
+                    if (sectionSubtitle) sectionSubtitle.textContent = "Discover Ethiopia's ancient historical sites and archaeological wonders";
+                } else if (category === 'cultural') {
+                    document.title = "Ethiopia Travel Guide | Cultural Destinations";
+                    if (sectionTitle) sectionTitle.textContent = "Cultural Destinations";
+                    if (sectionSubtitle) sectionSubtitle.textContent = "Experience the rich cultural heritage and traditions of Ethiopia's diverse communities";
+                } else if (category === 'religious') {
+                    document.title = "Ethiopia Travel Guide | Religious Destinations";
+                    if (sectionTitle) sectionTitle.textContent = "Religious Destinations";
+                    if (sectionSubtitle) sectionSubtitle.textContent = "Explore Ethiopia's sacred religious sites, ancient churches, and spiritual landmarks";
+                }
+            }
 
-    // Check for URL parameter and set filter accordingly
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlCategory = urlParams.get('category');
-    
-    if (urlCategory && ['historical', 'cultural', 'religious', 'all'].includes(urlCategory)) {
-        setActiveFilter(urlCategory);
-    } else {
-        setActiveFilter('all');
-    }
-    
-    // Filter by category when tabs are clicked
-    filterTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const category = tab.getAttribute('data-category');
-            setActiveFilter(category);
+            // Check for URL parameter and set filter accordingly
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlCategory = urlParams.get('category');
             
-            // Update URL without page reload
-            const newUrl = window.location.protocol + "//" + window.location.host + 
-                           window.location.pathname + (category === 'all' ? '' : `?category=${category}`);
-            window.history.pushState({path: newUrl}, '', newUrl);
-        });
-    });
-    
-    // Card action buttons
-    const cardButtons = document.querySelectorAll('.card-btn');
-    cardButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const card = this.closest('.card');
-            const title = card.querySelector('h3').textContent;
-            
-            if (this.classList.contains('secondary')) {
-                alert(`Added "${title}" to your itinerary!`);
+            if (urlCategory && ['historical', 'cultural', 'religious', 'all'].includes(urlCategory)) {
+                setActiveFilter(urlCategory);
+                filterCards(urlCategory);
             } else {
-                alert(`Showing details for "${title}"`);
+                setActiveFilter('all');
+                filterCards('all');
             }
+            
+            // Filter by category when tabs are clicked
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    setActiveFilter(category);
+                    filterCards(category);
+                    
+                    // Update URL without page reload
+                    const newUrl = window.location.protocol + "//" + window.location.host + 
+                                   window.location.pathname + (category === 'all' ? '' : `?category=${category}`);
+                    window.history.pushState({path: newUrl}, '', newUrl);
+                });
+            });
+            
+            // Card action buttons
+            const cardButtons = document.querySelectorAll('.card-btn');
+            cardButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const card = this.closest('.card');
+                    const title = card.querySelector('h3').textContent;
+                    
+                    if (this.classList.contains('secondary')) {
+                        alert(`Added "${title}" to your itinerary!`);
+                    } else {
+                        alert(`Showing details for "${title}"`);
+                    }
+                });
+            });
+            
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlCategory = urlParams.get('category');
+                if (urlCategory && ['historical', 'cultural', 'religious', 'all'].includes(urlCategory)) {
+                    setActiveFilter(urlCategory);
+                    filterCards(urlCategory);
+                } else {
+                    setActiveFilter('all');
+                    filterCards('all');
+                }
+            });
         });
-    });
-    
-    // Handle browser back/forward buttons
-    window.addEventListener('popstate', function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const urlCategory = urlParams.get('category');
-        if (urlCategory && ['historical', 'cultural', 'religious', 'all'].includes(urlCategory)) {
-            setActiveFilter(urlCategory);
-        } else {
-            setActiveFilter('all');
-        }
-    });
-});
     </script>
 </body>
 </html>
