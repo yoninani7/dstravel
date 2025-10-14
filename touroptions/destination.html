@@ -642,7 +642,7 @@
 
         :root {
             --primary: rgba(5, 55, 75, 0.863);
-            --secondary: #fecb00b2; 
+            --secondary: #fecb00b2;
             --dark: rgba(5, 55, 75, 0.98);
             --light: #f8f8f8;
             --text: #333;
@@ -705,41 +705,86 @@
         }
 
         #section-subtitle {
-            text-align: center; 
+            text-align: center;
             margin-top: 0px;
             color: rgba(5, 55, 75, 0.829);
             font-size: 1.2rem;
             font-weight: bold;
-        } 
-        #destinations{
-            padding-left:150px;
-            padding-right:150px;
         }
- 
+
+        #destinations {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
         .filter-container {
-            background-color: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
+            position: relative;
+            background-color: #ffffff;
+            /* Clean white background */
+            border-radius: 15px;
+            /* Increased border-radius for a softer feel */
+            padding: 2rem 2.5rem;
+            /* Added horizontal padding for balance */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
             margin-bottom: 3rem;
+            border-left: 15px solid transparent;
+            /* Adjusted for subtlety */
+            border-right: 15px solid transparent;
+            /* Adjusted for subtlety */
         }
+
+        .filter-container::before,
+        .filter-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            /* Thinner stripes for elegance */
+            border-radius: 4px;
+            /* Rounded edges for a smoother look */
+        }
+
+        .filter-container::before {
+            left: 0;
+            margin: auto 0;
+            height: 50%;
+            /* Balanced height */
+            background: #182848;
+            /* Slightly transparent for a modern feel */
+        }
+
+        .filter-container::after {
+            right: 0;
+            margin: auto 0;
+            height: 50%;
+            /* Balanced height */
+            background: #182848;
+            /* Slightly transparent for a modern feel */
+        }
+
+
 
         .filter-tabs {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1rem; 
+            
         }
 
         .filter-tab {
+            text-transform: uppercase;
             display: flex;
             align-items: center;
-            background-color: #f5f5f5;
-            color: rgba(5, 55, 75, 0.98);
+            background-color: var(--dark);
+            color: white;
             border: none;
             padding: 0.4rem 1.9rem;
             border-radius: 30px;
-            font-size: 1rem;
+           
+            font-size: 0.8rem;
+        letter-spacing: 1px;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
@@ -747,18 +792,20 @@
         }
 
         .filter-tab.active {
-            background-color: var(--dark);
-            color: white;
+            background-color: rgba(204, 204, 204, 0.733); 
+            color: var(--dark);
         }
 
         .filter-tab:hover:not(.active) {
-            background-color: var(--secondary);
+            background-color: var(--primary);
             transform: translateY(-3px);
+            color: white;
         }
 
         .filter-tab i {
             margin-right: 0.5rem;
             font-size: 1.1rem;
+            
         }
 
         /* Cards Container */
@@ -818,6 +865,7 @@
         .card-content h3 {
             font-size: 1.4rem;
             margin-bottom: 0.5rem;
+            font-weight: bold;
             color: var(--dark);
         }
 
@@ -976,33 +1024,35 @@
             </nav><!-- .navbar -->
         </div>
     </div><!-- End Header -->
-    <br>  
-    <p id="section-subtitle">Discover the rich diversity of Ethiopia's historical, cultural, and religious sites</p>
-    
+
+    <p id="section-subtitle" style="margin-top: 20px;  ">Discover the rich diversity of Ethiopia's historical, cultural,
+        and religious sites</p>
+    <br>
     <div id="destinations">
         <div class="filter-container" data-aos="fade-up">
+
             <div class="filter-tabs">
                 <button class="filter-tab active" data-category="all">
-                    <i class="fas fa-globe-africa"></i> All Sites
-                </button>
-                <button class="filter-tab" data-category="historical">
-                    <i class="fas fa-landmark"></i> Historical
+                    <i class="fas fa-globe"></i>&nbsp;&nbsp; All Sites
                 </button>
                 <button class="filter-tab" data-category="cultural">
-                    <i class="fas fa-masks-theater"></i> Cultural
+                    <i class="fas fa-masks-theater"></i>&nbsp;&nbsp; Cultural
+                </button>
+                <button class="filter-tab" data-category="historical">
+                    <i class="fas fa-landmark"></i>&nbsp;&nbsp; Historical
                 </button>
                 <button class="filter-tab" data-category="religious">
-                    <i class="fas fa-place-of-worship"></i> Religious
+                    <i class="fas fa-place-of-worship"></i> &nbsp;&nbsp; Religious
                 </button>
             </div>
+
         </div>
 
         <div class="cards-container" id="cards-container">
             <!-- Historical Sites -->
             <div class="card" data-aos="fade-up" data-category="historical">
                 <div class="card-img">
-                    <img src="../assets/img/touropts/l2.jpg"
-                        alt="Lalibela Rock-Hewn Churches">
+                    <img src="../assets/img/touropts/l2.jpg" alt="Lalibela Rock-Hewn Churches">
                     <div class="card-badge">Historical</div>
                 </div>
                 <div class="card-content">
@@ -1022,11 +1072,10 @@
                         <button class="card-btn secondary">Add to Itinerary</button>
                     </div>
                 </div>
-            </div>   
+            </div>
             <div class="card" data-aos="fade-up" data-category="historical">
                 <div class="card-img">
-                    <img src="../assets/img/touropts/aksum.jpg"
-                        alt="Aksum Obelisks">
+                    <img src="../assets/img/touropts/aksum.jpg" alt="Aksum Obelisks">
                     <div class="card-badge">Historical</div>
                 </div>
                 <div class="card-content">
@@ -1050,8 +1099,7 @@
 
             <div class="card" data-aos="fade-up" data-category="historical">
                 <div class="card-img">
-                    <img src="../assets/img/touropts/g1.jpg"
-                        alt="Gondar Castles">
+                    <img src="../assets/img/touropts/g1.jpg" alt="Gondar Castles">
                     <div class="card-badge">Historical</div>
                 </div>
                 <div class="card-content">
@@ -1075,8 +1123,7 @@
 
             <div class="card" data-aos="fade-up" data-category="historical">
                 <div class="card-img">
-                    <img src="../assets/img/touropts/tiya.jpg" 
-                        alt="Tiya Stelae">
+                    <img src="../assets/img/touropts/tiya.jpg" alt="Tiya Stelae">
                     <div class="card-badge">Historical</div>
                 </div>
                 <div class="card-content">
@@ -1100,8 +1147,7 @@
 
             <div class="card" data-aos="fade-up" data-category="historical">
                 <div class="card-img">
-                    <img src="../assets/img/touropts/yeha.jpg"
-                        alt="Yeha Temple">
+                    <img src="../assets/img/touropts/yeha.jpg" alt="Yeha Temple">
                     <div class="card-badge">Historical</div>
                 </div>
                 <div class="card-content">
@@ -1126,8 +1172,7 @@
             <!-- Cultural Sites -->
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
-                    <img src="../assets/img/touropts/konso.jpg"
-                        alt="Konso Cultural Landscape">
+                    <img src="../assets/img/touropts/konso.jpg" alt="Konso Cultural Landscape">
                     <div class="card-badge">Cultural</div>
                 </div>
                 <div class="card-content">
@@ -1151,8 +1196,7 @@
 
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                        alt="Sidama Cultural Festival">
+                    <img src="../assets/img/touropts/sidama.jpg" alt="Sidama Cultural Festival">
                     <div class="card-badge">Cultural</div>
                 </div>
                 <div class="card-content">
@@ -1176,8 +1220,7 @@
 
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                        alt="Omo Valley Tribes">
+                    <img src="../assets/img/slide/k1.jpg" alt="Omo Valley Tribes">
                     <div class="card-badge">Cultural</div>
                 </div>
                 <div class="card-content">
@@ -1201,8 +1244,7 @@
 
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1580730164529-31726d6b12d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                        alt="Harar City">
+                    <img src="../assets/img/touropts/harar.png" alt="Harar City">
                     <div class="card-badge">Cultural</div>
                 </div>
                 <div class="card-content">
@@ -1226,8 +1268,7 @@
 
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                        alt="Gurage Region">
+                    <img src="../assets/img/touropts/gurage.png" alt="Gurage Region">
                     <div class="card-badge">Cultural</div>
                 </div>
                 <div class="card-content">
@@ -1252,8 +1293,7 @@
             <!-- Religious Sites -->
             <div class="card" data-aos="fade-up" data-category="religious">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1580730164529-31726d6b12d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                        alt="Debre Damo Monastery">
+                    <img src="../assets/img/touropts/debredamo.jpg" alt="Debre Damo Monastery">
                     <div class="card-badge">Religious</div>
                 </div>
                 <div class="card-content">
@@ -1278,8 +1318,34 @@
 
             <div class="card" data-aos="fade-up" data-category="religious">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1559311640-2d8d8ba8240f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                        alt="Bahir Dar Monasteries">
+                    <img src="../assets/img/touropts/ziquala.jpg" alt="Ziquala Abo Monastery">
+                    <div class="card-badge">Religious</div>
+                </div>
+                <div class="card-content">
+                    <h3>Ziquala Abo Monastery</h3>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i> East Shewa Zone, Oromia Region
+                    </div>
+                    <p>The ancient monastery of Abune Gebre MenfesKidus, 80 km southeast of Addis Ababa, offers stunning
+                        views from 2,900 meters.
+                        Founded by a saint, this 500-year-old site is rich in vegetation and wildlife. Nearby Bishoftu
+                        has resorts and lakes for relaxation.</p>
+                    <div class="card-features">
+                        <span class="feature religious">Religious</span>
+                        <span class="feature">Monasteries</span>
+                        <span class="feature">Frescoes</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="card-btn">View Details</button>
+                        <button class="card-btn secondary">Add to Itinerary</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" data-aos="fade-up" data-category="religious">
+                <div class="card-img">
+                    <img src="../assets/img/touropts/bahirdar.jpg" alt="Bahir Dar Monasteries">
                     <div class="card-badge">Religious</div>
                 </div>
                 <div class="card-content">
@@ -1303,21 +1369,23 @@
 
             <div class="card" data-aos="fade-up" data-category="religious">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                        alt="Church of St. George">
+                    <img src="../assets/img/touropts/islamic.jpg" alt="Church of St. George">
                     <div class="card-badge">Religious</div>
                 </div>
                 <div class="card-content">
-                    <h3>Church of St. George</h3>
+                    <h3>Al-Nejashi Mosque</h3>
                     <div class="location">
-                        <i class="fas fa-map-marker-alt"></i> Lalibela, Amhara
+                        <i class="fas fa-map-marker-alt"></i>Mekelle , Tigray Region
                     </div>
-                    <p>Marvel at the most famous of Lalibela's rock-hewn churches, carved in the shape of a cross and
-                        dedicated to Ethiopia's patron saint. An architectural masterpiece.</p>
+                    <p>Considered as one of the oldest mosques in Africa and a historically significant site for early
+                        Islamic history.
+
+                        The site contains the tombs of the king and several companions of the Prophet Muhammad.
+                    </p>
                     <div class="card-features">
                         <span class="feature religious">Religious</span>
                         <span class="feature">Architecture</span>
-                        <span class="feature">UNESCO Site</span>
+                        <span class="feature">Sacred</span>
                     </div>
                     <div class="card-actions">
                         <button class="card-btn">View Details</button>
@@ -1328,8 +1396,7 @@
 
             <div class="card" data-aos="fade-up" data-category="religious">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                        alt="Abuna Yemata Guh">
+                    <img src="../assets/img/touropts/gheralta.jpg" alt="Abuna Yemata Guh">
                     <div class="card-badge">Religious</div>
                 </div>
                 <div class="card-content">
@@ -1338,11 +1405,11 @@
                         <i class="fas fa-map-marker-alt"></i> Tigray Region
                     </div>
                     <p>Visit this spectacular church built into a cliff face, accessible only by climbing a sheer rock
-                        wall. Features well-preserved frescoes and breathtaking views.</p>
+                        wall. Features well-preserved cliff and breathtaking views.</p>
                     <div class="card-features">
                         <span class="feature religious">Religious</span>
                         <span class="feature">Adventure</span>
-                        <span class="feature">Frescoes</span>
+                        <span class="feature">Cliffside</span>
                     </div>
                     <div class="card-actions">
                         <button class="card-btn">View Details</button>
@@ -1351,30 +1418,7 @@
                 </div>
             </div>
 
-            <div class="card" data-aos="fade-up" data-category="religious">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1580730164529-31726d6b12d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                        alt="Church of St. Mary of Zion">
-                    <div class="card-badge">Religious</div>
-                </div>
-                <div class="card-content">
-                    <h3>Church of St. Mary of Zion</h3>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i> Aksum, Tigray
-                    </div>
-                    <p>Visit this important Ethiopian Orthodox church, believed to house the Ark of the Covenant. The
-                        church is renowned for its significance and architectural beauty.</p>
-                    <div class="card-features">
-                        <span class="feature religious">Religious</span>
-                        <span class="feature">Orthodox</span>
-                        <span class="feature">Pilgrimage</span>
-                    </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

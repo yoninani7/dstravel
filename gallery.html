@@ -118,13 +118,60 @@
             text-transform: uppercase;
         }
 
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #ffc56e;
+        .filter-btn:hover 
+        {
+            background: #e7e6e2;
             color: #05374b;
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
         }
+         .filter-btn.active{
+            background: #e6e6e6;
+            color: #05374b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+         }
+
+.filter-container {
+    position: relative;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 15px; /* Increased border-radius for a softer feel */
+  
+            padding: 0.4rem 1.9rem;
+ 
+    width: 60%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);  
+    margin: auto 0; 
+    border-left: 15px solid transparent; /* Adjusted for subtlety */
+    border-right: 15px solid transparent; /* Adjusted for subtlety */
+}
+
+.filter-container::before,
+.filter-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 8px; /* Thinner stripes for elegance */
+    border-radius: 4px; /* Rounded edges for a smoother look */
+}
+
+.filter-container::before {
+    left: 0;
+    margin: auto 0;
+    height: 60%; /* Balanced height */
+    background:#182848; /* Slightly transparent for a modern feel */
+}
+
+.filter-container::after {
+    right: 0;
+    margin: auto 0;
+    height: 60%; /* Balanced height */
+    background:#182848;/* Slightly transparent for a modern feel */
+}
+
+ 
+
 
         .gallery {
             display: grid;
@@ -330,13 +377,20 @@
                 </nav><!-- .navbar -->
             </div>
         </div><!-- End Header -->
-
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All Images</button>
-            <button class="filter-btn" data-filter="scenery">scenery</button>
-            <button class="filter-btn" data-filter="explorers">explorers</button>
-            <button class="filter-btn" data-filter="devours">devours</button>
+        <center>
+            <br> 
+ <div class="filter-container" data-aos="fade-up"  >
+   <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">  <i class="fas fa-globe"></i>&nbsp;&nbsp;&nbsp; All Images</button>
+            <button class="filter-btn" data-filter="scenery"><i class="fas fa-tree"></i>&nbsp;&nbsp;&nbsp; scenery</button>
+            <button class="filter-btn" data-filter="devours"> <i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp; devours</button>
+            <button class="filter-btn" data-filter="explorers"> <i class="fas fa-user-ninja"></i>&nbsp;&nbsp;&nbsp;explorers</button>
         </div>
+        
+            
+ </div>
+     </center>
+
 
         <div class="gallery" id="imageGallery">
             <!-- Images will be dynamically loaded here -->
