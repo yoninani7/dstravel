@@ -707,7 +707,7 @@
         #section-subtitle {
             text-align: center;
             margin-top: 0px;
-            color: rgba(5, 55, 75, 0.829);
+            color: rgba(4, 40, 54, 0.829);
             font-size: 1.2rem;
             font-weight: bold;
         }
@@ -720,6 +720,8 @@
         .filter-container {
             position: relative;
             background-color: #ffffff;
+            width: 90%;
+            margin: 0 auto;
             /* Clean white background */
             border-radius: 15px;
             /* Increased border-radius for a softer feel */
@@ -774,11 +776,12 @@
         }
 
         .filter-tab {
+            
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            background-color: var(--dark);
-            color: white;
+            background-color: rgba(212, 211, 211, 0.829);
+            color: var(--dark);
             border: none;
             padding: 0.4rem 1.9rem;
             border-radius: 30px; 
@@ -790,15 +793,15 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .filter-tab.active {
-            background-color: rgba(204, 204, 204, 0.733);
-            color: var(--dark);
+        .filter-tab.active { 
+            background-color: var(--dark);
+            color: white;
         }
 
         .filter-tab:hover:not(.active) {
             background-color: var(--primary);
-            transform: translateY(-3px);
             color: white;
+            transform: translateY(-3px);
         }
 
         .filter-tab i {
@@ -914,13 +917,7 @@
             background-color: rgba(218, 41, 28, 0.1);
             color: var(--primary);
         }
-
-        .card-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1.5rem;
-        }
-
+ 
         .card-btn {
             background-color: var(--dark);
             color: white;
@@ -929,23 +926,13 @@
             border-radius: 5px;
             cursor: pointer;
             transition: var(--transition);
-            font-size: 0.9rem;
+            font-size: 0.9rem;   
+            margin-top: 30px;
         }
-
         .card-btn:hover {
             background-color: var(--primary);
         }
-
-        .card-btn.secondary {
-            background-color: transparent;
-            color: var(--dark);
-            border: 1px solid var(--dark);
-        }
-
-        .card-btn.secondary:hover {
-            background-color: var(--dark);
-            color: white;
-        }
+ 
 
         /* Responsive Design */
         @media (max-width: 992px) {
@@ -1000,6 +987,16 @@
                 justify-content: center;
             }
         }
+        
+    .divider {
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, #095775 50%, transparent 100%);
+      width: 40%;
+      max-width: 800px;
+      border: none;
+      border-radius: 3px;
+        margin: 0 auto;
+    }
     </style>
 
 </head>
@@ -1016,7 +1013,7 @@
 
             <nav id="navbar" class="navbar order-last order-lg-0 center">
                 <ul>
-                    <li><a style="font-size: 16px;" class="nav-link scrollto " href="../cultural.html"> Tours</a></li>
+                    <li><a style="font-size: 16px;" class="nav-link scrollto " href="../touroptions/destination.html"> Tours</a></li>
                     <li><a class="nav-link scrollto ">/</a></li>
                     <li><a style="font-size: 16px;" class="nav-link scrollto active" href="../index.html">Home</a></li>
                 </ul>
@@ -1026,6 +1023,7 @@
 
     <p id="section-subtitle" style="margin-top: 20px;  ">Discover the rich diversity of Ethiopia's historical, cultural,
         and religious sites</p>
+        <div class="divider"></div>
     <br>
     <div id="destinations">
         <div class="filter-container" data-aos="fade-up">
@@ -1065,11 +1063,9 @@
                         <span class="feature historical">Historical</span>
                         <span class="feature">UNESCO Site</span>
                         <span class="feature">Architecture</span>
-                    </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                    </div> 
+                        <button class="card-btn">View Details</button> 
+                     
                 </div>
             </div>
             <div class="card" data-aos="fade-up" data-category="historical">
@@ -1089,10 +1085,9 @@
                         <span class="feature">Archaeology</span>
                         <span class="feature">UNESCO Site</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                   
+                        <button class="card-btn">View Details</button> 
+                 
                 </div>
             </div>
 
@@ -1113,10 +1108,7 @@
                         <span class="feature">Architecture</span>
                         <span class="feature">UNESCO Site</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                        <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1137,10 +1129,7 @@
                         <span class="feature">Archaeology</span>
                         <span class="feature">UNESCO Site</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                        <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1161,10 +1150,7 @@
                         <span class="feature">Ancient</span>
                         <span class="feature">Archaeology</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                       <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1186,10 +1172,7 @@
                         <span class="feature">UNESCO Site</span>
                         <span class="feature">Traditional</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                       <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1210,10 +1193,7 @@
                         <span class="feature">Festivals</span>
                         <span class="feature">Music & Dance</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                      <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1234,10 +1214,7 @@
                         <span class="feature">Indigenous</span>
                         <span class="feature">Traditional</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                       <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1258,10 +1235,7 @@
                         <span class="feature">UNESCO Site</span>
                         <span class="feature">Islamic Heritage</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                       <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1282,10 +1256,7 @@
                         <span class="feature">Traditional</span>
                         <span class="feature">Crafts</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                        <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1308,10 +1279,7 @@
                         <span class="feature">Monastery</span>
                         <span class="feature">Ancient</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                        <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1334,10 +1302,7 @@
                         <span class="feature">Monasteries</span>
                         <span class="feature">Frescoes</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                        <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1359,10 +1324,7 @@
                         <span class="feature">Monasteries</span>
                         <span class="feature">Frescoes</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                       <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1386,10 +1348,7 @@
                         <span class="feature">Architecture</span>
                         <span class="feature">Sacred</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                        <button class="card-btn">View Details</button> 
                 </div>
             </div>
 
@@ -1410,10 +1369,7 @@
                         <span class="feature">Adventure</span>
                         <span class="feature">Cliffside</span>
                     </div>
-                    <div class="card-actions">
-                        <button class="card-btn">View Details</button>
-                        <button class="card-btn secondary">Add to Itinerary</button>
-                    </div>
+                        <button class="card-btn">View Details</button> 
                 </div>
             </div>
 

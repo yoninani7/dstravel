@@ -33,10 +33,10 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
     <style>
-         body {
-            background-image: url(assets/img/gembg1.png);  
+        body {
+            background-image: url(assets/img/gembg1.png);
 
-        } 
+        }
 
         .container {
             max-width: 1700px;
@@ -118,59 +118,67 @@
             text-transform: uppercase;
         }
 
-        .filter-btn:hover 
-        {
+        .filter-btn:hover {
             background: #e7e6e2;
             color: #05374b;
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
         }
-         .filter-btn.active{
+
+        .filter-btn.active {
             background: #e6e6e6;
             color: #05374b;
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
-         }
+        }
 
-.filter-container {
-    position: relative;
-    background-color: #ffffff; /* Clean white background */
-    border-radius: 15px; /* Increased border-radius for a softer feel */
-  
+        .filter-container {
+            position: relative;
+            background-color: #ffffff;
+            /* Clean white background */
+            border-radius: 15px;
+            /* Increased border-radius for a softer feel */
             padding: 0.4rem 1.9rem;
- 
-    width: 60%;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);  
-    margin: auto 0; 
-    border-left: 15px solid transparent; /* Adjusted for subtlety */
-    border-right: 15px solid transparent; /* Adjusted for subtlety */
-}
+            width: 60%;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            margin: auto 0;
+            border-left: 15px solid transparent;
+            /* Adjusted for subtlety */
+            border-right: 15px solid transparent;
+            /* Adjusted for subtlety */
+        }
 
-.filter-container::before,
-.filter-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 8px; /* Thinner stripes for elegance */
-    border-radius: 4px; /* Rounded edges for a smoother look */
-}
+        .filter-container::before,
+        .filter-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            /* Thinner stripes for elegance */
+            border-radius: 4px;
+            /* Rounded edges for a smoother look */
+        }
 
-.filter-container::before {
-    left: 0;
-    margin: auto 0;
-    height: 60%; /* Balanced height */
-    background:#182848; /* Slightly transparent for a modern feel */
-}
+        .filter-container::before {
+            left: 0;
+            margin: auto 0;
+            height: 60%;
+            /* Balanced height */
+            background: #182848;
+            /* Slightly transparent for a modern feel */
+        }
 
-.filter-container::after {
-    right: 0;
-    margin: auto 0;
-    height: 60%; /* Balanced height */
-    background:#182848;/* Slightly transparent for a modern feel */
-}
+        .filter-container::after {
+            right: 0;
+            margin: auto 0;
+            height: 60%;
+            /* Balanced height */
+            background: #182848;
+            /* Slightly transparent for a modern feel */
+        }
 
- 
+
 
 
         .gallery {
@@ -357,8 +365,8 @@
 </head>
 
 <body>
-     
-    <div class="container"> 
+
+    <div class="container">
         <div id="header">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
                 <div class="logo me-auto">
@@ -378,18 +386,22 @@
             </div>
         </div><!-- End Header -->
         <center>
-            <br> 
- <div class="filter-container" data-aos="fade-up"  >
-   <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">  <i class="fas fa-globe"></i>&nbsp;&nbsp;&nbsp; All Images</button>
-            <button class="filter-btn" data-filter="scenery"><i class="fas fa-tree"></i>&nbsp;&nbsp;&nbsp; scenery</button>
-            <button class="filter-btn" data-filter="devours"> <i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp; devours</button>
-            <button class="filter-btn" data-filter="explorers"> <i class="fas fa-user-ninja"></i>&nbsp;&nbsp;&nbsp;explorers</button>
-        </div>
-        
-            
- </div>
-     </center>
+            <br>
+            <div class="filter-container" data-aos="fade-up">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all"> <i class="fas fa-globe"></i>&nbsp;&nbsp;&nbsp;
+                        All Images</button>
+                    <button class="filter-btn" data-filter="scenery"><i class="fas fa-tree"></i>&nbsp;&nbsp;&nbsp;
+                        scenery</button>
+                    <button class="filter-btn" data-filter="devours"> <i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp;
+                        devours</button>
+                    <button class="filter-btn" data-filter="explorers"> <i
+                            class="fas fa-user-ninja"></i>&nbsp;&nbsp;&nbsp;explorers</button>
+                </div>
+
+
+            </div>
+        </center>
 
 
         <div class="gallery" id="imageGallery">
@@ -599,83 +611,83 @@
         let currentImageIndex = 0;
         let currentFilteredImages = [];
 
- // Function to load images with lazy loading
-function loadImages() {
-    // Clear loading message
-    gallery.innerHTML = '';
+        // Function to load images with lazy loading
+        function loadImages() {
+            // Clear loading message
+            gallery.innerHTML = '';
 
-    // Create image cards
-    imageData.forEach((image, index) => {
-        const imageCard = document.createElement('div');
-        imageCard.className = 'image-card';
-        imageCard.setAttribute('data-category', image.category);
-        // Remove this line: imageCard.setAttribute('data-index', index);
+            // Create image cards
+            imageData.forEach((image, index) => {
+                const imageCard = document.createElement('div');
+                imageCard.className = 'image-card';
+                imageCard.setAttribute('data-category', image.category);
+                // Remove this line: imageCard.setAttribute('data-index', index);
 
-        const imageContainer = document.createElement('div');
-        imageContainer.className = 'image-container';
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'image-container';
 
-        const img = document.createElement('img');
-        img.className = 'gallery-image';
-        img.src = image.src;
-        img.alt = image.title;
-        img.loading = 'lazy';
+                const img = document.createElement('img');
+                img.className = 'gallery-image';
+                img.src = image.src;
+                img.alt = image.title;
+                img.loading = 'lazy';
 
-        // Add click event to open modal - pass the image ID instead of index
-        img.addEventListener('click', () => openModal(image.id));
+                // Add click event to open modal - pass the image ID instead of index
+                img.addEventListener('click', () => openModal(image.id));
 
-        // Add placeholder until image loads
-        img.onload = function () {
-            if (imageContainer.querySelector('.placeholder')) {
-                imageContainer.removeChild(imageContainer.querySelector('.placeholder'));
-            }
-        };
+                // Add placeholder until image loads
+                img.onload = function () {
+                    if (imageContainer.querySelector('.placeholder')) {
+                        imageContainer.removeChild(imageContainer.querySelector('.placeholder'));
+                    }
+                };
 
-        // Create a placeholder
-        const placeholder = document.createElement('div');
-        placeholder.className = 'placeholder';
-        imageContainer.appendChild(placeholder);
+                // Create a placeholder
+                const placeholder = document.createElement('div');
+                placeholder.className = 'placeholder';
+                imageContainer.appendChild(placeholder);
 
-        imageContainer.appendChild(img);
-        imageCard.appendChild(imageContainer);
+                imageContainer.appendChild(img);
+                imageCard.appendChild(imageContainer);
 
-        gallery.appendChild(imageCard);
-    });
+                gallery.appendChild(imageCard);
+            });
 
-    // Set current filtered images to all images initially
-    currentFilteredImages = [...imageData];
-}
+            // Set current filtered images to all images initially
+            currentFilteredImages = [...imageData];
+        }
 
         // Filter images based on category 
-function filterImages(category) {
-    const imageCards = document.querySelectorAll('.image-card');
+        function filterImages(category) {
+            const imageCards = document.querySelectorAll('.image-card');
 
-    // Update current filtered images based on category
-    if (category === 'all') {
-        currentFilteredImages = [...imageData];
-    } else {
-        currentFilteredImages = imageData.filter(image => image.category === category);
-    }
+            // Update current filtered images based on category
+            if (category === 'all') {
+                currentFilteredImages = [...imageData];
+            } else {
+                currentFilteredImages = imageData.filter(image => image.category === category);
+            }
 
-    imageCards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
+            imageCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         }
-    });
-}
 
- 
-  // Open modal with selected image
-function openModal(imageId) {
-    // Find the index of the image in the current filtered array by its ID
-    currentImageIndex = currentFilteredImages.findIndex(img => img.id === imageId);
-    
-    if (currentImageIndex !== -1) {
-        modal.style.display = 'block';
-        modalImg.src = currentFilteredImages[currentImageIndex].src;
-    }
-}
+
+        // Open modal with selected image
+        function openModal(imageId) {
+            // Find the index of the image in the current filtered array by its ID
+            currentImageIndex = currentFilteredImages.findIndex(img => img.id === imageId);
+
+            if (currentImageIndex !== -1) {
+                modal.style.display = 'block';
+                modalImg.src = currentFilteredImages[currentImageIndex].src;
+            }
+        }
 
         // Navigate to next image in modal
         function nextImage() {
