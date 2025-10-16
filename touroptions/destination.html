@@ -43,13 +43,13 @@
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 0.5rem;
             position: relative;
             z-index: 1;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             color: #05374b;
-            margin-top: 100px;
+            margin-top: clamp(40px, 10vw, 100px);
             text-align: center;
         }
 
@@ -80,13 +80,11 @@
             box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
         }
 
-
-
         /* Container */
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 clamp(1rem, 3vw, 2rem);
         }
 
         /* PDF Viewer */
@@ -112,7 +110,7 @@
         }
 
         .pdf-header {
-            padding: 1.2rem 1.5rem;
+            padding: clamp(1rem, 2vw, 1.2rem) clamp(1rem, 2vw, 1.5rem);
             background: linear-gradient(to right, #f8f9fa, #ffffff);
             border-bottom: 1px solid #eee;
             display: flex;
@@ -129,7 +127,7 @@
         }
 
         .pdf-icon {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
             color: #4b6cb7;
             transition: transform 0.3s ease;
         }
@@ -139,7 +137,7 @@
         }
 
         .pdf-title {
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
             font-weight: 600;
             color: #2c3e50;
             word-break: break-word;
@@ -150,14 +148,14 @@
             color: white;
             border: none;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: clamp(35px, 8vw, 40px);
+            height: clamp(35px, 8vw, 40px);
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
         }
 
         .toggle-btn:hover {
@@ -173,7 +171,7 @@
         }
 
         .pdf-item.expanded .pdf-preview-container {
-            height: 500px;
+            height: clamp(300px, 50vw, 500px);
         }
 
         .pdf-iframe {
@@ -186,7 +184,7 @@
 
         .pdf-actions {
             display: flex;
-            padding: 1.2rem 1.5rem;
+            padding: clamp(1rem, 2vw, 1.2rem) clamp(1rem, 2vw, 1.5rem);
             background: #f8f9fa;
             border-top: 1px solid #e9ecef;
             gap: 1rem;
@@ -200,7 +198,7 @@
 
         .btnpdf {
             background: linear-gradient(135deg, #05374b 0%, #084f6b 100%);
-            width: 300px;
+            width: clamp(250px, 60vw, 300px);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -244,7 +242,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 25px;
+            padding: clamp(15px, 3vw, 20px) clamp(20px, 4vw, 25px);
             background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
             cursor: pointer;
             transition: all 0.3s ease;
@@ -259,17 +257,17 @@
         .header-left {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: clamp(15px, 3vw, 20px);
         }
 
         .accordion-title {
-            font-size: 1.3rem;
+            font-size: clamp(1.2rem, 2.5vw, 1.3rem);
             font-weight: 600;
         }
 
         .accordion-toggle-btn {
-            width: 40px;
-            height: 40px;
+            width: clamp(35px, 8vw, 40px);
+            height: clamp(35px, 8vw, 40px);
             border-radius: 50%;
             background: linear-gradient(135deg, #182848 0%, #253d6e 100%);
             color: white;
@@ -305,7 +303,7 @@
         }
 
         .accordion-item.expanded .pdf-preview {
-            height: 400px;
+            height: clamp(250px, 50vw, 400px);
         }
 
         .button-container {
@@ -363,7 +361,7 @@
 
         .footer-section {
             flex: 1;
-            min-width: 250px;
+            min-width: min(250px, 100%);
         }
 
         .footer-heading {
@@ -418,11 +416,6 @@
                 padding: 0 1.5rem;
             }
 
-            h1 {
-                font-size: 3rem;
-                margin-top: 80px;
-            }
-
             .pdf-item.expanded .pdf-preview-container {
                 height: 450px;
             }
@@ -434,14 +427,6 @@
 
         /* Tablets */
         @media (max-width: 900px) {
-            .pdf-title {
-                font-size: 1.3rem;
-            }
-
-            .accordion-title {
-                font-size: 1.3rem;
-            }
-
             .header-center-text {
                 font-size: 1.3rem;
             }
@@ -456,11 +441,6 @@
             #header {
                 height: 60px;
                 margin: 0 3%;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-                margin-top: 60px;
             }
 
             .pdf-header {
@@ -504,11 +484,6 @@
 
             .header-center-text {
                 font-size: 1.1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-                margin-top: 40px;
             }
 
             .pdf-header {
@@ -567,10 +542,6 @@
                 font-size: 1rem;
             }
 
-            h1 {
-                font-size: 1.8rem;
-            }
-
             .container {
                 padding: 0 1rem;
             }
@@ -583,16 +554,8 @@
                 height: 300px;
             }
 
-            .pdf-title {
-                font-size: 1.2rem;
-            }
-
             .accordion-header {
                 padding: 12px 15px;
-            }
-
-            .accordion-title {
-                font-size: 1.2rem;
             }
 
             .accordion-item.expanded .pdf-preview {
@@ -612,16 +575,8 @@
                 font-size: 0.9rem;
             }
 
-            h1 {
-                font-size: 1.6rem;
-            }
-
             .pdf-item.expanded .pdf-preview-container {
                 height: 250px;
-            }
-
-            .pdf-icon {
-                font-size: 1.5rem;
             }
 
             .accordion-item.expanded .pdf-preview {
@@ -657,21 +612,20 @@
             overflow-x: hidden;
         }
 
-
         .hero h1 {
-            font-size: 3rem;
+            font-size: clamp(1.8rem, 5vw, 3rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             max-width: 800px;
             margin-bottom: 2rem;
         }
 
         section {
-            padding: 10%;
+            padding: clamp(2rem, 10%, 10%);
         }
 
         #section-title {
@@ -679,7 +633,7 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
             font-weight: bold;
             color: white;
             pointer-events: none;
@@ -687,7 +641,7 @@
         }
 
         #section-title h3 {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
             color: var(--dark);
             position: relative;
             display: inline-block;
@@ -708,31 +662,27 @@
             text-align: center;
             margin-top: 0px;
             color: rgba(4, 40, 54, 0.829);
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             font-weight: bold;
         }
 
         #destinations {
-            padding-left: 150px;
-            padding-right: 150px;
+            padding-left: clamp(1rem, 10vw, 150px);
+            padding-right: clamp(1rem, 10vw, 150px);
         }
 
         .filter-container {
             position: relative;
             background-color: #ffffff;
             width: 90%;
+            max-width: 1200px;
             margin: 0 auto;
-            /* Clean white background */
             border-radius: 15px;
-            /* Increased border-radius for a softer feel */
-            padding: 2rem 2.5rem;
-            /* Added horizontal padding for balance */
+            padding: clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 4vw, 2.5rem);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
             margin-bottom: 3rem;
-            border-left: 15px solid transparent;
-            /* Adjusted for subtlety */
-            border-right: 15px solid transparent;
-            /* Adjusted for subtlety */
+            border-left: clamp(5px, 2vw, 15px) solid transparent;
+            border-right: clamp(5px, 2vw, 15px) solid transparent;
         }
 
         .filter-container::before,
@@ -741,51 +691,41 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 8px;
-            /* Thinner stripes for elegance */
+            width: clamp(4px, 1.5vw, 8px);
             border-radius: 4px;
-            /* Rounded edges for a smoother look */
         }
 
         .filter-container::before {
             left: 0;
             margin: auto 0;
             height: 50%;
-            /* Balanced height */
             background: #182848;
-            /* Slightly transparent for a modern feel */
         }
 
         .filter-container::after {
             right: 0;
             margin: auto 0;
             height: 50%;
-            /* Balanced height */
             background: #182848;
-            /* Slightly transparent for a modern feel */
         }
-
-
 
         .filter-tabs {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 1rem;
-
+            gap: clamp(0.5rem, 2vw, 1rem);
         }
 
         .filter-tab {
-            
             text-transform: uppercase;
             display: flex;
             align-items: center;
             background-color: rgba(212, 211, 211, 0.829);
             color: var(--dark);
             border: none;
-            padding: 0.4rem 1.9rem;
-            border-radius: 30px; 
-            font-size: 0.8rem;
+            padding: clamp(0.3rem, 1.5vw, 0.4rem) clamp(1rem, 3vw, 1.9rem);
+            border-radius: 30px;
+            font-size: clamp(0.7rem, 1.5vw, 0.8rem);
             letter-spacing: 1px;
             font-weight: 600;
             cursor: pointer;
@@ -793,7 +733,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .filter-tab.active { 
+        .filter-tab.active {
             background-color: var(--dark);
             color: white;
         }
@@ -806,15 +746,14 @@
 
         .filter-tab i {
             margin-right: 0.5rem;
-            font-size: 1.1rem;
-
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
         }
 
         /* Cards Container */
         .cards-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
         }
 
         .card {
@@ -832,7 +771,7 @@
         }
 
         .card-img {
-            height: 220px;
+            height: clamp(180px, 40vw, 220px);
             overflow: hidden;
             position: relative;
         }
@@ -861,11 +800,11 @@
         }
 
         .card-content {
-            padding: 1.5rem;
+            padding: clamp(1rem, 2vw, 1.5rem);
         }
 
         .card-content h3 {
-            font-size: 1.4rem;
+            font-size: clamp(1.2rem, 3vw, 1.4rem);
             margin-bottom: 0.5rem;
             font-weight: bold;
             color: var(--dark);
@@ -917,7 +856,7 @@
             background-color: rgba(218, 41, 28, 0.1);
             color: var(--primary);
         }
- 
+
         .card-btn {
             background-color: var(--dark);
             color: white;
@@ -926,22 +865,19 @@
             border-radius: 5px;
             cursor: pointer;
             transition: var(--transition);
-            font-size: 0.9rem;   
+            font-size: 0.9rem;
             margin-top: 30px;
+            width: 100%;
         }
+
         .card-btn:hover {
             background-color: var(--primary);
         }
- 
 
         /* Responsive Design */
         @media (max-width: 992px) {
             section {
                 padding: 4rem 5%;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
             }
         }
 
@@ -949,31 +885,11 @@
             .nav-links {
                 display: none;
             }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
         }
 
         @media (max-width: 576px) {
             header {
                 height: 50vh;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
             }
 
             .filter-tabs {
@@ -987,16 +903,15 @@
                 justify-content: center;
             }
         }
-        
-    .divider {
-      height: 3px;
-      background: linear-gradient(90deg, transparent 0%, #095775 50%, transparent 100%);
-      width: 40%;
-      max-width: 800px;
-      border: none;
-      border-radius: 3px;
-        margin: 0 auto;
-    }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, #095775 50%, transparent 100%);
+            width: min(80%, 800px);
+            border: none;
+            border-radius: 3px;
+            margin: 0 auto;
+        }
     </style>
 
 </head>
@@ -1021,7 +936,7 @@
         </div>
     </div><!-- End Header -->
 
-    <p id="section-subtitle" style="margin-top: 20px;  ">Discover the rich diversity of Ethiopia's historical, cultural,
+    <p id="section-subtitle" style="margin-top: 20px;">Discover the rich diversity of Ethiopia's historical, cultural,
         and religious sites</p>
         <div class="divider"></div>
     <br>

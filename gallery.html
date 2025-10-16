@@ -33,24 +33,31 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
             background-image: url(assets/img/gembg1.png);
-
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 1700px;
             margin: 0 auto;
             padding: 20px;
+            width: 100%;
         }
-
 
         #header {
             position: relative;
             top: 10px;
             left: 0;
             right: 0;
-            height: 70px;
+            height: auto;
+            min-height: 70px;
             z-index: 997;
             transition: all 0.5s;
             padding: 10px 0;
@@ -80,6 +87,7 @@
             color: white;
             pointer-events: none;
             text-transform: uppercase;
+            white-space: nowrap;
         }
 
         h1 {
@@ -95,57 +103,17 @@
             margin: 0 auto;
         }
 
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 30px 0;
-        }
-
-        .filter-btn {
-            padding: 0.7rem 1.8rem;
-            background: #05374b;
-            border: none;
-            border-radius: 30px;
-            color: #ffffff;
-            letter-spacing: 1px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-transform: uppercase;
-        }
-
-        .filter-btn:hover {
-            background: #e7e6e2;
-            color: #05374b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
-        }
-
-        .filter-btn.active {
-            background: #e6e6e6;
-            color: #05374b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
-        }
-
         .filter-container {
             position: relative;
             background-color: #ffffff;
-            /* Clean white background */
+            width: 90%;
+            margin: 0 auto;
             border-radius: 15px;
-            /* Increased border-radius for a softer feel */
-            padding: 0.4rem 1.9rem;
-            width: 60%;
+            padding: 1.5rem 1.5rem;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-            margin: auto 0;
+            margin-bottom: 3rem;
             border-left: 15px solid transparent;
-            /* Adjusted for subtlety */
             border-right: 15px solid transparent;
-            /* Adjusted for subtlety */
         }
 
         .filter-container::before,
@@ -155,31 +123,63 @@
             top: 0;
             bottom: 0;
             width: 8px;
-            /* Thinner stripes for elegance */
             border-radius: 4px;
-            /* Rounded edges for a smoother look */
         }
 
         .filter-container::before {
             left: 0;
             margin: auto 0;
-            height: 60%;
-            /* Balanced height */
+            height: 50%;
             background: #182848;
-            /* Slightly transparent for a modern feel */
         }
 
         .filter-container::after {
             right: 0;
             margin: auto 0;
-            height: 60%;
-            /* Balanced height */
+            height: 50%;
             background: #182848;
-            /* Slightly transparent for a modern feel */
         }
 
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
 
+        .filter-tab {
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            background-color: rgba(212, 211, 211, 0.829);
+            color: rgba(5, 55, 75, 0.98);
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+        }
 
+        .filter-tab.active {
+            background-color: rgba(5, 55, 75, 0.98);
+            color: rgb(255, 255, 255);
+        }
+
+        .filter-tab:hover:not(.active) {
+            background-color: rgba(5, 55, 75, 0.863);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .filter-tab i {
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
 
         .gallery {
             display: grid;
@@ -188,6 +188,7 @@
             margin-top: 40px;
             margin-right: 50px;
             margin-left: 50px;
+            width: calc(100% - 100px);
         }
 
         .image-card {
@@ -197,6 +198,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             aspect-ratio: 1 / 1;
+            width: 100%;
         }
 
         .image-card:hover {
@@ -327,39 +329,229 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
+        /* Responsive Design */
+        @media (max-width: 1400px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 1200px) {
             .gallery {
                 grid-template-columns: repeat(3, 1fr);
+                margin-left: 30px;
+                margin-right: 30px;
+                width: calc(100% - 60px);
+            }
+            
+            #imagetypes {
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                margin-left: 20px;
+                margin-right: 20px;
+                width: calc(100% - 40px);
+            }
+            
+            #imagetypes {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            
+            .filter-container {
+                width: 95%;
+                padding: 1.2rem 1rem;
+            }
+            
+            .header-center-text {
+                font-size: 1.2rem;
             }
         }
 
         @media (max-width: 768px) {
             .gallery {
                 grid-template-columns: repeat(2, 1fr);
+                margin-left: 15px;
+                margin-right: 15px;
+                width: calc(100% - 30px);
+                gap: 15px;
             }
-
-            h1 {
-                font-size: 2rem;
+            
+            #imagetypes {
+                padding-left: 20px;
+                padding-right: 20px;
             }
-
+            
+            .filter-container {
+                width: 100%;
+                padding: 1rem 0.8rem;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .filter-tabs {
+                gap: 0.6rem;
+            }
+            
+            .filter-tab {
+                padding: 0.4rem 0.9rem;
+                font-size: 0.75rem;
+            }
+            
+            .filter-tab i {
+                font-size: 0.9rem;
+                margin-right: 0.3rem;
+            }
+            
+            .header-center-text {
+                font-size: 1rem;
+            }
+            
+            #header {
+                margin: 0 3%;
+            }
+            
             .modal-content {
                 width: 95%;
             }
+            
+            .close {
+                top: 10px;
+                right: 20px;
+                font-size: 35px;
+            }
+            
+            .prev, .next {
+                padding: 12px;
+                font-size: 25px;
+            }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
             .gallery {
                 grid-template-columns: 1fr;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: calc(100% - 20px);
+                gap: 15px;
             }
-
-            .filter-buttons {
-                flex-direction: column;
-                align-items: center;
+            
+            #imagetypes {
+                padding-left: 10px;
+                padding-right: 10px;
             }
-
-            .filter-btn {
+            
+            .filter-container {
+                padding: 0.8rem 0.5rem;
+            }
+            
+            .filter-tabs {
+                gap: 0.4rem;
+            }
+            
+            .filter-tab {
+                padding: 0.3rem 0.7rem;
+                font-size: 0.7rem;
+            }
+            
+            .filter-tab i {
+                font-size: 0.8rem;
+                margin-right: 0.2rem;
+            }
+            
+            .header-center-text {
+                font-size: 0.9rem;
+                white-space: normal;
                 width: 80%;
+                text-align: center;
+                line-height: 1.2;
             }
+            
+            #header {
+                margin: 0 2%;
+                height: auto;
+                min-height: 60px;
+                padding: 8px 0;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            #section-subtitle {
+                font-size: 1rem;
+                padding: 0 10px;
+            }
+            
+            .divider {
+                width: 60%;
+            }
+            
+            .close {
+                top: 5px;
+                right: 15px;
+                font-size: 30px;
+            }
+            
+            .prev, .next {
+                padding: 8px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .filter-tabs {
+                gap: 0.3rem;
+            }
+            
+            .filter-tab {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.65rem;
+            }
+            
+            .filter-tab i {
+                font-size: 0.7rem;
+                margin-right: 0.1rem;
+            }
+            
+            .header-center-text {
+                font-size: 0.8rem;
+            }
+            
+            #header {
+                margin: 0 1%;
+            }
+        }
+        
+        #imagetypes {
+            padding-left: 150px;
+            padding-right: 150px;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, #095775 50%, transparent 100%);
+            width: 40%;
+            max-width: 800px;
+            border: none;
+            border-radius: 3px;
+            margin: 0 auto;
+        }
+        
+        #section-subtitle {
+            text-align: center;
+            margin-top: 0px;
+            color: rgba(4, 40, 54, 0.829);
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 0 20px;
         }
     </style>
 </head>
@@ -386,373 +578,383 @@
             </div>
         </div><!-- End Header -->
         <center>
-            <br>
-            <div class="filter-container" data-aos="fade-up">
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all"> <i class="fas fa-globe"></i>&nbsp;&nbsp;&nbsp;
-                        All Images</button>
-                    <button class="filter-btn" data-filter="scenery"><i class="fas fa-tree"></i>&nbsp;&nbsp;&nbsp;
-                        scenery</button>
-                    <button class="filter-btn" data-filter="devours"> <i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp;
-                        devours</button>
-                    <button class="filter-btn" data-filter="explorers"> <i
-                            class="fas fa-user-ninja"></i>&nbsp;&nbsp;&nbsp;explorers</button>
+            <br> 
+        <p id="section-subtitle" style="margin-top: 20px;  ">Take a look at our photo album of stunning landscapes, tasty dishes, and adventurous explore</p>
+        <div class="divider"></div>
+ <br> 
+        <div id="imagetypes">
+            <div class="filter-container" data-aos="fade-up"> 
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">
+                        <i class="fas fa-globe"></i>&nbsp;&nbsp; All Images
+                    </button>
+                    <button class="filter-tab" data-filter="scenery">
+                        <i class="fas fa-masks-theater"></i>&nbsp;&nbsp; scenery
+                    </button>
+                    <button class="filter-tab" data-filter="devours">
+                        <i class="fas fa-landmark"></i>&nbsp;&nbsp; devours
+                    </button>
+                    <button class="filter-tab" data-filter="explorers">
+                        <i class="fas fa-place-of-worship"></i> &nbsp;&nbsp; explorers
+                    </button>
                 </div>
 
-
             </div>
-        </center>
+ </center>
 
-
-        <div class="gallery" id="imageGallery">
-            <!-- Images will be dynamically loaded here -->
-            <div class="loading">Loading images...</div>
-        </div>
-    </div>
-
-    <!-- Modal for image viewing -->
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <span class="prev">&#10094;</span>
-        <span class="next">&#10095;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-
-    <!-- ======= Footer ======= -->
-    <div id="footer">
-        <div class="stars-container">
-            <!-- Generate 100 star divs -->
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-        </div>
-        <div class="container">
-            <div class="social-links">
-                <a href="#" class="twitter"><i class='bx bxl-whatsapp'></i></a>
-                <a href="#" class="facebook"><i class='bx bxl-facebook'></i></a>
-                <a href="#" class="instagram"><i class='bx bxl-instagram'></i></a>
-                <a href="#" class="linkedin"><i class='bx bxl-telegram'></i></a>
-            </div>
-            <div class="copyright">
-                &copy; Copyright <strong><span>DS International Trading PLC</span></strong>. All Rights Reserved
-            </div>
-            <br>
-            <div class="credits">
-                Designed by <a style="color: white; font-weight: bold;" href="https://yonikass.netlify.app/">Yonatan
-                    Kassahun</a>
+            <div class="gallery" id="imageGallery">
+                <!-- Images will be dynamically loaded here -->
+                <div class="loading">Loading images...</div>
             </div>
         </div>
-    </div><!-- End Footer -->
 
-    <script>
-        // Sample image data with categories
-        const imageData = [
-            { id: 1, src: "assets/img/selectedimg/explorers/e.JPG", category: "explorers", title: "Tropical Explorer 1" },
-            { id: 2, src: "assets/img/selectedimg/explorers/e1.JPG", category: "explorers", title: "Tropical Explorer 2" },
-            { id: 3, src: "assets/img/selectedimg/explorers/e2.JPG", category: "explorers", title: "Tropical Explorer 3" },
-            { id: 4, src: "assets/img/selectedimg/explorers/e3.JPG", category: "explorers", title: "Tropical Explorer 4" },
-            { id: 5, src: "assets/img/selectedimg/explorers/e4.JPG", category: "explorers", title: "Tropical Explorer 5" },
-            { id: 6, src: "assets/img/selectedimg/explorers/e5.JPG", category: "explorers", title: "Tropical Explorer 6" },
-            { id: 7, src: "assets/img/selectedimg/explorers/e10v.JPG", category: "explorers", title: "Tropical Explorer 7" },
-            { id: 8, src: "assets/img/selectedimg/explorers/e11.JPG", category: "explorers", title: "Tropical Explorer 8" },
-            { id: 9, src: "assets/img/selectedimg/explorers/e11v.JPG", category: "explorers", title: "Tropical Explorer 9" },
-            { id: 10, src: "assets/img/selectedimg/explorers/e12v.png", category: "explorers", title: "Tropical Explorer 10" },
-            { id: 11, src: "assets/img/selectedimg/explorers/ee3.JPG", category: "explorers", title: "Tropical Explorer 11" },
-            { id: 12, src: "assets/img/selectedimg/explorers/ee4.JPG", category: "explorers", title: "Tropical Explorer 12" },
-            { id: 13, src: "assets/img/selectedimg/explorers/eee1.JPG", category: "explorers", title: "Tropical Explorer 13" },
-            { id: 14, src: "assets/img/selectedimg/explorers/eee2.JPG", category: "explorers", title: "Tropical Explorer 14" },
-            { id: 15, src: "assets/img/selectedimg/explorers/eee3.JPG", category: "explorers", title: "Tropical Explorer 15" },
-            { id: 16, src: "assets/img/selectedimg/explorers/eee4.JPG", category: "explorers", title: "Tropical Explorer 16" },
-            { id: 17, src: "assets/img/selectedimg/explorers/eee5.JPG", category: "explorers", title: "Tropical Explorer 17" },
-            { id: 18, src: "assets/img/selectedimg/scenery/s.JPG", category: "scenery", title: "Scenery 1" },
-            { id: 19, src: "assets/img/selectedimg/scenery/s1.JPG", category: "scenery", title: "Scenery 2" },
-            { id: 20, src: "assets/img/selectedimg/scenery/s2.JPG", category: "scenery", title: "Scenery 3" },
-            { id: 21, src: "assets/img/selectedimg/scenery/s3.JPG", category: "scenery", title: "Scenery 4" },
-            { id: 22, src: "assets/img/selectedimg/scenery/s4.JPG", category: "scenery", title: "Scenery 5" },
-            { id: 23, src: "assets/img/selectedimg/scenery/s10v.png", category: "scenery", title: "Scenery 6" },
-            { id: 24, src: "assets/img/selectedimg/scenery/s11v.png", category: "scenery", title: "Scenery 7" },
-            { id: 25, src: "assets/img/selectedimg/scenery/s12v.png", category: "scenery", title: "Scenery 8" },
-            { id: 26, src: "assets/img/selectedimg/scenery/s13v.png", category: "scenery", title: "Scenery 9" },
-            { id: 27, src: "assets/img/selectedimg/scenery/s14v.png", category: "scenery", title: "Scenery 10" },
-            { id: 28, src: "assets/img/selectedimg/scenery/s15v.png", category: "scenery", title: "Scenery 11" },
-            { id: 29, src: "assets/img/selectedimg/scenery/s16v.png", category: "scenery", title: "Scenery 12" },
-            { id: 30, src: "assets/img/selectedimg/scenery/s17v.png", category: "scenery", title: "Scenery 13" },
-            { id: 31, src: "assets/img/selectedimg/scenery/ss.jpeg", category: "scenery", title: "Scenery 14" },
-            { id: 32, src: "assets/img/selectedimg/scenery/ss1.jpeg", category: "scenery", title: "Scenery 15" },
-            { id: 33, src: "assets/img/selectedimg/scenery/ss2.jpeg", category: "scenery", title: "Scenery 16" },
-            { id: 34, src: "assets/img/selectedimg/scenery/ss3.jpeg", category: "scenery", title: "Scenery 17" },
-            { id: 35, src: "assets/img/selectedimg/scenery/ss4.jpeg", category: "scenery", title: "Scenery 18" },
-            { id: 36, src: "assets/img/selectedimg/scenery/sss.JPG", category: "scenery", title: "Scenery 19" },
-            { id: 37, src: "assets/img/selectedimg/scenery/sss1.JPG", category: "scenery", title: "Scenery 20" },
-            { id: 38, src: "assets/img/selectedimg/scenery/sss2.JPG", category: "scenery", title: "Scenery 21" },
-            { id: 39, src: "assets/img/selectedimg/scenery/sss3.JPG", category: "scenery", title: "Scenery 22" },
-            { id: 40, src: "assets/img/selectedimg/devours/d.JPG", category: "devours", title: "Devour 1" },
-            { id: 41, src: "assets/img/selectedimg/devours/d1.JPG", category: "devours", title: "Devour 2" },
-            { id: 42, src: "assets/img/selectedimg/devours/d2.JPG", category: "devours", title: "Devour 3" },
-            { id: 43, src: "assets/img/selectedimg/devours/d3.JPG", category: "devours", title: "Devour 4" },
-            { id: 44, src: "assets/img/selectedimg/devours/d4.JPG", category: "devours", title: "Devour 5" },
-            { id: 45, src: "assets/img/selectedimg/devours/d5.JPG", category: "devours", title: "Devour 6" },
-            { id: 46, src: "assets/img/selectedimg/devours/dd.JPG", category: "devours", title: "Devour 7" },
-            { id: 47, src: "assets/img/selectedimg/devours/dd1v.png", category: "devours", title: "Devour 8" }];
+        <!-- Modal for image viewing -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
 
-        // DOM elements
-        const gallery = document.getElementById('imageGallery');
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const closeBtn = document.querySelector('.close');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
+        <!-- ======= Footer ======= -->
+        <div id="footer">
+            <div class="stars-container">
+                <!-- Generate 100 star divs -->
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
+            <div class="container">
+                <div class="social-links">
+                    <a href="#" class="twitter"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="#" class="facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="linkedin"><i class='bx bxl-telegram'></i></a>
+                </div>
+                <div class="copyright">
+                    &copy; Copyright <strong><span>DS International Trading PLC</span></strong>. All Rights Reserved
+                </div>
+                <br>
+                <div class="credits">
+                    Designed by <a style="color: white; font-weight: bold;" href="https://yonikass.netlify.app/">Yonatan
+                        Kassahun</a>
+                </div>
+            </div>
+        </div><!-- End Footer -->
 
-        // Variables for modal navigation
-        let currentImageIndex = 0;
-        let currentFilteredImages = [];
+        <script>
+            // Sample image data with categories
+            const imageData = [
+                { id: 1, src: "assets/img/selectedimg/explorers/e.JPG", category: "explorers", title: "Tropical Explorer 1" },
+                { id: 2, src: "assets/img/selectedimg/explorers/e1.JPG", category: "explorers", title: "Tropical Explorer 2" },
+                { id: 3, src: "assets/img/selectedimg/explorers/e2.JPG", category: "explorers", title: "Tropical Explorer 3" },
+                { id: 4, src: "assets/img/selectedimg/explorers/e3.JPG", category: "explorers", title: "Tropical Explorer 4" },
+                { id: 5, src: "assets/img/selectedimg/explorers/e4.JPG", category: "explorers", title: "Tropical Explorer 5" },
+                { id: 6, src: "assets/img/selectedimg/explorers/e5.JPG", category: "explorers", title: "Tropical Explorer 6" },
+                { id: 7, src: "assets/img/selectedimg/explorers/e10v.JPG", category: "explorers", title: "Tropical Explorer 7" },
+                { id: 8, src: "assets/img/selectedimg/explorers/e11.JPG", category: "explorers", title: "Tropical Explorer 8" },
+                { id: 9, src: "assets/img/selectedimg/explorers/e11v.JPG", category: "explorers", title: "Tropical Explorer 9" },
+                { id: 10, src: "assets/img/selectedimg/explorers/e12v.png", category: "explorers", title: "Tropical Explorer 10" },
+                { id: 11, src: "assets/img/selectedimg/explorers/ee3.JPG", category: "explorers", title: "Tropical Explorer 11" },
+                { id: 12, src: "assets/img/selectedimg/explorers/ee4.JPG", category: "explorers", title: "Tropical Explorer 12" },
+                { id: 13, src: "assets/img/selectedimg/explorers/eee1.JPG", category: "explorers", title: "Tropical Explorer 13" },
+                { id: 14, src: "assets/img/selectedimg/explorers/eee2.JPG", category: "explorers", title: "Tropical Explorer 14" },
+                { id: 15, src: "assets/img/selectedimg/explorers/eee3.JPG", category: "explorers", title: "Tropical Explorer 15" },
+                { id: 16, src: "assets/img/selectedimg/explorers/eee4.JPG", category: "explorers", title: "Tropical Explorer 16" },
+                { id: 17, src: "assets/img/selectedimg/explorers/eee5.JPG", category: "explorers", title: "Tropical Explorer 17" },
+                { id: 18, src: "assets/img/selectedimg/scenery/s.JPG", category: "scenery", title: "Scenery 1" },
+                { id: 19, src: "assets/img/selectedimg/scenery/s1.JPG", category: "scenery", title: "Scenery 2" },
+                { id: 20, src: "assets/img/selectedimg/scenery/s2.JPG", category: "scenery", title: "Scenery 3" },
+                { id: 21, src: "assets/img/selectedimg/scenery/s3.JPG", category: "scenery", title: "Scenery 4" },
+                { id: 22, src: "assets/img/selectedimg/scenery/s4.JPG", category: "scenery", title: "Scenery 5" },
+                { id: 23, src: "assets/img/selectedimg/scenery/s10v.png", category: "scenery", title: "Scenery 6" },
+                { id: 24, src: "assets/img/selectedimg/scenery/s11v.png", category: "scenery", title: "Scenery 7" },
+                { id: 25, src: "assets/img/selectedimg/scenery/s12v.png", category: "scenery", title: "Scenery 8" },
+                { id: 26, src: "assets/img/selectedimg/scenery/s13v.png", category: "scenery", title: "Scenery 9" },
+                { id: 27, src: "assets/img/selectedimg/scenery/s14v.png", category: "scenery", title: "Scenery 10" },
+                { id: 28, src: "assets/img/selectedimg/scenery/s15v.png", category: "scenery", title: "Scenery 11" },
+                { id: 29, src: "assets/img/selectedimg/scenery/s16v.png", category: "scenery", title: "Scenery 12" },
+                { id: 30, src: "assets/img/selectedimg/scenery/s17v.png", category: "scenery", title: "Scenery 13" },
+                { id: 31, src: "assets/img/selectedimg/scenery/ss.jpeg", category: "scenery", title: "Scenery 14" },
+                { id: 32, src: "assets/img/selectedimg/scenery/ss1.jpeg", category: "scenery", title: "Scenery 15" },
+                { id: 33, src: "assets/img/selectedimg/scenery/ss2.jpeg", category: "scenery", title: "Scenery 16" },
+                { id: 34, src: "assets/img/selectedimg/scenery/ss3.jpeg", category: "scenery", title: "Scenery 17" },
+                { id: 35, src: "assets/img/selectedimg/scenery/ss4.jpeg", category: "scenery", title: "Scenery 18" },
+                { id: 36, src: "assets/img/selectedimg/scenery/sss.JPG", category: "scenery", title: "Scenery 19" },
+                { id: 37, src: "assets/img/selectedimg/scenery/sss1.JPG", category: "scenery", title: "Scenery 20" },
+                { id: 38, src: "assets/img/selectedimg/scenery/sss2.JPG", category: "scenery", title: "Scenery 21" },
+                { id: 39, src: "assets/img/selectedimg/scenery/sss3.JPG", category: "scenery", title: "Scenery 22" },
+                { id: 40, src: "assets/img/selectedimg/devours/d.JPG", category: "devours", title: "Devour 1" },
+                { id: 41, src: "assets/img/selectedimg/devours/d1.JPG", category: "devours", title: "Devour 2" },
+                { id: 42, src: "assets/img/selectedimg/devours/d2.JPG", category: "devours", title: "Devour 3" },
+                { id: 43, src: "assets/img/selectedimg/devours/d3.JPG", category: "devours", title: "Devour 4" },
+                { id: 44, src: "assets/img/selectedimg/devours/d4.JPG", category: "devours", title: "Devour 5" },
+                { id: 45, src: "assets/img/selectedimg/devours/d5.JPG", category: "devours", title: "Devour 6" },
+                { id: 46, src: "assets/img/selectedimg/devours/dd.JPG", category: "devours", title: "Devour 7" },
+                { id: 47, src: "assets/img/selectedimg/devours/dd1v.png", category: "devours", title: "Devour 8" }];
 
-        // Function to load images with lazy loading
-        function loadImages() {
-            // Clear loading message
-            gallery.innerHTML = '';
+            // DOM elements
+            const gallery = document.getElementById('imageGallery');
+            const filterButtons = document.querySelectorAll('.filter-tab');
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeBtn = document.querySelector('.close');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
 
-            // Create image cards
-            imageData.forEach((image, index) => {
-                const imageCard = document.createElement('div');
-                imageCard.className = 'image-card';
-                imageCard.setAttribute('data-category', image.category);
-                // Remove this line: imageCard.setAttribute('data-index', index);
+            // Variables for modal navigation
+            let currentImageIndex = 0;
+            let currentFilteredImages = [];
 
-                const imageContainer = document.createElement('div');
-                imageContainer.className = 'image-container';
+            // Function to load images with lazy loading
+            function loadImages() {
+                // Clear loading message
+                gallery.innerHTML = '';
 
-                const img = document.createElement('img');
-                img.className = 'gallery-image';
-                img.src = image.src;
-                img.alt = image.title;
-                img.loading = 'lazy';
+                // Create image cards
+                imageData.forEach((image, index) => {
+                    const imageCard = document.createElement('div');
+                    imageCard.className = 'image-card';
+                    imageCard.setAttribute('data-category', image.category);
+                    // Remove this line: imageCard.setAttribute('data-index', index);
 
-                // Add click event to open modal - pass the image ID instead of index
-                img.addEventListener('click', () => openModal(image.id));
+                    const imageContainer = document.createElement('div');
+                    imageContainer.className = 'image-container';
 
-                // Add placeholder until image loads
-                img.onload = function () {
-                    if (imageContainer.querySelector('.placeholder')) {
-                        imageContainer.removeChild(imageContainer.querySelector('.placeholder'));
-                    }
-                };
+                    const img = document.createElement('img');
+                    img.className = 'gallery-image';
+                    img.src = image.src;
+                    img.alt = image.title;
+                    img.loading = 'lazy';
 
-                // Create a placeholder
-                const placeholder = document.createElement('div');
-                placeholder.className = 'placeholder';
-                imageContainer.appendChild(placeholder);
+                    // Add click event to open modal - pass the image ID instead of index
+                    img.addEventListener('click', () => openModal(image.id));
 
-                imageContainer.appendChild(img);
-                imageCard.appendChild(imageContainer);
+                    // Add placeholder until image loads
+                    img.onload = function () {
+                        if (imageContainer.querySelector('.placeholder')) {
+                            imageContainer.removeChild(imageContainer.querySelector('.placeholder'));
+                        }
+                    };
 
-                gallery.appendChild(imageCard);
-            });
+                    // Create a placeholder
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'placeholder';
+                    imageContainer.appendChild(placeholder);
 
-            // Set current filtered images to all images initially
-            currentFilteredImages = [...imageData];
-        }
+                    imageContainer.appendChild(img);
+                    imageCard.appendChild(imageContainer);
 
-        // Filter images based on category 
-        function filterImages(category) {
-            const imageCards = document.querySelectorAll('.image-card');
+                    gallery.appendChild(imageCard);
+                });
 
-            // Update current filtered images based on category
-            if (category === 'all') {
+                // Set current filtered images to all images initially
                 currentFilteredImages = [...imageData];
-            } else {
-                currentFilteredImages = imageData.filter(image => image.category === category);
             }
 
-            imageCards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'block';
+            // Filter images based on category 
+            function filterImages(category) {
+                const imageCards = document.querySelectorAll('.image-card');
+
+                // Update current filtered images based on category
+                if (category === 'all') {
+                    currentFilteredImages = [...imageData];
                 } else {
-                    card.style.display = 'none';
+                    currentFilteredImages = imageData.filter(image => image.category === category);
                 }
-            });
-        }
+
+                imageCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
 
 
-        // Open modal with selected image
-        function openModal(imageId) {
-            // Find the index of the image in the current filtered array by its ID
-            currentImageIndex = currentFilteredImages.findIndex(img => img.id === imageId);
+            // Open modal with selected image
+            function openModal(imageId) {
+                // Find the index of the image in the current filtered array by its ID
+                currentImageIndex = currentFilteredImages.findIndex(img => img.id === imageId);
 
-            if (currentImageIndex !== -1) {
-                modal.style.display = 'block';
+                if (currentImageIndex !== -1) {
+                    modal.style.display = 'block';
+                    modalImg.src = currentFilteredImages[currentImageIndex].src;
+                }
+            }
+
+            // Navigate to next image in modal
+            function nextImage() {
+                currentImageIndex = (currentImageIndex + 1) % currentFilteredImages.length;
                 modalImg.src = currentFilteredImages[currentImageIndex].src;
             }
-        }
 
-        // Navigate to next image in modal
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % currentFilteredImages.length;
-            modalImg.src = currentFilteredImages[currentImageIndex].src;
-        }
+            // Navigate to previous image in modal
+            function prevImage() {
+                currentImageIndex = (currentImageIndex - 1 + currentFilteredImages.length) % currentFilteredImages.length;
+                modalImg.src = currentFilteredImages[currentImageIndex].src;
+            }
 
-        // Navigate to previous image in modal
-        function prevImage() {
-            currentImageIndex = (currentImageIndex - 1 + currentFilteredImages.length) % currentFilteredImages.length;
-            modalImg.src = currentFilteredImages[currentImageIndex].src;
-        }
+            // Close modal
+            function closeModal() {
+                modal.style.display = 'none';
+            }
 
-        // Close modal
-        function closeModal() {
-            modal.style.display = 'none';
-        }
+            // Initialize the gallery
+            function initGallery() {
+                loadImages();
 
-        // Initialize the gallery
-        function initGallery() {
-            loadImages();
+                // Add event listeners to filter buttons
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        // Remove active class from all buttons
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
 
-            // Add event listeners to filter buttons
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                        // Add active class to clicked button
+                        this.classList.add('active');
 
-                    // Add active class to clicked button
-                    this.classList.add('active');
-
-                    // Filter images
-                    filterImages(this.getAttribute('data-filter'));
+                        // Filter images
+                        filterImages(this.getAttribute('data-filter'));
+                    });
                 });
-            });
 
-            // Modal event listeners
-            closeBtn.addEventListener('click', closeModal);
-            nextBtn.addEventListener('click', nextImage);
-            prevBtn.addEventListener('click', prevImage);
+                // Modal event listeners
+                closeBtn.addEventListener('click', closeModal);
+                nextBtn.addEventListener('click', nextImage);
+                prevBtn.addEventListener('click', prevImage);
 
-            // Close modal when clicking outside the image
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-
-            // Keyboard navigation
-            document.addEventListener('keydown', function (e) {
-                if (modal.style.display === 'block') {
-                    if (e.key === 'Escape') {
+                // Close modal when clicking outside the image
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) {
                         closeModal();
-                    } else if (e.key === 'ArrowRight') {
-                        nextImage();
-                    } else if (e.key === 'ArrowLeft') {
-                        prevImage();
                     }
-                }
-            });
-        }
+                });
 
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initGallery);
-    </script>
+                // Keyboard navigation
+                document.addEventListener('keydown', function (e) {
+                    if (modal.style.display === 'block') {
+                        if (e.key === 'Escape') {
+                            closeModal();
+                        } else if (e.key === 'ArrowRight') {
+                            nextImage();
+                        } else if (e.key === 'ArrowLeft') {
+                            prevImage();
+                        }
+                    }
+                });
+            }
+
+            // Initialize when DOM is loaded
+            document.addEventListener('DOMContentLoaded', initGallery);
+        </script>
 </body>
 
 </html>
