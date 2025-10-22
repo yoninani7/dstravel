@@ -513,6 +513,8 @@
    animation-delay: 0.5s;
    color: #fff;
    background-color: #05374be0;
+     -webkit-clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
+            clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
  }
 
  #hero .btn-menu:hover,
@@ -521,6 +523,14 @@
    background: linear-gradient(135deg, #05374b, #031c25);
  }
 
+  #hero #booked.btn-book:hover {
+   color: #fff;
+   background: linear-gradient(135deg, #682e1c, #68401C); 
+ } 
+ #hero #booked.btn-menu:hover {
+   color: #fff;
+   background: linear-gradient(135deg, #68401C, #682e1c); 
+ }
  @media (max-width: 768px) {
    #hero h2 {
      font-size: 28px;
