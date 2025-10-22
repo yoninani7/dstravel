@@ -118,7 +118,8 @@
    max-height: 60px;
    margin-left: 50px;
 
- } 
+ }
+
  /*--------------------------------------------------------------
 # Book a table button Menu
 --------------------------------------------------------------*/
@@ -949,9 +950,10 @@
  }
 
  .specials .nav-link.active {
-   color: #05374b;
-   border-color: #05374b;
+   color: #05374b; 
    background-color: rgba(105, 105, 105, 0.233);
+ -webkit-clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%);
  }
 
  .specials .tab-pane.active {
@@ -1288,7 +1290,7 @@
    background-position: center center;
    background-size: cover;
    position: relative;
-   z-index: 1; 
+   z-index: 1;
  }
 
  .testimonials::before {
@@ -1423,7 +1425,7 @@
    transform: translateX(-50%);
    width: 190px;
    height: 4px;
-   background: linear-gradient(90deg,  #333,#05374bd3 50%, transparent 100%);
+   background: linear-gradient(90deg, #333, #05374bd3 50%, transparent 100%);
    border-radius: 2px;
  }
 
@@ -1529,7 +1531,7 @@
  }
 
  .info:hover i {
-   background: linear-gradient(100deg,rgba(5, 55, 75, 0.98), #06536e);
+   background: linear-gradient(100deg, rgba(5, 55, 75, 0.98), #06536e);
    color: white;
    transform: scale(1.02);
  }
@@ -1550,7 +1552,7 @@
  /* Form styling */
  .php-email-form {
    width: 100%;
-    box-shadow: 0px 5px 10px #05374b7a;
+   box-shadow: 0px 5px 10px #05374b7a;
    padding: 40px;
    background: #ffffff;
    border-radius: 20px;
@@ -1582,7 +1584,7 @@
    padding: 10px 20px;
    font-size: 16px;
    border-radius: 10px;
-  border: 0.5px solid  #00138127;
+   border: 0.5px solid #00138127;
    background: #fcfcfc;
    transition: all 0.3s ease;
  }
@@ -1595,7 +1597,7 @@
 
  textarea.form-control {
    height: auto;
-   padding: 15px 20px; 
+   padding: 15px 20px;
  }
 
  .php-email-form button[type="submit"] {
@@ -1611,14 +1613,15 @@
    position: relative;
    overflow: hidden;
    z-index: 1;
- } 
+ }
+
  .php-email-form button[type="submit"]:before {
-   content: ''; 
+   content: '';
    position: absolute;
    top: 0;
    left: 0;
    width: 0%;
-   height: 100%;  
+   height: 100%;
    background: linear-gradient(135deg, #05374b, #0a122c);
    transition: all 1s ease;
    z-index: -1;
@@ -1735,7 +1738,7 @@
 
 
  /* Footer Styles */
- #footer { 
+ #footer {
    background: linear-gradient(180deg, #0a1929 4%, #05374b 90%);
    color: white;
    padding: 40px 0 25px;
@@ -2149,6 +2152,9 @@
    color: #fff;
    background-color: #05374be0;
    cursor: pointer;
+
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+        clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
  }
 
  .btnpdf:hover {
@@ -2170,6 +2176,8 @@
    color: #fff;
    background-color: #05374be0;
    cursor: pointer;
+   -webkit-clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+        clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
  }
 
  .btnpdfall:hover {
@@ -2189,9 +2197,8 @@
    .preview iframe {
      height: 180px;
      /* Adjust height for smaller screens */
-   } 
- 
-  }
+   }
+
+ }
 
  /* end offers section */
-

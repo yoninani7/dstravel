@@ -141,19 +141,20 @@
         }
 
         .filter-tabs {
-            display: flex;
+             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.8rem;
+            gap: clamp(0.5rem, 2vw, 1rem);
         }
 
         .filter-tab {
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            background-color: rgba(223, 223, 226, 0.897);
+            background-color: rgba(223, 223, 226, 0.897); 
             color: rgba(5, 55, 75, 0.98);
             border: none;
+            border-radius: 3px;
             padding: 0.5rem 1.2rem; 
             font-size: 0.8rem;
             letter-spacing: 1px;
@@ -162,6 +163,8 @@
             transition: all 0.3s ease;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             white-space: nowrap;
+            -webkit-clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
+            clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
         }
 
         .filter-tab.active {
@@ -585,16 +588,16 @@
             <div class="filter-container" data-aos="fade-up"> 
                 <div class="filter-tabs">
                     <button class="filter-tab active" data-filter="all">
-                        <i class="fas fa-globe"></i>&nbsp;&nbsp; All Images
+                       &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-globe"></i>&nbsp;&nbsp;All Images &nbsp;&nbsp;&nbsp;&nbsp; 
                     </button>
                     <button class="filter-tab" data-filter="scenery">
-                        <i class="fas fa-masks-theater"></i>&nbsp;&nbsp; scenery
+                       &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-masks-theater"></i>&nbsp;&nbsp; scenery &nbsp;&nbsp;&nbsp;&nbsp; 
                     </button>
                     <button class="filter-tab" data-filter="explorers">
-                        <i class="fas fa-place-of-worship"></i> &nbsp;&nbsp; explorers
+                      &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-place-of-worship"></i> &nbsp;&nbsp; explorers &nbsp;&nbsp;&nbsp;&nbsp;  
                     </button>
                     <button class="filter-tab" data-filter="devours">
-                        <i class="fas fa-landmark"></i>&nbsp;&nbsp; devours
+                      &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-landmark"></i>&nbsp;&nbsp; devours &nbsp;&nbsp;&nbsp;&nbsp; 
                     </button>
                 </div>
 
