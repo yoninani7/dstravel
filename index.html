@@ -386,10 +386,7 @@
     .p_modal-tagline {
       font-weight: 600;
       font-size: 1.25rem;
-      /* text-xl */
       margin-bottom: 0.75rem;
-      /* mb-3 */
-      color: var(--accent-color);
     }
 
     .p_modal-cta-container {
@@ -398,21 +395,24 @@
 
     .p_modal-cta {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
+      padding: 0.45rem 2.8rem;
       font-size: 1rem;
       font-weight: 600;
-      border-radius: 9999px;
-      /* rounded-full */
+      border: none;
+      background-color: #06374b;
       color: white;
       transition: background-color 300ms ease-in-out;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-      background-color: var(--accent-color);
       text-decoration: none;
+      -webkit-clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+      clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
     }
 
     .p_modal-cta:hover {
-      background-color: #3b9f98;
-      /* A darker shade of the accent color */
+
+      background-color: #06374bea;
+      color: white;
+
     }
   </style>
 </head>
@@ -495,7 +495,7 @@
                 </p>
                 <div>
                   <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto"
-                    style="background-color: #683f1ccb; "id="booked">Our Services  </a>
+                    style="background-color: #683f1ccb; " id="booked">Our Services </a>
                   <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto"
                     style="background-color: #683f1ccb;" id="booked">Schedule a trip
                     &nbsp;
@@ -518,7 +518,7 @@
                   sense of adventure.
                   We believe travel broadens perspectives and transforms lives.</p>
                 <div>
-                  <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services   </a>
+                  <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services </a>
                   <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto">Schedule a trip
                     &nbsp;
                     &#9992;</a>
@@ -715,8 +715,8 @@
           style="background: linear-gradient(90deg,  #333,#05374bd3); -webkit-background-clip: text; color: transparent; background-clip: text;">
           we </span>
         <span style="color: #05374bd3;">offer!</span>
-      </h1>
-      <p style="color: #666;">Explore our exclusive tour packages designed just for you.</p>
+      </h1> 
+      <p style="color: #666;">Ready for something special? Uncover our limited-edition tour packages</p>
 
       <center>
         <div
@@ -728,27 +728,28 @@
       <section id="packages" class="p_section-packages">
         <div class="p_packages-grid">
 
-          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="Tour"
-            data-tagline="Escapism Redefined"
-            data-description="Curated itineraries, private guides, and exclusive access to cultural landmarks. Focus on relaxation and personalized discovery in the world's most beautiful locations."
-            data-image="https://images.unsplash.com/photo-1542037109511-ac69f987f694?q=80&w=2940&auto=format&fit=crop"
-            data-images="https://images.unsplash.com/photo-1542037109511-ac69f987f694?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1522850689914-7494ec05b95a?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1508782353381-80718507d721?q=80&w=2940&auto=format&fit=crop">
-            <img class="p_card-image" src="assets/img/selectedimg/explorers/e11v.jpg" style="rotate: -2deg;"
+          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="Guided tour"
+            data-tagline="Escapism Redefined" data-description="Beyond the map: Our expert private guides transform travel into a personal story.
+             Experience exclusive access and authentic culture without the crowds. We redefine travel by handling every detail, 
+             so you just relax. This is your world, effortlessly explored."
+            data-image="assets/img/selectedimg/explorers/e11v.jpg"
+            data-images="assets/img/selectedimg/explorers/e11v.jpg,assets/img/selectedimg/explorers/e12v.png">
+            <img class="p_card-image" src="assets/img/selectedimg/explorers/e11v.jpg"
               alt="Group of people on a scenic tour overlooking a city"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Tour+Package+Preview'">
             <div class="p_card-content">
               <h3 class="p_card-title">Guided Tour</h3>
               <p class="p_card-tagline">Escapism Redefined</p>
-              <p class="p_card-description">Curated itineraries, private guides, and exclusive access to cultural
-                landmarks.</p>
+              <p class="p_card-description">Unparalleled access to cultural sites, exclusive guides, and carefully
+                planned itineraries.</p>
             </div>
           </div>
 
-          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
-            data-title="Social & Corporate Events" data-tagline="Spectacular Occasions"
-            data-description="Full-service planning for galas, launches, staff parties, and celebrations. We manage venues, catering, entertainment, and guest logistics seamlessly."
-            data-image="https://images.unsplash.com/photo-1533038590840-1cde6e63ce9a?q=80&w=2940&auto=format&fit=crop"
-            data-images="https://images.unsplash.com/photo-1533038590840-1cde6e63ce9a?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1540134005892-9a3b8396ce17?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1518015331613-2d25087d1ef4?q=80&w=2940&auto=format&fit=crop">
+          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="Special Events"
+            data-tagline="Spectacular Occasions"
+            data-description="Trust our dedicated team to transform your vision into a Spectacular Occasion. Full-service planning for corporate launches, private parties, and large-scale celebrations. We meticulously manage every detail: catering, entertainment, and all logistics. Exceptional events, seamlessly delivered."
+            data-image="assets/img/selectedimg/explorers/ee3.JPG"
+            data-images="assets/img/selectedimg/explorers/ee3.JPG,assets/img/fbimg/g3.jpg">
             <img class="p_card-image" src="assets/img/selectedimg/explorers/ee3.JPG"
               alt="Large crowd celebrating at a music festival or corporate gala"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Event+Planning+Preview'">
@@ -761,11 +762,12 @@
             </div>
           </div>
 
-          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="Conference Management"
-            data-tagline="High-Impact Gatherings"
-            data-description="Comprehensive services for large academic and industry conferences, including venue sourcing, speaker coordination, registration, and technical setup."
-            data-image="https://images.unsplash.com/photo-1521737711886-c567a5411988?q=80&w=2940&auto=format&fit=crop"
-            data-images="https://images.unsplash.com/photo-1521737711886-c567a5411988?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1520607162513-772a1c53dd70?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1587825590918-ee518e95079a?q=80&w=2940&auto=format&fit=crop">
+          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
+            data-title="Informative conference" data-tagline="High-Impact Gatherings" data-description="Ensure your message is heard with a High-Impact 
+            Gathering, expertly organized. Our comprehensive services cover every detail from start to finish.
+             We guarantee a smooth and professional experience for all your attendees. Maximum impact, minimum stress."
+            data-image="assets/img/selectedimg/explorers/e10v.jpg"
+            data-images="assets/img/selectedimg/explorers/e10v.jpg, assets/img/fbimg/g5.jpg">
             <img class="p_card-image" src="assets/img/selectedimg/explorers/e10v.jpg"
               alt="Professionals attending a large, well-lit conference with screens"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Conference+Planning+Preview'">
@@ -780,11 +782,12 @@
 
           <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
             data-title="Exposition & Tradeshows" data-tagline="Connecting Industry Leaders"
-            data-description="Expert logistics for exhibitors and organizers. Booth design, build-out, transport management, and on-site support for successful trade expos worldwide."
-            data-image="https://images.unsplash.com/photo-1505373877841-8e2b291e7080?q=80&w=2942&auto=format&fit=crop"
-            data-images="https://images.unsplash.com/photo-1505373877841-8e2b291e7080?q=80&w=2942&auto=format&fit=crop, https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1517486411545-a9f333333b26?q=80&w=2940&auto=format&fit=crop">
-            <img class="p_card-image"
-              src="https://images.unsplash.com/photo-1505373877841-8e2b291e7080?q=80&w=2942&auto=format&fit=crop"
+            data-description="Don't just attend; experience Connecting Industry Leaders with our tour packages. 
+            We offer comprehensive travel, accommodation, and access to global expos.
+             Benefit from coordinated transport and on-site guidance to maximize your time."
+            data-image="assets/img/fbimg/expo.jpg"
+            data-images="assets/img/selectedimg/explorers/eee1.jpg,assets/img/fbimg/expo.jpg, assets/img/fbimg/air.jpg ">
+            <img class="p_card-image" src="assets/img/fbimg/expo.jpg"
               alt="Modern exhibition hall with booths and large display banners"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Expo+Logistics+Preview'">
             <div class="p_card-content">
@@ -797,12 +800,13 @@
           </div>
 
           <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
-            data-title="B2B Meeting & Delegation" data-tagline="Executive Facilitation"
-            data-description="Private meeting coordination, executive travel, secure transportation, and translation services for high-stakes business discussions and trade delegations."
-            data-image="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2940&auto=format&fit=crop"
-            data-images="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1587560566861-f09c1389e023?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1579389083072-bae92da90924?q=80&w=2940&auto=format&fit=crop">
-            <img class="p_card-image"
-              src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2940&auto=format&fit=crop"
+            data-title="B2B Meeting " data-tagline="Executive Facilitation"
+            data-description="Ensure your next B2B meeting or delegation is a success with our agency. We provide secure travel, 
+            private meeting coordination, and specialized translation services. 
+            All the logistical elements needed for business discussions are managed. Maximum impact with complete peace of mind."
+            data-image="assets/img/fbimg/expo 1.jpg"
+            data-images="assets/img/fbimg/expo 1.jpg, https://images.unsplash.com/photo-1587560566861-f09c1389e023?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1579389083072-bae92da90924?q=80&w=2940&auto=format&fit=crop">
+            <img class="p_card-image" src="assets/img/fbimg/expo 1.jpg"
               alt="Two business people shaking hands across a boardroom table"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=B2B+Meetings+Preview'">
             <div class="p_card-content">
@@ -815,11 +819,11 @@
           </div>
 
           <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
-                      data-title="Medical Tourism & Assistance" data-tagline="Care & Comfort Travel"
-                      data-description="Specialized travel planning for medical procedures, recovery stays, and family support, ensuring privacy, comfort, and seamless health facility logistics."
-                      data-images="assets/img/fbimg/m1.jpg, https://images.unsplash.com/photo-1519491702952-662584d43679?q=80&w=2940&auto=format&fit=crop, https://images.unsplash.com/photo-1576091160550-2173dba99932?q=80&w=2940&auto=format&fit=crop">
-            <img class="p_card-image"
-              src="assets/img/fbimg/m1.jpg" style="object-fit:cover;  "
+            data-title="Medical Tourism & Assistance" data-tagline="Care & Comfort Travel"
+            data-description="Our specialized travel planning focuses entirely on your health journey, from consultation to full recovery. We manage all logistics for medical procedures and recovery stays, ensuring absolute privacy and comfort. 
+            This includes seamless coordination with health facilities and dedicated support for accompanying family members."
+            data-images="assets/img/fbimg/med1.jpg">
+            <img class="p_card-image" src="assets/img/fbimg/m1.jpg"  
               alt="Modern, clean medical environment or hospital room"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Medical+Travel+Preview'">
             <div class="p_card-content">
@@ -830,7 +834,6 @@
                 and family support.</p>
             </div>
           </div>
-
         </div>
 
 
@@ -859,9 +862,10 @@
               </h3>
               <div id="p_modal-description" class="p_modal-description-wrapper"></div>
               <div class="p_modal-cta-container">
-                <a href="#" id="p_modal-cta" class="p_modal-cta">Request Details</a>
+                <a id="p_modal-cta" class="p_modal-cta">Request details</a>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -957,7 +961,7 @@
           descriptionContainer.innerHTML = `<p class="p_modal-tagline">${data.tagline}</p><p class="text-base">${fullDescription}</p>`;
 
           // Link the CTA button to a dedicated contact form or page
-          cta.href = '#';
+          cta.href = 'book.html';
 
           // Initialize the carousel to the correct slide (index 0)
           p_updateCarousel();
@@ -1494,12 +1498,14 @@
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3 style="font-size: 1.25rem; color: #333; font-weight: bold; font-family: 'Poppins', sans-serif;">
-                                        What is included in the trip price, and are there any hidden fees?
+                      What is included in the trip price, and are there any hidden fees?
                     </h3>
                     <p style="font-size: 1rem; color: #777; font-family: 'Poppins', sans-serif;">
-                      We pride ourselves on providing clear, all-inclusive pricing. Your quote covers all accommodations, internal flights, private transportation, guided tours, and most meals as
-                          specified in your route. Your quoted price is the final price, with the exception of personal spending, international airfare, and other related fees, which are clearly noted as
-                          exclusions in your detailed trip plan.
+                      We pride ourselves on providing clear, all-inclusive pricing. Your quote covers all
+                      accommodations, internal flights, private transportation, guided tours, and most meals as
+                      specified in your route. Your quoted price is the final price, with the exception of personal
+                      spending, international airfare, and other related fees, which are clearly noted as
+                      exclusions in your detailed trip plan.
                     </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -1511,7 +1517,7 @@
 
 
 
- 
+
               <div class="tab-pane" id="tab-5">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
