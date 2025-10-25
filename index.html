@@ -413,12 +413,84 @@
       background-color: #06374bea;
       color: white;
 
+    } 
+ /* Custom styles for the clean, aesthetically pleasing section */
+    .about-clean-final {
+        padding: 80px 0;
+        background-color: #ffffff; 
+        overflow: hidden; 
     }
+
+    /* --- Heading Style (Unchanged) --- */
+    .about-clean-final h2 {
+        font-size: 3rem; 
+        font-family: 'Montserrat', sans-serif; 
+        font-weight: 800; 
+        color: #05374b;
+        margin-bottom: 5px;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+    
+    .about-clean-final .sub-heading {
+        color: #ffc107; 
+        font-size: 1rem;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 40px;
+        letter-spacing: 2px;
+    }
+
+    /* --- Image Style (Unchanged) --- */
+    .about-clean-final .image-box {
+        padding-right: 30px; 
+    }
+    
+    .about-clean-final img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    }
+
+    /* --- Paragraph Style (Unchanged) --- */
+    .about-clean-final .intro-text {
+        font-size: 1.15rem; 
+        line-height: 1.8; 
+        margin-bottom: 30px; /* Kept standard internal paragraph spacing */
+        color: #343a40; 
+        font-weight: 300; 
+    }
+
+    /* --- Feature Divider Line - CRITICAL ZERO MARGINS --- */
+    .about-clean-final .content-divider {
+        height: 1px;
+        background-color: #dee2e6;
+        width: 100%;
+        margin-top: 0; 
+        margin-bottom: 0; 
+    }
+
+    /* --- FULL-WIDTH BOTTOM FEATURE BAR STYLES - CRITICAL ZERO MARGINS --- */
+    .about-clean-final .feature-bar-wrap {
+        background-color: #f7f7f7; 
+        margin-top: 0; /* Ensures bar connects to divider */
+        padding: 40px 0; 
+    }
+
+    /* Feature List and Item styles remain as they only affect internal spacing */
+    .about-clean-final .feature-list-compact { display: flex; justify-content: space-between; }
+    .about-clean-final .feature-item-compact { flex-basis: 33%; padding: 0 25px; position: relative; text-align: center; }
+    .about-clean-final .feature-item-compact:not(:last-child)::after {
+        content: ''; position: absolute; right: 0; top: 10px; bottom: 10px; width: 1px; background-color: #dee2e6;
+    }
+    .about-clean-final .feature-item-compact strong { font-size: 2rem; font-weight: 800; color: #ffc107; display: block; margin-bottom: 3px; }
+    .about-clean-final .feature-item-compact span { font-size: 1rem; font-weight: 600; color: #05374b; display: block; margin-bottom: 5px; }
+    .about-clean-final .feature-item-compact p { font-size: 0.9rem; line-height: 1.4; color: #6c757d; }
   </style>
 </head>
 
-<body>
-
+<body> 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center fixed-top topbar-transparent">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
@@ -528,32 +600,9 @@
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item"  style="background-image: url(assets/img/slide/chebera1.jpeg); background-position: center; background-size: cover; ">
-            
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"
-                  style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;  ">
-                  Advance to remarkable heights
+          <div class="carousel-item"
+            style="background-image: url(assets/img/slide/chebera2.jpeg); background-position: center; background-size: cover; ">
 
-                </h2>
-                <p class="animate__animated animate__fadeInUp">Breathtaking destinations that promises to enrich the
-                  spirit and
-                  expand one's horizons through its stunning natural beauty</p>
-                <div>
-                  <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services</a>
-                  <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto">Schedule a trip
-                    &nbsp;
-                    &#9992;</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-
-           <!-- Slide 4 -->
-          <div class="carousel-item"  style="background-image: url(assets/img/slide/betemengest.png); background-position: center; background-size: cover; ">
-            
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"
@@ -574,78 +623,106 @@
             </div>
           </div>
 
+
+          <!-- Slide 4 -->
+          <div class="carousel-item"
+            style="background-image: url(assets/img/slide/betemengest.png); background-position: center; background-size: cover; ">
+
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown"
+                  style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                  Architectural Marvels Await
+
+                </h2>
+                <p class="animate__animated animate__fadeInUp">Explore destinations where unique design and profound
+                  culture meet, offering an experience that enriches the spirit and expands your appreciation for human
+                  ingenuity.</p>
+                <div>
+                  <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services</a>
+                  <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto">Schedule a trip
+                    &nbsp;
+                    &#9992;</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
-
       </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container-fluid">
-        <div class="row align-items-start no-gutters"> <!-- Added no-gutters to remove any default spacing -->
-          <!-- Video Box -->
-          <div class="col-lg-5 video-box"
-            style="background-image: url('assets/img/selectedimg/explorers/eee5.JPG'); min-height: 500px; background-size: cover; background-position: center;margin-left: auto;">
-            <!-- <a href="#" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a> -->
-          </div>
-
-          <!-- Additional Content Section -->
-          <div class="col-lg-6 d-flex flex-column justify-content-center px-5 py-4">
-
-
-            <div class="content">
-              <h2 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;">
-                WHAT WE <span style="color:#05374bd3;">DO</span>
-              </h2>
-              <div class="divider"
-                style="background: linear-gradient(90deg, #ffcf88, transparent 1%, #05374bd3); width: 40%;"></div>
-
-              <br>
-
-              <p class="mb-6" style="font-weight: 500;">
-                We handle every aspect of your trip, ensuring a seamless and enjoyable experience from start to finish.
-                Let us take care of the details while you focus on making unforgettable memories.
-              </p>
-
-              <br>
-
-              <!-- Consolidated Point 1 -->
-              <p class="mb-4">
-                <strong style="color: #05374bd3;">1. Travel Designed Around You:</strong> Every trip is designed just
-                for you. We start from scratch, working hard to match your interests and budget so your personal journey
-                is exactly what you want.
-              </p>
-
-              <!-- Consolidated Point 2 -->
-              <p class="mb-4">
-                <strong style="color: #05374bd3;">2. Real Local Experiences:</strong> We know the best local spots. We
-                take you past the busy tourist areas to discover hidden places and give you real, meaningful
-                experiences.
-              </p>
-
-              <!-- Consolidated Point 3 -->
-              <p class="mb-4">
-                <strong style="color: #05374bd3;">3. Easy and Supported Trip:</strong> We make travel easy by handling
-                all the hard planning and booking. Plus, we offer dedicated support and quick help when you need it,
-                so you can travel with total confidence.
-              </p>
-
+<section id="about" class="about-clean-final">
+    <div class="container">
+        <div class="row align-items-start mb-0">
+            
+            <div class="col-lg-5 image-box">
+                <img src="assets/img/selectedimg/explorers/eee5.JPG" alt="Travel group photo">
             </div>
 
-          </div>
+            <div class="col-lg-7 pb-0 mb-0">
+                
+                <h2>WHAT WE DO</h2>
+                <span class="sub-heading">Your Journey, Curated with Precision</span>
+                
+                <p class="intro-text">
+                    We meticulously orchestrate every detail of your expedition, guaranteeing a **seamless and enriching** experience from the moment of conception to your graceful return. Entrust us with the complex logistics, freeing you to immerse yourself entirely in the creation of cherished, unforgettable memories.
+                </p>
+                <p class="intro-text mb-0">
+                    From the initial spark of inspiration to the definitive itinerary, our bespoke planning methodology places your unique preferences and budgetary considerations at the core of the design process. We transcend mere booking; we **curate authentic, deeply personal travel narratives.**
+                </p>
+                
+            </div>
         </div>
-      </div>
-    </section>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="content-divider"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="feature-bar-wrap">
+                    <div class="feature-list-compact">
+                        
+                        <div class="feature-item-compact">
+                            <strong>01</strong> 
+                            <span>Bespoke Travel Design</span>
+                            <p>Every journey is crafted without templates, precisely aligning with your distinct interests and specific budget.</p>
+                        </div>
+
+                        <div class="feature-item-compact">
+                            <strong>02</strong> 
+                            <span>Exclusive Local Access</span>
+                            <p>We leverage privileged knowledge to guide you past tourist trails to genuine, culturally significant encounters.</p>
+                        </div>
+
+                        <div class="feature-item-compact">
+                            <strong>03</strong> 
+                            <span>Unwavering Support</span>
+                            <p>All planning and booking logistics are managed by us, supported by dedicated, rapid assistance for your total peace of mind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
     <!-- End About Section -->
 
     <!-- ======= Why Us Section ======= -->
@@ -740,7 +817,7 @@
           style="background: linear-gradient(90deg,  #333,#05374bd3); -webkit-background-clip: text; color: transparent; background-clip: text;">
           we </span>
         <span style="color: #05374bd3;">offer!</span>
-      </h1> 
+      </h1>
       <p style="color: #666;">Ready for something special? Uncover our limited-edition tour packages</p>
 
       <center>
@@ -806,8 +883,7 @@
           </div>
 
           <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
-            data-title="Exposition & Tradeshows" data-tagline="Connecting Industry Leaders"
-            data-description="Don't just attend; experience Connecting Industry Leaders with our tour packages. 
+            data-title="Exposition & Tradeshows" data-tagline="Connecting Industry Leaders" data-description="Don't just attend; experience Connecting Industry Leaders with our tour packages. 
             We offer comprehensive travel, accommodation, and access to global expos.
              Benefit from coordinated transport and on-site guidance to maximize your time."
             data-image="assets/img/fbimg/expo.jpg"
@@ -824,8 +900,8 @@
             </div>
           </div>
 
-          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
-            data-title="B2B Meeting " data-tagline="Executive Facilitation"
+          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="B2B Meeting "
+            data-tagline="Executive Facilitation"
             data-description="Ensure your next B2B meeting or delegation is a success with our agency. We provide secure travel, 
             private meeting coordination, and specialized translation services. 
             All the logistical elements needed for business discussions are managed. Maximum impact with complete peace of mind."
@@ -846,9 +922,8 @@
           <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
             data-title="Medical Tourism & Assistance" data-tagline="Care & Comfort Travel"
             data-description="Our specialized travel planning focuses entirely on your health journey, from consultation to full recovery. We manage all logistics for medical procedures and recovery stays, ensuring absolute privacy and comfort. 
-            This includes seamless coordination with health facilities and dedicated support for accompanying family members."
-            data-images="assets/img/fbimg/med1.jpg">
-            <img class="p_card-image" src="assets/img/fbimg/m1.jpg"  
+            This includes seamless coordination with health facilities and dedicated support for accompanying family members." data-images="assets/img/fbimg/med1.jpg">
+            <img class="p_card-image" src="assets/img/fbimg/m1.jpg"
               alt="Modern, clean medical environment or hospital room"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Medical+Travel+Preview'">
             <div class="p_card-content">
@@ -1596,7 +1671,7 @@
               </div>
             </div>
           </div>
-           
+
         </div>
       </div>
     </section>
