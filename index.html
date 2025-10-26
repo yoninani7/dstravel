@@ -415,78 +415,81 @@
 
     } 
  /* Custom styles for the clean, aesthetically pleasing section */
-    .about-clean-final {
-        padding: 80px 0;
-        background-color: #ffffff; 
-        overflow: hidden; 
-    }
+   /* Custom styles for the clean, aesthetically pleasing section */
+.about-clean-final {
+    padding: 80px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
 
-    /* --- Heading Style (Unchanged) --- */
-    .about-clean-final h2 {
-        font-size: 3rem; 
-        font-family: 'Montserrat', sans-serif; 
-        font-weight: 800; 
-        color: #05374b;
-        margin-bottom: 5px;
-        line-height: 1.1;
-        text-transform: uppercase;
-    }
-    
-    .about-clean-final .sub-heading {
-        color: #ffc107; 
-        font-size: 1rem;
-        font-weight: 500;
-        display: block;
-        margin-bottom: 40px;
-        letter-spacing: 2px;
-    }
+/* --- Heading Style (Unchanged) --- */
+.about-clean-final h2 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #05374b;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
 
-    /* --- Image Style (Unchanged) --- */
-    .about-clean-final .image-box {
-        padding-right: 30px; 
-    }
-    
-    .about-clean-final img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px; 
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
-    }
+.about-clean-final .sub-heading {
+    color: #ffc107;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
 
-    /* --- Paragraph Style (Unchanged) --- */
-    .about-clean-final .intro-text {
-        font-size: 1.15rem; 
-        line-height: 1.8; 
-        margin-bottom: 30px; /* Kept standard internal paragraph spacing */
-        color: #343a40; 
-        font-weight: 300; 
-    }
+/* --- Image Container Style - Corrected: Removed unnecessary padding-right from the container itself --- */
+.about-clean-final .image-box {
+    /* Removed padding-right: 30px; as it reduces the container's available space */
+}
 
-    /* --- Feature Divider Line - CRITICAL ZERO MARGINS --- */
-    .about-clean-final .content-divider {
-        height: 1px;
-        background-color: #dee2e6;
-        width: 100%;
-        margin-top: 0; 
-        margin-bottom: 0; 
-    }
+/* --- Image Style - CRITICAL FIX: Set width to 100% to fill its container --- */
+.about-clean-final img {
+    width: 100%; /* <-- FIX: Forces the image to fill the <img> box container width */
+    height: 450px; /* Kept fixed height */
+    object-fit: cover; /* Added to ensure the image covers the 400px height without stretching */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
 
-    /* --- FULL-WIDTH BOTTOM FEATURE BAR STYLES - CRITICAL ZERO MARGINS --- */
-    .about-clean-final .feature-bar-wrap {
-        background-color: #f7f7f7; 
-        margin-top: 0; /* Ensures bar connects to divider */
-        padding: 40px 0; 
-    }
+/* --- Paragraph Style (Unchanged) --- */
+.about-clean-final .intro-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 30px; /* Kept standard internal paragraph spacing */
+    color: #343a40;
+    font-weight: 300;
+}
 
-    /* Feature List and Item styles remain as they only affect internal spacing */
-    .about-clean-final .feature-list-compact { display: flex; justify-content: space-between; }
-    .about-clean-final .feature-item-compact { flex-basis: 33%; padding: 0 25px; position: relative; text-align: center; }
-    .about-clean-final .feature-item-compact:not(:last-child)::after {
-        content: ''; position: absolute; right: 0; top: 10px; bottom: 10px; width: 1px; background-color: #dee2e6;
-    }
-    .about-clean-final .feature-item-compact strong { font-size: 2rem; font-weight: 800; color: #ffc107; display: block; margin-bottom: 3px; }
-    .about-clean-final .feature-item-compact span { font-size: 1rem; font-weight: 600; color: #05374b; display: block; margin-bottom: 5px; }
-    .about-clean-final .feature-item-compact p { font-size: 0.9rem; line-height: 1.4; color: #6c757d; }
+/* --- Feature Divider Line - CRITICAL ZERO MARGINS (Unchanged) --- */
+.about-clean-final .content-divider {
+    height: 1px;
+    background-color: #dee2e6;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* --- FULL-WIDTH BOTTOM FEATURE BAR STYLES - CRITICAL ZERO MARGINS (Unchanged) --- */
+.about-clean-final .feature-bar-wrap {
+    background-color: #f7f7f7;
+    margin-top: 0; /* Ensures bar connects to divider */
+    padding: 40px 0;
+}
+
+/* Feature List and Item styles remain as they only affect internal spacing (Unchanged) */
+.about-clean-final .feature-list-compact { display: flex; justify-content: space-between; }
+.about-clean-final .feature-item-compact { flex-basis: 33%; padding: 0 25px; position: relative; text-align: center; }
+.about-clean-final .feature-item-compact:not(:last-child)::after {
+    content: ''; position: absolute; right: 0; top: 10px; bottom: 10px; width: 1px; background-color: #dee2e6;
+}
+.about-clean-final .feature-item-compact strong { font-size: 2rem; font-weight: 800; color: #ffc107; display: block; margin-bottom: 3px; }
+.about-clean-final .feature-item-compact span { font-size: 1rem; font-weight: 600; color: #05374b; display: block; margin-bottom: 5px; }
+.about-clean-final .feature-item-compact p { font-size: 0.9rem; line-height: 1.4; color: #6c757d; }
   </style>
 </head>
 
