@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
     <title>Our packages</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <link rel="icon" type="image/png" href="../assets/img/transformed.png" sizes="164x164">
-
     <!-- Vendor CSS Files -->
     <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +14,6 @@
     <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet"
@@ -29,7 +25,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -37,11 +32,9 @@
             background-color: #f8f9fa;
             padding-top: 90px;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         h1 {
             font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 0.5rem;
@@ -52,7 +45,6 @@
             margin-top: clamp(40px, 10vw, 100px);
             text-align: center;
         }
-
         /* Header */
         #header {
             position: fixed;
@@ -68,25 +60,21 @@
             border-radius: 10px;
             box-shadow: 0px 1px 4px #ffffff;
         }
-
         #header.header-transparent {
             background: transparent;
             box-shadow: none;
         }
-
         #header.header-scrolled {
             top: 10px;
             background: rgba(5, 55, 75, 0.98);
             box-shadow: 0px 2px 10px rgba(255, 197, 110, 0.7);
         }
-
         /* Container */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 clamp(1rem, 3vw, 2rem);
         }
-
         /* PDF Viewer */
         .pdf-viewer {
             display: flex;
@@ -94,7 +82,6 @@
             gap: 1.5rem;
             margin: 2rem 0;
         }
-
         .pdf-item {
             background: white;
             border-radius: 16px;
@@ -103,12 +90,10 @@
             transition: all 0.3s ease;
             border: 1px solid #e0e0e0;
         }
-
         .pdf-item.expanded {
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             margin: 15px 0;
         }
-
         .pdf-header {
             padding: clamp(1rem, 2vw, 1.2rem) clamp(1rem, 2vw, 1.5rem);
             background: linear-gradient(to right, #f8f9fa, #ffffff);
@@ -118,31 +103,26 @@
             justify-content: space-between;
             cursor: pointer;
         }
-
         .pdf-header-content {
             display: flex;
             align-items: center;
             gap: 1rem;
             flex: 1;
         }
-
         .pdf-icon {
             font-size: clamp(1.5rem, 3vw, 2rem);
             color: #4b6cb7;
             transition: transform 0.3s ease;
         }
-
         .pdf-item.expanded .pdf-icon {
             color: #ff6b6b;
         }
-
         .pdf-title {
             font-size: clamp(1.2rem, 2.5vw, 1.5rem);
             font-weight: 600;
             color: #2c3e50;
             word-break: break-word;
         }
-
         .toggle-btn {
             background: #05374b;
             color: white;
@@ -157,23 +137,19 @@
             transition: all 0.3s ease;
             font-size: clamp(1rem, 2vw, 1.2rem);
         }
-
         .toggle-btn:hover {
             background: #084f6baf;
             transform: scale(1.05);
         }
-
         .pdf-preview-container {
             height: 0;
             overflow: hidden;
             background: #f0f2f5;
             transition: height 0.4s ease;
         }
-
         .pdf-item.expanded .pdf-preview-container {
             height: clamp(300px, 50vw, 500px);
         }
-
         .pdf-iframe {
             width: 100%;
             height: 100%;
@@ -181,7 +157,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-
         .pdf-actions {
             display: flex;
             padding: clamp(1rem, 2vw, 1.2rem) clamp(1rem, 2vw, 1.5rem);
@@ -191,11 +166,9 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-
         .pdf-item.expanded .pdf-actions {
             opacity: 1;
         }
-
         .btnpdf {
             background: linear-gradient(135deg, #05374b 0%, #084f6b 100%);
             width: clamp(250px, 60vw, 300px);
@@ -210,13 +183,11 @@
             align-items: center;
             gap: 8px;
         }
-
         .btnpdf:hover {
             background: linear-gradient(135deg, #05374b 0%, #05374b 100%);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-
         /* Accordion */
         .accordion {
             display: flex;
@@ -224,7 +195,6 @@
             gap: 20px;
             margin: 2rem 0;
         }
-
         .accordion-item {
             background: white;
             overflow: hidden;
@@ -232,12 +202,10 @@
             transition: all 0.3s ease;
             border-top: 1px rgba(255, 255, 255, 0.2);
         }
-
         .accordion-item.expanded {
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.15);
             transform: translateY(-5px);
         }
-
         .accordion-header {
             display: flex;
             align-items: center;
@@ -248,23 +216,19 @@
             transition: all 0.3s ease;
             border-bottom: 1px solid #e9ecef;
         }
-
         .accordion-item.expanded .accordion-header {
             color: #05374b;
             border-top: 3px solid #05374b;
         }
-
         .header-left {
             display: flex;
             align-items: center;
             gap: clamp(15px, 3vw, 20px);
         }
-
         .accordion-title {
             font-size: clamp(1.2rem, 2.5vw, 1.3rem);
             font-weight: 600;
         }
-
         .accordion-toggle-btn {
             width: clamp(35px, 8vw, 40px);
             height: clamp(35px, 8vw, 40px);
@@ -279,33 +243,27 @@
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-
         .accordion-item.expanded .accordion-toggle-btn {
             background: #05186bec;
             color: #ffffff;
             transform: rotate(180deg);
         }
-
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease;
         }
-
         .accordion-item.expanded .accordion-content {
             max-height: 900px;
         }
-
         .pdf-preview {
             height: 0;
             transition: height 0.4s ease;
             overflow: hidden;
         }
-
         .accordion-item.expanded .pdf-preview {
             height: clamp(250px, 50vw, 400px);
         }
-
         .button-container {
             display: flex;
             justify-content: center;
@@ -313,7 +271,6 @@
             gap: 15px;
             flex-wrap: wrap;
         }
-
         /* Footer */
         #footer {
             background-color: #05374b;
@@ -323,7 +280,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .stars-container {
             position: absolute;
             top: 0;
@@ -332,38 +288,31 @@
             height: 100%;
             pointer-events: none;
         }
-
         .star {
             position: absolute;
             background-color: white;
             border-radius: 50%;
             animation: twinkle 5s infinite;
         }
-
         @keyframes twinkle {
-
             0%,
             100% {
                 opacity: 0.2;
             }
-
             50% {
                 opacity: 1;
             }
         }
-
         .footer-content {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 30px;
         }
-
         .footer-section {
             flex: 1;
             min-width: min(250px, 100%);
         }
-
         .footer-heading {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -371,12 +320,10 @@
             padding-bottom: 0.5rem;
             display: inline-block;
         }
-
         .social-links {
             text-align: center;
             margin-bottom: 20px;
         }
-
         .social-links a {
             font-size: 18px;
             display: inline-block;
@@ -391,210 +338,168 @@
             height: 36px;
             transition: 0.3s;
         }
-
         .social-links a:hover {
             background: #ffc56e;
             color: #05374b;
         }
-
         .copyright {
             text-align: center;
             padding-top: 20px;
             font-size: 14px;
         }
-
         .credits {
             text-align: center;
             font-size: 13px;
             padding-top: 5px;
         }
-
         /* Responsive Design */
         /* Tablets and smaller desktops */
         @media (max-width: 1024px) {
             .container {
                 padding: 0 1.5rem;
             }
-
             .pdf-item.expanded .pdf-preview-container {
                 height: 450px;
             }
-
             .accordion-item.expanded .pdf-preview {
                 height: 350px;
             }
         }
-
         /* Tablets */
         @media (max-width: 900px) {
             .header-center-text {
                 font-size: 1.3rem;
             }
         }
-
         /* Larger phones */
         @media (max-width: 768px) {
             body {
                 padding-top: 80px;
             }
-
             #header {
                 height: 60px;
                 margin: 0 3%;
             }
-
             .pdf-header {
                 padding: 1rem;
             }
-
             .pdf-item.expanded .pdf-preview-container {
                 height: 400px;
             }
-
             .accordion-header {
                 padding: 15px 20px;
             }
-
             .accordion-item.expanded .pdf-preview {
                 height: 300px;
             }
-
             .footer-content {
                 flex-direction: column;
                 gap: 20px;
             }
-
             .button-container {
                 flex-direction: column;
                 align-items: center;
             }
-
             .btnpdf {
                 width: 80%;
                 text-align: center;
                 justify-content: center;
             }
         }
-
         /* Phones */
         @media (max-width: 600px) {
             #header {
                 margin: 0 2%;
             }
-
             .header-center-text {
                 font-size: 1.1rem;
             }
-
             .pdf-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1rem;
             }
-
             .toggle-btn {
                 align-self: flex-end;
             }
-
             .pdf-item.expanded .pdf-preview-container {
                 height: 350px;
             }
-
             .pdf-actions {
                 flex-direction: column;
             }
-
             .accordion-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 15px;
             }
-
             .header-left {
                 width: 100%;
             }
-
             .accordion-toggle-btn {
                 align-self: flex-end;
             }
-
             .accordion-item.expanded .pdf-preview {
                 height: 250px;
             }
-
             .logo-container img {
                 width: 70px !important;
             }
         }
-
         /* Small phones */
         @media (max-width: 480px) {
             body {
                 padding-top: 70px;
             }
-
             #header {
                 height: 50px;
                 margin: 0 1%;
             }
-
             .header-center-text {
                 font-size: 1rem;
             }
-
             .container {
                 padding: 0 1rem;
             }
-
             .pdf-preview-container {
                 height: 300px;
             }
-
             .pdf-item.expanded .pdf-preview-container {
                 height: 300px;
             }
-
             .accordion-header {
                 padding: 12px 15px;
             }
-
             .accordion-item.expanded .pdf-preview {
                 height: 200px;
             }
-
             .btnpdf {
                 width: 90%;
                 padding: 8px 15px;
                 font-size: 14px;
             }
         }
-
         /* Very small phones */
         @media (max-width: 360px) {
             .header-center-text {
                 font-size: 0.9rem;
             }
-
             .pdf-item.expanded .pdf-preview-container {
                 height: 250px;
             }
-
             .accordion-item.expanded .pdf-preview {
                 height: 180px;
             }
-
             .logo-container img {
                 width: 60px !important;
             }
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         :root {
             --primary: rgba(5, 55, 75, 0.863);
             --secondary: #fecb00b2;
@@ -604,30 +509,25 @@
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
-
         body {
             background-color: #f5f5f5;
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
         }
-
         .hero h1 {
             font-size: clamp(1.8rem, 5vw, 3rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
-
         .hero p {
             font-size: clamp(1rem, 3vw, 1.3rem);
             max-width: 800px;
             margin-bottom: 2rem;
         }
-
         section {
             padding: clamp(2rem, 10%, 10%);
         }
-
         #section-title {
             position: absolute;
             left: 50%;
@@ -639,7 +539,6 @@
             pointer-events: none;
             white-space: nowrap;
         }
-
         #section-title h3 {
             font-size: clamp(1.8rem, 5vw, 2.5rem);
             color: var(--dark);
@@ -647,7 +546,6 @@
             display: inline-block;
             padding-bottom: 1rem;
         }
-
         #section-title h2::after {
             position: absolute;
             bottom: 0;
@@ -657,7 +555,6 @@
             height: 3px;
             background-color: var(--primary);
         }
-
         #section-subtitle {
             text-align: center;
             margin-top: 0px;
@@ -665,12 +562,10 @@
             font-size: clamp(1rem, 2.5vw, 1.2rem);
             font-weight: bold;
         }
-
         #destinations {
             padding-left: clamp(1rem, 10vw, 150px);
             padding-right: clamp(1rem, 10vw, 150px);
         }
-
         .filter-container {
             position: relative;
             background-color: #ffffff;
@@ -684,7 +579,6 @@
             border-left: clamp(5px, 2vw, 15px) solid transparent;
             border-right: clamp(5px, 2vw, 15px) solid transparent;
         }
-
         .filter-container::before,
         .filter-container::after {
             content: '';
@@ -694,28 +588,24 @@
             width: clamp(4px, 1.5vw, 8px);
             border-radius: 4px;
         }
-
         .filter-container::before {
             left: 0;
             margin: auto 0;
             height: 50%;
             background: #182848;
         }
-
         .filter-container::after {
             right: 0;
             margin: auto 0;
             height: 50%;
             background: #182848;
         }
-
         .filter-tabs {
              display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: clamp(0.5rem, 2vw, 1rem);
         }
-
         .filter-tab {
             text-transform: uppercase;
             display: flex;
@@ -735,30 +625,25 @@
             -webkit-clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
             clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
         }
-
         .filter-tab.active {
             background-color: var(--dark);
             color: white;
         }
-
         .filter-tab:hover:not(.active) {
             background-color: var(--primary);
             color: white;
             transform: translateY(-3px);
         }
-
         .filter-tab i {
             margin-right: 0.5rem;
             font-size: clamp(0.9rem, 2vw, 1.1rem);
         }
-
         /* Cards Container */
         .cards-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
             gap: clamp(1rem, 3vw, 2rem);
         }
-
         .card {
             background-color: white;
             border-radius: 10px;
@@ -767,29 +652,24 @@
             transition: var(--transition);
             position: relative;
         }
-
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
-
         .card-img {
             height: clamp(180px, 40vw, 220px);
             overflow: hidden;
             position: relative;
         }
-
         .card-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
-
         .card:hover .card-img img {
             transform: scale(1.1);
         }
-
         .card-badge {
             position: absolute;
             top: 15px;
@@ -801,18 +681,15 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
-
         .card-content {
             padding: clamp(1rem, 2vw, 1.5rem);
         }
-
         .card-content h3 {
             font-size: clamp(1.2rem, 3vw, 1.4rem);
             margin-bottom: 0.5rem;
             font-weight: bold;
             color: var(--dark);
         }
-
         .card-content .location {
             color: var(--primary);
             font-weight: 500;
@@ -820,22 +697,18 @@
             display: flex;
             align-items: center;
         }
-
         .card-content .location i {
             margin-right: 0.5rem;
         }
-
         .card-content p {
             margin-bottom: 1rem;
             color: #666;
         }
-
         .card-features {
             display: flex;
             flex-wrap: wrap;
             margin-top: 1rem;
         }
-
         .feature {
             background-color: #f0f0f0;
             padding: 0.3rem 0.8rem;
@@ -844,32 +717,26 @@
             margin-right: 0.5rem;
             margin-bottom: 0.5rem;
         }
-
         .feature.historical {
             background-color: rgba(7, 137, 48, 0.1);
             color: var(--dark);
         }
-
         .feature.cultural {
             background-color: rgba(254, 203, 0, 0.2);
             color: #b8860b;
         }
-
         .feature.religious {
             background-color: rgba(218, 41, 28, 0.1);
             color: var(--primary);
         }
-
         /* INSTANT LUXURY BASE STYLE */
         .card-btn {
             /* Rich Background: Use a subtle gradient for depth, not a complex shadow */
             background: linear-gradient(180deg, var(--dark) 0%, color-mix(in srgb, var(--dark) 85%, black) 100%);
             color: white;
-
             /* Clean, soft corners */
             border: none;
             border-radius: 6px;
-
             /* Typography: Refined and prominent */
             padding: 0.7rem 1.3rem;
             font-size: 1rem;
@@ -891,44 +758,35 @@
             left: 0;
             right: 0;
         }
-
         .card-btn:hover {
             box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
             background: linear-gradient(0deg, var(--dark) 0%, color-mix(in srgb, var(--dark) 85%, black) 100%);
         }
-
-
-
         /* Responsive Design */
         @media (max-width: 992px) {
             section {
                 padding: 4rem 5%;
             }
         }
-
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
         }
-
         @media (max-width: 576px) {
             header {
                 height: 50vh;
             }
-
             .filter-tabs {
                 flex-direction: column;
                 align-items: center;
             }
-
             .filter-tab {
                 width: 100%;
                 max-width: 250px;
                 justify-content: center;
             }
         }
-
         .divider {
             height: 3px;
             background: linear-gradient(90deg, transparent 0%, #095775 50%, transparent 100%);
@@ -938,9 +796,7 @@
             margin: 0 auto;
         }
     </style>
-
 </head>
-
 <body>
     <div id="header" style="position: fixed;">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -950,7 +806,6 @@
                 </a>
             </div>
             <h3 id="section-title">Ethiopia's Destinations</h3>
-
             <nav id="navbar" class="navbar order-last order-lg-0 center">
                 <ul>
                     <li><a style="font-size: 16px;" class="nav-link scrollto " href="../touroptions/destination.html">
@@ -961,14 +816,12 @@
             </nav><!-- .navbar -->
         </div>
     </div><!-- End Header -->
-
     <p id="section-subtitle" style="margin-top: 20px;">Discover the rich diversity of Ethiopia's historical, cultural,
         and religious sites</p>
     <div class="divider"></div>
     <br>
     <div id="destinations">
         <div class="filter-container" data-aos="fade-up">
-
             <div class="filter-tabs">
                 <button class="filter-tab active" data-category="all">
                    &nbsp;&nbsp;&nbsp;&nbsp;   <i class="fas fa-globe"></i>&nbsp;&nbsp; All Sites  &nbsp;&nbsp;&nbsp;&nbsp; 
@@ -983,9 +836,7 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;    <i class="fas fa-place-of-worship"></i> &nbsp;&nbsp; Religious  &nbsp;&nbsp;&nbsp;&nbsp; 
                 </button>
             </div>
-
         </div>
-
         <div class="cards-container" id="cards-container">
             <!-- Historical Sites -->
             <div class="card" data-aos="fade-up" data-category="historical">
@@ -1007,7 +858,6 @@
                     </div>
                     <br>
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
-
                 </div>
             </div>
             <div class="card" data-aos="fade-up" data-category="historical">
@@ -1027,13 +877,10 @@
                         <span class="feature">Archaeology</span>
                         <span class="feature">UNESCO Site</span>
                     </div>
-
                     <br>
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
-
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="historical">
                 <div class="card-img">
                     <img src="../assets/img/touropts/g1.jpg" alt="Gondar Castles">
@@ -1055,7 +902,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="historical">
                 <div class="card-img">
                     <img src="../assets/img/touropts/tiya.jpg" alt="Tiya Stelae">
@@ -1077,7 +923,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="historical">
                 <div class="card-img">
                     <img src="../assets/img/touropts/yeha.jpg" alt="Yeha Temple">
@@ -1099,7 +944,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <!-- Cultural Sites -->
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
@@ -1122,7 +966,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
                     <img src="../assets/img/touropts/sidama.jpg" alt="Sidama Cultural Festival">
@@ -1144,7 +987,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
                     <img src="../assets/img/slide/k1.jpg" alt="Omo Valley Tribes">
@@ -1166,7 +1008,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
                     <img src="../assets/img/touropts/harar.png" alt="Harar City">
@@ -1188,7 +1029,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="cultural">
                 <div class="card-img">
                     <img src="../assets/img/touropts/gurage.png" alt="Gurage Region">
@@ -1210,7 +1050,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <!-- Religious Sites -->
             <div class="card" data-aos="fade-up" data-category="religious">
                 <div class="card-img">
@@ -1234,7 +1073,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="religious">
                 <div class="card-img">
                     <img src="../assets/img/touropts/ziquala.jpg" alt="Ziquala Abo Monastery">
@@ -1258,8 +1096,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
-
             <div class="card" data-aos="fade-up" data-category="religious">
                 <div class="card-img">
                     <img src="../assets/img/touropts/bahirdar.jpg" alt="Bahir Dar Monasteries">
@@ -1281,7 +1117,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="religious">
                 <div class="card-img">
                     <img src="../assets/img/touropts/islamic.jpg" alt="Church of St. George">
@@ -1294,7 +1129,6 @@
                     </div>
                     <p>Considered as one of the oldest mosques in Africa and a historically significant site for early
                         Islamic history.
-
                         The site contains the tombs of the king and several companions of the Prophet Muhammad.
                     </p>
                     <div class="card-features">
@@ -1306,7 +1140,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
             <div class="card" data-aos="fade-up" data-category="religious">
                 <div class="card-img">
                     <img src="../assets/img/touropts/gheralta.jpg" alt="Abuna Yemata Guh">
@@ -1328,8 +1161,6 @@
                     <button class="card-btn">Book now &nbsp;&nbsp; <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
-
-
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -1340,12 +1171,10 @@
             once: true,
             offset: 100
         });
-
         // Filter functionality
         document.addEventListener('DOMContentLoaded', function () {
             const filterTabs = document.querySelectorAll('.filter-tab');
             const cards = document.querySelectorAll('.card');
-
             // Function to filter cards based on category
             function filterCards(category) {
                 cards.forEach(card => {
@@ -1357,11 +1186,9 @@
                         card.style.display = 'none';
                     }
                 });
-
                 // Refresh AOS to handle newly visible elements
                 AOS.refresh();
             }
-
             // Function to update active filter tab
             function setActiveFilter(category) {
                 filterTabs.forEach(tab => {
@@ -1370,16 +1197,13 @@
                         tab.classList.add('active');
                     }
                 });
-
                 // Update page titles based on category
                 updatePageTitles(category);
             }
-
             // Function to update page titles based on category
             function updatePageTitles(category) {
                 const sectionTitle = document.getElementById('section-title');
                 const sectionSubtitle = document.getElementById('section-subtitle');
-
                 if (category === 'all') {
                     document.title = "Ethiopia Travel Guide | All Destinations";
                     if (sectionTitle) sectionTitle.textContent = "Ethiopia's Destinations";
@@ -1398,11 +1222,9 @@
                     if (sectionSubtitle) sectionSubtitle.textContent = "Explore Ethiopia's sacred religious sites, ancient churches, and spiritual landmarks";
                 }
             }
-
             // Check for URL parameter and set filter accordingly
             const urlParams = new URLSearchParams(window.location.search);
             const urlCategory = urlParams.get('category');
-
             if (urlCategory && ['historical', 'cultural', 'religious', 'all'].includes(urlCategory)) {
                 setActiveFilter(urlCategory);
                 filterCards(urlCategory);
@@ -1410,21 +1232,18 @@
                 setActiveFilter('all');
                 filterCards('all');
             }
-
             // Filter by category when tabs are clicked
             filterTabs.forEach(tab => {
                 tab.addEventListener('click', function () {
                     const category = this.getAttribute('data-category');
                     setActiveFilter(category);
                     filterCards(category);
-
                     // Update URL without page reload
                     const newUrl = window.location.protocol + "//" + window.location.host +
                         window.location.pathname + (category === 'all' ? '' : `?category=${category}`);
                     window.history.pushState({ path: newUrl }, '', newUrl);
                 });
             });
-
             // Card action buttons
             const cardButtons = document.querySelectorAll('.card-btn');
             cardButtons.forEach(button => {
@@ -1432,7 +1251,6 @@
                     window.location.href = "../book.html";
                 });
             });
-
             // Handle browser back/forward buttons
             window.addEventListener('popstate', function () {
                 const urlParams = new URLSearchParams(window.location.search);
@@ -1447,12 +1265,10 @@
             });
         });
     </script>
-
     <!-- ======= Footer ======= -->
     <div id="footer">
         <div class="stars-container">
             <!-- Generate 100 star divs -->
-
             <div class="star"></div>
             <div class="star"></div>
             <div class="star"></div>
@@ -1564,8 +1380,5 @@
             </div>
         </div>
     </div><!-- End Footer -->
-
-
 </body>
-
 </html>

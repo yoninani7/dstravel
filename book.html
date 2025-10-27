@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <title>Book your trip</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
   <link rel="icon" type="image/png" href="assets/img/transformed.png" sizes="164x164">
-
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i"
     rel="stylesheet">
-
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,10 +18,8 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
   <style>
     .form-control {
       background-color: rgba(255, 255, 255, 0.95) !important;
@@ -39,24 +32,20 @@
       font-size: 16px;
       color: #05374b;
     }
-
     .form-control:focus {
       box-shadow: 0 0 0 3px rgba(5, 55, 75, 0.15) !important;
       border: 1px solid rgba(5, 55, 75, 0.4) !important;
       background-color: white !important;
       transform: translateY(-2px);
     }
-
     textarea.form-control {
       min-height: 150px;
       padding-top: 30px !important;
     }
-
     .form-group {
       margin-bottom: 25px;
       position: relative;
     }
-
     .floating-label {
       position: absolute;
       top: 18px;
@@ -71,7 +60,6 @@
       border-radius: 4px;
       font-weight: 400;
     }
-
     .form-control:focus + .floating-label,
     .form-control:not(:placeholder-shown) + .floating-label {
       top: -10px;
@@ -84,16 +72,13 @@
       box-shadow: 0 2px 5px rgba(5, 55, 75, 0.1);
       border: 1px solid rgba(5, 55, 75, 0.2);
     }
-
     .form-control::placeholder {
       color: transparent !important;
     }
-
     .form-control:focus::placeholder {
       color: #6c757d !important;
       opacity: 0.5 !important;
     }
-
     #header {
       position: relative;
       top: 10px;
@@ -108,19 +93,16 @@
       box-shadow: 0px 1px 4px #ffffff;
       background: linear-gradient(100deg, rgba(5, 55, 75, 0.98), #094e68);
     }
-
     #header.header-transparent {
       background: transparent;
       box-shadow: none;
     }
-
     #header.header-scrolled {
       top: 10px;
       /* Keep it at 10px even when scrolled */
       box-shadow: 0px 1px 4px #ffffff;
       background: linear-gradient(100deg, rgba(5, 55, 75, 0.98), #094e68);
     }
-
     .header-center-text {
       position: absolute;
       left: 50%;
@@ -130,7 +112,6 @@
       color: white;
       pointer-events: none;
     }
-
     /* Form container styling */
     .form-container {
       background-color: rgba(5, 55, 75, 0.15);
@@ -140,31 +121,25 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
-
     /* Responsive adjustments */
     @media (max-width: 768px) {
       #header {
         height: auto;
         padding: 10px;
       }
-
       nav#navbar ul {
         flex-direction: column;
       }
-
       .book-a-table-btn {
         margin-top: 10px;
       }
-      
       .floating-label {
         font-size: 14px;
       }
-      
       .form-container {
         padding: 25px 20px;
       }
     }
-
     .sendbtn {
       display: inline-block;
       background: linear-gradient(135deg, #05374b, #0a122c);
@@ -182,7 +157,6 @@
       box-shadow: 0 5px 15px rgba(5, 55, 75, 0.3);
       letter-spacing: 0.5px;
     }
-
     .sendbtn:before {
       content: '';
       position: absolute;
@@ -194,21 +168,17 @@
       transition: width 0.5s ease;
       z-index: -1;
     }
-
     .sendbtn:hover {
       color: white;
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(5, 55, 75, 0.4);
     }
-
     .sendbtn:hover:before {
       width: 100%;
     }
-
     .sendbtn:active {
       transform: translateY(-1px);
     }
-    
     /* Section title enhancement */
     .section-title {
       background: linear-gradient(120deg, #05374b, #ffcf88);
@@ -222,7 +192,6 @@
       position: relative;
       display: inline-block;
     }
-    
     .section-title:after {
       content: '';
       position: absolute;
@@ -233,17 +202,14 @@
       height: 3px;
       background: linear-gradient(90deg, transparent, #05374b, transparent);
     }
-    
     /* Form row spacing */
     .form-row-spacing {
       margin-bottom: 15px;
     }
   </style>
 </head>
-
 <body
   style=" background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('assets/img/book.jpg');">
-
   <div id="header">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <div class="logo me-auto">
@@ -253,17 +219,14 @@
       </div>
       <div class="header-center-text">Unlock Amazing Destinations</div>
       <nav id="navbar" class="navbar order-last order-lg-0 center">
-
         <ul>
           <li><a style="font-size: 16px;font-weight: bold;" class="nav-link scrollto " href="book.html">Book </a></li>
           <li><a class="nav-link scrollto ">/</a></li>
-
           <li><a style="font-size: 16px;" class="nav-link scrollto active" href="index.html">Home</a></li>
         </ul>
       </nav><!-- .navbar -->
     </div>
   </div><!-- End Header -->
-
   <main id="main">
     <!-- ======= Book A Table Section ======= -->
     <section id="book-a-table" class="book-a-table">
@@ -318,26 +281,20 @@
         </div>
       </div>
     </section><!-- End Book A Table Section -->
-
     <section class="inner-page">
       <div class="container">
         Designed by <a style="color: white; " href="https://yonikass.netlify.app/">Yonatan Kassahun</a>
       </div>
     </section>
   </main><!-- End #main -->
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
