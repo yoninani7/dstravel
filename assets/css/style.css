@@ -997,171 +997,182 @@
    }
  }
 
+/* Events Section */
+.events {
+  background: url(../img/celebration.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 50px 0;
+}
 
- /* Events Section */
- .events {
-   background: url(../img/celebration.jpg) center center no-repeat;
-   background-size: cover;
-   position: relative;
-   padding: 50px 0;
- }
+.events::before {
+  content: "";
+  background-color: rgba(12, 11, 10, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
 
- .events::before {
-   content: "";
-   background-color: rgba(12, 11, 10, 0.8);
-   position: absolute;
-   top: 0;
-   right: 0;
-   left: 0;
-   bottom: 0;
- }
+.events .section-title h2 {
+  color: #fff;
+}
 
- .events .section-title h2 {
-   color: #fff;
- }
+.events .container {
+  /* Set position relative on container to contain the navigation on smaller screens */
+  position: relative;
+}
 
- .events .container {
-   position: relative;
- }
+@media (min-width: 1024px) {
+  .events {
+    background-attachment: fixed;
+  }
+}
 
- @media (min-width: 1024px) {
-   .events {
-     background-attachment: fixed;
-   }
- }
+.events .events-carousel {
+  padding: 30px;
+}
 
- .events .events-carousel {
-   padding: 30px;
- }
+.events .event-item {
+  color: #fff;
+  /* Add some margin to the bottom of the content in case the row wraps */
+  margin-bottom: 20px;
+}
 
- .events .event-item {
-   color: #fff;
- }
+.events .event-item h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #ffcf88;
+}
 
- .events .event-item h3 {
-   font-weight: 600;
-   font-size: 26px;
-   color: #ffcf88;
- }
+/* Removed unused CSS for .events .event-item .price and .events .event-item ul i */
 
- .events .event-item .price {
-   font-size: 26px;
-   font-family: "Poppins", sans-serif;
-   font-weight: 700;
-   margin-bottom: 15px;
- }
+.events .event-item ul {
+  list-style: none;
+  padding: 0;
+}
 
- .events .event-item .price span {
-   border-bottom: 2px solid #05374b;
- }
+.events .event-item ul li {
+  padding-bottom: 10px;
+}
 
- .events .event-item ul {
-   list-style: none;
-   padding: 0;
- }
+.events .event-item p:last-child {
+  margin-bottom: 0;
+}
 
- .events .event-item ul li {
-   padding-bottom: 10px;
- }
+.events .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
 
- .events .event-item ul i {
-   font-size: 20px;
-   padding-right: 4px;
-   color: #05374b;
- }
+.events .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
 
- .events .event-item p:last-child {
-   margin-bottom: 0;
- }
+.events .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffcf88;
+}
 
- .events .swiper-pagination {
-   margin-top: 20px;
-   position: relative;
- }
+/* --- Custom Navigation Arrows FIX --- */
+/* The navigation container is positioned absolutely relative to the section (.events) */
+.events-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  /* Max width to align with container on large screens */
+  max-width: 1140px; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  /* Add padding to prevent arrows from touching the screen edge on mobile */
+  padding: 0 15px; 
+  pointer-events: none;
+  /* Ensure the navigation is positioned within the section's padding */
+}
 
- .events .swiper-pagination .swiper-pagination-bullet {
-   width: 12px;
-   height: 12px;
-   background-color: rgba(255, 255, 255, 0.5);
-   opacity: 1;
- }
+.events-button-prev,
+.events-button-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 207, 136, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added subtle shadow for depth */
+}
 
- .events .swiper-pagination .swiper-pagination-bullet-active {
-   background-color: #ffcf88;
- }
+.events-button-prev:hover,
+.events-button-next:hover {
+  background: #ffcf88;
+  /* Removed transform: scale(1.1); for a smoother hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
 
- /* Custom Navigation Arrows */
- .events-navigation {
-   position: absolute;
-   top: 50%;
-   width: 100%;
-   transform: translateY(-50%);
-   z-index: 10;
-   pointer-events: none;
- }
+/* Position arrows relative to the events-navigation container */
+.events-button-prev {
+  left: 0; /* Aligned to the start of the padding */
+}
 
- .events-button-prev,
- .events-button-next {
-   position: absolute;
-   width: 50px;
-   height: 50px;
-   background: rgba(255, 207, 136, 0.8);
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   pointer-events: auto;
- }
+.events-button-next {
+  right: 0; /* Aligned to the end of the padding */
+}
 
- .events-button-prev:hover,
- .events-button-next:hover {
-   background: #ffcf88;
-   transform: scale(1.1);
- }
+.events-button-prev::after,
+.events-button-next::after {
+  font-family: swiper-icons;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
 
- .events-button-prev {
-   left: -25px;
- }
+.events-button-prev::after {
+  content: 'prev';
+}
 
- .events-button-next {
-   right: -25px;
- }
+.events-button-next::after {
+  content: 'next';
+}
 
- .events-button-prev::after,
- .events-button-next::after {
-   font-family: swiper-icons;
-   font-size: 24px;
-   color: #333;
-   font-weight: bold;
- }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Smaller arrow size for mobile */
+  .events-button-prev,
+  .events-button-next {
+    width: 40px;
+    height: 40px;
+  }
+}
 
- .events-button-prev::after {
-   content: 'prev';
- }
+/* On large screens (desktop), move the arrows outside the main content block for a sleek look */
+@media (min-width: 992px) {
+  .events-button-prev {
+    left: -75px; /* Adjust to move outside the content column */
+  }
 
- .events-button-next::after {
-   content: 'next';
- }
+  .events-button-next {
+    right: -75px; /* Adjust to move outside the content column */
+  }
+}
 
- /* Responsive adjustments */
- @media (max-width: 768px) {
+/* Ensure the arrows are not too far out on extra large screens */
+@media (min-width: 1200px) {
+  .events-button-prev {
+    left: -100px; 
+  }
 
-   .events-button-prev,
-   .events-button-next {
-     width: 40px;
-     height: 40px;
-   }
-
-   .events-button-prev {
-     left: -15px;
-   }
-
-   .events-button-next {
-     right: -15px;
-   }
- }
+  .events-button-next {
+    right: -100px;
+  }
+}
 
 
  /*--------------------------------------------------------------
@@ -1184,112 +1195,155 @@
  .gallery .gallery-item:hover img {
    transform: scale(1.1);
  }
-
- /*--------------------------------------------------------------
-# Chefs
+/*--------------------------------------------------------------
+# Chefs - New Side-by-Side Design
 --------------------------------------------------------------*/
- .chefs {
-   background: url("../img/book.jpg") center center no-repeat;
-   background-size: cover;
-   padding: 60px 0;
-   position: relative;
- }
+.chefs {
+    background: url("../img/book.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+}
 
- .chefs::before {
-   content: "";
-   position: absolute;
-   left: 0;
-   right: 0;
-   top: 0;
-   bottom: 0;
-   background: rgba(255, 255, 255, 0.8);
-   z-index: 9;
- }
+.chefs::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.534);
+    z-index: 9;
+}
 
- .chefs .container {
-   position: relative;
-   z-index: 10;
- }
+.chefs .container {
+    position: relative;
+    z-index: 10;
+}
 
- .chefs .member {
-   text-align: center;
-   margin-bottom: 80px;
-   position: relative;
- }
+.chefs .member-side {
+    text-align: left; /* Adjust alignment for side-by-side text */
+    margin-bottom: 50px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    overflow: hidden;
+}
 
- .chefs .member .pic {
-   overflow: hidden;
- }
+/* Image Styling: Make the image large and fill its column */
+.chefs .member-side .pic-container {
+    /* UPDATED: Increased height for a more prominent image */
+    height: 420px; 
+}
 
- .chefs .member .member-info {
-   position: absolute;
-   bottom: -80px;
-   left: 20px;
-   right: 20px;
-   background: #fff;
-   padding: 20px 0;
-   color: #433f39;
-   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-   overflow: hidden;
-   transition: max-height 0.5s ease-in-out;
- }
+.chefs .member-side .pic {
+    overflow: hidden;
+    height: 100%;
+}
 
- .chefs .member h4 {
-   font-weight: 500;
-   margin-bottom: 10px;
-   font-size: 16px;
-   color: #6c665c;
-   position: relative;
-   padding-bottom: 10px;
-   font-family: "Poppins", sans-serif;
- }
+.chefs .member-side .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out;
+}
 
- .chefs .member h4::after {
-   content: "";
-   position: absolute;
-   display: block;
-   width: 50px;
-   height: 1px;
-   background: #ffcf88;
-   bottom: 0;
-   left: calc(50% - 25px);
- }
+/* Info Styling: Text block on the right */
+.chefs .member-side .info-container {
+    display: flex;
+    align-items: center;
+    padding: 0 15px; 
+}
 
- .chefs .member span {
-   font-style: italic;
-   display: block;
-   font-size: 13px;
- }
+.chefs .member-side .member-info {
+    position: static; 
+    padding: 20px 0;
+    background: none; 
+    box-shadow: none; 
+    color: #433f39;
+    width: 100%;
+}
 
- .chefs .member .social {
-   margin-top: 15px;
- }
+.chefs .member-side h4 {
+    font-weight: 600; 
+    margin-bottom: 10px;
+    font-size: 20px; 
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+}
 
- .chefs .member .social a {
-   transition: color 0.3s;
-   color: #7a7368;
- }
+.chefs .member-side h4::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #ffcf88;
+    bottom: 0;
+    left: 0; 
+}
 
- .chefs .member .social a:hover {
-   color: #05374b;
- }
+.chefs .member-side span {
+    font-style: italic;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
 
- .chefs .member .social i {
-   font-size: 16px;
-   margin: 0 2px;
- }
+.chefs .member-side .description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    padding: 0;
+    margin: 0;
+    text-align: left; 
+}
 
- @media (max-width: 992px) {
-   .chefs .member {
-     margin-bottom: 110px;
-   }
- }
+.chefs .member-side .social {
+    margin-top: 20px;
+}
 
- @media (min-width: 1024px) {
-   .chefs {
-     background-attachment: fixed;
-   }
- }
+.chefs .member-side .social a {
+    transition: color 0.3s;
+    color: #7a7368;
+    margin-right: 10px;
+}
+
+.chefs .member-side .social a:hover {
+    color: #05374b;
+}
+
+.chefs .member-side .social i {
+    font-size: 18px; 
+}
+
+@media (max-width: 767px) {
+    /* Stack the content vertically on small screens */
+    .chefs .member-side .pic-container {
+        height: 280px; /* Adjusted height for smaller screens */
+    }
+    .chefs .member-side .info-container {
+        padding: 20px 15px;
+    }
+    .chefs .member-side h4::after {
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+    .chefs .member-side .member-info {
+        text-align: center;
+    }
+    .chefs .member-side .description {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .chefs {
+        background-attachment: fixed;
+    }
+}
 
  /*--------------------------------------------------------------
 # Testimonials
@@ -1408,7 +1462,7 @@
 
  body {
    color: #433f39;
-   background-color: #f5f5f5;
+   background-color: rgb(250, 249, 246);
  }
 
 
@@ -2160,7 +2214,7 @@
    line-height: 1;
    animation-delay: 0.5s;
    color: #fff;
-   background-color: #05374be0;
+   background: linear-gradient(135deg, #05374b, #042633);
    cursor: pointer;
 
   -webkit-clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
@@ -2168,7 +2222,7 @@
  }
 
  .btnpdf:hover {
-   background: linear-gradient(135deg, #05374b, #042633);
+   background: #05374be0;
    color: white;
  }
 
@@ -2184,7 +2238,7 @@
    line-height: 1;
    animation-delay: 0.5s;
    color: #fff;
-   background-color: #05374be0;
+  background: linear-gradient(135deg, #05374b, #042633);
    cursor: pointer;
    -webkit-clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
         clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
