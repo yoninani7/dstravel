@@ -1,18 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Essential Meta Tags -->
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>DS International Trading PLC</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <link rel="icon" type="image/png" href="assets/img/transformed.png" sizes="164x164">
-  <!-- Favicons 
-      //top icon7
-    <link href="assets/img/favicon.png" rel="icon">-->
-  <!-- Google Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO-Optimized Title & Meta Description -->
+  <title>DS International Trading PLC | Premium Travel Agency & Tour Packages in Ethiopia</title>
+  <meta name="description"
+    content="DS International Trading PLC offers premium travel services, Ethiopia tour packages, air ticket sales, and event planning. Experience cultural tours, guided trips, and international destinations with expert travel consultants.">
+  <meta name="keywords"
+    content="travel agency Ethiopia, tour packages Ethiopia, air ticket booking Addis Ababa, Ethiopia cultural tours, international travel agency, event planning Ethiopia, honeymoon packages, business travel Ethiopia">
+  <meta name="author" content="DS International Trading PLC">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://dsinternationaltrading.com">
   <link
     href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i"
+    rel="stylesheet">
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="DS International Trading PLC | Premium Travel Agency & Tour Packages">
+  <meta property="og:description"
+    content="Premium travel services, Ethiopia tour packages, cultural experiences, and worldwide destinations. Your trusted travel partner in Addis Ababa.">
+  <meta property="og:image" content="https://dsinternationaltrading.com/assets/img/transformed.png">
+  <meta property="og:url" content="https://dsinternationaltrading.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DS International Trading PLC">
+  <meta property="og:locale" content="en_ET">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DS International Trading PLC | Premium Travel Agency">
+  <meta name="twitter:description"
+    content="Premium travel services, Ethiopia tour packages, and cultural experiences with expert guides.">
+  <meta name="twitter:image" content="https://dsinternationaltrading.com/assets/img/transformed.png">
+  <meta name="twitter:site" content="@DSInternational">
+  <!-- Structured Data / Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "DS International Trading PLC",
+    "description": "Premium travel agency offering Ethiopia tour packages, air ticket sales, cultural tours, and international travel services from Addis Ababa",
+    "url": "https://dsinternationaltrading.com",
+    "telephone": "+251-116-57-67-77",
+    "email": "samzewge@yahoo.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bole Medhaniyalem, Berhane Adere Mall, 6th Flr. Off.No.610",
+      "addressLocality": "Addis Ababa",
+      "addressRegion": "Addis Ababa",
+      "postalCode": "1000",
+      "addressCountry": "Ethiopia"
+    },
+    "openingHours": "Mo-Sa 08:30-18:00",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "8.995949789508172",
+      "longitude": "38.78555587367276"
+    },
+    "areaServed": "Ethiopia and Worldwide",
+    "serviceType": [
+      "Tour Packages",
+      "Air Ticket Booking",
+      "Cultural Tours",
+      "Event Planning",
+      "Hotel Reservations",
+      "Car Rental Services"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/dsinternationaltrading",
+      "https://www.instagram.com/dsinternationaltrading"
+    ]
+  }
+  </script>
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/png" href="assets/img/transformed.png" sizes="164x164">
+  <link rel="apple-touch-icon" href="assets/img/transformed.png">
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+  <!-- Google Fonts with Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i&display=swap"
     rel="stylesheet">
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -27,6 +98,7 @@
     html {
       scroll-behavior: smooth;
     }
+
     .divider {
       height: 3px;
       background: linear-gradient(90deg, transparent 0%, #095775 50%, transparent 100%);
@@ -35,71 +107,79 @@
       border: none;
       border-radius: 3px;
     }
+
     .marquee-container {
       max-width: 100%;
       overflow-x: hidden;
       background-color: #f9f9f9;
-      /* Light background */
       padding: 20px 0;
-      /* Padding for breathing space */
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      /* Subtle shadow */
     }
+
     .airlinecontained {
       display: flex;
       align-items: center;
       animation: marquee 30s linear infinite;
       width: max-content;
     }
+
     .airlinecontained img {
       width: 150px;
       height: 100px;
       margin: 0 15px;
       transition: transform 0.9s;
-      /* Smooth transition for hover effect */
     }
+
     .airlinecontained img:hover {
       transform: scale(1.1);
-      /* Scale up on hover */
     }
+
     @keyframes marquee {
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(-50%);
       }
     }
+
     /* Custom scrollbar for PDF iframes only */
     .preview iframe::-webkit-scrollbar {
       width: 14px;
     }
+
     .preview iframe::-webkit-scrollbar-track {
-      background: #cf0c0c;
-      border-radius: 10px;
+      background: #cf0c0c; 
     }
+
     .preview iframe::-webkit-scrollbar-thumb {
-      background: #3498db;
-      border-radius: 10px;
+      background: #3498db; 
       border: 3px solid #af0a0a;
     }
+
     .preview iframe::-webkit-scrollbar-thumb:hover {
       background: #2980b9;
     }
+
     /* Firefox support */
     .preview iframe {
       scrollbar-width: thin;
       scrollbar-color: #3498db #f1f1f1;
+     
     }
+
     @media (max-width: 999px) {
       .chck {
         margin-top: 40px;
       }
+
       .events-button-prev,
       .events-button-next {
         visibility: hidden;
       }
     }
+
     /* --- Global & Typography Styles --- */
     .p_section-packages {
       padding: 4rem 1rem;
@@ -107,13 +187,9 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .p_section-title {
-      font-size: 2.25rem;
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 4rem;
-      color: var(--primary-color);
-    }
+
+     
+
     /* Responsive padding for section (px-4 sm:px-6 lg:px-8) */
     @media (min-width: 640px) {
       .p_section-packages {
@@ -121,6 +197,7 @@
         padding-right: 1.5rem;
       }
     }
+
     @media (min-width: 1024px) {
       .p_section-packages {
         padding-left: 2rem;
@@ -129,105 +206,105 @@
         padding-bottom: 6rem;
       }
     }
+
     /* --- Card Grid Styles --- */
     .p_packages-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
     }
+
     @media (min-width: 768px) {
       .p_packages-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
     @media (min-width: 1024px) {
       .p_packages-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
     /* --- Card Styles --- */
     .p_package-card {
-      background-color: white;
-      border-radius: 0.75rem;
-      /* rounded-xl */
+      background-color: white; 
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      /* shadow-2xl */
       overflow: hidden;
       cursor: pointer;
     }
+
     .p_card-hover-effect {
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       will-change: transform, box-shadow;
     }
+
     .p_card-hover-effect:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px var(--shadow-color);
     }
+
     .p_card-image {
       height: 14rem;
-      /* h-56 */
       width: 100%;
       object-fit: cover;
     }
+
     .p_card-content {
       padding: 1.5rem;
     }
+
     .p_card-title {
       font-size: 1.5rem;
-      /* text-2xl */
       font-weight: 700;
       margin-bottom: 0.5rem;
-      /* mb-2 */
       color: var(--accent-color);
     }
+
     .p_card-tagline {
       color: rgb(107 114 128);
-      /* text-gray-500 */
       margin-bottom: 1rem;
-      /* mb-4 */
       font-size: 0.875rem;
-      /* text-sm */
     }
+
     .p_card-description {
       color: rgb(55 65 81);
-      /* text-gray-700 */
       margin-bottom: 1.5rem;
-      /* mb-6 */
     }
+
     /* --- Modal Styles (Image Modal Overlay) --- */
     .p_modal-overlay {
       position: fixed;
       inset: 0;
       z-index: 1000;
       background-color: rgba(0, 0, 0, 0.8);
-      /* bg-black bg-opacity-80 */
       padding: 1rem;
       overflow-y: auto;
       display: none;
-      /* hidden by default */
       justify-content: center;
       align-items: center;
     }
+
     .p_modal-overlay.p_open {
       display: flex;
     }
+
     .p_modal-content {
       background-color: white;
       border-radius: 0.75rem;
-      /* rounded-xl */
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-      /* shadow-2xl */
       max-width: 64rem;
-      /* max-w-5xl */
       width: 100%;
       margin-top: 2rem;
       margin-bottom: 2rem;
       margin-left: auto;
       margin-right: auto;
     }
+
     .p_modal-relative-container {
       position: relative;
     }
+
     /* Close Button */
     .p_modal-close-button {
       position: absolute;
@@ -243,15 +320,16 @@
       align-items: center;
       justify-content: center;
       border-radius: 9999px;
-      /* rounded-full */
       transition: background-color 150ms ease-in-out;
       z-index: 20;
       border: none;
       cursor: pointer;
     }
+
     .p_modal-close-button:hover {
       background-color: rgba(0, 0, 0, 0.8);
     }
+
     /* Carousel Container */
     .p_carousel-container {
       position: relative;
@@ -260,28 +338,33 @@
       border-top-left-radius: 0.75rem;
       border-top-right-radius: 0.75rem;
     }
+
     @media (min-width: 640px) {
       .p_carousel-container {
         height: 50vh;
       }
     }
+
     /* Carousel Track */
     #p_carousel-track {
       display: flex;
       height: 100%;
       transition: transform 0.5s ease-in-out;
     }
+
     /* Carousel Slide */
     .p_carousel-slide {
       flex-shrink: 0;
       height: 100%;
       position: relative;
     }
+
     .p_carousel-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     /* Navigation Buttons */
     .p_nav-button {
       position: absolute;
@@ -293,48 +376,52 @@
       font-size: 1.5rem;
       font-weight: 700;
       border-radius: 9999px;
-      /* rounded-full */
       transition: background-color 150ms ease-in-out;
       z-index: 10;
       border: none;
       cursor: pointer;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     }
+
     .p_nav-button:hover {
       background-color: rgba(0, 0, 0, 0.7);
     }
+
     .p_nav-button-prev {
       left: 1rem;
     }
+
     .p_nav-button-next {
       right: 1rem;
     }
+
     /* Modal Body Content */
     .p_modal-body-content {
       padding: 1.5rem;
     }
+
     .p_modal-title {
       font-size: 1.875rem;
-      /* text-3xl */
       font-weight: 800;
       margin-bottom: 0.5rem;
-      /* mb-2 */
       color: var(--primary-color);
     }
+
     .p_modal-description-wrapper {
       color: rgb(55 65 81);
-      /* text-gray-700 */
       margin-bottom: 1.5rem;
-      /* mb-6 */
     }
+
     .p_modal-tagline {
       font-weight: 600;
       font-size: 1.25rem;
       margin-bottom: 0.75rem;
     }
+
     .p_modal-cta-container {
       margin-top: 1rem;
     }
+
     .p_modal-cta {
       display: inline-block;
       padding: 0.45rem 2.8rem;
@@ -349,139 +436,217 @@
       -webkit-clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
       clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
     }
+
     .p_modal-cta:hover {
       background-color: #06374bea;
       color: white;
     }
+
     .about-revised {
       padding: 60px 0;
       background-color: #f8f7f5;
-      /* Light, off-white background for contrast */
     }
+
     .about-revised .image-col {
       padding-right: 0;
       padding-left: 0;
     }
+
     .about-revised img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* Ensures the image covers the container without distortion */
       min-height: 450px;
-      /* Set a minimum height for the image */
     }
+
     .about-revised .content-col {
       padding: 40px 60px;
       background-color: #ffffff;
-      /* White background for the text area */
     }
+
     .about-revised h2 {
       font-size: 2.5rem;
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
       color: #05374b;
-      /* Dark primary color */
       margin-bottom: 20px;
       position: relative;
     }
+
     .about-revised .feature-box {
       padding: 20px;
       margin-top: 20px;
       border-radius: 8px;
       background-color: #fcfcfc;
-      /* Slightly darker than main content background for contrast */
       border-left: 5px solid #ffc107;
-      /* Accent line on the left (Gold/Accent Color) */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      /* Soft initial shadow */
     }
+
     .about-revised .feature-box:hover {
       transform: translateY(-5px);
-      /* Lift effect on hover */
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      /* Deeper shadow on hover */
     }
+
     .about-revised strong {
       color: #05374b;
-      /* Dark primary color for emphasis */
       font-size: 1.1em;
       display: block;
       margin-bottom: 5px;
     }
+
+    /* SEO Accessibility Improvements */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border: 1px solid rgba(5, 55, 75, 0.2) !important;
+      border-radius: 8px !important;
+      padding: 24px 15px 10px !important;
+      height: auto !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+      transition: all 0.3s ease;
+      font-size: 16px;
+      color: #05374b;
+    }
+    .form-control:focus {
+      box-shadow: 0 0 0 3px rgba(5, 55, 75, 0.15) !important;
+      border: 1px solid rgba(5, 55, 75, 0.4) !important;
+      background-color: white !important;
+      transform: translateY(-2px);
+    }
+    textarea.form-control {
+      min-height: 150px;
+      padding-top: 30px !important;
+    }
+    .form-group {
+      margin-bottom: 25px;
+      position: relative;
+    }
+    .floating-label {
+      position: absolute;
+      top: 18px;
+      left: 15px;
+      font-size: 16px;
+      color: #6c757d;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1;
+      background: transparent;
+      padding: 0 5px;
+      border-radius: 4px;
+      font-weight: 400;
+    }
+    .form-control:focus + .floating-label,
+    .form-control:not(:placeholder-shown) + .floating-label {
+      top: -10px;
+      font-size: 13px;
+      opacity: 1;
+      color: #05374b;
+      font-weight: 600;
+      background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+      padding: 0 8px;
+      box-shadow: 0 2px 5px rgba(5, 55, 75, 0.1);
+      border: 1px solid rgba(5, 55, 75, 0.2);
+    }
+    .form-control::placeholder {
+      color: transparent !important;
+    }
+    .form-control:focus::placeholder {
+      color: #6c757d !important;
+      opacity: 0.5 !important;
+    }
+    .package-title{
+      padding: 8px; background: #f5f5f5;height: 70px; font-weight:600; color: #333; margin: 4px auto; font-size: medium;
+    }
   </style>
 </head>
-<body>
+
+<body itemscope itemtype="https://schema.org/WebPage">
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center fixed-top topbar-transparent">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
-      <i class="bi bi-phone d-flex align-items-center"><span>+251 984 94 92 33 </span></i>
+      <i class="bi bi-phone d-flex align-items-center"><span itemprop="telephone">+251 984 94 92 33</span></i>
       <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Mon-Sat: 8:30 AM - 6:00 PM</span></i>
     </div>
   </section>
-  <!-- ======= Header  ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent" role="banner">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <div class="logo me-auto">
-        <a href="index.html">
-          <!-- <h4 style="font-family: sans-serif;"> DS International Trading PLC </h4> -->
-          <img src="assets/img/transformedwhite.png" alt="Logo" style="width: auto;  " />
+        <a href="index.html" aria-label="DS International Trading PLC Home">
+          <img src="assets/img/transformedwhite.png"
+            alt="DS International Trading PLC Logo - Premium Travel Agency Ethiopia" width="auto">
         </a>
       </div>
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home </a></li>
-          <li><a class="nav-link scrollto" href="#about">About us</a></li>
-          <li><a class="nav-link scrollto" href="#why-us">Services</a></li>
-          <li><a class="nav-link scrollto" href="#offers">Offerings</a></li>
-          <li class="dropdown">
+      <nav id="navbar" class="navbar order-last order-lg-0" role="navigation" aria-label="Main Navigation" >
+        <ul role="menubar">
+          <li role="none"><a class="nav-link scrollto active" href="#hero" role="menuitem">Home</a></li>
+          <li role="none"><a class="nav-link scrollto" href="#about" role="menuitem">About Us</a></li>
+          <li role="none"><a class="nav-link scrollto" href="#why-us" role="menuitem">Services</a></li>
+          <li role="none"><a class="nav-link scrollto" href="#offers" role="menuitem">Offerings</a></li>
+          <li class="dropdown" role="none">
             <a class="nav-link scrollto" id="tourDropdown" role="button" data-bs-toggle="dropdown"
-              href="../dstravel/touroptions/destination.html" aria-expanded="false">
-              ET Tour options <i class="bi bi-chevron-down"></i>
+              href="../dstravel/touroptions/destination.html" aria-expanded="false" aria-haspopup="true">
+              Et Tour Options <i class="bi bi-chevron-down"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="tourDropdown"
               style="background-color: rgba(255, 255, 255, 0.904);">
-              <li><a href="../dstravel/touroptions/destination.html?category=historical">Historical Sightings</a></li>
-              <li><a href="../dstravel/touroptions/destination.html?category=cultural">Cultural tours</a></li>
-              <li><a href="../dstravel/touroptions/destination.html?category=religious">Religious tours</a></li>
+              <li><a href="../dstravel/touroptions/destination.html?category=historical" role="menuitem">Historical
+                  Sightseeing</a></li>
+              <li><a href="../dstravel/touroptions/destination.html?category=cultural" role="menuitem">Cultural
+                  Tours</a></li>
+              <li><a href="../dstravel/touroptions/destination.html?category=religious" role="menuitem">Religious
+                  Tours</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li role="none"><a class="nav-link scrollto" href="gallery.html" role="menuitem">Gallery</a></li>
+          <li role="none"><a class="nav-link scrollto" href="#contact" role="menuitem">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-      <a href="book.html" class="book-a-table-btn scrollto" style="font-size: 14px;" id="book-a-table-btn">BOOK A TRIP
-      </a>
+        </nav>
+       
+        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+    
+      <a href="book.html" class="book-a-table-btn scrollto" style="font-size: 14px;" id="book-a-table-btn">
+        BOOK A TRIP
+      </a> 
+       <i class="bi bi-list mobile-nav-toggle" aria-label="Toggle mobile menu"></i>
     </div>
-  </header><!-- End Header -->
+  </header>
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  <section id="hero" role="banner" aria-label="DS International Trading PLC Hero Section">
     <div class="hero-container">
       <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
         <div class="carousel-inner" role="listbox">
-          <!-- Slide 1    -->
+          <!-- Slide 1 - Optimized with proper heading structure -->
           <div class="carousel-item active"
-            style="background-image: url(assets/img/touropts/omo.jpeg); background-position: center; background-size: cover; ">
+            style="background-image: url(assets/img/touropts/omo.jpeg); background-position: center; background-size: cover;">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown" style="font-family:sans-serif;">DS International
-                  Trading PLC</h2>
-                <h5 style="color: white;">A Journey to inspire</h5>
+                <h2 class="animate__animated animate__fadeInDown" style="font-family:sans-serif;color: white;">DS
+                  International Trading PLC</h2>
+                <h3 style="color: white; ">A Journey to Inspire</h3>
                 <br>
                 <p class="animate__animated animate__fadeInUp">
-                  Unlock the doors to new worlds and embark on a journey of discovery.The true essence of travel
-                  lies in exploring the unknown immersing yourself in different
-                  cultures
+                  Unlock the doors to new worlds and embark on a journey of discovery. The true essence of travel lies
+                  in exploring the unknown and immersing yourself in different cultures.
                 </p>
                 <div>
                   <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto"
                     style="background-color: #683f1ccb; " id="booked">Our Services </a>
                   <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto"
-                    style="background-color: #683f1ccb;" id="booked">Schedule a trip
+                    style="background-color: #683f1ccb;  " id="booked">Schedule a trip
                     &nbsp;
                     &#9992;</a>
                 </div>
@@ -493,45 +658,41 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"
-                  style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;  ">
-                  Elevate your experiences
+                  style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                  Elevate Your Travel Experiences
                 </h2>
                 <p class="animate__animated animate__fadeInUp">Explore the unknown, uncover hidden gems, and ignite your
-                  sense of adventure.
-                  We believe travel broadens perspectives and transforms lives.</p>
+                  sense of adventure. We believe travel broadens perspectives and transforms lives.</p>
                 <div>
-                  <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services </a>
-                  <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto">Schedule a trip
-                    &nbsp;
-                    &#9992;</a>
+                  <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services</a>
+                  <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto">Schedule a Trip
+                    &nbsp; &#9992;</a>
                 </div>
               </div>
             </div>
           </div>
           <!-- Slide 3 -->
           <div class="carousel-item"
-            style="background-image: url(assets/img/slide/chebera2.jpeg); background-position: center; background-size: cover; ">
+            style="background-image: url(assets/img/slide/chebera2.jpeg); background-position: center; background-size: cover;">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"
-                  style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;  ">
-                  Advance to remarkable heights
+                  style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                  Advance to Remarkable Heights
                 </h2>
-                <p class="animate__animated animate__fadeInUp">Breathtaking destinations that promises to enrich the
-                  spirit and
-                  expand one's horizons through its stunning natural beauty</p>
+                <p class="animate__animated animate__fadeInUp">Breathtaking destinations that promise to enrich the
+                  spirit and expand one's horizons through stunning natural beauty.</p>
                 <div>
                   <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services</a>
-                  <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto">Schedule a trip
-                    &nbsp;
-                    &#9992;</a>
+                  <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto">Schedule a Trip
+                    &nbsp; &#9992;</a>
                 </div>
               </div>
             </div>
           </div>
           <!-- Slide 4 -->
           <div class="carousel-item"
-            style="background-image: url(assets/img/slide/betemengest.png); background-position: center; background-size: cover; ">
+            style="background-image: url(assets/img/slide/betemengest.png); background-position: center; background-size: cover;">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"
@@ -540,41 +701,41 @@
                 </h2>
                 <p class="animate__animated animate__fadeInUp">Explore destinations where unique design and profound
                   culture meet, offering an experience that enriches the spirit and expands your appreciation for human
-                  ingenuity.</p>
+                  imagination.</p>
                 <div>
                   <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Services</a>
-                  <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto">Schedule a trip
-                    &nbsp;
-                    &#9992;</a>
+                  <a href="book.html" class="btn-book animate__animated animate__fadeInUp scrollto">Schedule a Trip
+                    &nbsp; &#9992;</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev"
+          aria-label="Previous slide">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next"
+          aria-label="Next slide">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      </a>
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      </a>
     </div>
-    </div>
-  </section><!-- End Hero -->
-  <main id="main">
+  </section>
+  <main id="main" role="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about" aria-labelledby="about-heading">
       <div class="container-fluid">
         <div class="row align-items-stretch px-0">
-          <div class="col-lg-5 video-box mr-lg-3" style="background-image: url('assets/img/selectedimg/explorers/eee5.JPG'); 
-               max-height: 600px;  
-               background-size: cover; 
-               background-position: center; 
-               margin-left: 80px;">
+          <div class="col-lg-5 video-box mr-lg-3"
+            style="background-image: url('assets/img/selectedimg/explorers/eee5.JPG'); max-height: 600px; background-size: cover; background-position: center; margin-left: 80px;">
+            <span class="sr-only">DS International Travel Team providing excellent service to travelers in
+              Ethiopia</span>
           </div>
           <div class="col-lg-6 d-flex flex-column justify-content-center px-5 py-4" style="background-color: #fcf8f5;">
-            <h2 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444444;">
-              WHAT WE <span style="color:#05374bd3; font-weight: 1200;font-size: 2.6rem; font-weight: 800;  ">DO</span>
+            <h2 id="about-heading"
+              style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444444;">
+              WHAT WE <span style="color:#05374bd3; font-weight: 1200;font-size: 2.6rem; font-weight: 800;">DO</span>
             </h2>
             <div class="divider" style="background-color: #05374bd3; height: 3px; width: 60px; margin-bottom: 25px;">
             </div>
@@ -583,13 +744,13 @@
               Let us take care of the details while you focus on making unforgettable memories.
             </p>
             <div class="row">
-              <div class="col-md-4 p-4 text-center" style="border-bottom: 2px solid #00000028;width: 100%;  ">
+              <div class="col-md-4 p-4 text-center" style="border-bottom: 2px solid #00000028;width: 100%;">
                 <p style="font-size: 2.2rem; font-weight: 900; color: #ffcf88; line-height: 1; margin-bottom: 0.5rem;">
                   01</p>
-                <h5
+                <h3
                   style="font-size: 1.1rem; font-weight: 700; color: #05374bd3; margin-bottom: 1rem; font-family: 'Courier New', Courier, monospace;">
                   Real Local Experiences
-                </h5>
+                </h3>
                 <p style="font-weight: 400; font-size: 0.95rem; color: #6c757d;">
                   We know the best local spots. We take you past the busy tourist areas to discover hidden places and
                   give you real, meaningful experiences.
@@ -598,26 +759,25 @@
               <div class="col-md-4 p-4 text-center" style="border-right: 2px solid #00000028;width: 50%;">
                 <p style="font-size: 2.2rem; font-weight: 900; color: #ffcf88; line-height: 1; margin-bottom: 0.5rem;">
                   02</p>
-                <h5
+                <h3
                   style="font-size: 1.1rem; font-weight: 700; color: #05374bd3; margin-bottom: 1rem;font-family: 'Courier New', Courier, monospace;">
                   Travel Designed Around You
-                </h5>
+                </h3>
                 <p style="font-weight: 400; font-size: 0.95rem; color: #6c757d;">
-                  Every trip is designed just for you. We start from scratch, working hard to match your
-                  interests and budget so your personal journey is exactly what you want.
+                  Every trip is designed just for you. We start from scratch, working hard to match your interests and
+                  budget so your personal journey is exactly what you want.
                 </p>
               </div>
               <div class="col-md-4 p-4 text-center" style="width: 50%;">
                 <p style="font-size: 2.2rem; font-weight: 900; color: #ffcf88; line-height: 1; margin-bottom: 0.5rem;">
                   03</p>
-                <h5
+                <h3
                   style="font-size: 1.1rem; font-weight: 700; color: #05374bd3; margin-bottom: 1rem;font-family: 'Courier New', Courier, monospace;">
                   Easy and Supported Trip
-                </h5>
+                </h3>
                 <p style="font-weight: 400; font-size: 0.95rem; color: #6c757d;">
-                  We make travel easy by handling
-                  all the hard planning and booking. Plus, we offer dedicated support and quick help when you need it,
-                  so you can travel with total confidence.
+                  We make travel easy by handling all the hard planning and booking. Plus, we offer dedicated support
+                  and quick help when you need it, so you can travel with total confidence.
                 </p>
               </div>
             </div>
@@ -625,14 +785,13 @@
         </div>
       </div>
     </section>
-    <!-- End About Section -->
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us"
       style="background-image: url('assets/img/back.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; margin: 0;">
       <div class="container">
         <div class="section-title">
           <h3 class="chck"
-            style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;color:#ffcf886c; ">
+            style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;color:#ffcf886c;">
             <span
               style="background: linear-gradient(90deg,  #ffcf88,#ffcf88); -webkit-background-clip: text; color: transparent; background-clip: text;">
               Checkout our </span> <span
@@ -640,8 +799,7 @@
           </h3>
           <center>
             <div class="divider" style="background: linear-gradient(90deg, transparent 1%, #ffcf88 );width: 40%;"></div>
-          </center>
-          <div style="height: 10px;"> </div>
+          </center> 
           <p style=" font-family: 'Poppins', sans-serif; font-weight: 600; ">Discover the full range of solutions we
             offer to meet <br> your needs and requirements.</p>
         </div>
@@ -649,7 +807,7 @@
           <div class="col-lg-4">
             <div class="box">
               <span>01</span>
-              <h4>Air Ticket sales</h4>
+              <h4>Air Ticket Sales</h4>
               <p>Process booking and purchasing airline tickets. Also check flight availability, pricing, and customer
                 demand.</p>
             </div>
@@ -657,55 +815,52 @@
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box">
               <span>02</span>
-              <h4>Tour packages</h4>
+              <h4>Tour Packages</h4>
               <p>We provide international tour packages to different destinations around the world.</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box">
               <span>03</span>
-              <h4> Recreational packages</h4>
-              <p>Encompass a variety of travel offerings, such as honeymoons, holidays, business, spirtual and other
+              <h4>Recreational Packages</h4>
+              <p>Encompass a variety of travel offerings, such as honeymoons, holidays, business, spiritual and other
                 packages.</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-3">
             <div class="box">
               <span>04</span>
-              <h4> Itinerary's and ticket booking</h4>
-              <p>Enable customers to organize their trips and insure a secure transportation.</p>
+              <h4>Itineraries and Ticket Booking</h4>
+              <p>Enable customers to organize their trips and ensure secure transportation.</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-3">
             <div class="box">
               <span>05</span>
-              <h4> Consultancy</h4>
+              <h4>Consultancy</h4>
               <p>We assist customers with embassy forms and visa consultancy</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-3">
             <div class="box">
               <span>06</span>
-              <h4> Car rental</h4>
+              <h4>Car Rental</h4>
               <p>Additionally we also provide car rental(Shuttle Service) - Monthly rental.</p>
             </div>
           </div>
           <center>
-            <div class="col-lg-4 mt-4 mt-lg-3">
-              <div class="box">
+            <div class="col-lg-5 mt-4 mt-lg-3">
+              <div class="box"id="boxc">
                 <span>07</span>
-                <h4> Hotel Reservations</h4>
-                <p>We help you book hotels based on your preferences and budget, ensuring a great stay </p>
+                <h4>Hotel Reservations</h4>
+                <p>We help you book hotels based on your preferences and budget, ensuring a great stay</p>
               </div>
             </div>
+          </center>
         </div>
-        </center>
       </div>
-    </section><!-- End Whu Us Section -->
-    <!-- <hr style="color: #05374b; ">
-      <hr style="color: #05374b; ">
-      <hr style="color: #05374b;"> -->
-    <section id="offers" style="text-align: center;  ">
+    </section><!-- End Why Us Section -->
+    <section id="offers" style="text-align: center;">
       <h1 style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 600;">What
         <span
           style="background: linear-gradient(90deg,  #333,#05374bd3); -webkit-background-clip: text; color: transparent; background-clip: text;">
@@ -720,14 +875,13 @@
       </center>
       <section id="packages" class="p_section-packages">
         <div class="p_packages-grid">
-          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="Guided tour"
-            data-tagline="Escapism Redefined" data-description="Beyond the map: Our expert private guides transform travel into a personal story.
-             Experience exclusive access and authentic culture without the crowds. We redefine travel by handling every detail, 
-             so you just relax. This is your world, effortlessly explored."
+          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="Guided Tour"
+            data-tagline="Escapism Redefined"
+            data-description="Beyond the map: Our expert private guides transform travel into a personal story. Experience exclusive access and authentic culture without the crowds. We redefine travel by handling every detail, so you just relax. This is your world, effortlessly explored."
             data-image="assets/img/selectedimg/explorers/e11v.jpg"
             data-images="assets/img/selectedimg/explorers/e11v.jpg,assets/img/selectedimg/explorers/e12v.png">
             <img class="p_card-image" src="assets/img/selectedimg/explorers/e11v.jpg"
-              alt="Group of people on a scenic tour overlooking a city"
+              alt="Group of people on a scenic tour overlooking a city in Ethiopia"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Tour+Package+Preview'">
             <div class="p_card-content">
               <h3 class="p_card-title">Guided Tour</h3>
@@ -740,81 +894,72 @@
             data-tagline="Spectacular Occasions"
             data-description="Trust our dedicated team to transform your vision into a Spectacular Occasion. Full-service planning for corporate launches, private parties, and large-scale celebrations. We meticulously manage every detail: catering, entertainment, and all logistics. Exceptional events, seamlessly delivered."
             data-image="assets/img/selectedimg/explorers/ee3.JPG"
-            data-images="assets/img/selectedimg/explorers/ee3.JPG,assets/img/fbimg/g3.jpg,assets/img/fbimg/m1.jpg">
+            data-images="assets/img/selectedimg/explorers/ee3.JPG,assets/img/fbimg/g3.jpg">
             <img class="p_card-image" src="assets/img/selectedimg/explorers/ee3.JPG"
-              alt="Large crowd celebrating at a music festival or corporate gala"
+              alt="Large crowd celebrating at a music festival or corporate gala in Ethiopia"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Event+Planning+Preview'">
             <div class="p_card-content">
-              <h3 class="p_card-title">Special Events
-              </h3>
+              <h3 class="p_card-title">Special Events</h3>
               <p class="p_card-tagline">Spectacular Occasions</p>
-              <p class="p_card-description">Full-service planning for galas, launches, staff parties, and
-                celebrations.</p>
-            </div>
-          </div>
-          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
-            data-title="Informative conference" data-tagline="High-Impact Gatherings" data-description="Ensure your message is heard with a High-Impact 
-            Gathering, expertly organized. Our comprehensive services cover every detail from start to finish.
-             We guarantee a smooth and professional experience for all your attendees. Maximum impact, minimum stress."
-            data-image="assets/img/selectedimg/explorers/e10v.jpg"
-            data-images="assets/img/selectedimg/explorers/e10v.jpg, assets/img/fbimg/g5.jpg">
-            <img class="p_card-image" src="assets/img/selectedimg/explorers/e10v.jpg"
-              alt="Professionals attending a large, well-lit conference with screens"
-              onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Conference+Planning+Preview'">
-            <div class="p_card-content">
-              <h3 class="p_card-title">Informative conference
-              </h3>
-              <p class="p_card-tagline">High-Impact Gatherings</p>
-              <p class="p_card-description">Comprehensive services for large academic and industry conferences.
+              <p class="p_card-description">Full-service planning for galas, launches, staff parties, and celebrations.
               </p>
             </div>
           </div>
           <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
-            data-title="Exposition & Tradeshows" data-tagline="Connecting Industry Leaders" data-description="Don't just attend; experience Connecting Industry Leaders with our tour packages. 
-            We offer comprehensive travel, accommodation, and access to global expos.
-             Benefit from coordinated transport and on-site guidance to maximize your time."
-            data-image="assets/img/fbimg/expo.jpg"
-            data-images="assets/img/fbimg/expo.jpg,assets/img/selectedimg/explorers/eee1.jpg, assets/img/fbimg/air.jpg ">
-            <img class="p_card-image" src="assets/img/fbimg/expo.jpg"
-              alt="Modern exhibition hall with booths and large display banners"
-              onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Expo+Logistics+Preview'">
+            data-title="Informative Conference" data-tagline="High-Impact Gatherings"
+            data-description="Ensure your message is heard with a High-Impact Gathering, expertly organized. Our comprehensive services cover every detail from start to finish. We guarantee a smooth and professional experience for all your attendees. Maximum impact, minimum stress."
+            data-image="assets/img/selectedimg/explorers/e10v.jpg"
+            data-images="assets/img/selectedimg/explorers/e10v.jpg, assets/img/fbimg/g5.jpg">
+            <img class="p_card-image" src="assets/img/selectedimg/explorers/e10v.jpg"
+              alt="Professionals attending a large, well-lit conference with screens in Ethiopia"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Conference+Planning+Preview'">
             <div class="p_card-content">
-              <h3 class="p_card-title">Expo & Tradeshows
-              </h3>
-              <p class="p_card-tagline">Connecting Industry Leaders</p>
-              <p class="p_card-description">Expert logistics for exhibitors and organizers including design,
-                build-out, and on-site support.</p>
+              <h3 class="p_card-title">Informative Conference</h3>
+              <p class="p_card-tagline">High-Impact Gatherings</p>
+              <p class="p_card-description">Comprehensive services for large academic and industry conferences.</p>
             </div>
           </div>
-          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="B2B Meeting "
+          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
+            data-title="Exposition & Tradeshows" data-tagline="Connecting Industry Leaders"
+            data-description="Don't just attend; experience Connecting Industry Leaders with our tour packages. We offer comprehensive travel, accommodation, and access to global expos. Benefit from coordinated transport and on-site guidance to maximize your time."
+            data-image="assets/img/fbimg/expo.jpg"
+            data-images="assets/img/fbimg/expo.jpg,assets/img/selectedimg/explorers/eee1.jpg, assets/img/fbimg/air.jpg">
+            <img class="p_card-image" src="assets/img/fbimg/expo.jpg"
+              alt="Modern exhibition hall with booths and large display banners at trade show"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Expo+Logistics+Preview'">
+            <div class="p_card-content">
+              <h3 class="p_card-title">Expo & Tradeshows</h3>
+              <p class="p_card-tagline">Connecting Industry Leaders</p>
+              <p class="p_card-description">Expert logistics for exhibitors and organizers including design, build-out,
+                and on-site support.</p>
+            </div>
+          </div>
+          <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)" data-title="B2B Meeting"
             data-tagline="Executive Facilitation"
-            data-description="Ensure your next B2B meeting or delegation is a success with our agency. We provide secure travel, 
-            private meeting coordination, and specialized translation services. 
-            All the logistical elements needed for business discussions are managed. Maximum impact with complete peace of mind."
+            data-description="Ensure your next B2B meeting or delegation is a success with our agency. We provide secure travel, private meeting coordination, and specialized translation services. All the logistical elements needed for business discussions are managed. Maximum impact with complete peace of mind."
             data-image="assets/img/fbimg/expo 1.jpg" data-images="assets/img/fbimg/expo 1.jpg">
             <img class="p_card-image" src="assets/img/fbimg/expo 1.jpg"
-              alt="Two business people shaking hands across a boardroom table"
+              alt="Two business people shaking hands across a boardroom table in Ethiopia"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=B2B+Meetings+Preview'">
             <div class="p_card-content">
-              <h3 class="p_card-title">B2B Meeting
-              </h3>
+              <h3 class="p_card-title">B2B Meeting</h3>
               <p class="p_card-tagline">Executive Facilitation</p>
-              <p class="p_card-description">Private meeting coordination, executive travel, secure transportation,
-                and translation services.</p>
+              <p class="p_card-description">Private meeting coordination, executive travel, secure transportation, and
+                translation services.</p>
             </div>
           </div>
           <div class="p_package-card p_card-hover-effect" onclick="p_openModal(this)"
             data-title="Medical Tourism & Assistance" data-tagline="Care & Comfort Travel"
-            data-description="Our specialized travel planning focuses entirely on your health journey, from consultation to full recovery. We manage all logistics for medical procedures and recovery stays, ensuring absolute privacy and comfort. 
-            This includes seamless coordination with health facilities and dedicated support for accompanying family members." data-images="assets/img/blk.jpg,assets/img/bum.jpg">
-            <img class="p_card-image" src="assets/img/blk.jpg" alt="Modern, clean medical environment or hospital room"
+            data-description="Our specialized travel planning focuses entirely on your health journey, from consultation to full recovery. We manage all logistics for medical procedures and recovery stays, ensuring absolute privacy and comfort. This includes seamless coordination with health facilities and dedicated support for accompanying family members."
+            data-images="assets/img/blk.jpg,assets/img/bum.jpg">
+            <img class="p_card-image" src="assets/img/blk.jpg"
+              alt="Modern, clean medical environment or hospital room for medical tourism"
               onerror="this.onerror=null;this.src='https://placehold.co/600x400/0d47a1/ffffff?text=Medical+Travel+Preview'">
             <div class="p_card-content">
-              <h3 class="p_card-title">Medical Tour
-              </h3>
+              <h3 class="p_card-title">Medical Tour</h3>
               <p class="p_card-tagline">Care & Comfort Travel</p>
-              <p class="p_card-description">Specialized travel planning for medical procedures, recovery stays,
-                and family support.</p>
+              <p class="p_card-description">Specialized travel planning for medical procedures, recovery stays, and
+                family support.</p>
             </div>
           </div>
         </div>
@@ -822,14 +967,14 @@
       <div id="image-modal" class="p_modal-overlay" onclick="p_closeModal()">
         <div class="p_modal-content" onclick="event.stopPropagation()">
           <div class="p_modal-relative-container">
-            <button onclick="p_closeModal()" class="p_modal-close-button">&times;</button>
+            <button onclick="p_closeModal()" class="p_modal-close-button" aria-label="Close modal">&times;</button>
             <div class="p_carousel-container">
               <div id="p_carousel-track" class="p_flex p_h-full">
               </div>
-              <button onclick="p_changeSlide(-1)" class="p_nav-button p_nav-button-prev">
+              <button onclick="p_changeSlide(-1)" class="p_nav-button p_nav-button-prev" aria-label="Previous image">
                 &lsaquo;
               </button>
-              <button onclick="p_changeSlide(1)" class="p_nav-button p_nav-button-next">
+              <button onclick="p_changeSlide(1)" class="p_nav-button p_nav-button-next" aria-label="Next image">
                 &rsaquo;
               </button>
             </div>
@@ -848,29 +993,19 @@
         // --- Global Carousel State ---
         let p_currentSlideIndex = 0;
         let p_totalSlides = 0;
-        /**
-         * Updates the carousel position based on the p_currentSlideIndex.
-         */
         function p_updateCarousel() {
           const track = document.getElementById('p_carousel-track');
           if (p_totalSlides === 0) return;
-          // Calculate the shift unit: 100% divided by the total number of slides 
           const slideWidthUnit = 100 / p_totalSlides;
           const offset = -p_currentSlideIndex * slideWidthUnit;
-          // Use the calculated percentage for accurate translation.
           track.style.transform = `translateX(${offset}%)`;
         }
-        /**
-         * Changes the visible slide in the carousel.
-         * @param {number} direction - 1 for next slide, -1 for previous slide.
-         */
         function p_changeSlide(direction) {
           p_currentSlideIndex += direction;
-          // Boundary check for infinite loop effect
           if (p_currentSlideIndex >= p_totalSlides) {
-            p_currentSlideIndex = 0; // Loop back to the first slide
+            p_currentSlideIndex = 0;
           } else if (p_currentSlideIndex < 0) {
-            p_currentSlideIndex = p_totalSlides - 1; // Loop back to the last slide
+            p_currentSlideIndex = p_totalSlides - 1;
           }
           p_updateCarousel();
         }
@@ -880,29 +1015,23 @@
           const title = document.getElementById('p_modal-title');
           const descriptionContainer = document.getElementById('p_modal-description');
           const cta = document.getElementById('p_modal-cta');
-          // Extract data from the clicked card
           const data = cardElement.dataset;
           const fullTitle = data.title;
           const fullDescription = data.description;
           const allImagesStr = data.images;
-          const images = allImagesStr.split(',').map(url => url.trim()); // Array of 3 URLs
-          // --- Reset and Initialize Carousel State ---
+          const images = allImagesStr.split(',').map(url => url.trim());
           p_totalSlides = images.length;
           p_currentSlideIndex = 0;
-          // --- Set Track Width (e.g., 300% for 3 slides) ---
           galleryContainer.style.width = `${p_totalSlides * 100}%`;
-          galleryContainer.innerHTML = ''; // Clear previous slides
-          // --- Populate Carousel Track with Slides ---
-          const slideWidth = 100 / p_totalSlides; // Width of each slide relative to the track
+          galleryContainer.innerHTML = '';
+          const slideWidth = 100 / p_totalSlides;
           images.forEach((url, index) => {
             const slide = document.createElement('div');
-            // Apply p_carousel-slide class which has flex-shrink-0 and h-full properties
             slide.classList.add('p_carousel-slide');
             slide.style.width = `${slideWidth}%`;
             const imgElement = document.createElement('img');
             imgElement.src = url;
-            imgElement.alt = `${fullTitle} visual ${index + 1}`;
-            // Image styling is handled by CSS rule for .p_carousel-slide img
+            imgElement.alt = `${fullTitle} visual ${index + 1} - DS International Travel`;
             imgElement.onerror = function () {
               this.src = `https://placehold.co/800x500/173e6a/ffffff?text=${encodeURIComponent('Image ' + (index + 1))}`;
               this.style.backgroundColor = 'var(--primary-color)';
@@ -910,27 +1039,18 @@
             slide.appendChild(imgElement);
             galleryContainer.appendChild(slide);
           });
-          // --- Populate Text Content ---
           title.textContent = fullTitle;
-          // Combine tagline and description for richer text in the modal
           descriptionContainer.innerHTML = `<p class="p_modal-tagline">${data.tagline}</p><p class="text-base">${fullDescription}</p>`;
-          // Link the CTA button to a dedicated contact form or page
           cta.href = 'book.html';
-          // Initialize the carousel to the correct slide (index 0)
           p_updateCarousel();
-          // Show the modal
           modal.classList.add('p_open');
-          document.body.style.overflow = 'hidden'; // Prevent scrolling on the body
+          document.body.style.overflow = 'hidden';
         }
-        /**
-         * Closes the modal.
-         */
         function p_closeModal() {
           const modal = document.getElementById('image-modal');
           modal.classList.remove('p_open');
-          document.body.style.overflow = ''; // Restore scrolling
+          document.body.style.overflow = '';
         }
-        // Bind ESC key to close modal
         document.addEventListener('keydown', function (event) {
           if (event.key === 'Escape') {
             p_closeModal();
@@ -949,18 +1069,17 @@
           style="width: 13%; height: 5px; border-radius: 10px; background: linear-gradient(90deg,  #333,#05374bd3,transparent);">
         </div>
       </center>
-      <div class="containered" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px;  ">
+      <div class="containered" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px;">
         <!-- Package 1 -->
         <div class="package">
-          <div class="package-title"
-            style="padding: 20px; background: #f5f5f5;height: 70px; font-weight: 600w; color:  #333;"
+          <div class="package-title" 
             data-path="assets/packages/3Nights and 4Days Honeymoon package to MBA-with flight ticket.pdf">
             <!-- Title will be inserted by JavaScript -->
           </div>
-          <div class="preview">
+          <div class="preview" >
             <iframe
               src="assets\packages\3Nights and 4Days Honeymoon package to MBA-with flight ticket.pdf#toolbar=0&navpanes=0&scrollbar=0"
-              scrolling="no"></iframe>
+              scrolling="no" title="3 Nights 4 Days Honeymoon Package Preview"></iframe>
           </div>
           <div class="package-content">
             <a class="btnpdf"
@@ -971,27 +1090,27 @@
         <!-- Package 2 -->
         <div class="package">
           <div class="package-title"
-            style="padding: 10px; background: #f5f5f5; height: 70px;font-weight: 600w; color:  #333;"
+             
             data-path="assets/packages/Zanzibar Valentine-2025.pdf">
             <!-- Title will be inserted by JavaScript -->
           </div>
           <div class="preview">
-            <iframe src="assets/packages/Zanzibar Valentine-2025.pdf" scrolling="no"></iframe>
+            <iframe src="assets/packages/Zanzibar Valentine-2025.pdf" scrolling="no"
+              title="Zanzibar Valentine Package Preview"></iframe>
           </div>
           <div class="package-content">
-            <a class="btnpdf" onclick="viewPackage('assets/packages/Zanzibar Valentine-2025.pdf')">View
-              Package</a>
+            <a class="btnpdf" onclick="viewPackage('assets/packages/Zanzibar Valentine-2025.pdf')">View Package</a>
           </div>
         </div>
         <!-- Package 3 -->
         <div class="package">
-          <div class="package-title"
-            style="padding: 10px; background: #f5f5f5;height: 70px; font-weight: 600w; color:  #333;"
+          <div class="package-title" 
             data-path="assets/packages/Weekend Gateway Cape Town Package-2025.pdf">
             <!-- Title will be inserted by JavaScript -->
           </div>
           <div class="preview">
-            <iframe src="assets/packages/Weekend Gateway Cape Town Package-2025.pdf" scrolling="no"></iframe>
+            <iframe src="assets/packages/Weekend Gateway Cape Town Package-2025.pdf" scrolling="no"
+              title="Weekend Gateway Cape Town Package Preview"></iframe>
           </div>
           <div class="package-content">
             <a class="btnpdf" onclick="viewPackage('assets/packages/Weekend Gateway Cape Town Package-2025.pdf')">View
@@ -1000,13 +1119,13 @@
         </div>
         <!-- Package 4 -->
         <div class="package">
-          <div class="package-title"
-            style="padding: 10px; background: #f5f5f5;height: 70px;font-weight: 600w; color:  #333;"
+          <div class="package-title" 
             data-path="assets/packages/Mombasa valentine day Package-2025.pdf">
             <!-- Title will be inserted by JavaScript -->
           </div>
           <div class="preview">
-            <iframe src="assets/packages/Mombasa valentine day Package-2025.pdf" scrolling="no"></iframe>
+            <iframe src="assets/packages/Mombasa valentine day Package-2025.pdf" scrolling="no"
+              title="Mombasa Valentine Day Package Preview"></iframe>
           </div>
           <div class="package-content">
             <a class="btnpdf" onclick="viewPackage('assets/packages/Mombasa valentine day Package-2025.pdf')">View
@@ -1015,29 +1134,27 @@
         </div>
         <!-- Package 5 -->
         <div class="package">
-          <div class="package-title"
-            style="padding: 10px; background: #f5f5f5;height: 70px; font-weight: 600w; color:  #333;"
+          <div class="package-title" 
             data-path="assets/packages/Cape Town Valentine-2025.pdf">
             <!-- Title will be inserted by JavaScript -->
           </div>
           <div class="preview">
-            <iframe src="assets/packages/Cape Town Valentine-2025.pdf" scrolling="no"></iframe>
+            <iframe src="assets/packages/Cape Town Valentine-2025.pdf" scrolling="no"
+              title="Cape Town Valentine Package Preview"></iframe>
           </div>
           <div class="package-content">
-            <a class="btnpdf" onclick="viewPackage('assets/packages/Cape Town Valentine-2025.pdf')">View
-              Package</a>
+            <a class="btnpdf" onclick="viewPackage('assets/packages/Cape Town Valentine-2025.pdf')">View Package</a>
           </div>
         </div>
         <!-- Package 6 -->
         <div class="package">
-          <div class="package-title"
-            style="padding: 10px; background: #f5f5f5;height: 70px; font-weight: 600w; color: #333;"
+          <div class="package-title" 
             data-path="assets/packages/3Nights and 4Days Weekend Getaway Package to ZNZ-with flight ticket.pdf">
             <!-- Title will be inserted by JavaScript -->
           </div>
           <div class="preview">
             <iframe src="assets/packages/3Nights and 4Days Weekend Getaway Package to ZNZ-with flight ticket.pdf"
-              scrolling="no"></iframe>
+              scrolling="no" title="3 Nights 4 Days Weekend Getaway Package Preview"></iframe>
           </div>
           <div class="package-content">
             <a class="btnpdf"
@@ -1047,7 +1164,7 @@
         </div>
       </div>
       <div style="display: flex; justify-content: center; width: 100%; margin-top: 0px;">
-        <a class="btnpdfall" style="width:350px; " href="packages.html">View more Packages</a>
+        <a class="btnpdfall" style="width:350px;" href="packages.html">View more Packages</a>
       </div>
       <script>
         function viewPackage(pdf) {
@@ -1059,7 +1176,6 @@
           const titleWithSpaces = titleWithoutExtension.replace(/[_-]/g, ' ');
           return titleWithSpaces.replace(/\b\w/g, c => c.toUpperCase());
         }
-        // Add titles to all packages after page loads
         document.addEventListener('DOMContentLoaded', function () {
           const titleElements = document.querySelectorAll('.package-title');
           titleElements.forEach(element => {
@@ -1070,7 +1186,7 @@
         });
       </script>
     </section>
-    <!-- ======= events Section ======= -->
+    <!-- ======= Events Section ======= -->
     <section id="events" class="events">
       <div class="container">
         <div class="section-title">
@@ -1085,14 +1201,14 @@
             <div class="swiper-slide">
               <div class="row event-item">
                 <div class="col-lg-6">
-                  <img src="assets/img/drun.jpg" class="img-fluid" alt="Birthday Party">
+                  <img src="assets/img/drun.jpg" class="img-fluid"
+                    alt="Art and Music Festival organized by DS International">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
                   <h3>Art and Music Festivals</h3>
                   <p>
                     Make your festival experience unforgettable! We curate vibrant, immersive art and music festivals,
-                    filled
-                    with creativity, rhythm, and unforgettable moments for all ages.
+                    filled with creativity, rhythm, and unforgettable moments for all ages.
                   </p>
                   <ul>
                     <li>
@@ -1118,7 +1234,8 @@
             <div class="swiper-slide">
               <div class="row event-item">
                 <div class="col-lg-6">
-                  <img src="assets/img/selectedimg/fest/fest1.JPG" class="img-fluid" alt="Private Party">
+                  <img src="assets/img/selectedimg/fest/fest1.JPG" class="img-fluid"
+                    alt="Anniversary Celebration organized by DS International">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
                   <h3>Anniversary Celebrations</h3>
@@ -1141,7 +1258,7 @@
                     </li>
                   </ul>
                   <p>
-                    Let us handle the details so you can focus on celebrating your love and the memories you’ve created
+                    Let us handle the details so you can focus on celebrating your love and the memories you've created
                     together!
                   </p>
                 </div>
@@ -1150,11 +1267,11 @@
             <div class="swiper-slide">
               <div class="row event-item">
                 <div class="col-lg-6">
-                  <img src="assets/img/beach.jpg" class="img-fluid" alt="Custom Party"
-                    style="height: 380px; width: 500px;">
+                  <img src="assets/img/beach.jpg" class="img-fluid"
+                    alt="Beach Paradise vacation organized by DS International" style="height: 380px; width: 500px;">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Beach paradise</h3>
+                  <h3>Beach Paradise</h3>
                   <p>
                     Make your beach getaway unforgettable! We offer stunning beach paradise packages, filled with sun,
                     sand, and unforgettable moments for all beach lovers.
@@ -1188,7 +1305,7 @@
         <div class="events-button-next"></div>
       </div>
     </section>
-    <!-- End events Section -->
+    <!-- End Events Section -->
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
       <div class="container-fluid">
@@ -1206,70 +1323,78 @@
             </div>
           </center>
           <div style="height: 10px;"> </div>
-          <p style="font-size: 0.5 rem;">Browse highlights from our recent travels in our photo collection
-            for a glimpse into diverse and fascinating locations we've visited.</p>
+          <p style="font-size: 0.5 rem;">Browse highlights from our recent travels in our photo collection for a glimpse
+            into diverse and fascinating locations we've visited.</p>
         </div>
         <br>
         <div class="row g-0">
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/selectedimg/scenery/s1.JPG" class="gallery-lightbox">
-                <img src="assets/img/selectedimg/scenery/s1.JPG " alt="" class="img-fluid">
+                <img src="assets/img/selectedimg/scenery/s1.JPG"
+                  alt="Beautiful Ethiopian landscape from DS International travels" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/selectedimg/scenery/ss1.jpeg" class="gallery-lightbox">
-                <img src="assets/img/selectedimg/scenery/ss1.jpeg" alt="" class="img-fluid">
+                <img src="assets/img/selectedimg/scenery/ss1.jpeg"
+                  alt="Scenic Ethiopian countryside view from DS International tour" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/selectedimg/explorers/e3.JPG" class="gallery-lightbox">
-                <img src="assets/img/selectedimg/explorers/e3.JPG" alt="" class="img-fluid">
+                <img src="assets/img/selectedimg/explorers/e3.JPG"
+                  alt="Travel group exploring Ethiopian cultural site with DS International" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/selectedimg/explorers/e4.JPG" class="gallery-lightbox">
-                <img src="assets/img/selectedimg/explorers/e4.JPG" alt="" class="img-fluid">
+                <img src="assets/img/selectedimg/explorers/e4.JPG"
+                  alt="Adventure travel group with DS International in Ethiopia" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/selectedimg/explorers/ee3.JPG" class="gallery-lightbox">
-                <img src="assets/img/selectedimg/explorers/ee3.JPG" alt="" class="img-fluid">
+                <img src="assets/img/selectedimg/explorers/ee3.JPG"
+                  alt="Cultural event organized by DS International Travel Agency" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/selectedimg/explorers/eee2.JPG" class="gallery-lightbox">
-                <img src="assets/img/selectedimg/explorers/eee2.JPG" alt="" class="img-fluid">
+                <img src="assets/img/selectedimg/explorers/eee2.JPG"
+                  alt="Group tour exploring Ethiopian heritage with DS International" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/selectedimg/scenery/s4.JPG" class="gallery-lightbox">
-                <img src="assets/img/selectedimg/scenery/s4.JPG" alt="" class="img-fluid">
+                <img src="assets/img/selectedimg/scenery/s4.JPG"
+                  alt="Stunning Ethiopian natural scenery from DS International travels" class="img-fluid">
               </a>
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/selectedimg/explorers/e5.JPG" class="gallery-lightbox">
-                <img src="assets/img/selectedimg/explorers/e5.JPG" alt="" class="img-fluid">
+                <img src="assets/img/selectedimg/explorers/e5.JPG"
+                  alt="Travel experience with DS International in beautiful Ethiopia" class="img-fluid">
               </a>
             </div>
           </div>
         </div>
         <a class="btnpdfall"
-          style="display: flex; justify-content: center; width: 20%; position: absolute; right: 0; margin-right: 30px;margin-top: 20px;"
+          style="display: flex; justify-content: center; width: 30%; position: absolute; right: 0; margin-right: 30px;margin-top: 20px;"
           href="gallery.html">
           <center> Browse more gallery images </center>
         </a>
@@ -1334,16 +1459,13 @@
                     </h3>
                     <p style="font-size: 1rem; color: #777; margin-top: 10px; font-family: 'Poppins', sans-serif;">
                       Our process begins with a free consultation where we discuss your ideal destination, budget, and
-                      travel
-                      style. Once you approve, we handle all the
-                      bookings, from flights and accommodations to activities and ensuring a seamless
-                      experience
-                      from start to finish.
+                      travel style. Once you approve, we handle all the bookings, from flights and accommodations to
+                      activities and ensuring a seamless experience from start to finish.
                     </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/travel.jpg" alt="Travel Planning" class="img-fluid rounded"
-                      style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="assets/img/travel.jpg" alt="Travel Planning with DS International in Ethiopia"
+                      class="img-fluid rounded" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                   </div>
                 </div>
               </div>
@@ -1354,16 +1476,15 @@
                       Will your agency help me determine the necessary visa or passport requirements for my trip?
                     </h3>
                     <p style="font-size: 1rem; color: #777; font-family: 'Poppins', sans-serif;">
-                      Yes, as part of our planning service, we will provide you with up-to-date information on
-                      passport validity, visa, and any required health documentation for your destination. While the
-                      final responsibility for securing these documents lies with the traveler, we act as your expert
-                      guide, outlining the application process, and any forms you need to
-                      complete.
+                      Yes, as part of our planning service, we will provide you with up-to-date information on passport
+                      validity, visa, and any required health documentation for your destination. While the final
+                      responsibility for securing these documents lies with the traveler, we act as your expert guide,
+                      outlining the application process, and any forms you need to complete.
                     </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/travel.jpg" alt="Documentation & Visas" class="img-fluid rounded"
-                      style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="assets/img/travel.jpg" alt="Documentation & Visa assistance from DS International"
+                      class="img-fluid rounded" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                   </div>
                 </div>
               </div>
@@ -1375,15 +1496,13 @@
                     </h3>
                     <p style="font-size: 1rem; color: #777; font-family: 'Poppins', sans-serif;">
                       Absolutely! We specialize in both. You can either tweak one of our established packages to better
-                      suit
-                      your interests and budget, or we can work with you to create a completely unique, tailor-made
-                      itinerary
-                      based on your specific vision. Just let your travel consultant know your preferences.
+                      suit your interests and budget, or we can work with you to create a completely unique, tailor-made
+                      itinerary based on your specific vision. Just let your travel consultant know your preferences.
                     </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/travel.jpg" alt="Customization" class="img-fluid rounded"
-                      style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="assets/img/travel.jpg" alt="Custom travel packages with DS International"
+                      class="img-fluid rounded" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                   </div>
                 </div>
               </div>
@@ -1397,13 +1516,13 @@
                       We pride ourselves on providing clear, all-inclusive pricing. Your quote covers all
                       accommodations, internal flights, private transportation, guided tours, and most meals as
                       specified in your route. Your quoted price is the final price, with the exception of personal
-                      spending, international airfare, and other related fees, which are clearly noted as
-                      exclusions in your detailed trip plan.
+                      spending, international airfare, and other related fees, which are clearly noted as exclusions in
+                      your detailed trip plan.
                     </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/travel.jpg" alt="Customization" class="img-fluid rounded"
-                      style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="assets/img/travel.jpg" alt="Transparent pricing with DS International Travel"
+                      class="img-fluid rounded" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                   </div>
                 </div>
               </div>
@@ -1414,16 +1533,14 @@
                       What kind of support do you provide while I am on my trip?
                     </h3>
                     <p style="font-size: 1rem; color: #777; font-family: 'Poppins', sans-serif;">
-                      We provide 24/7 emergency support for all our clients while they are traveling. You will
-                      receive a
+                      We provide 24/7 emergency support for all our clients while they are traveling. You will receive a
                       dedicated emergency contact number before you leave. Our support team is available to assist with
-                      any
-                      unforeseen issues, from flight delays to last-minute itinerary changes.
+                      any unforeseen issues, from flight delays to last-minute itinerary changes.
                     </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/travel.jpg" alt="Support" class="img-fluid rounded"
-                      style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="assets/img/travel.jpg" alt="24/7 travel support from DS International"
+                      class="img-fluid rounded" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                   </div>
                 </div>
               </div>
@@ -1440,7 +1557,8 @@
             <div class="member member-side">
               <div class="row g-0">
                 <div class="col-md-5 pic-container">
-                  <div class="pic"><img src="assets/img/samp.jpg" class="img-fluid" alt=""></div>
+                  <div class="pic"><img src="assets/img/samson.jpg" class="img-fluid"
+                      alt="Samson Zewge - Founding and Managing Director of DS International Trading PLC"></div>
                 </div>
                 <div class="col-md-7 info-container">
                   <div class="member-info">
@@ -1452,8 +1570,8 @@
                       excellence are the driving forces behind the company's success.</p>
                     <div class="social">
                       <a href=""><i class="bi bi-telegram"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
+                      <a href="https://web.facebook.com/sami.zewge"target="_blank"><i class="bi bi-facebook"></i></a>
+                      <a href="https://www.instagram.com/sami.zewge"  target="_blank"><i class="bi bi-instagram"></i></a>
                     </div>
                   </div>
                 </div>
@@ -1466,12 +1584,12 @@
     <!-- End Chefs Section -->
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
-      <div style="position: absolute; left: 20px; top: 20px;  ">
+      <div style="position: absolute; left: 20px; top: 20px;">
         <h2 style="font-size: 1.9rem; font-family: 'Poppins', sans-serif; font-weight: 600;color:#696969;">
           TESTIMONIALS
         </h2>
         <div class="divider"
-          style="background: linear-gradient(90deg,#dbdbdb57 20%, transparent 80%);width: 80%;margin-left: 10px; ">
+          style="background: linear-gradient(90deg,#dbdbdb57 20%, transparent 80%);width: 80%;margin-left: 10px;">
         </div>
         <div class="height:5px;"></div>
       </div>
@@ -1480,7 +1598,8 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/samp.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/samp.jpg" class="testimonial-img"
+                  alt="Client testimonial for DS International Travel">
                 <h3>Samson Zewge</h3>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -1493,12 +1612,13 @@
             <!-- End testimonial item -->
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/samp.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/samp.jpg" class="testimonial-img"
+                  alt="Happy customer of DS International Travel Agency">
                 <h3>Samson Zewge</h3>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  I’ve never felt so well taken care of. The attention to detail and dedication from the team made this
-                  one of the most enjoyable trips I’ve ever had. Everything was perfectly organized!
+                  I've never felt so well taken care of. The attention to detail and dedication from the team made this
+                  one of the most enjoyable trips I've ever had. Everything was perfectly organized!
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -1506,12 +1626,13 @@
             <!-- End testimonial item -->
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/samp.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/samp.jpg" class="testimonial-img"
+                  alt="Satisfied traveler with DS International Trading PLC">
                 <h3>Samson Zewge</h3>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   The service provided was outstanding. From start to finish, every aspect of our journey was
-                  meticulously planned, making it a seamless and memorable experience. I’ll definitely book with them
+                  meticulously planned, making it a seamless and memorable experience. I'll definitely book with them
                   again.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
@@ -1525,35 +1646,48 @@
     </section>
     <!-- End Testimonials Section -->
     <br><br>
-    <!-- <center>
-      <h2 style="color: #0a6c93;"> Discover the airlines  <span>  leading the way in modern air travel</span></h2>
-      </center> -->
     <div class="divider"></div>
     <div class="marquee-container">
       <div class="airlinecontained">
-        <img src="assets/img/airlines/ethiopianairlines.png" alt="Airline 1 Logo" class="airline-logo">
-        <img src="assets/img/airlines/egypt.png" alt="Airline 2 Logo" class="airline-logo">
-        <img src="assets/img/airlines/emirates.png" alt="Airline 3 Logo" class="airline-logo">
-        <img src="assets/img/airlines/etihad.png" alt="Airline 4 Logo" class="airline-logo">
-        <img src="assets/img/airlines/gulf.png" alt="Airline 5 Logo" class="airline-logo">
-        <img src="assets/img/airlines/qatar.png" alt="Airline 6 Logo" class="airline-logo">
-        <img src="assets/img/airlines/turkish.png" alt="Airline 7 Logo" class="airline-logo">
-        <img src="assets/img/airlines/southafrica.png" alt="Airline 8 Logo" class="airline-logo">
-        <img src="assets/img/airlines/ethiopianairlines.png" alt="Airline 1 Logo" class="airline-logo">
-        <img src="assets/img/airlines/egypt.png" alt="Airline 2 Logo" class="airline-logo">
-        <img src="assets/img/airlines/emirates.png" alt="Airline 3 Logo" class="airline-logo">
-        <img src="assets/img/airlines/etihad.png" alt="Airline 4 Logo" class="airline-logo">
-        <img src="assets/img/airlines/gulf.png" alt="Airline 5 Logo" class="airline-logo">
-        <img src="assets/img/airlines/qatar.png" alt="Airline 6 Logo" class="airline-logo">
-        <img src="assets/img/airlines/turkish.png" alt="Airline 7 Logo" class="airline-logo">
-        <img src="assets/img/airlines/southafrica.png" alt="Airline 8 Logo" class="airline-logo">
+        <img src="assets/img/airlines/ethiopianairlines.png"
+          alt="Ethiopian Airlines - Partner of DS International Travel" class="airline-logo">
+        <img src="assets/img/airlines/egypt.png" alt="Egypt Air - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/emirates.png" alt="Emirates Airlines - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/etihad.png" alt="Etihad Airways - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/gulf.png" alt="Gulf Air - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/qatar.png" alt="Qatar Airways - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/turkish.png" alt="Turkish Airlines - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/southafrica.png" alt="South African Airways - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/ethiopianairlines.png"
+          alt="Ethiopian Airlines - Partner of DS International Travel" class="airline-logo">
+        <img src="assets/img/airlines/egypt.png" alt="Egypt Air - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/emirates.png" alt="Emirates Airlines - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/etihad.png" alt="Etihad Airways - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/gulf.png" alt="Gulf Air - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/qatar.png" alt="Qatar Airways - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/turkish.png" alt="Turkish Airlines - Partner of DS International Travel"
+          class="airline-logo">
+        <img src="assets/img/airlines/southafrica.png" alt="South African Airways - Partner of DS International Travel"
+          class="airline-logo">
       </div>
     </div>
     <center>
       <div class="divider"></div>
     </center>
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" itemscope itemtype="https://schema.org/ContactPoint">
       <div class="section-title fade-in">
         <h2 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; color: #333;">
           Contact <span style="color:#05374bd3;">Us </span>
@@ -1564,35 +1698,41 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.7411467598777!2d38.78555587367276!3d8.995949789508172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85d1ac548603%3A0x4df5a08a139c3118!2zQmVyaGFuZSBBZGVyZSBNYWxsIHwgQm9sZSBNZWRoYW5pYWxlbSB8IOGJpeGIreGIg-GKlCDhiqDhi7DhiKwg4Yie4YiNIHwg4Ymm4YiMIOGImOGLteGIg-GKkuGKoOGIiOGInQ!5e0!3m2!1sen!2set!4v1725608995109!5m2!1sen!2set"
           width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          referrerpolicy="no-referrer-when-downgrade"
+          title="DS International Trading PLC Location Map - Bole Medhaniyalem, Addis Ababa">
+        </iframe>
       </div>
       <div class="container">
         <div class="info-wrap fade-in">
           <div class="row">
-            <div class="col-lg-3 col-md-6 info">
+            <div class="col-lg-3 col-md-6 info" itemprop="address" itemscope
+              itemtype="https://schema.org/PostalAddress">
               <i class="bi bi-geo-alt"></i>
               <h4 style="font-family: 'Courier New', Courier, monospace; text-transform: uppercase;">Location</h4>
-              <p>Bole Medhaniyalem, Berhane Adere Mall<br>6th Flr.Off.No.610</p>
+              <p><span itemprop="streetAddress">Bole Medhaniyalem, Berhane Adere Mall</span><br><span
+                  itemprop="addressLocality">6th Flr.Off.No.610, Addis Ababa</span></p>
             </div>
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="bi bi-clock"></i>
               <h4 style="font-family: 'Courier New', Courier, monospace; text-transform: uppercase;">Open Hours:</h4>
-              <p>Monday-Saturday:<br>2:30 AM - 6:00 PM</p>
+              <p>Monday-Saturday:<br>8:30 AM - 6:00 PM</p>
             </div>
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="bi bi-envelope"></i>
               <h4 style="font-family: 'Courier New', Courier, monospace; text-transform: uppercase;">Email:</h4>
-              <p>samzewge@yahoo.com<br>dsintertravel@gmail.com</p>
+              <p itemprop="email">samzewge@yahoo.com<br>dsintertravel@gmail.com</p>
             </div>
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="bi bi-phone"></i>
               <h4 style="font-family: 'Courier New', Courier, monospace; text-transform: uppercase;">Call:</h4>
-              <p>+251 116 57 67 77<br> +251 911 23 66 79 <br> +251 984 94 92 33 <br> +251 912 12 26 36</p>
+              <p itemprop="telephone">+251 116 57 67 77<br> +251 911 23 66 79 <br> +251 984 94 92 33 <br> +251 912 12 26
+                36</p>
             </div>
           </div>
-        </div>
-        <form action="https://formspree.io/f/xvoejqbk" method="POST" role="form" class="php-email-form fade-in">
-          <div class="row">
+        </div> 
+           <div class="container">
+        <div class="form-container">
+          <form action="https://formspree.io/f/xvoejqbk" method="POST" class="php-email-form">
             <h2 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; color: #333;">
               Get in <span style="color:#05374bd3; margin-bottom: 30px; ">touch </span>
             </h2>
@@ -1600,34 +1740,45 @@
               style="background: linear-gradient(90deg,#095775 20%, transparent 80%);width: 30%;"></div>
             <div class="height:5px;"></div>
             <br>
-            <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            <div class="row form-row-spacing">
+              <div class="col-lg-6 col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                <label for="name" class="floating-label">Your Name</label>
+              </div>
+              <div class="col-lg-6 col-md-6 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <label for="email" class="floating-label">Your Email</label>
+              </div>
             </div>
-            <div class="col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+             
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="message" rows="5"
+                placeholder="Reach out to us if you have any questions or inquiries you might have"
+                required style="resize: none;"></textarea>
+              <label for="message" class="floating-label">Send message</label>
             </div>
-          </div>
-          <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" style="resize: none;"
-              required></textarea>
-          </div>
-          <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
+            <br>
+            <div class="text-center">
+              <button type="submit" class="sendbtn">&#9993;&nbsp;&nbsp;&nbsp; Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div> 
         </form>
         <div class="footer-logo fade-in">
-          <img src="assets/img/footerlogoenhanced.png" alt="Footer Logo">
+          <img src="assets/img/footerlogoenhanced.png"
+            alt="DS International Trading PLC Footer Logo - Premium Travel Agency Ethiopia" width="300" height="auto">
         </div>
       </div>
     </section><!-- End Contact Section -->
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
-  <div id="footer">
+  <footer id="footer" role="contentinfo">
     <div class="stars-container">
       <!-- Generate 100 star divs -->
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
       <div class="star"></div>
       <div class="star"></div>
       <div class="star"></div>
@@ -1733,10 +1884,10 @@
     </div>
     <div class="container">
       <div class="social-links">
-        <a href="#" class="twitter"><i class='bx bxl-whatsapp'></i></a>
-        <a href="#" class="facebook"><i class='bx bxl-facebook'></i></a>
-        <a href="#" class="instagram"><i class='bx bxl-instagram'></i></a>
-        <a href="#" class="linkedin"><i class='bx bxl-telegram'></i></a>
+        <a href="#" class="twitter" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://web.facebook.com/sami.zewge" target="_blank" class="facebook" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.instagram.com/sami.zewge" target="_blank" class="instagram" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        <a href="#" class="linkedin" aria-label="Telegram"><i class='bx bxl-telegram'></i></a>
       </div>
       <div class="copyright">
         &copy; Copyright <strong><span>DS International Trading PLC</span></strong>. All Rights Reserved
@@ -1747,8 +1898,8 @@
           Kassahun</a>
       </div>
     </div>
-  </div><!-- End Footer -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i
       class="bi bi-arrow-up-short"></i></a>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1837,5 +1988,56 @@
       });
     });
   </script>
+
+  <script>
+// Mobile Navigation Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navbar = document.querySelector('#navbar');
+    const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function toggleMobileNav() {
+        navbar.classList.toggle('active');
+        mobileNavOverlay.classList.toggle('active');
+        document.body.style.overflow = navbar.classList.contains('active') ? 'hidden' : '';
+    }
+
+    // Toggle mobile menu
+    mobileNavToggle.addEventListener('click', toggleMobileNav);
+    
+    // Close mobile menu when clicking overlay
+    mobileNavOverlay.addEventListener('click', toggleMobileNav);
+
+    // Close mobile menu when clicking nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbar.classList.contains('active')) {
+                toggleMobileNav();
+            }
+        });
+    });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navbar.classList.contains('active')) {
+            toggleMobileNav();
+        }
+    });
+
+    // Handle dropdown menus in mobile
+    const dropdownToggles = document.querySelectorAll('.dropdown > a');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                const dropdownMenu = this.nextElementSibling;
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+});
+</script>
 </body>
+
 </html>
