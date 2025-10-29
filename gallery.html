@@ -3,17 +3,39 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>DS International Trading PLC - Art Gallery</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <title>DS International Trading PLC - Art Gallery | Scenery, Explorers & Devour Photos</title>
+    <meta name="description" content="Explore our stunning photo gallery featuring beautiful scenery, adventurous explorers, and delicious culinary creations from DS International Trading PLC.">
+    <meta name="keywords" content="DS International Trading, art gallery, photography, scenery photos, explorers, devours, food photography, landscape photography">
+    <meta name="author" content="DS International Trading PLC">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph meta tags for social media sharing -->
+    <meta property="og:title" content="DS International Trading PLC - Art Gallery">
+    <meta property="og:description" content="Explore our stunning photo gallery featuring beautiful scenery, adventurous explorers, and delicious culinary creations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dsintertravel.com/gallery.html">
+    <meta property="og:image" content="assets/img/transformed.png">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DS International Trading PLC - Art Gallery">
+    <meta name="twitter:description" content="Explore our stunning photo gallery featuring beautiful scenery, adventurous explorers, and delicious culinary creations.">
+    <meta name="twitter:image" content="assets/img/transformed.png">
+    
+    <!-- Canonical URL to avoid duplicate content -->
+    <link rel="canonical" href="https://www.dsintertravel.com/gallery.html">
+    
+    <!-- Favicon and Apple Touch Icons -->
     <link rel="icon" type="image/png" href="assets/img/transformed.png" sizes="164x164">
+    <link rel="apple-touch-icon" href="assets/img/transformed.png">
+    
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preload" as="style"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preload" as="style" href="assets/css/style.css">
-    <!-- Add this line within the <head> section -->
+    
+    <!-- CSS Files -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -24,8 +46,8 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
+    
     <style>
         * {
             box-sizing: border-box;
@@ -35,6 +57,7 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
         }
         .container {
             max-width: 1700px;
@@ -81,6 +104,8 @@
             font-size: 2.5rem;
             margin-bottom: 10px;
             color: #2c3e50;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
         }
         .subtitle {
             font-size: 1.1rem;
@@ -475,15 +500,85 @@
             font-weight: bold;
             padding: 0 20px;
         }
+        /* Footer Styles */
+        #footer {
+            background: linear-gradient(135deg, rgba(5, 55, 75, 0.98), #094e68);
+            color: white;
+            padding: 40px 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .stars-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        .copyright, .credits {
+            margin-bottom: 10px;
+        }
+        .credits a {
+            color: #ffc56e;
+            text-decoration: none;
+        }
+        .credits a:hover {
+            text-decoration: underline;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div id="header"  >
+        <!-- Header -->
+        <div id="header">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
                 <div class="logo me-auto">
                     <a href="index.html">
-                        <img src="assets/img/transformedwhite.png" alt="Logo" style="width: auto; height: 50px;" />
+                        <img src="assets/img/transformedwhite.png" alt="DS International Trading PLC Logo" style="width: auto; height: 50px;" />
                     </a>
                 </div>
                 <div class="header-center-text">Photo album</div>
@@ -497,45 +592,58 @@
                 </nav><!-- .navbar -->
             </div>
         </div><!-- End Header -->
-        <center>
-            <br> 
-        <p id="section-subtitle" style="margin-top: 20px;  ">Take a look at our photo album of stunning landscapes, tasty dishes, and adventurous explore</p>
-        <div class="divider"></div>
- <br> 
-        <div id="imagetypes">
-            <div class="filter-container" data-aos="fade-up"> 
-                <div class="filter-tabs">
-                    <button class="filter-tab active" data-filter="all">
-                       &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-globe"></i>&nbsp;&nbsp;All Images &nbsp;&nbsp;&nbsp;&nbsp; 
-                    </button>
-                    <button class="filter-tab" data-filter="scenery">
-                       &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-camera"></i> &nbsp;&nbsp; scenery &nbsp;&nbsp;&nbsp;&nbsp; 
-                    </button>
-                    <button class="filter-tab" data-filter="explorers">
-                      &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-hiking"></i> &nbsp;&nbsp; explorers &nbsp;&nbsp;&nbsp;&nbsp;  
-                    </button>
-                    <button class="filter-tab" data-filter="devours">
-                      &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-utensils"></i>&nbsp;&nbsp; devours &nbsp;&nbsp;&nbsp;&nbsp; 
-                    </button>
+        
+        <!-- Main Content -->
+        <main>
+            <header class="gallery-header"style="margin-top: 10px;"> 
+                <p id="section-subtitle" style="margin-top: 40px;">Take a look at our photo album of stunning landscapes, tasty dishes, and adventurous explorers</p>
+                <div class="divider"></div>
+            </header>
+            
+            <div id="imagetypes" aria-labelledby="gallery-filter-heading" >
+                <h2 id="gallery-filter-heading" class="visually-hidden">Gallery Filter Options</h2>
+                <div class="filter-container" data-aos="fade-up"> 
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">
+                           &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;All Images &nbsp;&nbsp;&nbsp;&nbsp; 
+                        </button>
+                        <button class="filter-tab" data-filter="scenery">
+                           &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-camera" aria-hidden="true"></i> &nbsp;&nbsp; Scenery &nbsp;&nbsp;&nbsp;&nbsp; 
+                        </button>
+                        <button class="filter-tab" data-filter="explorers">
+                          &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-hiking" aria-hidden="true"></i> &nbsp;&nbsp; Explorers &nbsp;&nbsp;&nbsp;&nbsp;  
+                        </button>
+                        <button class="filter-tab" data-filter="devours">
+                          &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fas fa-utensils" aria-hidden="true"></i>&nbsp;&nbsp; Devours &nbsp;&nbsp;&nbsp;&nbsp; 
+                        </button>
+                    </div>
                 </div>
             </div>
- </center>
-            <div class="gallery" id="imageGallery">
-                <!-- Images will be dynamically loaded here -->
-                <div class="loading">Loading images...</div>
+            
+            <div id="image-gallery-section" aria-labelledby="gallery-heading">
+                <h2 id="gallery-heading" class="visually-hidden">Image Gallery</h2>
+                <div class="gallery" id="imageGallery">
+                    <!-- Images will be dynamically loaded here -->
+                    <div class="loading">Loading images...</div>
+                </div>
             </div>
-        </div>
+        </main>
+        
         <!-- Modal for image viewing -->
-        <div id="imageModal" class="modal">
-            <span class="close">&times;</span>
-            <span class="prev">&#10094;</span>
-            <span class="next">&#10095;</span>
-            <img class="modal-content" id="modalImage">
+        <div id="imageModal" class="modal" role="dialog" aria-labelledby="modal-image-title">
+            <span class="close" aria-label="Close modal">&times;</span>
+            <span class="prev" aria-label="Previous image">&#10094;</span>
+            <span class="next" aria-label="Next image">&#10095;</span>
+            <img class="modal-content" id="modalImage" alt="">
         </div>
-        <!-- ======= Footer ======= -->
+        
+        <!-- Footer -->
         <div id="footer">
             <div class="stars-container">
                 <!-- Generate 100 star divs -->
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
@@ -664,56 +772,59 @@
                 </div>
             </div>
         </div><!-- End Footer -->
+        
         <script>
-            // Sample image data with categories
+            // Sample image data with categories and improved alt text
             const imageData = [
-                { id: 1, src: "assets/img/selectedimg/explorers/e.JPG", category: "explorers", title: "Tropical Explorer 1" },
-                { id: 2, src: "assets/img/selectedimg/explorers/e1.JPG", category: "explorers", title: "Tropical Explorer 2" },
-                { id: 3, src: "assets/img/selectedimg/explorers/e2.JPG", category: "explorers", title: "Tropical Explorer 3" },
-                { id: 4, src: "assets/img/selectedimg/explorers/e3.JPG", category: "explorers", title: "Tropical Explorer 4" },
-                { id: 5, src: "assets/img/selectedimg/explorers/e4.JPG", category: "explorers", title: "Tropical Explorer 5" },
-                { id: 6, src: "assets/img/selectedimg/explorers/e5.JPG", category: "explorers", title: "Tropical Explorer 6" },
-                { id: 7, src: "assets/img/selectedimg/explorers/e10v.JPG", category: "explorers", title: "Tropical Explorer 7" },
-                { id: 8, src: "assets/img/selectedimg/explorers/e11.JPG", category: "explorers", title: "Tropical Explorer 8" },
-                { id: 9, src: "assets/img/selectedimg/explorers/e11v.JPG", category: "explorers", title: "Tropical Explorer 9" },
-                { id: 10, src: "assets/img/selectedimg/explorers/e12v.png", category: "explorers", title: "Tropical Explorer 10" },
-                { id: 11, src: "assets/img/selectedimg/explorers/ee3.JPG", category: "explorers", title: "Tropical Explorer 11" },
-                { id: 12, src: "assets/img/selectedimg/explorers/ee4.JPG", category: "explorers", title: "Tropical Explorer 12" },
-                { id: 13, src: "assets/img/selectedimg/explorers/eee1.JPG", category: "explorers", title: "Tropical Explorer 13" },
-                { id: 14, src: "assets/img/selectedimg/explorers/eee2.JPG", category: "explorers", title: "Tropical Explorer 14" },
-                { id: 15, src: "assets/img/selectedimg/explorers/eee3.JPG", category: "explorers", title: "Tropical Explorer 15" },
-                { id: 16, src: "assets/img/selectedimg/explorers/eee4.JPG", category: "explorers", title: "Tropical Explorer 16" },
-                { id: 17, src: "assets/img/selectedimg/explorers/eee5.JPG", category: "explorers", title: "Tropical Explorer 17" },
-                { id: 18, src: "assets/img/selectedimg/scenery/s.JPG", category: "scenery", title: "Scenery 1" },
-                { id: 19, src: "assets/img/selectedimg/scenery/s1.JPG", category: "scenery", title: "Scenery 2" },
-                { id: 20, src: "assets/img/selectedimg/scenery/s2.JPG", category: "scenery", title: "Scenery 3" },
-                { id: 21, src: "assets/img/selectedimg/scenery/s3.JPG", category: "scenery", title: "Scenery 4" },
-                { id: 22, src: "assets/img/selectedimg/scenery/s4.JPG", category: "scenery", title: "Scenery 5" },
-                { id: 23, src: "assets/img/selectedimg/scenery/s10v.png", category: "scenery", title: "Scenery 6" },
-                { id: 24, src: "assets/img/selectedimg/scenery/s11v.png", category: "scenery", title: "Scenery 7" },
-                { id: 25, src: "assets/img/selectedimg/scenery/s12v.png", category: "scenery", title: "Scenery 8" },
-                { id: 26, src: "assets/img/selectedimg/scenery/s13v.png", category: "scenery", title: "Scenery 9" },
-                { id: 27, src: "assets/img/selectedimg/scenery/s14v.png", category: "scenery", title: "Scenery 10" },
-                { id: 28, src: "assets/img/selectedimg/scenery/s15v.png", category: "scenery", title: "Scenery 11" },
-                { id: 29, src: "assets/img/selectedimg/scenery/s16v.png", category: "scenery", title: "Scenery 12" },
-                { id: 30, src: "assets/img/selectedimg/scenery/s17v.png", category: "scenery", title: "Scenery 13" },
-                { id: 31, src: "assets/img/selectedimg/scenery/ss.jpeg", category: "scenery", title: "Scenery 14" },
-                { id: 32, src: "assets/img/selectedimg/scenery/ss1.jpeg", category: "scenery", title: "Scenery 15" },
-                { id: 33, src: "assets/img/selectedimg/scenery/ss2.jpeg", category: "scenery", title: "Scenery 16" },
-                { id: 34, src: "assets/img/selectedimg/scenery/ss3.jpeg", category: "scenery", title: "Scenery 17" },
-                { id: 35, src: "assets/img/selectedimg/scenery/ss4.jpeg", category: "scenery", title: "Scenery 18" },
-                { id: 36, src: "assets/img/selectedimg/scenery/sss.JPG", category: "scenery", title: "Scenery 19" },
-                { id: 37, src: "assets/img/selectedimg/scenery/sss1.JPG", category: "scenery", title: "Scenery 20" },
-                { id: 38, src: "assets/img/selectedimg/scenery/sss2.JPG", category: "scenery", title: "Scenery 21" },
-                { id: 39, src: "assets/img/selectedimg/scenery/sss3.JPG", category: "scenery", title: "Scenery 22" },
-                { id: 40, src: "assets/img/selectedimg/devours/d.JPG", category: "devours", title: "Devour 1" },
-                { id: 41, src: "assets/img/selectedimg/devours/d1.JPG", category: "devours", title: "Devour 2" },
-                { id: 42, src: "assets/img/selectedimg/devours/d2.JPG", category: "devours", title: "Devour 3" },
-                { id: 43, src: "assets/img/selectedimg/devours/d3.JPG", category: "devours", title: "Devour 4" },
-                { id: 44, src: "assets/img/selectedimg/devours/d4.JPG", category: "devours", title: "Devour 5" },
-                { id: 45, src: "assets/img/selectedimg/devours/d5.JPG", category: "devours", title: "Devour 6" },
-                { id: 46, src: "assets/img/selectedimg/devours/dd.JPG", category: "devours", title: "Devour 7" },
-                { id: 47, src: "assets/img/selectedimg/devours/dd1v.png", category: "devours", title: "Devour 8" }];
+                { id: 1, src: "assets/img/selectedimg/explorers/e.JPG", category: "explorers", title: "Tropical Explorer 1", alt: "Adventurous explorer in tropical environment" },
+                { id: 2, src: "assets/img/selectedimg/explorers/e1.JPG", category: "explorers", title: "Tropical Explorer 2", alt: "Explorer hiking through lush landscape" },
+                { id: 3, src: "assets/img/selectedimg/explorers/e2.JPG", category: "explorers", title: "Tropical Explorer 3", alt: "Adventurer exploring natural terrain" },
+                { id: 4, src: "assets/img/selectedimg/explorers/e3.JPG", category: "explorers", title: "Tropical Explorer 4", alt: "Explorer discovering new landscapes" },
+                { id: 5, src: "assets/img/selectedimg/explorers/e4.JPG", category: "explorers", title: "Tropical Explorer 5", alt: "Hiker on mountain trail with scenic views" },
+                { id: 6, src: "assets/img/selectedimg/explorers/e5.JPG", category: "explorers", title: "Tropical Explorer 6", alt: "Adventurer in dense forest environment" },
+                { id: 7, src: "assets/img/selectedimg/explorers/e10v.JPG", category: "explorers", title: "Tropical Explorer 7", alt: "Explorer on coastal adventure" },
+                { id: 8, src: "assets/img/selectedimg/explorers/e11.JPG", category: "explorers", title: "Tropical Explorer 8", alt: "Hiker enjoying panoramic mountain views" },
+                { id: 9, src: "assets/img/selectedimg/explorers/e11v.JPG", category: "explorers", title: "Tropical Explorer 9", alt: "Adventurer exploring river landscapes" },
+                { id: 10, src: "assets/img/selectedimg/explorers/e12v.png", category: "explorers", title: "Tropical Explorer 10", alt: "Explorer in tropical forest setting" },
+                { id: 11, src: "assets/img/selectedimg/explorers/ee3.JPG", category: "explorers", title: "Tropical Explorer 11", alt: "Hiker on scenic mountain path" },
+                { id: 12, src: "assets/img/selectedimg/explorers/ee4.JPG", category: "explorers", title: "Tropical Explorer 12", alt: "Adventurer in lush green environment" },
+                { id: 13, src: "assets/img/selectedimg/explorers/eee1.JPG", category: "explorers", title: "Tropical Explorer 13", alt: "Explorer discovering hidden trails" },
+                { id: 14, src: "assets/img/selectedimg/explorers/eee2.JPG", category: "explorers", title: "Tropical Explorer 14", alt: "Hiker enjoying nature's beauty" },
+                { id: 15, src: "assets/img/selectedimg/explorers/eee3.JPG", category: "explorers", title: "Tropical Explorer 15", alt: "Adventurer in picturesque landscape" },
+                { id: 16, src: "assets/img/selectedimg/explorers/eee4.JPG", category: "explorers", title: "Tropical Explorer 16", alt: "Explorer on mountain peak" },
+                { id: 17, src: "assets/img/selectedimg/explorers/eee5.JPG", category: "explorers", title: "Tropical Explorer 17", alt: "Hiker in serene natural setting" },
+                { id: 18, src: "assets/img/selectedimg/scenery/s.JPG", category: "scenery", title: "Scenery 1", alt: "Beautiful mountain landscape with clear skies" },
+                { id: 19, src: "assets/img/selectedimg/scenery/s1.JPG", category: "scenery", title: "Scenery 2", alt: "Stunning coastal view with ocean waves" },
+                { id: 20, src: "assets/img/selectedimg/scenery/s2.JPG", category: "scenery", title: "Scenery 3", alt: "Majestic forest with sunlight filtering through trees" },
+                { id: 21, src: "assets/img/selectedimg/scenery/s3.JPG", category: "scenery", title: "Scenery 4", alt: "Panoramic view of valley and mountains" },
+                { id: 22, src: "assets/img/selectedimg/scenery/s4.JPG", category: "scenery", title: "Scenery 5", alt: "Serene lake surrounded by mountains" },
+                { id: 23, src: "assets/img/selectedimg/scenery/s10v.png", category: "scenery", title: "Scenery 6", alt: "Breathtaking sunset over the horizon" },
+                { id: 24, src: "assets/img/selectedimg/scenery/s11v.png", category: "scenery", title: "Scenery 7", alt: "Peaceful river flowing through forest" },
+                { id: 25, src: "assets/img/selectedimg/scenery/s12v.png", category: "scenery", title: "Scenery 8", alt: "Dramatic mountain peaks with clouds" },
+                { id: 26, src: "assets/img/selectedimg/scenery/s13v.png", category: "scenery", title: "Scenery 9", alt: "Vibrant autumn foliage in forest" },
+                { id: 27, src: "assets/img/selectedimg/scenery/s14v.png", category: "scenery", title: "Scenery 10", alt: "Coastal cliffs with crashing waves" },
+                { id: 28, src: "assets/img/selectedimg/scenery/s15v.png", category: "scenery", title: "Scenery 11", alt: "Misty mountain landscape at dawn" },
+                { id: 29, src: "assets/img/selectedimg/scenery/s16v.png", category: "scenery", title: "Scenery 12", alt: "Colorful sunset over water" },
+                { id: 30, src: "assets/img/selectedimg/scenery/s17v.png", category: "scenery", title: "Scenery 13", alt: "Rolling hills under blue sky" },
+                { id: 31, src: "assets/img/selectedimg/scenery/ss.jpeg", category: "scenery", title: "Scenery 14", alt: "Tranquil beach with palm trees" },
+                { id: 32, src: "assets/img/selectedimg/scenery/ss1.jpeg", category: "scenery", title: "Scenery 15", alt: "Snow-capped mountain range" },
+                { id: 33, src: "assets/img/selectedimg/scenery/ss2.jpeg", category: "scenery", title: "Scenery 16", alt: "Waterfall in lush green forest" },
+                { id: 34, src: "assets/img/selectedimg/scenery/ss3.jpeg", category: "scenery", title: "Scenery 17", alt: "Desert landscape with sand dunes" },
+                { id: 35, src: "assets/img/selectedimg/scenery/ss4.jpeg", category: "scenery", title: "Scenery 18", alt: "Urban skyline at night" },
+                { id: 36, src: "assets/img/selectedimg/scenery/sss.JPG", category: "scenery", title: "Scenery 19", alt: "Countryside with rolling fields" },
+                { id: 37, src: "assets/img/selectedimg/scenery/sss1.JPG", category: "scenery", title: "Scenery 20", alt: "Mountain lake reflection" },
+                { id: 38, src: "assets/img/selectedimg/scenery/sss2.JPG", category: "scenery", title: "Scenery 21", alt: "Forest path in autumn" },
+                { id: 39, src: "assets/img/selectedimg/scenery/sss3.JPG", category: "scenery", title: "Scenery 22", alt: "Coastal sunrise over ocean" },
+                { id: 40, src: "assets/img/selectedimg/devours/d.JPG", category: "devours", title: "Devours Creation 1", alt: "Gourmet dish with fresh ingredients" },
+                { id: 41, src: "assets/img/selectedimg/devours/d1.JPG", category: "devours", title: "Devours Creation 2", alt: "Artfully plated restaurant meal" },
+                { id: 42, src: "assets/img/selectedimg/devours/d2.JPG", category: "devours", title: "Devours Creation 3", alt: "Delicious dessert presentation" },
+                { id: 43, src: "assets/img/selectedimg/devours/d3.JPG", category: "devours", title: "Devours Creation 4", alt: "Traditional cuisine with modern twist" },
+                { id: 44, src: "assets/img/selectedimg/devours/d4.JPG", category: "devours", title: "Devours Creation 5", alt: "Fresh seafood platter" },
+                { id: 45, src: "assets/img/selectedimg/devours/d5.JPG", category: "devours", title: "Devours Creation 6", alt: "Colorful vegetarian dish" },
+                { id: 46, src: "assets/img/selectedimg/devours/dd.JPG", category: "devours", title: "Devours Creation 7", alt: "Artisan bread and cheese board" },
+                { id: 47, src: "assets/img/selectedimg/devours/dd1v.png", category: "devours", title: "Devours Creation 8", alt: "Delicious culinary dish presentation" }
+            ];
+            
             // DOM elements
             const gallery = document.getElementById('imageGallery');
             const filterButtons = document.querySelectorAll('.filter-tab');
@@ -722,34 +833,41 @@
             const closeBtn = document.querySelector('.close');
             const prevBtn = document.querySelector('.prev');
             const nextBtn = document.querySelector('.next');
+            
             // Variables for modal navigation
             let currentImageIndex = 0;
             let currentFilteredImages = [];
+            
             // Function to load images with lazy loading
             function loadImages() {
                 // Clear loading message
                 gallery.innerHTML = '';
+                
                 // Create image cards
                 imageData.forEach((image, index) => {
-                    const imageCard = document.createElement('div');
+                    const imageCard = document.createElement('article');
                     imageCard.className = 'image-card';
                     imageCard.setAttribute('data-category', image.category);
-                    // Remove this line: imageCard.setAttribute('data-index', index);
+                    
                     const imageContainer = document.createElement('div');
                     imageContainer.className = 'image-container';
+                    
                     const img = document.createElement('img');
                     img.className = 'gallery-image';
                     img.src = image.src;
-                    img.alt = image.title;
+                    img.alt = image.alt || image.title;
                     img.loading = 'lazy';
+                    
                     // Add click event to open modal - pass the image ID instead of index
                     img.addEventListener('click', () => openModal(image.id));
+                    
                     // Add placeholder until image loads
-                    img.onload = function () {
-                        if (imageContainer.querySelector('.placeholder')) {
+                    img.onload = function() {
+                        if(imageContainer.querySelector('.placeholder')) {
                             imageContainer.removeChild(imageContainer.querySelector('.placeholder'));
                         }
                     };
+                    
                     // Create a placeholder
                     const placeholder = document.createElement('div');
                     placeholder.className = 'placeholder';
@@ -758,55 +876,68 @@
                     imageCard.appendChild(imageContainer);
                     gallery.appendChild(imageCard);
                 });
+                
                 // Set current filtered images to all images initially
                 currentFilteredImages = [...imageData];
             }
+            
             // Filter images based on category 
             function filterImages(category) {
                 const imageCards = document.querySelectorAll('.image-card');
+                
                 // Update current filtered images based on category
-                if (category === 'all') {
+                if(category === 'all') {
                     currentFilteredImages = [...imageData];
                 } else {
                     currentFilteredImages = imageData.filter(image => image.category === category);
                 }
+                
                 imageCards.forEach(card => {
-                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                    if(category === 'all' || card.getAttribute('data-category') === category) {
                         card.style.display = 'block';
                     } else {
                         card.style.display = 'none';
                     }
                 });
             }
+            
             // Open modal with selected image
             function openModal(imageId) {
                 // Find the index of the image in the current filtered array by its ID
                 currentImageIndex = currentFilteredImages.findIndex(img => img.id === imageId);
-                if (currentImageIndex !== -1) {
+                if(currentImageIndex !== -1) {
                     modal.style.display = 'block';
                     modalImg.src = currentFilteredImages[currentImageIndex].src;
+                    modalImg.alt = currentFilteredImages[currentImageIndex].alt || currentFilteredImages[currentImageIndex].title;
                 }
             }
+            
             // Navigate to next image in modal
             function nextImage() {
                 currentImageIndex = (currentImageIndex + 1) % currentFilteredImages.length;
                 modalImg.src = currentFilteredImages[currentImageIndex].src;
+                modalImg.alt = currentFilteredImages[currentImageIndex].alt || currentFilteredImages[currentImageIndex].title;
             }
+            
             // Navigate to previous image in modal
             function prevImage() {
                 currentImageIndex = (currentImageIndex - 1 + currentFilteredImages.length) % currentFilteredImages.length;
                 modalImg.src = currentFilteredImages[currentImageIndex].src;
+                modalImg.alt = currentFilteredImages[currentImageIndex].alt || currentFilteredImages[currentImageIndex].title;
             }
+            
             // Close modal
             function closeModal() {
                 modal.style.display = 'none';
             }
+            
             // Initialize the gallery
             function initGallery() {
                 loadImages();
+                
                 // Add event listeners to filter buttons
                 filterButtons.forEach(button => {
-                    button.addEventListener('click', function () {
+                    button.addEventListener('click', function() {
                         // Remove active class from all buttons
                         filterButtons.forEach(btn => btn.classList.remove('active'));
                         // Add active class to clicked button
@@ -815,31 +946,94 @@
                         filterImages(this.getAttribute('data-filter'));
                     });
                 });
+                
                 // Modal event listeners
                 closeBtn.addEventListener('click', closeModal);
                 nextBtn.addEventListener('click', nextImage);
                 prevBtn.addEventListener('click', prevImage);
+                
                 // Close modal when clicking outside the image
-                modal.addEventListener('click', function (e) {
-                    if (e.target === modal) {
+                modal.addEventListener('click', function(e) {
+                    if(e.target === modal) {
                         closeModal();
                     }
                 });
+                
                 // Keyboard navigation
-                document.addEventListener('keydown', function (e) {
-                    if (modal.style.display === 'block') {
-                        if (e.key === 'Escape') {
+                document.addEventListener('keydown', function(e) {
+                    if(modal.style.display === 'block') {
+                        if(e.key === 'Escape') {
                             closeModal();
-                        } else if (e.key === 'ArrowRight') {
+                        } else if(e.key === 'ArrowRight') {
                             nextImage();
-                        } else if (e.key === 'ArrowLeft') {
+                        } else if(e.key === 'ArrowLeft') {
                             prevImage();
                         }
                     }
                 });
             }
+            
             // Initialize when DOM is loaded
             document.addEventListener('DOMContentLoaded', initGallery);
+            
+            // Generate stars for footer
+            function generateStars() {
+                const starsContainer = document.querySelector('.stars-container');
+                const starCount = 100;
+                
+                for (let i = 0; i < starCount; i++) {
+                    const star = document.createElement('div');
+                    star.className = 'star';
+                    
+                    // Random position
+                    const left = Math.random() * 100;
+                    const top = Math.random() * 100;
+                    
+                    // Random size
+                    const size = Math.random() * 3 + 1;
+                    
+                    // Random animation delay
+                    const delay = Math.random() * 5;
+                    
+                    star.style.left = `${left}%`;
+                    star.style.top = `${top}%`;
+                    star.style.width = `${size}px`;
+                    star.style.height = `${size}px`;
+                    star.style.animationDelay = `${delay}s`;
+                    
+                    starsContainer.appendChild(star);
+                }
+            }
+            
+            // Generate stars when page loads
+            document.addEventListener('DOMContentLoaded', generateStars);
         </script>
+        
+        <!-- Schema.org structured data for the gallery -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "DS International Trading PLC - Art Gallery",
+          "description": "Explore our stunning photo gallery featuring beautiful scenery, adventurous explorers, and delicious culinary creations.",
+          "url": "https://www.dsintertravel.com/gallery.html",
+          "mainEntity": {
+            "@type": "ImageGallery",
+            "name": "Photo Album",
+            "description": "Take a look at our photo album of stunning landscapes, tasty dishes, and adventurous explorers",
+            "image": [
+              "assets/img/selectedimg/scenery/s.JPG",
+              "assets/img/selectedimg/explorers/e.JPG",
+              "assets/img/selectedimg/devours/d.JPG"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "DS International Trading PLC",
+            "url": "https://www.dsintertravel.com"
+          }
+        }
+        </script>
+    </div>
 </body>
 </html>
