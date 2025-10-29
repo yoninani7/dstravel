@@ -2071,15 +2071,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         new Swiper('.testimonials-slider', {
             loop: true,
             slidesPerView: 1,
-            spaceBetween: 30,
-            autoplay: {
-                delay: 5000,
+            spaceBetween: 20,
+              autoplay: {
+                delay: 10000,  
                 disableOnInteraction: false
             },
             pagination: {
@@ -2089,16 +2090,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                },
-                992: {
-                    slidesPerView: 1,
-                    spaceBetween: 40,
-                }
             }
         });
     });
