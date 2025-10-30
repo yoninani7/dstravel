@@ -229,9 +229,10 @@
     /* --- Card Styles --- */
     .p_package-card {
       background-color: white; 
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      box-shadow: 10px 10px 30px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       cursor: pointer;
+      border-radius: 20px;
     }
 
     .p_card-hover-effect {
@@ -585,7 +586,7 @@
       <div class="logo me-auto">
         <a href="index.html" aria-label="DS International Trading PLC Home">
           <img src="assets/img/transformedwhite.png"
-            alt="DS International Trading PLC Logo - Premium Travel Agency Ethiopia" width="auto">
+            alt="DS International Trading PLC Logo - Premium Travel Agency Ethiopia" width="auto" id="logoimg">
         </a>
       </div>
       <nav id="navbar" class="navbar order-last order-lg-0" role="navigation" aria-label="Main Navigation" >
@@ -596,7 +597,7 @@
           <li role="none"><a class="nav-link scrollto" href="#offers" role="menuitem">Offerings</a></li>
           <li class="dropdown" role="none">
             <a class="nav-link scrollto" id="tourDropdown" role="button" data-bs-toggle="dropdown"
-              href="../dstravel/touroptions/destination.html" aria-expanded="false" aria-haspopup="true">
+                aria-expanded="false" aria-haspopup="true">
               Et Tour Options <i class="bi bi-chevron-down"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="tourDropdown"
@@ -1268,7 +1269,7 @@
               <div class="row event-item">
                 <div class="col-lg-6">
                   <img src="assets/img/beach.jpg" class="img-fluid"
-                    alt="Beach Paradise vacation organized by DS International" style="height: 380px; width: 500px;">
+                    alt="Beach Paradise vacation organized by DS International" style="height: 350px; width: 500px;">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
                   <h3>Beach Paradise</h3>
@@ -1610,7 +1611,7 @@
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                             This agency planned every detail of my trip perfectly. I didn't have to worry about anything, from the
-                            flights to the hotels and excursions. They truly made my vacation a wonderful, stress-free experience.
+                            flights to the hotels and tours. They truly made my vacation a wonderful, stress-free experience.
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>
@@ -1763,11 +1764,12 @@
         <div class="form-container">
           <form action="https://formspree.io/f/xvoejqbk" method="POST" class="php-email-form">
             <h2 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif; font-weight: 600; color: #333;">
-              Get in <span style="color:#05374bd3; margin-bottom: 30px; ">touch </span>
+              Get in <span style="color:#05374bd3; margin-bottom: 10px; ">touch </span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<div class="divider"
+              style="background: linear-gradient(90deg,#095775 20%, transparent 80%);width: 30%; margin-top: 10px;"></div>
             </h2>
-            &nbsp;&nbsp;&nbsp;&nbsp;<div class="divider"
-              style="background: linear-gradient(90deg,#095775 20%, transparent 80%);width: 30%;"></div>
-            <div class="height:5px;"></div>
+            
+            <div class="height:0px;"></div>
             <br>
             <div class="row form-row-spacing">
               <div class="col-lg-6 col-md-6 form-group">
@@ -2079,8 +2081,8 @@ document.addEventListener('DOMContentLoaded', function() {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 20,
-              autoplay: {
-                delay: 10000,  
+            autoplay: {
+                delay: 10000, // Changed from 5000 to 10000 (10 seconds)
                 disableOnInteraction: false
             },
             pagination: {

@@ -102,23 +102,23 @@
  #header.header-transparent {
    background: transparent;
  }
-
- /* #000280;  */
+ 
  #header.header-scrolled {
-   top: 10px;
+   top: 7px;
    margin-left: 5%;
    margin-right: 5%;
    background: linear-gradient(100deg, rgba(5, 55, 75, 0.98), #094e68);
-   border-radius: 10px;
+   border-radius: 10px; 
    box-shadow: 0px 1px 4px #ffffff; 
- }
-
- #header .logo img {
-   /* margin-top: 10px;  */
+ } 
+ #header .logo img { 
    max-height: 60px;
    margin-left: 50px;
-
  }
+ #header.header-scrolled .logo img {
+    max-height: 50px;
+   margin-left: 50px; 
+}
 
  /*--------------------------------------------------------------
 # Book a table button Menu
@@ -1030,12 +1030,7 @@
    .specials .nav-link {
      border: 0;
      padding: 15px;
-   }
-
-   .specials .nav-link.active {
-     color: #fff;
-     background: #05374b;
-   }
+   } 
  }
 
 /* Events Section */
@@ -1457,7 +1452,7 @@
 .testimonials .testimonial-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.151);
 }
 
 /* Larger rectangular testimonial images */
@@ -1478,7 +1473,7 @@
 
 .testimonials .testimonial-item:hover .testimonial-img {
     border-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
+    transform: scale(1.09);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
