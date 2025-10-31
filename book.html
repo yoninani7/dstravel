@@ -3,14 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Book your trip</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Book Your Dream Trip | Travel Agency | Amazing Destinations</title>
+  <meta name="description" content="Book your dream vacation with our travel agency. Custom trips, amazing destinations, and personalized service. Start planning your perfect getaway today!">
+  <meta name="keywords" content="travel booking, vacation planning, dream trip, holiday packages, travel agency, book trip, travel destinations">
+  <meta name="author" content="Travel Agency">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Book Your Dream Trip | Travel Agency">
+  <meta property="og:description" content="Book your dream vacation with our travel agency. Custom trips, amazing destinations, and personalized service.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dsintertravel.com/book.html">
+  <meta property="og:image" content="https://dsintertravel.com/assets/img/book.jpg">
+  <meta property="og:site_name" content="Travel Agency">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book Your Dream Trip | Travel Agency">
+  <meta name="twitter:description" content="Book your dream vacation with our travel agency. Custom trips, amazing destinations, and personalized service.">
+  <meta name="twitter:image" content="https://dsintertravel.com/assets/img/book.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://dsintertravel.com/book.html">
+  
+  <!-- Favicon and Icons -->
   <link rel="icon" type="image/png" href="assets/img/transformed.png" sizes="164x164">
+  
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Travel Agency",
+    "description": "Professional travel agency offering customized vacation packages to amazing destinations worldwide",
+    "url": "https://dsintertravel.com",
+    "telephone": "+1-555-123-4567",
+    "email": "info@dsintertravel.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Travel Street",
+      "addressLocality": "Your City",
+      "addressRegion": "Your State",
+      "postalCode": "12345",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "serviceType": "Travel booking and vacation planning",
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Travel Packages",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Vacation Planning"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+  
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i"
     rel="stylesheet">
+  
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,8 +78,10 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
   <style>
     .form-control {
       background-color: rgba(255, 255, 255, 0.95) !important;
@@ -206,19 +268,40 @@
     .form-row-spacing {
       margin-bottom: 15px;
     }
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #05374b;
+      color: white;
+      padding: 8px;
+      z-index: 10000;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .skip-link:focus {
+      top: 10px;
+    }
   </style>
 </head>
 <body
   style=" background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('assets/img/book.jpg');">
-  <div id="header">
+  
+  <!-- Skip to main content for accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Header with ARIA landmark -->
+  <header id="header" role="banner">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <div class="logo me-auto">
-        <a href="index.html">
-          <img src="assets/img/transformedwhite.png" alt="Logo" style="width: auto; height: 50px;" />
+        <a href="index.html" aria-label="Go to homepage - Travel Agency">
+          <img src="assets/img/transformedwhite.png" alt="Travel Agency Logo - Book your dream vacation with us" style="width: auto; height: 50px;" />
         </a>
       </div>
       <div class="header-center-text">Unlock Amazing Destinations</div>
-      <nav id="navbar" class="navbar order-last order-lg-0 center">
+      <nav id="navbar" class="navbar order-last order-lg-0 center" role="navigation" aria-label="Main navigation">
         <ul>
           <li><a style="font-size: 16px;font-weight: bold;" class="nav-link scrollto " href="book.html">Book </a></li>
           <li><a class="nav-link scrollto ">/</a></li>
@@ -226,12 +309,13 @@
         </ul>
       </nav><!-- .navbar -->
     </div>
-  </div><!-- End Header -->
-  <main id="main">
+  </header><!-- End Header -->
+  
+  <!-- Main Content with ARIA landmark -->
+  <main id="main" role="main">
     <!-- ======= Book A Table Section ======= -->
-    <section id="book-a-table" class="book-a-table">
-       <center>
-    <span style="
+    <section id="book-a-table" class="book-a-table" aria-labelledby="booking-heading">
+       <h1 id="booking-heading" style="
         font-family: 'Georgia', serif; 
         background: linear-gradient(130deg, #ecc17f, #05374b,#05374b,#05374b, #05374b,#05374b, #05374b,#05374b,#05374b, #ecc17f);
         -webkit-background-clip: text; 
@@ -240,10 +324,12 @@
         font-size: 3rem; 
         font-weight: 300; 
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        letter-spacing: 1px;">
+        letter-spacing: 1px;
+        text-align: center;
+        display: block;
+        margin-bottom: 30px;">
         Book your trip now!
-    </span>
-</center>
+      </h1>
       <div class="container">
         <div class="form-container">
           <form action="https://formspree.io/f/xnqekzbb" method="POST" class="php-email-form">
@@ -275,26 +361,40 @@
             </div>
             <br>
             <div class="text-center">
-              <button type="submit" class="sendbtn">&#9993;&nbsp;&nbsp;&nbsp; Send Request</button>
+              <button type="submit" class="sendbtn" aria-label="Submit travel request">&#9993;&nbsp;&nbsp;&nbsp; Send Request</button>
             </div>
           </form>
         </div>
       </div>
     </section><!-- End Book A Table Section -->
+    
     <section class="inner-page">
       <div class="container">
-        Designed by <a style="color: white; " href="https://yonikass.netlify.app/">Yonatan Kassahun</a>
+        Designed by <a style="color: white; " href="https://yonikass.netlify.app/" target="_blank" rel="noopener noreferrer">Yonatan Kassahun</a>
       </div>
     </section>
   </main><!-- End #main -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i
       class="bi bi-arrow-up-short"></i></a>
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <!-- Hidden content for SEO (not visible on page) -->
+  <div style="display: none;" aria-hidden="true">
+    <h2>Travel Booking Services</h2>
+    <p>Book your dream vacation with our professional travel agency. We offer customized travel packages, amazing destinations, and personalized service to make your trip unforgettable. Our travel experts help you plan the perfect getaway whether you're looking for a beach vacation, cultural exploration, adventure travel, or luxury resort experience.</p>
+    <h3>Popular Destinations</h3>
+    <p>Explore tropical beaches, cultural cities, adventure destinations, and luxury resorts with our travel packages. We specialize in creating personalized itineraries that match your interests and budget.</p>
+    <h3>Why Book With Us?</h3>
+    <p>Our travel agency provides expert guidance, competitive pricing, and 24/7 support throughout your journey. We handle all the details so you can focus on enjoying your dream vacation.</p>
+  </div>
 </body>
 </html>
