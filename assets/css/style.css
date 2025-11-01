@@ -1032,184 +1032,181 @@
      padding: 15px;
    } 
  }
+  /* Events Section */
+        .events {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') center center no-repeat;
+            background-size: cover;
+            position: relative;
+            padding: 80px 0;
+        }
 
-/* Events Section */
-.events {
-  background: url(../img/celebration.jpg) center center no-repeat;
-  background-size: cover;
-  position: relative;
-  padding: 50px 0;
-}
+        .events .section-title h1 {
+            font-size: 2.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
+        }
 
-.events::before {
-  content: "";
-  background-color: rgba(12, 11, 10, 0.8);
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
+        .divider {
+            background: linear-gradient(90deg, #ffcf88, transparent);
+            width: 40%;
+            height: 3px;
+            margin: 0 auto 40px;
+        }
 
-.events .section-title h2 {
-  color: #fff;
-}
+        /* Swiper Container */
+        .events-slider {
+            position: relative;
+            padding: 20px 0 60px;
+        }
 
-.events .container {
-  /* Set position relative on container to contain the navigation on smaller screens */
-  position: relative;
-}
+        .event-item {
+            color: #fff;
+            padding: 20px;
+        }
 
-@media (min-width: 1024px) {
-  .events {
-    background-attachment: fixed;
-  }
-}
+        .event-item h3 {
+            font-weight: 600;
+            font-size: 26px;
+            color: #ffcf88;
+            margin-bottom: 15px;
+        }
 
-.events .events-carousel {
-  padding: 30px;
-}
+        .event-item p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
 
-.events .event-item {
-  color: #fff;
-  /* Add some margin to the bottom of the content in case the row wraps */
-  margin-bottom: 20px;
-}
+        .event-item ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
 
-.events .event-item h3 {
-  font-weight: 600;
-  font-size: 26px;
-  color: #ffcf88;
-}
+        .event-item ul li {
+            padding-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
 
-/* Removed unused CSS for .events .event-item .price and .events .event-item ul i */
+        .event-item img {
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            height: 100%;
+            object-fit: cover;
+        }
 
-.events .event-item ul {
-  list-style: none;
-  padding: 0;
-}
+        /* Pagination */
+        .swiper-pagination {
+            bottom: 0 !important;
+        }
 
-.events .event-item ul li {
-  padding-bottom: 10px;
-}
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            opacity: 1;
+        }
 
-.events .event-item p:last-child {
-  margin-bottom: 0;
-}
+        .swiper-pagination-bullet-active {
+            background-color: #ffcf88;
+        }
 
-.events .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
+        /* Navigation Arrows */
+        .events-button-prev,
+        .events-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 207, 136, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.events .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-  opacity: 1;
-}
+        .events-button-prev:hover,
+        .events-button-next:hover {
+            background: #ffcf88;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
 
-.events .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffcf88;
-}
+        .events-button-prev {
+            left: 10px;
+        }
 
-/* --- Custom Navigation Arrows FIX --- */
-/* The navigation container is positioned absolutely relative to the section (.events) */
-.events-navigation {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  /* Max width to align with container on large screens */
-  max-width: 1140px; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  /* Add padding to prevent arrows from touching the screen edge on mobile */
-  padding: 0 15px; 
-  pointer-events: none;
-  /* Ensure the navigation is positioned within the section's padding */
-}
+        .events-button-next {
+            right: 10px;
+        }
 
-.events-button-prev,
-.events-button-next {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 207, 136, 0.8);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  pointer-events: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added subtle shadow for depth */
-}
+        .events-button-prev::after,
+        .events-button-next::after {
+            font-family: swiper-icons;
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
 
-.events-button-prev:hover,
-.events-button-next:hover {
-  background: #ffcf88;
-  /* Removed transform: scale(1.1); for a smoother hover effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
+        .events-button-prev::after {
+            content: 'prev';
+        }
 
-/* Position arrows relative to the events-navigation container */
-.events-button-prev {
-  left: 0; /* Aligned to the start of the padding */
-}
+        .events-button-next::after {
+            content: 'next';
+        }
 
-.events-button-next {
-  right: 0; /* Aligned to the end of the padding */
-}
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .events {
+                padding: 50px 0;
+            }
+            
+            .events .section-title h1 {
+                font-size: 2rem;
+            }
+            
+            .events-button-prev,
+            .events-button-next {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .events-button-prev {
+                left: 5px;
+            }
+            
+            .events-button-next {
+                right: 5px;
+            }
+        }
 
-.events-button-prev::after,
-.events-button-next::after {
-  font-family: swiper-icons;
-  font-size: 24px;
-  color: #333;
-  font-weight: bold;
-}
+        @media (min-width: 992px) {
+            .events-button-prev {
+                left: -60px;
+            }
 
-.events-button-prev::after {
-  content: 'prev';
-}
+            .events-button-next {
+                right: -60px;
+            }
+        }
 
-.events-button-next::after {
-  content: 'next';
-}
+        @media (min-width: 1200px) {
+            .events-button-prev {
+                left: -80px;
+            }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  /* Smaller arrow size for mobile */
-  .events-button-prev,
-  .events-button-next {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/* On large screens (desktop), move the arrows outside the main content block for a sleek look */
-@media (min-width: 992px) {
-  .events-button-prev {
-    left: -75px; /* Adjust to move outside the content column */
-  }
-
-  .events-button-next {
-    right: -75px; /* Adjust to move outside the content column */
-  }
-}
-
-/* Ensure the arrows are not too far out on extra large screens */
-@media (min-width: 1200px) {
-  .events-button-prev {
-    left: -100px; 
-  }
-
-  .events-button-next {
-    right: -100px;
-  }
-}
-
+            .events-button-next {
+                right: -80px;
+            }
+        }
 
  /*--------------------------------------------------------------
 # Gallery
