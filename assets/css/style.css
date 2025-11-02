@@ -1033,180 +1033,229 @@
    } 
  }
   /* Events Section */
-        .events {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') center center no-repeat;
-            background-size: cover;
-            position: relative;
-            padding: 80px 0;
-        }
+.t_events { /* Changed from .events */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../img/kleen.png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 80px 0;
+    max-height:510px;
+}
 
-        .events .section-title h1 {
-            font-size: 2.5rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 15px;
-        }
+.t_events .section-title h1 {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15px;
+}
 
-        .divider {
-            background: linear-gradient(90deg, #ffcf88, transparent);
-            width: 40%;
-            height: 3px;
-            margin: 0 auto 40px;
-        }
+.t_divider { /* Added t_ prefix */
+    background: linear-gradient(90deg, #ffcf88, transparent);
+    width: 40%;
+    height: 3px;
+    margin: 0 auto 40px;
+}
 
-        /* Swiper Container */
-        .events-slider {
-            position: relative;
-            padding: 20px 0 60px;
-        }
+/* Swiper Container */
+.t_events-slider { /* Added t_ prefix */
+    position: relative;
+    padding: 20px 0 60px;
+}
 
-        .event-item {
-            color: #fff;
-            padding: 20px;
-        }
+.t_event-item { /* Added t_ prefix */
+    color: #fff;
+    padding: 20px;
+}
 
-        .event-item h3 {
-            font-weight: 600;
-            font-size: 26px;
-            color: #ffcf88;
-            margin-bottom: 15px;
-        }
+.t_event-item h3 {
+    font-weight: 600;
+    font-size: 26px;
+    color: #ffcf88;
+    margin-bottom: 15px;
+}
 
-        .event-item p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
+.t_event-item p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
 
-        .event-item ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
+.t_event-item ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
 
-        .event-item ul li {
-            padding-bottom: 10px;
-            display: flex;
-            align-items: flex-start;
-        }
+.t_event-item ul li {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
 
-        .event-item img {
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            height: 100%;
-            object-fit: cover;
-        }
+.t_event-item img {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    object-fit: cover;
+}
 
-        /* Pagination */
-        .swiper-pagination {
-            bottom: 0 !important;
-        }
+/* Pagination */
+.swiper-pagination {
+    bottom: 0 !important;
+}
 
-        .swiper-pagination-bullet {
-            width: 12px;
-            height: 12px;
-            background-color: rgba(255, 255, 255, 0.5);
-            opacity: 1;
-        }
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
 
-        .swiper-pagination-bullet-active {
-            background-color: #ffcf88;
-        }
+.swiper-pagination-bullet-active {
+    background-color: #ffcf88;
+}
 
-        /* Navigation Arrows */
-        .events-button-prev,
-        .events-button-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 207, 136, 0.8);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 10;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+/* Navigation Arrows */
+.t_events-button-prev, /* Added t_ prefix */
+.t_events-button-next { /* Added t_ prefix */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 207, 136, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-        .events-button-prev:hover,
-        .events-button-next:hover {
-            background: #ffcf88;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
+.t_events-button-prev:hover,
+.t_events-button-next:hover {
+    background: #ffcf88;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
 
-        .events-button-prev {
-            left: 10px;
-        }
+.t_events-button-prev {
+    left: 10px;
+}
 
-        .events-button-next {
-            right: 10px;
-        }
+.t_events-button-next {
+    right: 10px;
+}
 
-        .events-button-prev::after,
-        .events-button-next::after {
-            font-family: swiper-icons;
-            font-size: 24px;
-            color: #333;
-            font-weight: bold;
-        }
+/* --- FIX: Swiper Navigation Icon Content --- */
+/* The default Swiper content is NOT 'prev' or 'next' as text, 
+   but specific Unicode characters (or SVG). 
+   You must either include the swiper-icons font/CSS, 
+   or use standard Unicode characters. 
+   I've switched the font family to a generic one and used 
+   Unicode characters for compatibility.
+*/
+.t_events-button-prev::after,
+.t_events-button-next::after {
+    /* font-family: 'Arial', sans-serif;  - Removed specific swiper-icons */
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    /* Resetting default Swiper content */
+    content: ''; 
+}
 
-        .events-button-prev::after {
-            content: 'prev';
-        }
+/* Using Unicode or a simple HTML entity for the arrow shapes */
+.t_events-button-prev::after {
+    content: '\276E'; /* Heavy Black Leftwards-Pointing Angle Quotation Mark (‹) */
+}
 
-        .events-button-next::after {
-            content: 'next';
-        }
+.t_events-button-next::after {
+    content: '\276F'; /* Heavy Black Rightwards-Pointing Angle Quotation Mark (›) */
+}
+/* --- END FIX --- */
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .events {
-                padding: 50px 0;
-            }
-            
-            .events .section-title h1 {
-                font-size: 2rem;
-            }
-            
-            .events-button-prev,
-            .events-button-next {
-                width: 40px;
-                height: 40px;
-            }
-            
-            .events-button-prev {
-                left: 5px;
-            }
-            
-            .events-button-next {
-                right: 5px;
-            }
-        }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .t_events {
+        padding: 50px 0;
+    }
+    
+    .t_events .section-title h1 {
+        font-size: 2rem;
+    }
+    
+    .t_events-button-prev,
+    .t_events-button-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .t_events-button-prev {
+        left: 5px;
+    }
+    
+    .t_events-button-next {
+        right: 5px;
+    }
+}
 
-        @media (min-width: 992px) {
-            .events-button-prev {
-                left: -60px;
-            }
+@media (min-width: 992px) {
+    .t_events-button-prev {
+        left: -60px;
+    }
 
-            .events-button-next {
-                right: -60px;
-            }
-        }
+    .t_events-button-next {
+        right: -60px;
+    }
+}
 
-        @media (min-width: 1200px) {
-            .events-button-prev {
-                left: -80px;
-            }
+@media (min-width: 1200px) {
+    .t_events-button-prev {
+        left: -80px;
+    }
 
-            .events-button-next {
-                right: -80px;
-            }
-        }
+    .t_events-button-next {
+        right: -80px;
+    }
+}
+
+/* --- Pagination & Bullets --- */
+
+/* Ensures the pagination dots are visible at the bottom of the slider area */
+.t_events-slider .swiper-pagination {
+    bottom: 0px !important; /* Forces it to the bottom of the slider container */
+    padding-top: 20px; /* Optional: adds a little space above the dots */
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* Styles for all individual bullets (inactive/default state) */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px; /* Ensures space between dots */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    opacity: 1; /* Reset default opacity behavior */
+    transition: background-color 0.3s ease;
+}
+
+/* Styles for the currently active bullet */
+.swiper-pagination-bullet-active {
+    background-color: #ffcf88; /* Your accent color */
+    width: 14px; /* Optional: slightly larger for emphasis */
+    height: 14px;
+    opacity: 1; 
+}
+
+/* Optional: Improves hover state for better user experience */
+.swiper-pagination-bullet:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
 
  /*--------------------------------------------------------------
 # Gallery

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Essential Meta Tags -->
   <meta charset="utf-8">
@@ -95,6 +96,7 @@
     html {
       scroll-behavior: smooth;
     }
+
     .divider {
       height: 3px;
       background: linear-gradient(90deg, transparent 0%, #095775 50%, transparent 100%);
@@ -103,6 +105,7 @@
       border: none;
       border-radius: 3px;
     }
+
     .marquee-container {
       max-width: 100%;
       overflow-x: hidden;
@@ -110,57 +113,66 @@
       padding: 20px 0;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
     .airlinecontained {
       display: flex;
       align-items: center;
       animation: marquee 30s linear infinite;
       width: max-content;
     }
+
     .airlinecontained img {
       width: 150px;
       height: 100px;
       margin: 0 15px;
       transition: transform 0.9s;
     }
+
     .airlinecontained img:hover {
       transform: scale(1.1);
     }
+
     @keyframes marquee {
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(-50%);
       }
     }
+
     /* Custom scrollbar for PDF iframes only */
     .preview iframe::-webkit-scrollbar {
       width: 14px;
     }
+
     .preview iframe::-webkit-scrollbar-track {
       background: #cf0c0c;
     }
+
     .preview iframe::-webkit-scrollbar-thumb {
       background: #3498db;
       border: 3px solid #af0a0a;
     }
+
     .preview iframe::-webkit-scrollbar-thumb:hover {
       background: #2980b9;
     }
+
     /* Firefox support */
     .preview iframe {
       scrollbar-width: thin;
       scrollbar-color: #3498db #f1f1f1;
     }
+
     @media (max-width: 999px) {
       .chck {
         margin-top: 40px;
       }
-      .events-button-prev,
-      .events-button-next {
-        visibility: hidden;
-      }
+
     }
+
     /* --- Global & Typography Styles --- */
     .p_section-packages {
       padding: 4rem 1rem;
@@ -168,6 +180,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     /* Responsive padding for section (px-4 sm:px-6 lg:px-8) */
     @media (min-width: 640px) {
       .p_section-packages {
@@ -175,6 +188,7 @@
         padding-right: 1.5rem;
       }
     }
+
     @media (min-width: 1024px) {
       .p_section-packages {
         padding-left: 2rem;
@@ -183,22 +197,26 @@
         padding-bottom: 6rem;
       }
     }
+
     /* --- Card Grid Styles --- */
     .p_packages-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
     }
+
     @media (min-width: 768px) {
       .p_packages-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
     @media (min-width: 1024px) {
       .p_packages-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
     /* --- Card Styles --- */
     .p_package-card {
       background-color: white;
@@ -207,37 +225,45 @@
       cursor: pointer;
       border-radius: 20px;
     }
+
     .p_card-hover-effect {
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       will-change: transform, box-shadow;
     }
+
     .p_card-hover-effect:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px var(--shadow-color);
     }
+
     .p_card-image {
       height: 14rem;
       width: 100%;
       object-fit: cover;
     }
+
     .p_card-content {
       padding: 1.5rem;
     }
+
     .p_card-title {
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: var(--accent-color);
     }
+
     .p_card-tagline {
       color: rgb(107 114 128);
       margin-bottom: 1rem;
       font-size: 0.875rem;
     }
+
     .p_card-description {
       color: rgb(55 65 81);
       margin-bottom: 1.5rem;
     }
+
     /* --- Modal Styles (Image Modal Overlay) --- */
     .p_modal-overlay {
       position: fixed;
@@ -250,9 +276,11 @@
       justify-content: center;
       align-items: center;
     }
+
     .p_modal-overlay.p_open {
       display: flex;
     }
+
     .p_modal-content {
       background-color: white;
       border-radius: 0.75rem;
@@ -264,9 +292,11 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .p_modal-relative-container {
       position: relative;
     }
+
     /* Close Button */
     .p_modal-close-button {
       position: absolute;
@@ -287,9 +317,11 @@
       border: none;
       cursor: pointer;
     }
+
     .p_modal-close-button:hover {
       background-color: rgba(0, 0, 0, 0.8);
     }
+
     /* Carousel Container */
     .p_carousel-container {
       position: relative;
@@ -298,28 +330,33 @@
       border-top-left-radius: 0.75rem;
       border-top-right-radius: 0.75rem;
     }
+
     @media (min-width: 640px) {
       .p_carousel-container {
         height: 50vh;
       }
     }
+
     /* Carousel Track */
     #p_carousel-track {
       display: flex;
       height: 100%;
       transition: transform 0.5s ease-in-out;
     }
+
     /* Carousel Slide */
     .p_carousel-slide {
       flex-shrink: 0;
       height: 100%;
       position: relative;
     }
+
     .p_carousel-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     /* Navigation Buttons */
     .p_nav-button {
       position: absolute;
@@ -337,37 +374,46 @@
       cursor: pointer;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     }
+
     .p_nav-button:hover {
       background-color: rgba(0, 0, 0, 0.7);
     }
+
     .p_nav-button-prev {
       left: 1rem;
     }
+
     .p_nav-button-next {
       right: 1rem;
     }
+
     /* Modal Body Content */
     .p_modal-body-content {
       padding: 1.5rem;
     }
+
     .p_modal-title {
       font-size: 1.875rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
       color: var(--primary-color);
     }
+
     .p_modal-description-wrapper {
       color: rgb(55 65 81);
       margin-bottom: 1.5rem;
     }
+
     .p_modal-tagline {
       font-weight: 600;
       font-size: 1.25rem;
       margin-bottom: 0.75rem;
     }
+
     .p_modal-cta-container {
       margin-top: 1rem;
     }
+
     .p_modal-cta {
       display: inline-block;
       padding: 0.45rem 2.8rem;
@@ -382,28 +428,34 @@
       -webkit-clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
       clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
     }
+
     .p_modal-cta:hover {
       background-color: #06374bea;
       color: white;
     }
+
     .about-revised {
       padding: 60px 0;
       background-color: #f8f7f5;
     }
+
     .about-revised .image-col {
       padding-right: 0;
       padding-left: 0;
     }
+
     .about-revised img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       min-height: 450px;
     }
+
     .about-revised .content-col {
       padding: 40px 60px;
       background-color: #ffffff;
     }
+
     .about-revised h2 {
       font-size: 2.5rem;
       font-family: 'Poppins', sans-serif;
@@ -412,6 +464,7 @@
       margin-bottom: 20px;
       position: relative;
     }
+
     .about-revised .feature-box {
       padding: 20px;
       margin-top: 20px;
@@ -421,16 +474,19 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
+
     .about-revised .feature-box:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
+
     .about-revised strong {
       color: #05374b;
       font-size: 1.1em;
       display: block;
       margin-bottom: 5px;
     }
+
     /* SEO Accessibility Improvements */
     .sr-only {
       position: absolute;
@@ -443,6 +499,7 @@
       white-space: nowrap;
       border: 0;
     }
+
     .form-control {
       background-color: rgba(255, 255, 255, 0.95) !important;
       border: 1px solid rgba(5, 55, 75, 0.2) !important;
@@ -454,20 +511,24 @@
       font-size: 16px;
       color: #05374b;
     }
+
     .form-control:focus {
       box-shadow: 0 0 0 3px rgba(5, 55, 75, 0.15) !important;
       border: 1px solid rgba(5, 55, 75, 0.4) !important;
       background-color: white !important;
       transform: translateY(-2px);
     }
+
     textarea.form-control {
       min-height: 150px;
       padding-top: 30px !important;
     }
+
     .form-group {
       margin-bottom: 25px;
       position: relative;
     }
+
     .floating-label {
       position: absolute;
       top: 18px;
@@ -482,6 +543,7 @@
       border-radius: 4px;
       font-weight: 400;
     }
+
     .form-control:focus+.floating-label,
     .form-control:not(:placeholder-shown)+.floating-label {
       top: -10px;
@@ -494,13 +556,16 @@
       box-shadow: 0 2px 5px rgba(5, 55, 75, 0.1);
       border: 1px solid rgba(5, 55, 75, 0.2);
     }
+
     .form-control::placeholder {
       color: transparent !important;
     }
+
     .form-control:focus::placeholder {
       color: #6c757d !important;
       opacity: 0.5 !important;
     }
+
     .package-title {
       padding: 8px;
       background: #f5f5f5;
@@ -510,19 +575,23 @@
       margin: 4px auto;
       font-size: medium;
     }
-    /* Critical CSS - Above the fold */ 
+
+    /* Critical CSS - Above the fold */
     #topbar {
       position: fixed;
       width: 100%;
       z-index: 1000;
     }
+
     .hero-container {
       min-height: 100vh;
       position: relative;
     }
+
     .critical-hidden {
       opacity: 0;
     }
+
     /* Remove animations for users who prefer reduced motion */
     @media (prefers-reduced-motion: reduce) {
       * {
@@ -532,6 +601,7 @@
     }
   </style>
 </head>
+
 <body itemscope itemtype="https://schema.org/WebPage">
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center fixed-top topbar-transparent">
@@ -1140,239 +1210,240 @@
         });
       </script>
     </section>
-    <!-- Events Section -->
-    <section id="events" class="events">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1>Organize Your Events <span style="color: #ffcf88;">with DS!</span></h1>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="events-slider swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="row event-item align-items-center">
-                            <div class="col-lg-6">
-                                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                                     class="img-fluid" alt="Agricultural Trade Fair">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                <h3>Agricultural Trade Fair</h3>
-                                <p>
-                                    Connecting Ethiopian farmers and producers with reliable global markets through well-organized B2B
-                                    meetings and trade events. We ensure fair trade practices, quality assurance, and long-term business
-                                    relationships.
-                                </p>
-                                <ul>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Direct
-                                        connections between Ethiopian producers and international buyers
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Quality
-                                        assurance and fair trade practices
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Sustainable
-                                        business linkages and export opportunities
-                                    </li>
-                                </ul>
-                                <p>
-                                    Join us in creating meaningful economic development while building strong partnerships with
-                                    stakeholders at local and international levels.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="row event-item align-items-center">
-                            <div class="col-lg-6">
-                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                                     class="img-fluid" alt="Construction Equipment Expo">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                <h3>Construction Equipment Expo</h3>
-                                <p>
-                                    Addressing Ethiopia's growing infrastructure needs with high-quality heavy machinery, construction
-                                    equipment, and agricultural combiners from trusted international suppliers.
-                                </p>
-                                <ul>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Latest
-                                        construction and industrial equipment demonstrations
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Direct access
-                                        to trusted international suppliers
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Solutions for
-                                        Ethiopia's construction and agricultural sectors
-                                    </li>
-                                </ul>
-                                <p>
-                                    Discover equipment and machinery that meets the evolving needs of Ethiopia's development projects.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class="row event-item align-items-center">
-                            <div class="col-lg-6">
-                                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                                     class="img-fluid" alt="B2B Networking Events">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                <h3>B2B Networking Events</h3>
-                                <p>
-                                    Creating sustainable business linkages between domestic producers and international buyers through
-                                    well-organized B2B meetings and market development initiatives.
-                                </p>
-                                <ul>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Structured
-                                        meetings between domestic and international partners
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Market
-                                        development and export facilitation
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Value-added
-                                        services to enhance global competitiveness
-                                    </li>
-                                </ul>
-                                <p>
-                                    Build lasting business relationships guided by professionalism, integrity, and commitment to
-                                    excellence.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 4 -->
-                    <div class="swiper-slide">
-                        <div class="row event-item align-items-center">
-                            <div class="col-lg-6">
-                                <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                                     class="img-fluid" alt="Art and Music Festival">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                <h3>Art and Music Festivals</h3>
-                                <p>
-                                    Make your festival experience unforgettable! We curate vibrant, immersive art and music festivals,
-                                    filled with creativity, rhythm, and unforgettable moments for all ages.
-                                </p>
-                                <ul>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Diverse lineup
-                                        of artists and performers.
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Unique and
-                                        interactive installations.
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Engaging
-                                        workshops and activities for all ages.
-                                    </li>
-                                </ul>
-                                <p>
-                                    Join us for a celebration of talent, culture, and community that will leave you inspired and
-                                    connected!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 5 -->
-                    <div class="swiper-slide">
-                        <div class="row event-item align-items-center">
-                            <div class="col-lg-6">
-                                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
-                                     class="img-fluid" alt="Anniversary Celebration">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                <h3>Anniversary Celebrations</h3>
-                                <p>
-                                    Make your anniversary unforgettable! We design personalized anniversary celebrations, filled with
-                                    love, joy, and unforgettable moments for couples.
-                                </p>
-                                <ul>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Tailored
-                                        romantic getaway packages.
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Memorable
-                                        dining experiences and surprises.
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Unique
-                                        activities to celebrate your love story.
-                                    </li>
-                                </ul>
-                                <p>
-                                    Let us handle the details so you can focus on celebrating your love and the memories you've created
-                                    together!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 6 -->
-                    <div class="swiper-slide">
-                        <div class="row event-item align-items-center">
-                            <div class="col-lg-6">
-                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" 
-                                     class="img-fluid" alt="Beach Paradise">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                <h3>Beach Paradise</h3>
-                                <p>
-                                    Make your beach getaway unforgettable! We offer stunning beach paradise packages, filled with sun,
-                                    sand, and unforgettable moments for all beach lovers.
-                                </p>
-                                <ul>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Exclusive
-                                        beachfront accommodations.
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Exciting water
-                                        sports and activities.
-                                    </li>
-                                    <li>
-                                        <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span> Relaxing spa
-                                        treatments and sunset dinners.
-                                    </li>
-                                </ul>
-                                <p>
-                                    Let us create the perfect tropical escape so you can unwind and enjoy the beauty of paradise!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-                
-                <!-- Navigation Arrows -->
-                <div class="events-button-prev"></div>
-                <div class="events-button-next"></div>
-            </div>
+    <section id="t_events" class="t_events">
+      <div class="container position-relative">
+        <div class="section-title text-center">
+          <h1>Organize Your Events <span style="color: #ffcf88;">with DS!</span></h1>
+
         </div>
+
+        <div class="t_events-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="row t_event-item align-items-center">
+                <div class="col-lg-6">
+                  <img src="assets/img/farmers.jpg" style="height:350px;" class="img-fluid"
+                    alt="Agricultural Trade Fair">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Agricultural Trade Fair</h3>
+                  <p>
+                    Connecting Ethiopian farmers and producers with reliable global markets through well-organized B2B
+                    meetings and trade events.
+                  </p>
+                  <ul>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.1rem; margin-right: 8px;">&#9679;</span> Direct
+                      connections between producers and buyers
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.1rem; margin-right: 8px;">&#9679;</span> Quality
+                      assurance and fair trade practices
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.1rem; margin-right: 8px;">&#9679;</span> Sustainable
+                      business linkages
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="row t_event-item align-items-center">
+                <div class="col-lg-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    class="img-fluid" alt="Construction Equipment Expo">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Construction Equipment Expo</h3>
+                  <p>
+                    Addressing Ethiopia's infrastructure needs with high-quality machinery and equipment from trusted
+                    international suppliers.
+                  </p>
+                  <ul>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.1rem; margin-right: 8px;">&#9679;</span> Latest
+                      equipment demonstrations
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.1rem; margin-right: 8px;">&#9679;</span> Direct access
+                      to international suppliers
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.1rem; margin-right: 8px;">&#9679;</span> Solutions for
+                      construction sectors
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="row t_event-item align-items-center">
+                <div class="col-lg-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    class="img-fluid" alt="B2B Networking Events">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>B2B Networking Events</h3>
+                  <p>
+                    Creating sustainable business linkages between domestic producers and international buyers.
+                  </p>
+                  <ul>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.1rem; margin-right: 8px;">&#9679;</span> Structured
+                      meetings between partners
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.1rem; margin-right: 8px;">&#9679;</span> Market
+                      development facilitation
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.1rem; margin-right: 8px;">&#9679;</span> Value-added
+                      services
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="row t_event-item align-items-center">
+                <div class="col-lg-6">
+                  <img src="assets/img/drun.jpg" class="img-fluid"
+                    alt="Art and Music Festival organized by DS International">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Art and Music Festivals</h3>
+                  <p>
+                    Make your festival experience unforgettable! We curate vibrant, immersive art
+                    and music festivals,
+                    filled with creativity, rhythm, and unforgettable moments for all ages.
+                  </p>
+                  <ul>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span>
+                      Diverse lineup
+                      of artists and performers.
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span>
+                      Unique and
+                      interactive installations.
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span>
+                      Engaging
+                      workshops and activities for all ages.
+                    </li>
+                    <p>
+                      Join us for a celebration of talent, culture, and community that will leave you
+                      inspired and
+                      connected!
+                    </p>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="row t_event-item align-items-center">
+                <div class="col-lg-6">
+                  <img src="assets/img/selectedimg/fest/fest1.JPG" class="img-fluid"
+                    alt="Anniversary Celebration organized by DS International">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Anniversary Celebrations</h3>
+                  <p>
+                    Make your anniversary unforgettable! We design personalized anniversary
+                    celebrations, filled with
+                    love, joy, and unforgettable moments for couples.
+                  </p>
+                  <ul>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span>
+                      Tailored
+                      romantic getaway packages.
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span>
+                      Memorable
+                      dining experiences and surprises.
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span>
+                      Unique
+                      activities to celebrate your love story.
+                    </li>
+                    <p>
+                      Let us handle the details so you can focus on celebrating your love and the
+                      memories you've created
+                      together!
+                    </p>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="row t_event-item align-items-center">
+                <div class="col-lg-6">
+                  <img src="assets/img/beach.jpg" class="img-fluid"
+                    alt="Beach Paradise vacation organized by DS International" style="height: 350px; width: 500px;">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Beach Paradise</h3>
+                  <p>
+                    Make your beach getaway unforgettable! We offer stunning beach paradise
+                    packages, filled with sun,
+                    sand, and unforgettable moments for all beach lovers.
+                  </p>
+                  <ul>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span>
+                      Exclusive
+                      beachfront accommodations.
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span>
+                      Exciting water
+                      sports and activities.
+                    </li>
+                    <li>
+                      <span style="color: #ffcf88; font-size: 1.2rem; margin-right: 10px;">&#9679;</span>
+                      Relaxing spa
+                      treatments and sunset dinners.
+                    </li>
+                    <p>
+                      Let us create the perfect tropical escape so you can unwind and enjoy the beauty
+                      of paradise!
+                    </p>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="t_events-navigation">
+          <div class="t_events-button-prev"></div>
+          <div class="t_events-button-next"></div>
+        </div>
+      </div>
     </section>
 
     <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container-fluid">
+    <section id="gallery" class="gallery" style="margin-top: 50px;">
+      <div class=" container-fluid">
         <div class="section-title">
           <h1 style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 600;">Some photos from
             <span
@@ -2010,32 +2081,44 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    Swiper JS  
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const swiper = new Swiper('.events-slider', {
-                loop: true,
-                autoplay: {
-                    delay: 7000,
-                    disableOnInteraction: false,
-                },
-                speed: 800,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.events-button-next',
-                    prevEl: '.events-button-prev',
-                },
-                grabCursor: true,
-                effect: 'slide',
-                spaceBetween: 30,
-            });
-        });
-    </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.events-slider', {
+        loop: true,
+        autoplay: {
+          delay: 50000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        speed: 600,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: '.events-button-next',
+          prevEl: '.events-button-prev',
+        },
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        initialSlide: 1,
+        breakpoints: {
+          320: {
+            spaceBetween: 15,
+          },
+          768: {
+            spaceBetween: 20,
+          }
+        }
+      });
+    });
+  </script>
   <script>
     // Simple fade-in animation for elements
     document.addEventListener('DOMContentLoaded', function () {
@@ -2134,27 +2217,53 @@
       });
     });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      new Swiper('.testimonials-slider', {
+      // FIX: Using correct class name
+      const swiper = new Swiper('.t_events-slider', {
         loop: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
         autoplay: {
-          delay: 10000, // Changed from 5000 to 10000 (10 seconds)
-          disableOnInteraction: false
+          delay: 50000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         },
+        speed: 800,
         pagination: {
           el: '.swiper-pagination',
-          clickable: true
+          clickable: true,
+          dynamicBullets: true,
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          // FIX: Using correct class names
+          nextEl: '.t_events-button-next',
+          prevEl: '.t_events-button-prev',
+        },
+        grabCursor: true,
+
+        // FIX: Removed centeredSlides: true and slidesPerView: 'auto' 
+        // as they are unnecessary for a standard single-item slider 
+        // and can introduce visual glitches on load.
+        slidesPerView: 1, // Explicitly set to 1 slide per view
+        spaceBetween: 0, // No space between slides for this layout
+
+        // initialSlide: 0 is the default and is more reliable than 1 when loop is true
+
+        breakpoints: {
+          320: {
+            slidesPerView: 1, // Ensure mobile is 1 slide
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          }
         }
       });
     });
   </script>
 </body>
+
 </html>
