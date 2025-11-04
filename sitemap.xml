@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.w3.org/2001/XMLSchema-instance http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://dsintertravel.com/</loc>
+  <lastmod>2025-11-04T11:23:36+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+
+<url>
+  <loc>https://dsintertravel.com/packages.html</loc>
+  <lastmod>2025-11-04T11:23:36+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://dsintertravel.com/gallery.html</loc>
+  <lastmod>2025-11-04T11:23:36+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://dsintertravel.com/book.html</loc>
+  <lastmod>2025-11-04T11:23:36+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://dsintertravel.com/touroptions/destination.html</loc>
+  <lastmod>2025-11-04T11:23:36+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://dsintertravel.com/touroptions/destination.html?category=historical</loc>
+  <lastmod>2025-11-03T18:01:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dsintertravel.com/touroptions/destination.html?category=cultural</loc>
+  <lastmod>2025-11-03T18:01:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dsintertravel.com/touroptions/destination.html?category=religious</loc>
+  <lastmod>2025-11-03T18:01:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://dsintertravel.com/assets/packages/Zanzibar%20Valentine-2025.pdf</loc>
+  <lastmod>2025-10-22T07:02:45+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://dsintertravel.com/assets/packages/Weekend%20Gateway%20Cape%20Town%20Package-2025.pdf</loc>
+  <lastmod>2025-10-22T07:02:45+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://dsintertravel.com/assets/packages/Mombasa%20valentine%20day%20Package-2025.pdf</loc>
+  <lastmod>2025-10-22T07:02:45+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://dsintertravel.com/assets/packages/Cape%20Town%20Valentine-2025.pdf</loc>
+  <lastmod>2025-10-22T07:02:45+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://dsintertravel.com/assets/packages/3Nights%20and%204Days%20Weekend%20Getaway%20Package%20to%20ZNZ-with%20flight%20ticket.pdf</loc>
+  <lastmod>2025-10-22T07:02:45+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+
+</urlset>
