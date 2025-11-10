@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Essential Meta Tags -->
   <meta charset="utf-8">
@@ -22,7 +23,7 @@
   <meta property="og:title" content="DS International Trading PLC | Ethiopian Travel Agency & Tour Packages">
   <meta property="og:description"
     content="Premium travel services, Ethiopia tour packages, cultural experiences, and worldwide destinations. Your trusted travel partner in Addis Ababa.">
-  <meta property="og:image" content="https://dsintertravel.com/assets/img/transformed.png">
+  <meta property="og:image" content="https://dsintertravel.com/assets/img/dslogo.png">
   <meta property="og:url" content="https://dsintertravel.com">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DS International Trading PLC">
@@ -32,7 +33,7 @@
   <meta name="twitter:title" content="DS International Trading PLC | Premium Travel Agency">
   <meta name="twitter:description"
     content="Premium travel services, Ethiopia tour packages, and cultural experiences with expert guides.">
-  <meta name="twitter:image" content="https://dsintertravel.com/assets/img/transformed.png">
+  <meta name="twitter:image" content="https://dsintertravel.com/assets/img/dslogo.png">
   <meta name="twitter:site" content="@DSInternational">
   <!-- Structured Data / Schema Markup -->
   <script type="application/ld+json">
@@ -99,6 +100,7 @@
     html {
       scroll-behavior: smooth;
     }
+
     .divider {
       height: 3px;
       background: linear-gradient(90deg, transparent 0%, #095775 50%, transparent 100%);
@@ -107,6 +109,7 @@
       border: none;
       border-radius: 3px;
     }
+
     .marquee-container {
       max-width: 100%;
       overflow-x: hidden;
@@ -114,53 +117,65 @@
       padding: 20px 0;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
     .airlinecontained {
       display: flex;
       align-items: center;
       animation: marquee 30s linear infinite;
       width: max-content;
     }
+
     .airlinecontained img {
       width: 150px;
       height: 100px;
       margin: 0 15px;
       transition: transform 0.9s;
     }
+
     .airlinecontained img:hover {
       transform: scale(1.1);
     }
+
     @keyframes marquee {
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(-50%);
       }
     }
+
     /* Custom scrollbar for PDF iframes only */
     .preview iframe::-webkit-scrollbar {
       width: 14px;
     }
+
     .preview iframe::-webkit-scrollbar-track {
       background: #cf0c0c;
     }
+
     .preview iframe::-webkit-scrollbar-thumb {
       background: #3498db;
       border: 3px solid #af0a0a;
     }
+
     .preview iframe::-webkit-scrollbar-thumb:hover {
       background: #2980b9;
     }
+
     /* Firefox support */
     .preview iframe {
       scrollbar-width: thin;
       scrollbar-color: #3498db #f1f1f1;
     }
+
     @media (max-width: 999px) {
       .chck {
         margin-top: 40px;
       }
     }
+
     /* --- Global & Typography Styles --- */
     .p_section-packages {
       padding: 4rem 1rem;
@@ -168,6 +183,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     /* Responsive padding for section (px-4 sm:px-6 lg:px-8) */
     @media (min-width: 640px) {
       .p_section-packages {
@@ -175,6 +191,7 @@
         padding-right: 1.5rem;
       }
     }
+
     @media (min-width: 1024px) {
       .p_section-packages {
         padding-left: 2rem;
@@ -183,22 +200,26 @@
         padding-bottom: 6rem;
       }
     }
+
     /* --- Card Grid Styles --- */
     .p_packages-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
     }
+
     @media (min-width: 768px) {
       .p_packages-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
     @media (min-width: 1024px) {
       .p_packages-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
     /* --- Card Styles --- */
     .p_package-card {
       background-color: white;
@@ -207,37 +228,45 @@
       cursor: pointer;
       border-radius: 20px;
     }
+
     .p_card-hover-effect {
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       will-change: transform, box-shadow;
     }
+
     .p_card-hover-effect:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px var(--shadow-color);
     }
+
     .p_card-image {
       height: 14rem;
       width: 100%;
       object-fit: cover;
     }
+
     .p_card-content {
       padding: 1.5rem;
     }
+
     .p_card-title {
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: var(--accent-color);
     }
+
     .p_card-tagline {
       color: rgb(107 114 128);
       margin-bottom: 1rem;
       font-size: 0.875rem;
     }
+
     .p_card-description {
       color: rgb(55 65 81);
       margin-bottom: 1.5rem;
     }
+
     /* --- Modal Styles (Image Modal Overlay) --- */
     .p_modal-overlay {
       position: fixed;
@@ -250,9 +279,11 @@
       justify-content: center;
       align-items: center;
     }
+
     .p_modal-overlay.p_open {
       display: flex;
     }
+
     .p_modal-content {
       background-color: white;
       border-radius: 0.75rem;
@@ -264,9 +295,11 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .p_modal-relative-container {
       position: relative;
     }
+
     /* Close Button */
     .p_modal-close-button {
       position: absolute;
@@ -287,9 +320,11 @@
       border: none;
       cursor: pointer;
     }
+
     .p_modal-close-button:hover {
       background-color: rgba(0, 0, 0, 0.8);
     }
+
     /* Carousel Container */
     .p_carousel-container {
       position: relative;
@@ -298,28 +333,33 @@
       border-top-left-radius: 0.75rem;
       border-top-right-radius: 0.75rem;
     }
+
     @media (min-width: 640px) {
       .p_carousel-container {
         height: 50vh;
       }
     }
+
     /* Carousel Track */
     #p_carousel-track {
       display: flex;
       height: 100%;
       transition: transform 0.5s ease-in-out;
     }
+
     /* Carousel Slide */
     .p_carousel-slide {
       flex-shrink: 0;
       height: 100%;
       position: relative;
     }
+
     .p_carousel-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     /* Navigation Buttons */
     .p_nav-button {
       position: absolute;
@@ -337,37 +377,46 @@
       cursor: pointer;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     }
+
     .p_nav-button:hover {
       background-color: rgba(0, 0, 0, 0.7);
     }
+
     .p_nav-button-prev {
       left: 1rem;
     }
+
     .p_nav-button-next {
       right: 1rem;
     }
+
     /* Modal Body Content */
     .p_modal-body-content {
       padding: 1.5rem;
     }
+
     .p_modal-title {
       font-size: 1.875rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
       color: var(--primary-color);
     }
+
     .p_modal-description-wrapper {
       color: rgb(55 65 81);
       margin-bottom: 1.5rem;
     }
+
     .p_modal-tagline {
       font-weight: 600;
       font-size: 1.25rem;
       margin-bottom: 0.75rem;
     }
+
     .p_modal-cta-container {
       margin-top: 1rem;
     }
+
     .p_modal-cta {
       display: inline-block;
       padding: 0.45rem 2.8rem;
@@ -382,28 +431,34 @@
       -webkit-clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
       clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
     }
+
     .p_modal-cta:hover {
       background-color: #06374bea;
       color: white;
     }
+
     .about-revised {
       padding: 60px 0;
       background-color: #f8f7f5;
     }
+
     .about-revised .image-col {
       padding-right: 0;
       padding-left: 0;
     }
+
     .about-revised img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       min-height: 450px;
     }
+
     .about-revised .content-col {
       padding: 40px 60px;
       background-color: #ffffff;
     }
+
     .about-revised h2 {
       font-size: 2.5rem;
       font-family: 'Poppins', sans-serif;
@@ -412,6 +467,7 @@
       margin-bottom: 20px;
       position: relative;
     }
+
     .about-revised .feature-box {
       padding: 20px;
       margin-top: 20px;
@@ -421,16 +477,19 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
+
     .about-revised .feature-box:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
+
     .about-revised strong {
       color: #05374b;
       font-size: 1.1em;
       display: block;
       margin-bottom: 5px;
     }
+
     /* SEO Accessibility Improvements */
     .sr-only {
       position: absolute;
@@ -443,6 +502,7 @@
       white-space: nowrap;
       border: 0;
     }
+
     .form-control {
       background-color: rgba(255, 255, 255, 0.95) !important;
       border: 1px solid rgba(5, 55, 75, 0.2) !important;
@@ -454,20 +514,24 @@
       font-size: 16px;
       color: #05374b;
     }
+
     .form-control:focus {
       box-shadow: 0 0 0 3px rgba(5, 55, 75, 0.15) !important;
       border: 1px solid rgba(5, 55, 75, 0.4) !important;
       background-color: white !important;
       transform: translateY(-2px);
     }
+
     textarea.form-control {
       min-height: 150px;
       padding-top: 30px !important;
     }
+
     .form-group {
       margin-bottom: 25px;
       position: relative;
     }
+
     .floating-label {
       position: absolute;
       top: 18px;
@@ -482,6 +546,7 @@
       border-radius: 4px;
       font-weight: 400;
     }
+
     .form-control:focus+.floating-label,
     .form-control:not(:placeholder-shown)+.floating-label {
       top: -10px;
@@ -494,13 +559,16 @@
       box-shadow: 0 2px 5px rgba(5, 55, 75, 0.1);
       border: 1px solid rgba(5, 55, 75, 0.2);
     }
+
     .form-control::placeholder {
       color: transparent !important;
     }
+
     .form-control:focus::placeholder {
       color: #6c757d !important;
       opacity: 0.5 !important;
     }
+
     .package-title {
       padding: 8px;
       background: #f5f5f5;
@@ -510,19 +578,23 @@
       margin: 4px auto;
       font-size: medium;
     }
+
     /* Critical CSS - Above the fold */
     #topbar {
       position: fixed;
       width: 100%;
       z-index: 1000;
     }
+
     .hero-container {
       min-height: 100vh;
       position: relative;
     }
+
     .critical-hidden {
       opacity: 0;
     }
+
     /* Remove animations for users who prefer reduced motion */
     @media (prefers-reduced-motion: reduce) {
       * {
@@ -540,6 +612,7 @@
   gtag('js', new Date());
   gtag('config', 'G-FJ494F25NS');
 </script>
+
 <body itemscope itemtype="https://schema.org/WebPage">
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center fixed-top topbar-transparent">
@@ -2228,4 +2301,5 @@
     });
   </script>
 </body>
+
 </html>
