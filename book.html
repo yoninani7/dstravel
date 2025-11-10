@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -89,20 +90,24 @@
       font-size: 16px;
       color: #05374b;
     }
+
     .form-control:focus {
       box-shadow: 0 0 0 3px rgba(5, 55, 75, 0.15) !important;
       border: 1px solid rgba(5, 55, 75, 0.4) !important;
       background-color: white !important;
       transform: translateY(-2px);
     }
+
     textarea.form-control {
       min-height: 150px;
       padding-top: 30px !important;
     }
+
     .form-group {
       margin-bottom: 25px;
       position: relative;
     }
+
     .floating-label {
       position: absolute;
       top: 18px;
@@ -117,6 +122,7 @@
       border-radius: 4px;
       font-weight: 400;
     }
+
     .form-control:focus+.floating-label,
     .form-control:not(:placeholder-shown)+.floating-label {
       top: -10px;
@@ -129,13 +135,16 @@
       box-shadow: 0 2px 5px rgba(5, 55, 75, 0.1);
       border: 1px solid rgba(5, 55, 75, 0.2);
     }
+
     .form-control::placeholder {
       color: transparent !important;
     }
+
     .form-control:focus::placeholder {
       color: #6c757d !important;
       opacity: 0.5 !important;
     }
+
     #header {
       position: relative;
       top: 10px;
@@ -150,16 +159,19 @@
       box-shadow: 0px 1px 4px #ffffff;
       background: linear-gradient(100deg, rgba(5, 55, 75, 0.98), #094e68);
     }
+
     #header.header-transparent {
       background: transparent;
       box-shadow: none;
     }
+
     #header.header-scrolled {
       top: 10px;
       /* Keep it at 10px even when scrolled */
       box-shadow: 0px 1px 4px #ffffff;
       background: linear-gradient(100deg, rgba(5, 55, 75, 0.98), #094e68);
     }
+
     .header-center-text {
       position: absolute;
       left: 50%;
@@ -169,6 +181,7 @@
       color: white;
       pointer-events: none;
     }
+
     /* Form container styling */
     .form-container {
       background-color: rgba(5, 55, 75, 0.15);
@@ -178,25 +191,31 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       #header {
         height: auto;
         padding: 10px;
       }
+
       nav#navbar ul {
         flex-direction: column;
       }
+
       .book-a-table-btn {
         margin-top: 10px;
       }
+
       .floating-label {
         font-size: 14px;
       }
+
       .form-container {
         padding: 25px 20px;
       }
     }
+
     .sendbtn {
       display: inline-block;
       background: linear-gradient(135deg, #05374b, #0a122c);
@@ -214,6 +233,7 @@
       box-shadow: 0 5px 15px rgba(5, 55, 75, 0.3);
       letter-spacing: 0.5px;
     }
+
     .sendbtn:before {
       content: '';
       position: absolute;
@@ -225,17 +245,21 @@
       transition: width 0.5s ease;
       z-index: -1;
     }
+
     .sendbtn:hover {
       color: white;
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(5, 55, 75, 0.4);
     }
+
     .sendbtn:hover:before {
       width: 100%;
     }
+
     .sendbtn:active {
       transform: translateY(-1px);
     }
+
     /* Section title enhancement */
     .section-title {
       background: linear-gradient(120deg, #05374b, #ffcf88);
@@ -249,6 +273,7 @@
       position: relative;
       display: inline-block;
     }
+
     .section-title:after {
       content: '';
       position: absolute;
@@ -259,10 +284,12 @@
       height: 3px;
       background: linear-gradient(90deg, transparent, #05374b, transparent);
     }
+
     /* Form row spacing */
     .form-row-spacing {
       margin-bottom: 15px;
     }
+
     /* Skip link for accessibility */
     .skip-link {
       position: absolute;
@@ -276,6 +303,7 @@
       border-radius: 4px;
       font-weight: bold;
     }
+
     .skip-link:focus {
       top: 10px;
     }
@@ -289,6 +317,7 @@
   gtag('js', new Date());
   gtag('config', 'G-FJ494F25NS');
 </script>
+
 <body
   style=" background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('assets/img/book.jpg');">
   <!-- Skip to main content for accessibility -->
@@ -337,11 +366,7 @@
             <div class="row form-row-spacing">
               <div class="col-lg-6 col-md-6 form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                <a href="book.html"
-                  style="position: fixed; bottom: 20px; right: 20px; background: #012e40f9; color: #fff; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: small;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-weight: bold; z-index: 1000; display: inline-flex; align-items: center;">
-                  <i class="far fa-calendar-alt"> </i> &nbsp;&nbsp;&nbsp;BOOK A TRIP
-                </a><label for="name" class="floating-label">Your Name</label>
+                <label for="name" class="floating-label">Your Name</label>
               </div>
               <div class="col-lg-6 col-md-6 form-group">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
@@ -406,4 +431,5 @@
       handle all the details so you can focus on enjoying your dream vacation.</p>
   </div>
 </body>
+
 </html>
